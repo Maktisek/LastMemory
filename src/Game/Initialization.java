@@ -7,6 +7,7 @@ import Items.Safe;
 import Items.Task;
 import Locations.Location;
 import NPCS.EnemyNPC;
+import NPCS.FriendlyNPC;
 
 import java.util.ArrayList;
 
@@ -18,6 +19,7 @@ public class Initialization {
     ArrayList<Memory> memories;
     ArrayList<Task> tasks;
     ArrayList<EnemyNPC> enemyNPCS;
+    ArrayList<FriendlyNPC> friendlyNPCS;
     ArrayList<Location> sideLocations;
     ArrayList<Location> mainLocations;
     Player player;
@@ -28,6 +30,7 @@ public class Initialization {
         this.memories = new ArrayList<>();
         this.tasks = new ArrayList<>();
         this.enemyNPCS = new ArrayList<>();
+        this.friendlyNPCS = new ArrayList<>();
         this.sideLocations = new ArrayList<>();
         this.mainLocations = new ArrayList<>();
     }
