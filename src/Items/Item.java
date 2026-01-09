@@ -16,5 +16,10 @@ public class Item {
         this.weight = weight;
     }
 
+    @Override
+    public String toString() {
+        //TODO toString metoda chybi
+        return null;
+    }
     //Zatím žádné metody nepotřebujeme. Item slouží pouze jako datový kontejner (POJO)
 }
