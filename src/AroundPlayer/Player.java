@@ -78,6 +78,8 @@ public class Player {
         return null;
     }
 
+
+
     @Override
     public String toString() {
         //TODO toString metoda chybi
