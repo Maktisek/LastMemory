@@ -78,6 +78,11 @@ public class Player {
         return null;
     }
 
+    @Override
+    public String toString() {
+        //TODO toString metoda chybi
+        return null;
+    }
 
     private static class Inventory{
         private final double capacity;
