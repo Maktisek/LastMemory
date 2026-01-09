@@ -52,6 +52,17 @@ public class Location {
         return true;
     }
 
+    public boolean tryOpenSafe(String code){
+        //TODO tryCodeSafe metoda chybi
+        return true;
+    }
+
+    public ArrayList<String> extractSafe(){
+        //TODO addItems metoda chybi
+        //Prida vsechny itemy ze safu do listu itemu
+        return null;
+    }
+
     public boolean addPossibleLocation(Location location){
         //TODO addPossibleLocation metoda chybi
         return true;
@@ -75,9 +86,30 @@ public class Location {
         return true;
     }
 
+    public String writeItemsNames(){
+        //TODO writeItemsNames metoda chybi
+        //Vypise vsechny predmety v lokaci
+        return null;
+    }
+
+    public String writeAllPossibleLocations(){
+        //TODO writeAllPossibleLocations metoda chybi
+        //Vypise vsechny mozne lokace
+        return null;
+    }
+
     @Override
     public String toString() {
         //TODO toString metoda chybi
         return null;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
 }

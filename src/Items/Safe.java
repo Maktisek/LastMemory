@@ -40,7 +40,7 @@ public class Safe{
         //Resetuje pozici pointeru na startPointer
     }
 
-    public boolean isLocked(){
+    private boolean isLocked(){
         //TODO isLocked metoda chybi
         //Pomoci isEmpty() zkontroluje, zda je safe jeste zamknuty
         return true;

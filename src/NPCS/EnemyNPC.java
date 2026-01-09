@@ -29,4 +29,8 @@ public class EnemyNPC extends NPC{
         //TODO toString metoda chybi
         return null;
     }
+
+    public String getQuestion() {
+        return question;
+    }
 }

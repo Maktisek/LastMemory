@@ -25,4 +25,12 @@ public class FriendlyNPC extends NPC{
         //TODO toString metoda chybi
         return null;
     }
+
+    public String getCurrentSpeech() {
+        return currentSpeech;
+    }
+
+    public Task getTask() {
+        return task;
+    }
 }

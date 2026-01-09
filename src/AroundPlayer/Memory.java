@@ -10,7 +10,7 @@ public class Memory {
     private boolean opened;
     private Location locationGift;
     private String code;
-    private boolean used;
+    private boolean used; //True as long as the locationGift was given
 
 
     public Memory(String name, String description, Location locationGift, String code) {
@@ -43,5 +43,13 @@ public class Memory {
     public String toString() {
         //TODO toString metoda chybi
         return null;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public boolean isUsed() {
+        return used;
     }
 }

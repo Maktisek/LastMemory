@@ -56,4 +56,8 @@ public class Task {
         //TODO toString metoda chybi
         return null;
     }
+
+    public String getName() {
+        return name;
+    }
 }

@@ -1,6 +1,6 @@
 package Commands;
 
-public class ShowTaskCommand implements Command{
+public class ShowCurrentTaskCommand implements Command{
     @Override
     public String execute() {
         return "";
