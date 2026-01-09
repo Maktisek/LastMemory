@@ -15,4 +15,14 @@ public class FriendlyNPC extends NPC{
         this.anotherSpeech = anotherSpeech;
         this.task = task;
     }
+
+    public void switchSpeeches(){
+        //TODO switchSpeeches metoda chybi
+    }
+
+    @Override
+    public String toString() {
+        //TODO toString metoda chybi
+        return null;
+    }
 }

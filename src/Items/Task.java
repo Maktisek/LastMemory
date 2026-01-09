@@ -31,10 +31,10 @@ public class Task {
         return true;
     }
 
-    public ArrayList<Item> scanAndSolveTask(HashMap<String, ArrayList<Item>> input){
+    public ArrayList<String> scanAndSolveTask(HashMap<String, ArrayList<Item>> input){
         //TODO scanAndSolveTask metoda chybi
         //Projde input a odevzda ty predmety, ktere ma.
-        //Vraci arraylist itemu, aby hrac videl, co odevzdal.
+        //Vraci arraylist nazvu itemu, aby hrac videl, co odevzdal.
         //Resi celou logiku vyhodnocovani ukolu
         return null;
     }
