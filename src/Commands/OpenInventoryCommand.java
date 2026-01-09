@@ -1,4 +1,4 @@
 package Commands;
 
-public class OpenInventoryCommand {
+public class OpenInventoryCommand implements Command{
 }

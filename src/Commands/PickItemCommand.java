@@ -1,4 +1,4 @@
 package Commands;
 
-public class PickItemCommand {
+public class PickItemCommand implements Command {
 }

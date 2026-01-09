@@ -1,4 +1,4 @@
 package Commands;
 
-public class InspectInventoryItemCommand {
+public class InspectInventoryItemCommand implements Command {
 }

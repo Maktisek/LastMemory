@@ -1,4 +1,4 @@
 package Commands;
 
-public class RecallMemoryCommand {
+public class RecallMemoryCommand implements Command{
 }

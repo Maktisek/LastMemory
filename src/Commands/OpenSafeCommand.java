@@ -1,4 +1,4 @@
 package Commands;
 
-public class OpenSafeCommand {
+public class OpenSafeCommand implements Command{
 }

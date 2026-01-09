@@ -1,4 +1,4 @@
 package Commands;
 
-public class DropItemCommand {
+public class DropItemCommand implements Command {
 }

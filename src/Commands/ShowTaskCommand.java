@@ -1,4 +1,4 @@
 package Commands;
 
-public class ShowTaskCommand {
+public class ShowTaskCommand implements Command{
 }

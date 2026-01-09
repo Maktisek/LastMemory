@@ -1,4 +1,4 @@
 package Commands;
 
-public class CheckTaskCommand {
+public class CheckTaskCommand implements Command{
 }

@@ -1,4 +1,4 @@
 package Commands;
 
-public class HandInCommand {
+public class HandInCommand implements Command{
 }

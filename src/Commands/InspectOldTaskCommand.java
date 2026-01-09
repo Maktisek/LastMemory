@@ -1,4 +1,4 @@
 package Commands;
 
-public class InspectOldTaskCommand {
+public class InspectOldTaskCommand implements Command {
 }
