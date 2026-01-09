@@ -78,6 +78,12 @@ public class Player {
         return null;
     }
 
+    public boolean canEnd(){
+        //TODO canEnd metoda chybi
+        //Posoudi zda ma hrac uz 10 vzpominek
+        return true;
+    }
+
     @Override
     public String toString() {
         //TODO toString metoda chybi
