@@ -71,8 +71,8 @@ public class Player {
         return false;
     }
 
-    public ArrayList<Location> scanAndAdd(){
-        //TODO scanAndAdd metoda chybi
+    public ArrayList<Location> scanAndAddPossibleLocation(){
+        //TODO scanAndAddPossibleLocation metoda chybi
         //Ten arraylist je tady, proto aby se hracovi pak mohlo vypsat jake lokace se pridaly.
         //Prida nove lokace do lokace podle vzpominek
         return null;
@@ -105,7 +105,7 @@ public class Player {
 
         public Item dropItem(String name){
             //TODO dropItem metoda chybi
-            //Odstrani item
+            //Najde a odevzda Item
             return null;
         }
     }
