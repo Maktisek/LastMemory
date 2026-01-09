@@ -12,5 +12,11 @@ public class Memory {
     private String code;
 
 
-
+    public Memory(String name, String description, boolean opened, Location locationGift, String code) {
+        this.name = name;
+        this.description = description;
+        this.opened = opened;
+        this.locationGift = locationGift;
+        this.code = code;
+    }
 }
