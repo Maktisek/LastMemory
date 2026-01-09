@@ -3,6 +3,8 @@ package AroundPlayer;
 import Items.Item;
 import Items.Task;
 import Locations.Location;
+import Modes.LocationMode;
+import Modes.Mode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,6 +17,7 @@ public class Player {
     private ArrayList<Task> doneTasks;
     private Task currentTask;
     private Location currentLocation;
+    private Mode mode;
 
     public Player(Location startLocation) {
         this.inventory = new Inventory();
@@ -22,6 +25,7 @@ public class Player {
         this.doneTasks = new ArrayList<>();
         this.currentTask = null;
         this.currentLocation = startLocation;
+        this.mode = new LocationMode();
     }
 
     public boolean addMemory(Memory memory){
@@ -84,9 +88,16 @@ public class Player {
         return true;
     }
 
+    public boolean switchMode(Mode mode){
+        //TODO switchMode metoda chybi
+        //Zmeni mode
+        return true;
+    }
+
     @Override
     public String toString() {
         //TODO toString metoda chybi
+        //Bude pouzivat mode
         return null;
     }
 
