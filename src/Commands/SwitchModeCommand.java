@@ -7,9 +7,9 @@ import java.util.HashMap;
 
 public class SwitchModeCommand implements Command{
 
-    public HashMap<String, Mode> map;
-    public Player player;
-    public String mode;
+    private HashMap<String, Mode> map;
+    private Player player;
+    private String mode;
 
     public SwitchModeCommand(String mode, Player player) {
         this.map = new HashMap<>();
