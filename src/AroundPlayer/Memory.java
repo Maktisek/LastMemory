@@ -19,4 +19,8 @@ public class Memory {
         this.locationGift = locationGift;
         this.code = code;
     }
+
+
+
+
 }
