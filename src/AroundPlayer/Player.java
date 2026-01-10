@@ -104,7 +104,7 @@ public class Player {
     private static class Inventory{
         private final double capacity;
         private double weight;
-        private HashMap<String, Item> items;
+        private HashMap<String, ArrayList<Item>> items;
 
         public Inventory() {
             this.capacity = 20.0;
