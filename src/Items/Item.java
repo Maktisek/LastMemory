@@ -21,5 +21,14 @@ public class Item {
         //TODO toString metoda chybi
         return null;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
     //Zatím žádné metody nepotřebujeme. Item slouží pouze jako datový kontejner (POJO)
 }
