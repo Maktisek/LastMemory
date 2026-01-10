@@ -10,13 +10,13 @@ public class Task {
     private String name;
     private String description;
     private ArrayList<String> namesOfNeededObjects;
-    private ArrayList<String> codeOfNeededObjects;
+    private ArrayList<String> codesOfNeededObjects;
     private Memory memoryPrice;
 
     public Task(String name, String description, Memory memoryPrice) {
         this.name = name;
         this.memoryPrice = memoryPrice;
-        this.codeOfNeededObjects = new ArrayList<>();
+        this.codesOfNeededObjects = new ArrayList<>();
         this.namesOfNeededObjects = new ArrayList<>();
         this.description = description;
     }
