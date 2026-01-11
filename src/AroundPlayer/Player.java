@@ -17,6 +17,7 @@ public class Player {
     private ArrayList<Task> doneTasks;
     private Task currentTask;
     private Location currentLocation;
+    private Location previousLocation;
     private Mode mode;
 
     public Player(Location startLocation) {
@@ -25,6 +26,7 @@ public class Player {
         this.doneTasks = new ArrayList<>();
         this.currentTask = null;
         this.currentLocation = startLocation;
+        this.previousLocation = null;
         this.mode = new LocationMode();
     }
 
@@ -71,8 +73,14 @@ public class Player {
 
     public boolean switchLocation(Location location){
         //TODO switchLocation metoda chybi
-        //Zmeni lokaci
+        //Zmeni lokaci a nastavi na previousLocation currentLocation.
         return false;
+    }
+
+    public boolean runAway(){
+        //TODO runAway metoda chybi
+        //Nastavi na currentLocation previousLocation, ale na previous location nastavi null
+        return true;
     }
 
     public ArrayList<Location> scanAndAddPossibleLocations(){

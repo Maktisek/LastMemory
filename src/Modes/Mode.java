@@ -6,7 +6,7 @@ public interface Mode {
 
     String executeInfo(Player player);
 
-    String executeHelp();
+    String executeHelp(Player player);
 
 
 

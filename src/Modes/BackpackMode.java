@@ -9,7 +9,7 @@ public class BackpackMode implements Mode{
     }
 
     @Override
-    public String executeHelp() {
+    public String executeHelp(Player player) {
         return "";
     }
 }

@@ -76,7 +76,7 @@ public class Location {
 
     public boolean isPossible(){
         //TODO isPossible metoda chybi
-        //Vrati zda muzeme do lokace vstoupit
+        //Vrati zda muzeme v lokaci operovat
         return true;
     }
 
