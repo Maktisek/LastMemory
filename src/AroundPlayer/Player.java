@@ -75,7 +75,7 @@ public class Player {
         return false;
     }
 
-    public ArrayList<Location> scanAndAddPossibleLocation(){
+    public ArrayList<Location> scanAndAddPossibleLocations(){
         //TODO scanAndAddPossibleLocation metoda chybi
         //Ten arraylist je tady, proto aby se hracovi pak mohlo vypsat jake lokace se pridaly.
         //Prida nove lokace do lokace podle vzpominek
