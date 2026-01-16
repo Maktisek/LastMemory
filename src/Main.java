@@ -1,3 +1,5 @@
+import AroundPlayer.Player;
+import Game.Initialization;
 import Locations.Location;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -10,6 +12,15 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        Initialization init = new Initialization();
+        ArrayList<Location> locations = init.getLocations();
+        for (Location location: locations){
+            System.out.println(location.toString());
+        }
+        Player player = init.getPlayer();
+
+    }
+    public static void testLoader1(){
         ObjectMapper mapper = new ObjectMapper();
         ArrayList<Location> locations = new ArrayList<>();
         try {
@@ -25,9 +36,8 @@ public class Main {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-       for (Location location: locations){
-           System.out.println(location.toString());
-       }
-
+        for (Location location: locations){
+            System.out.println(location.toString());
+        }
     }
 }
