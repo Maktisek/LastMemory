@@ -80,8 +80,7 @@ public class Location {
     }
 
     public boolean addPossibleLocation(Location location){
-        //TODO addPossibleLocation metoda chybi
-        return true;
+        return possibleLocations.add(location);
     }
 
     public Location findLocation(String name){
@@ -109,9 +108,11 @@ public class Location {
     }
 
     public String writeAllPossibleLocations(){
-        //TODO writeAllPossibleLocations metoda chybi
-        //Vypise vsechny mozne lokace
-        return null;
+        ArrayList<String> names = new ArrayList<>(25);
+        for (Location location: possibleLocations){
+            names.add(location.getName());
+        }
+        return String.join(",",names);
     }
 
 

@@ -2,7 +2,6 @@ import AroundPlayer.Player;
 import Game.Initialization;
 import Locations.Location;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,11 +13,19 @@ public class Main {
 
         Initialization init = new Initialization();
         ArrayList<Location> locations = init.getLocations();
+        int i = 0;
         for (Location location: locations){
-            System.out.println(location.toString());
+            System.out.println(i+". "+location.writeAllPossibleLocations());
+            i++;
         }
         Player player = init.getPlayer();
 
+        int ii = 0;
+        for (Location location: locations) {
+            if (location.getFriendlyNPC() != null && location.getFriendlyNPC().getTask().getMemoryPrice().getLocationGift() != null) {
+                System.out.println(location.getFriendlyNPC().getTask().getMemoryPrice().getLocationGift().writeAllPossibleLocations());
+            }
+        }
     }
     public static void testLoader1(){
         ObjectMapper mapper = new ObjectMapper();
