@@ -8,6 +8,12 @@ public class FriendlyNPC extends NPC{
     private String anotherSpeech;
     private Task task;
 
+    public FriendlyNPC(String name, String position, String age) {
+        super(name, position, age);
+    }
+
+    public FriendlyNPC() {
+    }
 
     public FriendlyNPC(String name, String position, String age, String currentSpeech, String anotherSpeech, Task task) {
         super(name, position, age);
@@ -32,5 +38,21 @@ public class FriendlyNPC extends NPC{
 
     public Task getTask() {
         return task;
+    }
+
+    public void setCurrentSpeech(String currentSpeech) {
+        this.currentSpeech = currentSpeech;
+    }
+
+    public void setTask(Task task) {
+        this.task = task;
+    }
+
+    public String getAnotherSpeech() {
+        return anotherSpeech;
+    }
+
+    public void setAnotherSpeech(String anotherSpeech) {
+        this.anotherSpeech = anotherSpeech;
     }
 }

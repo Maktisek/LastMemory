@@ -10,7 +10,6 @@ public class Memory {
     private boolean opened;
     private Location locationGift;
     private String code;
-    private boolean used; //True as long as the locationGift was given
 
 
     public Memory(String name, String description, Location locationGift, String code) {
@@ -19,7 +18,9 @@ public class Memory {
         this.opened = false;
         this.locationGift = locationGift;
         this.code = code;
-        this.used = false;
+    }
+
+    public Memory() {
     }
 
     public String writeName(){
@@ -49,7 +50,39 @@ public class Memory {
         return code;
     }
 
-    public boolean isUsed() {
-        return used;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public Location getLocationGift() {
+        return locationGift;
+    }
+
+    public void setLocationGift(Location locationGift) {
+        this.locationGift = locationGift;
+    }
+
+    public boolean isOpened() {
+        return opened;
+    }
+
+    public void setOpened(boolean opened) {
+        this.opened = opened;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

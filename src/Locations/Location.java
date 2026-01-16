@@ -19,24 +19,28 @@ public class Location {
     private Safe safe;
     private ArrayList<Location> possibleLocations;
 
-    public Location(String name, String code, String description) {
-        this.name = name;
-        this.code = code;
-        this.description = description;
-        this.items = new ArrayList<>();
-        this.possibleLocations = new ArrayList<>();
+    public Location() {
     }
-    public Location(String name, String code, String description, EnemyNPC enemyNPC, FriendlyNPC friendlyNPC, Item[] items, Safe safe) {
-        this.name = name;
-        this.code = code;
-        this.description = description;
-        this.items = new ArrayList<>();
-        this.possibleLocations = new ArrayList<>();
-        this.enemyNPC = enemyNPC;
-        this.friendlyNPC = friendlyNPC;
-        this.items.addAll(List.of(items));
-        this.safe = safe;
-    }
+
+
+    //    public Location(String name, String code, String description) {
+//        this.name = name;
+//        this.code = code;
+//        this.description = description;
+//        this.items = new ArrayList<>();
+//        this.possibleLocations = new ArrayList<>();
+//    }
+//    public Location(String name, String code, String description, EnemyNPC enemyNPC, FriendlyNPC friendlyNPC, Item[] items, Safe safe) {
+//        this.name = name;
+//        this.code = code;
+//        this.description = description;
+//        this.items = new ArrayList<>();
+//        this.possibleLocations = new ArrayList<>();
+//        this.enemyNPC = enemyNPC;
+//        this.friendlyNPC = friendlyNPC;
+//        this.items.addAll(List.of(items));
+//        this.safe = safe;
+//    }
 
     public boolean addEnemyNPC(EnemyNPC NPC){
         //TODO addEnemyNPC metoda chybi
@@ -110,10 +114,19 @@ public class Location {
         return null;
     }
 
+
     @Override
     public String toString() {
-        //TODO toString metoda chybi
-        return null;
+        return "Location{" +
+                "name='" + name + '\'' +
+                ", code='" + code + '\'' +
+                ", description='" + description + '\'' +
+                ", enemyNPC=" + enemyNPC +
+                ", friendlyNPC=" + friendlyNPC +
+                ", items=" + items +
+                ", safe=" + safe +
+                ", possibleLocations=" + possibleLocations +
+                '}';
     }
 
     public String getName() {
@@ -124,4 +137,59 @@ public class Location {
         return code;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<Location> getPossibleLocations() {
+        return possibleLocations;
+    }
+
+    public void setPossibleLocations(ArrayList<Location> possibleLocations) {
+        this.possibleLocations = possibleLocations;
+    }
+
+    public Safe getSafe() {
+        return safe;
+    }
+
+    public void setSafe(Safe safe) {
+        this.safe = safe;
+    }
+
+    public ArrayList<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(ArrayList<Item> items) {
+        this.items = items;
+    }
+
+    public EnemyNPC getEnemyNPC() {
+        return enemyNPC;
+    }
+
+    public void setEnemyNPC(EnemyNPC enemyNPC) {
+        this.enemyNPC = enemyNPC;
+    }
+
+    public FriendlyNPC getFriendlyNPC() {
+        return friendlyNPC;
+    }
+
+    public void setFriendlyNPC(FriendlyNPC friendlyNPC) {
+        this.friendlyNPC = friendlyNPC;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 }

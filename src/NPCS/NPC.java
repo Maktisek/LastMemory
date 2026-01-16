@@ -13,6 +13,9 @@ public abstract class NPC {
         this.age = age;
     }
 
+    public NPC() {
+    }
+
     public String getName() {
         return name;
     }

@@ -8,6 +8,13 @@ public class EnemyNPC extends NPC{
     private String question;
     private ArrayList<String> possibleAnswers;
 
+    public EnemyNPC(String name, String position, String age) {
+        super(name, position, age);
+    }
+
+    public EnemyNPC() {
+    }
+
     public EnemyNPC(String name, String position, String age, String question, String[] possibleAnswers) {
         super(name, position, age);
         this.question = question;
@@ -34,5 +41,17 @@ public class EnemyNPC extends NPC{
 
     public String getQuestion() {
         return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public ArrayList<String> getPossibleAnswers() {
+        return possibleAnswers;
+    }
+
+    public void setPossibleAnswers(ArrayList<String> possibleAnswers) {
+        this.possibleAnswers = possibleAnswers;
     }
 }

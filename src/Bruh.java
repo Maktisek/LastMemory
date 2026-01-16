@@ -1,16 +1,15 @@
+import java.util.ArrayList;
+
 public class Bruh {
 
 
     private int age;
     private String name;
+    private ArrayList<String> list;
 
     public Bruh() {
     }
 
-    public Bruh(int age, String name) {
-        this.age = age;
-        this.name = name;
-    }
 
     public int getAge() {
         return age;
@@ -18,6 +17,14 @@ public class Bruh {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public ArrayList<String> getList() {
+        return list;
+    }
+
+    public void setList(ArrayList<String> list) {
+        this.list = list;
     }
 
     public String getName() {
@@ -33,6 +40,7 @@ public class Bruh {
         return "Bruh{" +
                 "age=" + age +
                 ", name='" + name + '\'' +
+                ", list=" + list +
                 '}';
     }
 }

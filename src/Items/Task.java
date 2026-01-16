@@ -24,6 +24,9 @@ public class Task {
         this.codesOfNeededObjects.addAll(List.of(codesOfNeededObjects));
     }
 
+    public Task() {
+    }
+
     public boolean addNameOfNeededObject(){
         //TODO addNameOfNeededObject metoda chybi
         return true;
@@ -62,5 +65,41 @@ public class Task {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<String> getCodesOfNeededObjects() {
+        return codesOfNeededObjects;
+    }
+
+    public void setCodesOfNeededObjects(ArrayList<String> codesOfNeededObjects) {
+        this.codesOfNeededObjects = codesOfNeededObjects;
+    }
+
+    public Memory getMemoryPrice() {
+        return memoryPrice;
+    }
+
+    public void setMemoryPrice(Memory memoryPrice) {
+        this.memoryPrice = memoryPrice;
+    }
+
+    public ArrayList<String> getNamesOfNeededObjects() {
+        return namesOfNeededObjects;
+    }
+
+    public void setNamesOfNeededObjects(ArrayList<String> namesOfNeededObjects) {
+        this.namesOfNeededObjects = namesOfNeededObjects;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

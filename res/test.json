@@ -1,4 +1,70 @@
 {
-  "age" : 12,
-  "name" : "ahoj"
-}
+    "name": "Učebna 15",
+    "code": "CLASS_001",
+    "description": "Kmenová učebna třídy C2a, kde třídním učitelem je sám Ing. Jan Šváb. Jedná se o typ učebny se stupínkem. Tato učebna je specifická svojí velikostí, jelikož je celkem malá. Mám ji ráda, protože je taková, no, roztomilá. ",
+    "enemyNPC": {
+      "name": "Ing. Jan Šváb",
+      "position": "Učitel",
+      "age": "50 let",
+      "question": "Co znamená zkratka RAM?",
+      "possibleAnswers": [
+        "Random-access memory",
+        "Random access memory",
+        "Ryba-access memory",
+        "Ryba access memory"
+      ]
+    },
+    "friendlyNPC": {
+      "name": "Ing. Jan Šváb",
+      "position": "Učitel",
+      "age": "50 let",
+      "currentSpeech": "Hele, to víte, že se vám ve třídě rozbil dataprojektor? Budu ho muset opravit, ale potřebuji k tomu šroubovák a novou výbojku. Myslíš, že byste mi je mohla přinést?",
+      "anotherSpeech": "Díky moc, ty dataprojektory většinou vydrží dlouho, ale tenhle tu nebyl ani dva roky. Jinak ředitel už schválil vaše samostudium na příští týden, říkám vám to, abyste tam už nemusela chodit. Užijte si to.",
+      "task": {
+        "name": "Nefunkční dataprojektor",
+        "description": "Šváb opravuje dataprojektor v učebně 15, musím mu donést potřebné nářadí.",
+        "namesOfNeededObjects": [
+          " Šroubovák",
+          "Výbojka"
+        ],
+        "codesOfNeededObjects": [
+          " ESSENTIALS_016",
+          "ESSENTIALS_017"
+        ],
+        "memoryPrice": {
+          "name": "Samostudium na příští týden",
+          "description": "Pan Šváb tvrdí, že prý mám domluvené samostudium na příští týden. Dokonce mi popřál ať si to něco užiji... Co to ale je, je to vůbec podstatné?",
+          "opened": false,
+          "locationGift": null,
+          "code": "HALLWAY_002"
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Safe toalety",
+        "description": "Papírek obsahující: R1;L2;R2",
+        "code": "PAPERS_001",
+        "weight": 0.2
+      },
+      {
+        "name": "Stlačený vzduch",
+        "description": "Klasický stlačený vzduch ve spreji",
+        "code": "ESSENTIALS_001",
+        "weight": 3
+      },
+      {
+        "name": "Sešit teoretické informatiky",
+        "description": "Píšou zde, že pivot se využívá k rozdělení pole během Quick Sortu",
+        "code": "NOTES_001",
+        "weight": 2
+      },
+      {
+        "name": "Třídnice C2a",
+        "description": "To je třídnice mojí třídy! Vždycky ji nosí Švec",
+        "code": "ESSENTIALS_002",
+        "weight": 2.5
+      }
+    ],
+    "safe": null
+  }
