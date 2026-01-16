@@ -13,11 +13,9 @@ public class Main {
 
         ObjectMapper mapper = new ObjectMapper();
         ArrayList<Location> locations = new ArrayList<>();
-        mapper.enable(DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES);
-        mapper.enable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         try {
-            InputStream input = new FileInputStream("res\\test.json");
-            Location[] location = new Location[]{mapper.readValue(input, Location.class)};
+            InputStream input = new FileInputStream("res\\locations.json");
+            Location[] location = mapper.readValue(input, Location[].class);
             locations.addAll(List.of(location));
         } catch (IOException e) {
             throw new RuntimeException(e);

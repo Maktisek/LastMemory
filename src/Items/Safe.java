@@ -81,4 +81,13 @@ public class Safe{
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "Safe{" +
+                "items=" + items +
+                ", code='" + code + '\'' +
+                ", startPointer=" + startPointer +
+                ", currentPointer=" + currentPointer +
+                '}';
+    }
 }

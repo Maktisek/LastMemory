@@ -29,7 +29,7 @@
           "Výbojka"
         ],
         "codesOfNeededObjects": [
-          " ESSENTIALS_016",
+          "ESSENTIALS_016",
           "ESSENTIALS_017"
         ],
         "memoryPrice": {
@@ -65,6 +65,564 @@
         "description": "To je třídnice mojí třídy! Vždycky ji nosí Švec",
         "code": "ESSENTIALS_002",
         "weight": 2.5
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Učebna 17",
+    "code": "CLASS_002",
+    "description": "Jedná se o počítačovou učebnu naplněnou malými počítači, na kterých jsou položeny monitory. Je významná svým zvláštním stolem uprostřed třídy v poslední řadě. Do učebny lze vlézt dvěma vchody. Hned vedle obou dveří jsou dva dataprojektory. Řekla bych, že je to takový outsider počítačových učeben.",
+    "enemyNPC": {
+      "name": "Bc. Adam Papula",
+      "position": "Učitel",
+      "age": "28 let",
+      "question": "Jaké zvláštní písmeno české abecedy bylo kódované ve znakové sadě KOI8-CS?",
+      "possibleAnswers": [
+        "Ch",
+        "ch"
+      ]
+    },
+    "friendlyNPC": {
+      "name": "Bc. Adam Papula",
+      "position": "Učitel",
+      "age": "28 let",
+      "currentSpeech": "Dobrý den, Amy, zrovna tady řeším rozbitý monitor. Já bych to neřešil, ale tenhle týden je to už podruhé... Připadá mi, že se to teď děje naschvál takhle dva týdny před Vánocemi. Chyba bude asi v kabelu, možná i v konektoru. Nemohla byste mi prosím přinést nový HDMI kabel a stlačený vzduch?",
+      "anotherSpeech": "Děkuji vám moc, snad to pomůže... Ano, už jsem si vzpomněl. Já jsem udělal chybu v plánování a omylem jsem vám řekl, že budeme dělat příští týden JSON. Na to teď zapomeňte, protože budeme probírat UNICODE. Prezentaci najdete na Moodlu, takže vše se dozvíte. Kdyžtak vám pak ve škole spolužáci látku dovysvětlí.",
+      "task": {
+        "name": "Nefunkční monitor ",
+        "description": "V učebně 17 přestal fungovat monitor. Pan učitel Papula se domnívá, že je to způsobeno vadným HDMI kabelem či konektorem. Musím mu sehnat všechny potřebné předměty.",
+        "namesOfNeededObjects": [
+          "HDMI kabel",
+          "stlačený vzduch",
+          "šroubovák"
+        ],
+        "codesOfNeededObjects": [
+          "ESSENTIALS_003",
+          "ESSENTIALS_001",
+          "ESSENTIALS_016"
+        ],
+        "memoryPrice": {
+          "name": "UNICODE místo JSON",
+          "description": "Tak asi fakt jsem měla příští týden chybět. Musela jsem oběhnout všechny učitele a zeptat se jich, co se bude příští týden dít. Mohla jsem jet na hory, nebo na chatu, nevím. Stále ale nerozumím tomu, co to má společného s tím, proč jsem tady. Možná na něco přijdu.",
+          "opened": false,
+          "locationGift": null,
+          "code": "HALLWAY_002"
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Papíry",
+        "description": "Štos bílých čistých papírů",
+        "code": "ESSENTIALS_013",
+        "weight": 3
+      },
+      {
+        "name": "Klávesnice",
+        "description": "Obyčejná černá kancelářská klávesnice",
+        "code": "ESSENTIALS_004",
+        "weight": 2.5
+      },
+      {
+        "name": "Seznam programů",
+        "description": "Seznam s postupem celé prezentace školy",
+        "code": "ESSENTIALS_005",
+        "weight": 1
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Učebna 18",
+    "code": "CLASS_003",
+    "description": "Jedná se o počítačovou učebnu klasického vzhledu. Interiér je v bílých barvách. Do učebny lze vlézt dvěma vchody. Hned vedle obou dveří jsou dva dataprojektory. Na první pohled nikdy nepoznám, zda se nacházím v osmnáctce nebo devatenáctce.",
+    "enemyNPC": {
+      "name": "Petr Procházka",
+      "position": "Učitel",
+      "age": "55 let",
+      "question": "Můžeme protnout kótovací čáru?",
+      "possibleAnswers": [
+        "V žádném případě",
+        "Ne",
+        "Nein",
+        "No"
+      ]
+    },
+    "friendlyNPC": {
+      "name": "Petr Procházka",
+      "position": "Učitel",
+      "age": "55 let",
+      "currentSpeech": "Zase nějaký vtipálek odhlásil VariCAD... Já už nemůžu, nebudu to dělat! Kdybych si alespoň pamatoval licenční klíč k VariCADU. Zkusím tam něco naťukat... Co? Co je s tou klávesnicí! Ty vole, pardon, já už fakt nechápu, co se to poslední dobou děje. Mám hlad, jsem unavenej, nic nefunguje. Heleď nemohla bys mi, prosím, sehnat ten klíč a novou klávesnici?",
+      "anotherSpeech": "Děkuji, Amy, jooo i bagetu, jo? Víte co, Amy, měla byste na sebe dávat pozor... Ne fakt myslím to vážně. Byla by to škoda, kdyby o vás škola přišla. Fakt dávejte pozor.",
+      "task": {
+        "name": "Instalace VariCADU",
+        "description": "Pan učitel Procházka instaluje VariCAD na školní počítač. Nejen, že mu chybí licenční kód k VariCADu, ale i se mu rozbila klávesnice. Už má z toho všeho celkem hlad, já se mu nedivím. Zkusím mu pomoct, třeba mi zase sdělí něco důležitého.",
+        "namesOfNeededObjects": [
+          "Licenční klíč VariCAD",
+          "Klávesnice",
+          "Bageta"
+        ],
+        "codesOfNeededObjects": [
+          "ESSENTIALS_023",
+          "ESSENTIALS_004",
+          "ESSENTIALS_021"
+        ],
+        "memoryPrice": {
+          "name": "Dávej si pozor",
+          "description": "Pan učitel Procházka mi až moc seriózně kladl na duši, že si mám na sebe dávat pozor. Prý by byla škoda, kdyby o mě škola přišla. Upřímně, asi jsem zapomněla, že jsem tak dobrá studentka xd.",
+          "opened": false,
+          "locationGift": null,
+          "code": "HALLWAY_002"
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "USB paní Haasové",
+        "description": "Takové malé černé USB, lehce se ztratí",
+        "code": "ESSENTIALS_006",
+        "weight": 0.5
+      },
+      {
+        "name": "PLA filament",
+        "description": "Tondův PLA filament do jeho milované 3D tiskárny",
+        "code": "FILAMENTS_001",
+        "weight": 4
+      },
+      {
+        "name": "3D tiskárny info",
+        "description": "Materiál pro 3D tisk se nazývá filament",
+        "code": "PAPERS_002",
+        "weight": 0.2
+      },
+      {
+        "name": "USB s kódem",
+        "description": "Malá fleška vystupující z figurky psa",
+        "code": "ESSENTIALS_007",
+        "weight": 0.5
+      },
+      {
+        "name": "Banner o C#",
+        "description": "Plakát popisující výhody programovacího jazyka C#",
+        "code": "BANNERS_001",
+        "weight": 3.5
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Učebna 19",
+    "code": "CLASS_004",
+    "description": "Jedná se o počítačovou učebnu klasického vzhledu. Interiér je v bílých barvách. Do učebny lze vlézt dvěma vchody. Hned vedle obou dveří jsou dva dataprojektory. Já sama to tady mám ráda, připomíná mi to IT hodiny, které jsou fajn. Možná jsem divná, ale myslím to vážně.",
+    "enemyNPC": {
+      "name": "Kateřina Haasová",
+      "position": "Učitel",
+      "age": "23 let",
+      "question": "Jak se nazývá prvek, podle kterého algoritmus Quick Sort rozděluje pole?",
+      "possibleAnswers": [
+        "Pivot"
+      ]
+    },
+    "friendlyNPC": {
+      "name": "Kateřina Haasová",
+      "position": "Učitel",
+      "age": "23 let",
+      "currentSpeech": "Jee, dobrý den, Amy... Em, víte já už tady dobrých 10 minut hledám svojí ztracenou flešku. Neviděla jste ji? Hodilo by se mi to stihnout, dokud nezačne hodina. Možná jestli bych vás mohla poprosit, zda mi nepomůžete?",
+      "anotherSpeech": "Jo! To je ona! Moc vám děkuji, opravdu. Jinak, Amy, co je to, že jste tak veselá, a dokonce vám to nadprůměrně sluší! Jste celá rozzářená. Ale pamatujte, pozornost. Dávejte na sebe pozor.",
+      "task": {
+        "name": "Ztracená fleška",
+        "description": "Paní učitelka Haasová zmateně bloudí třídami a snaží se najít svojí miniaturní flešku. Prý nemá tušení, kde by se mohla nacházet. Zkusím ji najít.",
+        "namesOfNeededObjects": [
+          "USB paní Haasové"
+        ],
+        "codesOfNeededObjects": [
+          "ESSENTIALS_006"
+        ],
+        "memoryPrice": {
+          "name": "Já jsem šťastná",
+          "description": "Podle paní učitelky Haasové mi to dneska prý sluší. Často mi to nikdo jen tak neříká, něco na tom bude. Navíc jsem dneska i šťastná, prý to jde na mně poznat. Asi mě musí čekat něco pěkného. Pokud jo, tak pak to nemohou být lyže... Navíc na konci mi řekla, že mám pamatovat na pozornost. Co s tím všichni mají?",
+          "opened": false,
+          "locationGift": null,
+          "code": "HALLWAY_003"
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "PETG filament",
+        "description": "Tondův PETG filament do jeho milované 3D tiskárny",
+        "code": "FILAMENTS_002",
+        "weight": 4
+      },
+      {
+        "name": "PLA filament",
+        "description": "Tondův PLA filament do jeho milované 3D tiskárny",
+        "code": "FILAMENTS_001",
+        "weight": 4
+      },
+      {
+        "name": "Safe kancelář",
+        "description": "Papírek obsahující: L50;R21;L1;R21",
+        "code": "PAPERS_003",
+        "weight": 0.2
+      },
+      {
+        "name": "USB s kódem",
+        "description": "Malá fleška vystupující z figurky psa",
+        "code": "ESSENTIALS_007",
+        "weight": 0.5
+      },
+      {
+        "name": "Notebook paní Meitnerové",
+        "description": "Notebook paní Meitnerové, který si vždycky najde čas pokazit hodinu",
+        "code": "ESSENTIALS_008",
+        "weight": 3
+      },
+      {
+        "name": "Banner o Pythonu",
+        "description": "Plakát popisující výhody programovacího jazyka Python",
+        "code": "BANNERS_002",
+        "weight": 3.5
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Učebna 8a",
+    "code": "CLASS_005",
+    "description": "Učebna sloužící k trénování studentů v oblasti počítačových sítí. Je vybavena moderním vybavením, které je uloženo v několik rackových skříních. Po obou stranách třídy jsou rozesety počítače. Její velikost pojme pouze polovinu celé třídy. Upřímně jsem tady stála jenom dvakrát, zatím jsem sítě nikdy nedělala.",
+    "enemyNPC": {
+      "name": "Antonín Franěk",
+      "position": "Kamarád",
+      "age": "16 let",
+      "question": "Jak se říká materiálu, ze kterého se tiskne na 3d tiskárně (Také jinak tiskové vlákno)?",
+      "possibleAnswers": [
+        "Filament"
+      ]
+    },
+    "friendlyNPC": {
+      "name": "Antonín Franěk",
+      "position": "Kamarád",
+      "age": "16 let",
+      "currentSpeech": "Ahoj, Amy, neviděla si Mari? Já jsem s Mari chtěl něco tisknout, ale není tu ani Mari ani moje filamenty... Prostě jsem je někde musel položit a jsou fuč. Co bych taky dělal v 8a co? Prosím pomůžeš mi je najít, já jsem dneska nějakej slepej.",
+      "anotherSpeech": "Ou, wow, díky moc. Teď už bude jenom muset někde vyplavat i Mari, nebo víš co? Já si jí vytisknu, haha. Heleď, Amy, ještě jsem ti chtěl říct, že docela důležité je brát v potaz, že někdy musíme být velice opatrní a pozorní na to, co děláme, víš? Chybějící pozornost je často příčinou selhání. Anyway jinými slovy, nechceš hledat všude po škole svoje filamenty...",
+      "task": {
+        "name": "Chybějící filament",
+        "description": "Tonda hledá po škole jeho chybějící filament. Prý ho někde položil a zapomněl na něj. Upřímně nevím, jak se mu to povedlo, když to jsou čtyři cívky filamentu, ale dobrý... Zkusím je najít.",
+        "namesOfNeededObjects": [
+          "PLA filament",
+          "PETG filament",
+          "ABS filament",
+          "TPU filament"
+        ],
+        "codesOfNeededObjects": [
+          "FILAMENTS_001",
+          "FILAMENTS_002",
+          "FILAMENTS_003",
+          "FILAMENTS_004"
+        ],
+        "memoryPrice": {
+          "name": "Tonda a filament",
+          "description": "Hehe, Tonda je vtipnej, ale docela mě vystrašil s tím svým hlubokým proslovem o chybějící pozornosti jako příčinou selhání. Já si myslím, že jsem pozorná dost... Navíc už zase, zase mi někdo připomíná pozornost? Proto jsem tady? Kvůli nepozornosti?",
+          "opened": false,
+          "locationGift": null,
+          "code": "HALLWAY_003"
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Notebook pana Adámka",
+        "description": "Notebook pana Adámka (ano, MacBook)",
+        "code": "ESSENTIALS_009",
+        "weight": 3
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Učebna 13",
+    "code": "CLASS_006",
+    "description": "Kmenová učebna třídy C4c. Jedná se o ten nejzvláštnější druh kmenové učebny. Vchod má totiž zepředu, a ne z boku. Navíc se za ní nachází další místnost se zvláštní zdí, která připomíná matné zrcadlo.",
+    "enemyNPC": {
+      "name": "Bc. Daniel Adámek",
+      "position": "Učitel",
+      "age": "27 let",
+      "question": "Kde se ukládají data webové aplikace?",
+      "possibleAnswers": [
+        "V databázi",
+        "Databáze",
+        "Do databáze"
+      ]
+    },
+    "friendlyNPC": {
+      "name": "Bc. Daniel Adámek",
+      "position": "Učitel",
+      "age": "27 let",
+      "currentSpeech": "Dobrý den, Amy, jsem rád, že jste se ukázala. Zrovna tady potřebuji vyřešit něco školního, ale nevzal jsem si s sebou nic. Rád bych si totiž uložil všechny studenty a jejich známky. Nemohla byste mi prosím sehnat můj notebook, myš a flešku, na který mám takový Excelový soubor? Děkuji.",
+      "anotherSpeech": "Jak pěkné, to je přesně on. Děkuji moc. Jinak všimla jste si toho, co se děje před školou? Teď tam přijela záchranka a policie. Sjel se tam snad celý sbor. Snad se nestalo nic vážného. Buďte opatrná.",
+      "task": {
+        "name": "Uložení studentů",
+        "description" : "Pan učitel Adámek potřebuje uložit jména studentů a jejich známky. Požádal mě, jestli bych mu s tím pomohla. Nepustí mě sice k práci, ale musím mu sehnat vybavení.",
+        "namesOfNeededObjects": [
+          "Notebook pana Adámka",
+          "USB s Excelem",
+          "Myš"
+        ],
+        "codesOfNeededObjects": [
+          "ESSENTIALS_009",
+          "ESSENTIALS_014",
+          "ESSENTIALS_015"
+        ],
+        "memoryPrice": {
+          "name": "Záchranka před školou",
+          "description": "Uf, docela jsem se lekla, když pan učitel Adámek začal mluvit o jakési záchrance před školou. Máme okna hned do velmi rušné ulice, často tudy projíždí záchranky, třeba se nás to netýká. Ale když o tom tak slyším, nepozornost, záchranka... Co když to jde dohromady.",
+          "opened": false,
+          "locationGift": null,
+          "code": "HALLWAY_003"
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Svazek učebnic matematiky",
+        "description": "Těžký svazek starých učebnic matematiky",
+        "code": "ESSENTIALS_010",
+        "weight": 5
+      },
+      {
+        "name": "Safe kabinet K12",
+        "description": "Papírek obsahující: L20;R41;L41;L20;R21;L1;R8;L8",
+        "code": "PAPERS_004",
+        "weight": 0.2
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Kabinet K12",
+    "code": "CABINET_001",
+    "description": "Kabinet učitelů z oblasti IT. Obsahuje pár stolních počítačů a míst na sezení. Pojí se s kabinetem K13, který je na kabinet K12 napojený. Díky tomuto napojení to působí jako backrooms. Byla jsem tu dvakrát, působí to tu docela roztomile.",
+    "enemyNPC": {
+      "name": "Michaela Meitnerová",
+      "position": "Učitel",
+      "age": "25 let",
+      "question": "Jakou třídu použijete v Javě, pokud chcete přečíst obsah souboru řádek po řádku?",
+      "possibleAnswers": [
+        "BufferedReader",
+        "Buffered něco",
+        "Něco reader"
+      ]
+    },
+    "friendlyNPC": {
+      "name": "Michaela Meitnerová",
+      "position": "Učitel",
+      "age": "25 let",
+      "currentSpeech": "Amy, co vy tu děláte? Na tom nesejde. Když už jste tady, hodila by se mi pomocná ruka. Ne teda, že byste něco opravovala, ale spíš, jestli byste mi někam neskočila. Potřebuji sehnat notebook a moje ztracené USB s kódem. Když vás ještě takhle vidím, tak mi dochází, že jsem vám včera zapomněla zapsat do třídnice... Nemohla byste ji sehnat také? Děkuji.",
+      "anotherSpeech": "Ty jo, Amy, vy jste hodná. Teď vám můžu připravit takové fajn a hezké cvičení na Moodle, mrk mrk. Teda jestli se tam ještě stihnete ukázat. Nee, vtipkuji samozřejmě. Taky, slyšela jste o té tragédii před školou? Někoho prý něco srazilo, víc nevím, ale je to hrozné, dávejte na sebe pozor, jo?",
+      "task": {
+        "name": "Příprava na hodinu",
+        "description" : "Paní učitelka Meitnerová potřebuje pomoct s přípravou na příští hodinu. Pověřila mě, abych jí tedy pomohla sehnat vše, co potřebuje. Taky mě poprosila, jestli jí neskočím pro třídnici C2a, prý tam včera zapomněla zapsat.",
+        "namesOfNeededObjects": [
+          "Notebook paní Meitnerové",
+          "USB s kódem",
+          "Třídnice C2a"
+        ],
+        "codesOfNeededObjects": [
+          "ESSENTIALS_008",
+          "ESSENTIALS_007",
+          "ESSENTIALS_002"
+        ],
+        "memoryPrice": {
+          "name": "Někdo byl sražen",
+          "description": "Ou ne, před školou byl někdo sražen. Autem nebo tramvají, na tom nesejde. Dostala jsem obrovský strach, že jsem to já. Co když jo? Co když jsem to byla já? Ty řeči o tom, že mám být opatrná by pak dávaly smysl. Bojím se. Paní učitelka ale žádné bližší informace zatím nezná. Navíc ta věta s tím, že jestli se ještě stihnu ještě ukázat, fuj, jde mi z toho úplný mráz po zádech.",
+          "opened": false,
+          "locationGift": null,
+          "code": "HALLWAY_004"
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Žlutý narcis",
+        "description": "Kytička připomínající kytičku na kopečku",
+        "code": "ESSENTIALS_011",
+        "weight": 1
+      },
+      {
+        "name": "Safe sekretariát",
+        "description": "Papírek obsahující: L16;R28;L24;R4;L8",
+        "code": "PAPERS_005",
+        "weight": 0.2
+      }
+    ],
+    "safe": {
+      "code" : 4,
+      "startPointer" : 20,
+      "currentPointer" : 20,
+      "items" : [
+        {
+          "name": "Svazek strojnických tabulek",
+          "description": "Strojnické tabulky, které nikdo nepoužívá",
+          "code": "ESSENTIALS_012",
+          "weight": 5
+        }
+      ]
+    }
+  },
+  {
+    "name": "Zástupci ředitele",
+    "code": "CABINET_002",
+    "description": "Kabinet zástupců ředitele. Je rozdělen do dvou bloků, které se setkávají v relativně malé chodbičce. Každý zástupce ředitele, tam totiž má svoji místnost. Působí to tu skoro až neuklizeně, ale já budu věřit tomu, že je to ten typ přehledného nepořádku.",
+    "enemyNPC": {
+      "name": "RNDr. Luboš Rašek",
+      "position": "Učitel",
+      "age": "65 let",
+      "question": "Jak vypadá vzoreček pro výpočet síly?",
+      "possibleAnswers": [
+        "F=m*a",
+        "ma",
+        "m*a",
+        "F-ma",
+        "F-m*a"
+      ]
+    },
+    "friendlyNPC": {
+      "name": "RNDr. Luboš Rašek",
+      "position": "Učitel",
+      "age": "65 let",
+      "currentSpeech": "Dobrý den, pilná studentko, já moc nestíhám, jenom jestli bych vás takhle nemohl rychle poprosit, zda byste mi nesehnala svazky učebnic. Tedy přímo matematiky, strojnických tabulek, chemie a fyziky. Vy jste taková pracovitá, rozhodně to pro vás nebude problém.",
+      "anotherSpeech": "Děkuji moc, mám teď toho hodně. Musím ještě vyplnit spoustu papírů pro pojišťovnu poté, co studentku Vránovou srazila tramvaj. Je mi jí moc líto. Víte, pustili její třídu dříve ze školy, a tak se celý incident stal ještě v době výuky. Je to pak naše chyba, že jsme dali na tento incident dopustit.",
+      "task": {
+        "name": "Chybějící svazky učebnic",
+        "description" : "Pan učitel Rašek má prý spoustu práce a nestihl posbírat svazky učebnic po třídách. Pověřil mě tedy, abych mu je všechny přinesla. Snad je unesu.",
+        "namesOfNeededObjects": [
+          "Svazek učebnic chemie",
+          "Svazek učebnic fyziky",
+          "Svazek učebnic matematiky",
+          "Svazek strojnických tabulek"
+        ],
+        "codesOfNeededObjects": [
+          "ESSENTIALS_018",
+          "ESSENTIALS_020",
+          "ESSENTIALS_010",
+          "ESSENTIALS_012"
+        ],
+        "memoryPrice": {
+          "name": "Byla jsem to já",
+          "description": "Uf, celá se klepu. Přímo do očí mi řekl, že jsem to byla já. Ale jako by mě už ani nepoznal. Vůbec si nevšiml, že to říká té Amy Vránové, té Amy, která byla sražena. Jsem to já, já jsem byla sražena tramvají. Teď ty řeči o pozornosti dávají smysl. Musím se odsud dostat, musím ven!",
+          "opened": false,
+          "locationGift": null,
+          "code": "HALLWAY_004"
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Plakát o Ječné",
+        "description": "Plakát zobrazující historii školy SPŠE Ječná",
+        "code": "BANNERS_003",
+        "weight": 5
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Ředitelna",
+    "code": "CABINET_003",
+    "description": "Kabinet pana ředitele a pana učitele Ing. Jana Švába. Hned po příchodu se nachází mála chodbička vedoucí do dvou místností. V jedné sídlí pan učitel Ing. Jan Šváb a ve druhé pan ředitel. Párkrát jsem tu stála, ale upřímně, moc se tu od zástupců ředitele neliší.",
+    "enemyNPC": {
+      "name": "Ing. Ondřej Mandík",
+      "position": "Ředitel",
+      "age": "38 let",
+      "question": "Rok, kdy byla založena SPŠE Ječná?",
+      "possibleAnswers": [
+        "1949"
+      ]
+    },
+    "friendlyNPC": {
+      "name": "Ing. Ondřej Mandík",
+      "position": "Ředitel",
+      "age": "38 let",
+      "currentSpeech": "Dobrý den, já se teď nemůžu nijak zdržovat. Připravuji totiž prezentaci naší školy žákům devátých tříd. Pokud byste byla hodná, hodila by se mi vaše pomoc. Potřebuji sehnat plakáty o C# a Pythonu, také potřebuji sehnat USB s prezentací, seznam programů a papíry. Čisté bílé prázdné papíry jsou ideál. Děkuji moc.",
+      "anotherSpeech": "Víte, je toho teď na školu nějak moc. Studenti jako vy jsou nám bohatstvím. Situace se slečnou Amy Vránovou školou otřásla, od té doby nezůstalo nic, tak jak bylo. Věříme, že se z toho slečna ještě vyléčí, ale doktoři už psali, že šance jsou mizivé. Buďte opatrná.",
+      "task": {
+        "name": "Příprava prezentace školy",
+        "description" : "Pan ředitel mě pověřil, abych mu přinesla potřebné věci k přípravě prezentace školy. Jestli se chci dozvědět víc, musím úkol splnit.",
+        "namesOfNeededObjects": [
+          "Seznam programů",
+          "USB s prezentacemi",
+          "Banner o C#",
+          "Banner o Pythonu",
+          "Papíry"
+        ],
+        "codesOfNeededObjects": [
+          "ESSENTIALS_005",
+          "ESSENTIALS_022",
+          "BANNERS_001",
+          "BANNERS_002",
+          "ESSENTIALS_013"
+        ],
+        "memoryPrice": {
+          "name": "Za chvíli tu nebudu",
+          "description": "Teď mi bylo řečeno, že prý žiji. Doktoři ale říkají, že mám malou šanci na přežití. Nechci ani vidět, jak vypadám, vždyť už mě tady ani nepoznávají. Někde tam v tom reálném světě jsou moji rodiče, kteří se musí dívat na tuhle hrůzu a já se s nimi nemohu ani rozloučit. Měla jsem být pozornější... Už to chápu. Je pozdě.",
+          "opened": false,
+          "locationGift": null,
+          "code": "HALLWAY_005"
+        }
+      }
+    },
+    "items": [
+    ],
+    "safe": null
+  },
+  {
+    "name": "Vjezd",
+    "code": "HALLWAY_006",
+    "description": "Jedná se o velký vjezd do školy. Ráno tudy mohou kantoři přijíždět autem a studenti tudy prochází do školy. Příjezdová cesta je tvořena zvláštními malými špalky. Během zimních časů je zde poměrně velká zima. Je to takový symbol Ječné.",
+    "enemyNPC": {
+      "name": "Duše Amy",
+      "position": "Amy sama",
+      "age": "17 let",
+      "question": "Kdy se Amy narodila",
+      "possibleAnswers": [
+        "21.01.2009",
+        "21. ledna 2009",
+        "dvacátéhoprvního ledna 2009",
+        "dvacátého prvního ledna dvatisíce devět"
+      ]
+    },
+    "friendlyNPC": {
+      "name": "Duše Amy",
+      "position": "Amy sama",
+      "age": "17 let",
+      "currentSpeech": "Kam si myslíš, že jako jdeš, Amy! Je to jenom tvoje chyba! Kdyby ses netáhla za tím Tomášem a dávala třeba větší pozor, nemusely jsme tady takhle obě stát! Ani nevíš, jak moc se zlobím. Celý život tě lidi učí dávat si na sebe pozor a ty se prostě nerozhlédneš? To nemyslíš snad vážně... Poslední, co chci, abys udělala je mě vysvobodit. Potřebuji k tomu jedno kvítí narcisu. Narcis totiž symbolizuje nový začátek, jako když se krajina začne probouzet z věčné zimy. Pokud mi ten narcis přineseš, bude mi líp.",
+      "anotherSpeech": "Mezitím, co má duše pomalu mizí, já stojím u vjezdu do školy. Pomalu se vše kolem mě mění na nemocniční lůžko. Ležím zde já, bez dechu, bez života. Běhá kolem mě pár doktorů, kteří neví, že už není cesty zpět. Tělo, které ještě včera bylo zdravé, teď ztrácí teplo. Obličej, který se denně usmíval, teď drží jeden výraz. Kůže, která byla známkou zdraví, teď šedne. Už tam nejsem já, není tam nic. A co rodina? Upřímně je mi jich víc líto, než je mi líto sebe samotné. Oni teď musí žít v té neuvěřitelné bolesti ztráty někoho blízkého. V té bolesti, ze které nelze odejít. Sama jsem ji nezažila, ale stala jsem se příčinou jedné z nich.  \nTohle jsem byla já, Amy Vránová. \nProsím dávejte na sebe pozor. Ne všechno je samozřejmost.",
+      "task": {
+        "name": "Narcis pro duši",
+        "description" : "Moje duše mě sama požádala o poslední pomoc. Mrzí mě, že to končí takhle. Jestli chci dát alespoň něco do pořádku, pak musím najít žlutý narcis a vysvobodit svojí duši.",
+        "namesOfNeededObjects": [
+          "Žlutý narcis"
+        ],
+        "codesOfNeededObjects": [
+          "ESSENTIALS_011"
+        ],
+        "memoryPrice": {
+          "name": "Konec",
+          "description": "Konec",
+          "opened": false,
+          "locationGift": null,
+          "code": "Konec"
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Papíry pro pojišťovnu",
+        "description": "Oficiální dokumenty o pojistné události",
+        "code": "PAPERS_006",
+        "weight": 1
       }
     ],
     "safe": null
