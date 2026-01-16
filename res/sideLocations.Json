@@ -1,0 +1,248 @@
+[
+  {
+    "name": "Učebna 29a",
+    "code": "SIDECLASS_001",
+    "description": "Učebna určená k výuce anglického jazyka. Lavice jsou seskládány do půl oválu, tak že někteří žáci sedí naproti sobě. Učebna je vybavena projektorem a televizí. Nachází se v podkroví budovy školy, a tak strop lemují dřevěné trámy. Nejlepší je tady klimatizace, miluji to.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+      {
+        "name": "RAM info",
+        "description": "RAM je zkratkou pro Ryba-access memory",
+        "code": "PAPERS_007",
+        "weight": 0.2
+      },
+      {
+        "name": "USB s Excelem",
+        "description": "Malá fleška pana učitele Adámka",
+        "code": "ESSENTIALS_014",
+        "weight": 0.5
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Učebna 20",
+    "code": "SIDECLASS_002",
+    "description": "Učebna sloužící převážně k přehrávání filmů. Je vybavena velkou televizí a pohodlným posezením. Na zemi je poležený koberec. Třída se nachází v podkroví, a tak strop lemují dřevěné trámy. Pokud tu máme mít hodinu, vím, že to bude pohoda.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+      {
+        "name": "Měl bys CHroCHtat",
+        "description": "Jakýsi papírek se zvláštním významem",
+        "code": "PAPERS_008",
+        "weight": 0.2
+      },
+      {
+        "name": "Sešit webových aplikací",
+        "description": "Data webových aplikací se ukládají v databázi",
+        "code": "NOTES_002",
+        "weight": 2
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Toalety3",
+    "code": "TOILET_001",
+    "description": " Pánské toalety ve třetím patře. Nejedná se o úplně vábné místo. Kluci asi naschvál rádi znečišťují zem svým jablkovým džusem. Alespoň mýdlo na umytí rukou tu páni mají, mohlo jim být hůř.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+      {
+        "name": "Myš",
+        "description": "Školní počítačová myš",
+        "code": "ESSENTIALS_015",
+        "weight": 1
+      }
+    ],
+    "safe": {
+      "code" : 2,
+      "startPointer" : 99,
+      "currentPointer" : 99,
+      "items" : [
+        {
+          "name": "Šroubovák",
+          "description": "Klasický křížový šroubovák",
+          "code": "ESSENTIALS_016",
+          "weight": 1
+        },
+        {
+          "name": "Výbojka",
+          "description": "Slouží k projekci obrazu z dataprojektoru",
+          "code": "ESSENTIALS_017",
+          "weight": 2
+        }
+      ]
+    }
+  },
+  {
+    "name": "Kancelář",
+    "code": "SPECIALS_001",
+    "description": "Velmi malá místnost s okénkem do místnosti větší. Vzhled není moc vábný až takový komunistický. Na levé straně se nachází starý stůl osazený podél zdi s velice nepříjemně vypadajícími židlemi. Na přední zdi se nachází velké přepážkové okno. Do místnosti za oknem lze projít dveřmi rovnou z malé místnosti. Nic moc.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+      {
+        "name": "Svazek učebnic chemie",
+        "description": "Velký svazek učebnic chemie",
+        "code": "ESSENTIALS_018",
+        "weight": 5
+      },
+      {
+        "name": "Svazek učebnic přírodovědy",
+        "description": "Moderní učebnice přírodovědy",
+        "code": "ESSENTIALS_019",
+        "weight": 5
+      }
+    ],
+    "safe": {
+      "code" : 1,
+      "startPointer" : 9,
+      "currentPointer" : 9,
+      "items" : [
+        {
+          "name": "ABS filament",
+          "description": "Tondův ABS filament do jeho milované 3D tiskárny",
+          "code": "FILAMENTS_003",
+          "weight": 5
+        },
+        {
+          "name": "TPU filament",
+          "description": "Tondův TPU filament do jeho milované 3D tiskárny",
+          "code": "FILAMENTS_004",
+          "weight": 5
+        }
+      ]
+    }
+  },
+  {
+    "name": "Učebna 8",
+    "code": "SIDECLASS_003",
+    "description": "Učebna sloužící k výuce fyziky. Je vybavena velmi starým nábytkem. Masivní dřevěné lavice, které působí těžce, ale jsou strašně lehké, a židle, které se brzo pod někým propadnou, zdobí tuto třídu a svým starým šarmem a nahání studentům strach. Nevím, proč má tento starý vzhled takový odpudivý dojem.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+      {
+        "name": "Sešit technické dokumentace",
+        "description": "Nesmíme protínat kótovací čáru",
+        "code": "NOTES_003",
+        "weight": 2
+      },
+      {
+        "name": "Sešit informační technologie",
+        "description": "BufferedWriter a BufferedReader poznámky",
+        "code": "NOTES_004",
+        "weight": 2
+      },
+      {
+        "name": "Druhý Newtonův zákon",
+        "description": "Výpočet síly: F=m*a",
+        "code": "PAPERS_009",
+        "weight": 0.2
+      },
+      {
+        "name": "Svazek učebnic fyziky",
+        "description": "Těžký svazek učebnic fyziky",
+        "code": "ESSENTIALS_020",
+        "weight": 5
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Aula",
+    "code": "SPECIALS_002 ",
+    "description": "Dříve to byl kostel, nyní je to jídelna. Obrovský prostor, v nímž se ozvěna ozývá i po třech sekundách. Na zdech jsou křesťanské malby dnes připomínající starý účel této místnosti. Úplně vepředu se nachází stupínek se schůdky. Na stupínku je piano a nad pianem se nachází dataprojektor. Je to tu, jak bych řekla, masivní. Nejstylovější jídelna na Praze 2, nebudu lhát.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+      {
+        "name": "Bageta",
+        "description": "Neodolatelná bageta z Milošova bufetu",
+        "code": "ESSENTIALS_021",
+        "weight": 2
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Sborovna",
+    "code": "SIDECABINET_001 ",
+    "description": "Velká místnost sloužící jako sborovna, ale zároveň i kabinet. Žáci a učitelé sem nosí třídnice. Po místnosti jsou rozsázeny stolní počítače a vzadu místnosti se nachází malý whiteboard. Já třídnici nenosím, tak jsem tu tolikrát nebyla.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+      {
+        "name": "USB s prezentacemi",
+        "description": "Nenápadné USB s prezentacemi",
+        "code": "ESSENTIALS_022",
+        "weight": 0.5
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Dílna D2",
+    "code": "SIDEWORKROOM_001 ",
+    "description": "Nejvybavenější učebna školy určená k výuce robotiky. Robotická ramena v takovém zvláštním akváriu, jsou osazena uprostřed třídy a ke každému z nich je píchnut i počítač. Místnost působí profesionálně, ale mně je naprosto k ničemu. Ajťák se sem totiž nikdy nepodívá.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+      {
+        "name": "Šroubovák",
+        "description": "Klasický křížový šroubovák",
+        "code": "ESSENTIALS_016",
+        "weight": 1
+      }
+    ],
+    "safe": null
+  },
+  {
+    "name": "Sekretariát",
+    "code": "SPECIALS_003 ",
+    "description": "Malá útulná místnost určená pro sekretářky školy. Na zemi je koberec. Místnost působí zabydleně, hlavně kvůli svému přehlednému nepořádku. Jedna se sekretářek si sem vodí i svého psa. Celkem cute místnost.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+      {
+        "name": "HDMI kabel",
+        "description": "Klasický HDMI kabel, nic speciálního",
+        "code": "ESSENTIALS_003",
+        "weight": 3
+      }
+    ],
+    "safe": {
+      "code" : 2,
+      "startPointer" : 16,
+      "currentPointer" : 16,
+      "items" : [
+        {
+          "name": "Výkaz o studentech",
+          "description": "Seznam studentů s daty narození",
+          "code": "ESSENTIALS_023",
+          "weight": 2
+        }
+      ]
+    }
+  },
+  {
+    "name": "Kumbál",
+    "code": "SPECIALS_004 ",
+    "description": "Zvláštní malá místnost obsahující pomůcky k výuce fyziky. Nachází se v ní poměrně velký nepořádek. Vždycky jsem to tu chtěla celé projít, ale moje hlava si nevymyslí, jak to tu doopravdy vypadá.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+      {
+        "name": "Licenční klíč VariCAD",
+        "description": "Licenční klíč k programu VariCAD",
+        "code": "ESSENTIALS_023",
+        "weight": 0.1
+      }
+    ],
+    "safe": null
+  }
+
+
+]
