@@ -59,8 +59,13 @@ public class Task {
 
     @Override
     public String toString() {
-        //TODO toString metoda chybi
-        return null;
+        return "Task{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", namesOfNeededObjects=" + namesOfNeededObjects +
+                ", codesOfNeededObjects=" + codesOfNeededObjects +
+                ", memoryPrice=" + memoryPrice +
+                '}';
     }
 
     public String getName() {

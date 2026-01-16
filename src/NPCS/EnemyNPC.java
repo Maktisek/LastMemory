@@ -35,8 +35,13 @@ public class EnemyNPC extends NPC{
 
     @Override
     public String toString() {
-        //TODO toString metoda chybi
-        return null;
+        return "EnemyNPC{" +
+                "question='" + question + '\'' +
+                ", possibleAnswers=" + possibleAnswers +
+                ", age='" + age + '\'' +
+                ", position='" + position + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 
     public String getQuestion() {

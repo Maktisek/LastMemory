@@ -1,7 +1,4 @@
-import Items.Task;
 import Locations.Location;
-import com.fasterxml.jackson.core.exc.StreamReadException;
-import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -9,7 +6,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -21,14 +17,14 @@ public class Main {
         mapper.enable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         try {
             InputStream input = new FileInputStream("res\\test.json");
-            Locations.Location location = mapper.readValue(input, Location.class);
-            locations.add(location);
+            Location[] location = new Location[]{mapper.readValue(input, Location.class)};
+            locations.addAll(List.of(location));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-        System.out.println(locations.get(0));
-
+       for (Location location: locations){
+           System.out.println(location.toString());
+       }
 
     }
 }

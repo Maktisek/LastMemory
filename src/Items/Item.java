@@ -21,8 +21,12 @@ public class Item {
 
     @Override
     public String toString() {
-        //TODO toString metoda chybi
-        return null;
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", code='" + code + '\'' +
+                ", weight=" + weight +
+                '}';
     }
 
     public String getName() {

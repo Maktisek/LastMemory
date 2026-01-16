@@ -28,8 +28,14 @@ public class FriendlyNPC extends NPC{
 
     @Override
     public String toString() {
-        //TODO toString metoda chybi
-        return null;
+        return "FriendlyNPC{" +
+                "currentSpeech='" + currentSpeech + '\'' +
+                ", anotherSpeech='" + anotherSpeech + '\'' +
+                ", task=" + task +
+                ", age='" + age + '\'' +
+                ", position='" + position + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 
     public String getCurrentSpeech() {
