@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Učebna 15",
+    "code": "CLASS_001",
+    "description": "Kmenová učebna třídy C2a, kde třídním učitelem je sám Ing. Jan Šváb. Jedná se o typ učebny se stupínkem. Tato učebna je specifická svojí velikostí, jelikož je celkem malá. Mám ji ráda, protože je taková, no, roztomilá. ",
+    "enemyNPC": {
+      "name": "Ing. Jan Šváb",
+      "position": "Učitel",
+      "age": "50 let",
+      "question": "Co znamená zkratka RAM?",
+      "possibleAnswers": [
+        "Random-access memory",
+        "Random access memory",
+        "Ryba-access memory",
+        "Ryba access memory"
+      ]
+    },
+    "friendlyNPC": {
+      "name": "Ing. Jan Šváb",
+      "position": "Učitel",
+      "age": "50 let",
+      "currentSpeech": "Hele, to víte, že se vám ve třídě rozbil dataprojektor? Budu ho muset opravit, ale potřebuji k tomu šroubovák a novou výbojku. Myslíš, že byste mi je mohla přinést?",
+      "anotherSpeech": "Díky moc, ty dataprojektory většinou vydrží dlouho, ale tenhle tu nebyl ani dva roky. Jinak ředitel už schválil vaše samostudium na příští týden, říkám vám to, abyste tam už nemusela chodit. Užijte si to.",
+      "task": {
+        "name": "Nefunkční dataprojektor",
+        "description" : "Šváb opravuje dataprojektor v učebně 15, musím mu donést potřebné nářadí.",
+        "namesOfNeededObjects" : [" Šroubovák","Výbojka"],
+        "codesOfNeededObjects" : [" ESSENTIALS_016","ESSENTIALS_017"]
+      }
+    }
+  },
+  {
+  }
+]

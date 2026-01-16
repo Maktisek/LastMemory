@@ -4,6 +4,7 @@ import AroundPlayer.Memory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Task {
 
@@ -13,12 +14,14 @@ public class Task {
     private ArrayList<String> codesOfNeededObjects;
     private Memory memoryPrice;
 
-    public Task(String name, String description, Memory memoryPrice) {
+    public Task(String name, String description, String[] namesOfNeededObjects, String[] codesOfNeededObjects, Memory memoryPrice) {
         this.name = name;
         this.memoryPrice = memoryPrice;
         this.codesOfNeededObjects = new ArrayList<>();
         this.namesOfNeededObjects = new ArrayList<>();
         this.description = description;
+        this.namesOfNeededObjects.addAll(List.of(namesOfNeededObjects));
+        this.codesOfNeededObjects.addAll(List.of(codesOfNeededObjects));
     }
 
     public boolean addNameOfNeededObject(){

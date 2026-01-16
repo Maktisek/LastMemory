@@ -6,6 +6,7 @@ import NPCS.EnemyNPC;
 import NPCS.FriendlyNPC;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Location {
 
@@ -24,6 +25,17 @@ public class Location {
         this.description = description;
         this.items = new ArrayList<>();
         this.possibleLocations = new ArrayList<>();
+    }
+    public Location(String name, String code, String description, EnemyNPC enemyNPC, FriendlyNPC friendlyNPC, Item[] items, Safe safe) {
+        this.name = name;
+        this.code = code;
+        this.description = description;
+        this.items = new ArrayList<>();
+        this.possibleLocations = new ArrayList<>();
+        this.enemyNPC = enemyNPC;
+        this.friendlyNPC = friendlyNPC;
+        this.items.addAll(List.of(items));
+        this.safe = safe;
     }
 
     public boolean addEnemyNPC(EnemyNPC NPC){

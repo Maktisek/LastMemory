@@ -1,16 +1,18 @@
 package NPCS;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class EnemyNPC extends NPC{
 
     private String question;
-    private ArrayList<String> PossibleAnswers;
+    private ArrayList<String> possibleAnswers;
 
-    public EnemyNPC(String name, String position, String age, String question) {
+    public EnemyNPC(String name, String position, String age, String question, String[] possibleAnswers) {
         super(name, position, age);
         this.question = question;
-        this.PossibleAnswers = new ArrayList<>();
+        this.possibleAnswers = new ArrayList<>();
+        this.possibleAnswers.addAll(List.of(possibleAnswers));
     }
 
     public boolean addPossibleAnswer(String answer){
