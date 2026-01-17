@@ -15,12 +15,6 @@ public class EnemyNPC extends NPC{
     public EnemyNPC() {
     }
 
-    public EnemyNPC(String name, String position, String age, String question, String[] possibleAnswers) {
-        super(name, position, age);
-        this.question = question;
-        this.possibleAnswers = new ArrayList<>();
-        this.possibleAnswers.addAll(List.of(possibleAnswers));
-    }
 
     public boolean addPossibleAnswer(String answer){
         //TODO addPossibleAnswer metoda chybi
@@ -35,13 +29,10 @@ public class EnemyNPC extends NPC{
 
     @Override
     public String toString() {
-        return "EnemyNPC{" +
-                "question='" + question + '\'' +
-                ", possibleAnswers=" + possibleAnswers +
-                ", age='" + age + '\'' +
-                ", position='" + position + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+        return "------------------Protivník------------------" + "\n" +
+                "Oh ne " + this.name + " mi stojí v cestě! \nMusím odpovědět na otázku, abych mohla pokračovat dále." + "\n" +
+                "Otázka: " + this.question + "\n" +
+                "Hra: " + "Lokace se otevře až zodpovíš na otázku (command unknown)";
     }
 
     public String getQuestion() {

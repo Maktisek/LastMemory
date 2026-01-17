@@ -61,12 +61,15 @@ public class Main {
         Initialization init = new Initialization();
         Player player = init.getPlayer();
         System.out.println(player.toString());
-        player.switchMode(new BackpackMode());
+        player.getCurrentLocation().setEnemyNPC(null);
         System.out.println(player.toString());
-        player.getInventory().addItem(new Item("Test", "Description", "CODE_001", 2));
-        player.getInventory().addItem(new Item("Test2", "Description", "CODE_002", 2));
-        player.addMemory(new Memory("Testovaci", "Popisek", null, "BRUH_002"));
-        System.out.println(player.toString());
+
+//        player.switchMode(new BackpackMode());
+//        System.out.println(player.toString());
+//        player.getInventory().addItem(new Item("Test", "Description", "CODE_001", 2));
+//        player.getInventory().addItem(new Item("Test2", "Description", "CODE_002", 2));
+//        player.addMemory(new Memory("Testovaci", "Popisek", null, "BRUH_002"));
+//        System.out.println(player.toString());
 
 
 

@@ -5,7 +5,11 @@ import AroundPlayer.Player;
 public class LocationMode implements Mode{
     @Override
     public String executeInfo(Player player) {
-        return player.getCurrentLocation().toString();
+        if(player.getCurrentLocation().getEnemyNPC() == null) {
+            return player.getCurrentLocation().toString();
+        }else {
+            return player.getCurrentLocation().getEnemyNPC().toString();
+        }
     }
 
     @Override

@@ -93,7 +93,8 @@ public class Initialization {
     }
 
     public void loadPlayer(){
-        this.player = new Player(locations.get(11));
+        //11 je startovní lokace
+        this.player = new Player(locations.get(15));
     }
 
     public Player getPlayer() {

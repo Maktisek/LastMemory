@@ -90,7 +90,7 @@ public class Location {
         if (names.isEmpty()) {
             return "Místnost je prázdná";
         } else {
-            return String.join(",", names);
+            return String.join(", ", names);
         }
     }
 
