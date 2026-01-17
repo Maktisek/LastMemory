@@ -1,6 +1,10 @@
+import AroundPlayer.Memory;
 import AroundPlayer.Player;
 import Game.Initialization;
+import Items.Item;
+import Items.Task;
 import Locations.Location;
+import Modes.BackpackMode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -56,8 +60,23 @@ public class Main {
     public static void testLoader3(){
         Initialization init = new Initialization();
         Player player = init.getPlayer();
-        System.out.println(player.getCurrentLocation());
+        System.out.println(player.toString());
+        player.switchMode(new BackpackMode());
+        System.out.println(player.toString());
+        player.getInventory().addItem(new Item("Test", "Description", "CODE_001", 2));
+        player.getInventory().addItem(new Item("Test2", "Description", "CODE_002", 2));
+        player.addMemory(new Memory("Testovaci", "Popisek", null, "BRUH_002"));
+        System.out.println(player.toString());
 
 
+
+    }
+
+    public static void testWait(){
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

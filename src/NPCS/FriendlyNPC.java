@@ -26,18 +26,6 @@ public class FriendlyNPC extends NPC{
         //TODO switchSpeeches metoda chybi
     }
 
-    @Override
-    public String toString() {
-        return "FriendlyNPC{" +
-                "currentSpeech='" + currentSpeech + '\'' +
-                ", anotherSpeech='" + anotherSpeech + '\'' +
-                ", task=" + task +
-                ", age='" + age + '\'' +
-                ", position='" + position + '\'' +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
     public String getCurrentSpeech() {
         return currentSpeech;
     }

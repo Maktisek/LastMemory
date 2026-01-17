@@ -31,9 +31,7 @@ public class Player {
     }
 
     public boolean addMemory(Memory memory){
-        //TODO addMemory metoda chybi
-        //Prida vzpominku
-        return true;
+        return collectedMemories.add(memory);
     }
 
     public void sortMemories(){
@@ -48,9 +46,7 @@ public class Player {
     }
 
     public boolean addDoneTask(Task task){
-        //TODO addDoneTask metoda chybi
-        //Prida hotovy ukol
-        return true;
+        return doneTasks.add(task);
     }
 
     public String writeTask(String name){
@@ -97,16 +93,35 @@ public class Player {
     }
 
     public boolean switchMode(Mode mode){
-        //TODO switchMode metoda chybi
-        //Zmeni mode
+        this.mode = mode;
         return true;
+    }
+
+    public String writeMemories(){
+        ArrayList<String> names = new ArrayList<>();
+        for (Memory memory: collectedMemories){
+            names.add(memory.getName());
+        }
+        if(names.isEmpty()){
+            return "Doposud nebyly posbírané žádné vzpomínky";
+        }
+        return String.join(",",names);
+    }
+
+    public String writeDoneTasks(){
+        ArrayList<String> names = new ArrayList<>();
+        for (Task task: doneTasks){
+            names.add(task.getName());
+        }
+        if(names.isEmpty()){
+            return "Doposud nebyly splněny žádné úkoly";
+        }
+        return String.join(",",names);
     }
 
     @Override
     public String toString() {
-        //TODO toString metoda chybi
-        //Bude pouzivat mode
-        return null;
+        return mode.executeInfo(this);
     }
 
     public Inventory getInventory() {
@@ -165,7 +180,7 @@ public class Player {
         this.doneTasks = doneTasks;
     }
 
-    private static class Inventory{
+    public static class Inventory{
         private final double capacity;
         private double weight;
         private HashMap<String, ArrayList<Item>> items;
@@ -176,16 +191,55 @@ public class Player {
             this.items = new HashMap<>();
         }
 
+        public boolean checkAddCapacity(Item item){
+            double temp = weight + item.getWeight();
+            if(temp > capacity){
+                return false;
+            }else {
+                this.weight = temp;
+                return true;
+            }
+        }
+
         public boolean addItem(Item item){
-            //TODO addItem metoda chybi
-            //Prida item
-            return false;
+            if (checkAddCapacity(item)) {
+                if(items.containsKey(item.getCode())){
+                    return items.get(item.getCode()).add(item);
+                }else {
+                    ArrayList<Item> temp = new ArrayList<>();
+                    temp.add(item);
+                    items.put(item.getCode(), temp);
+                    return true;
+                }
+            }else {
+                return false;
+            }
         }
 
         public Item dropItem(String name){
             //TODO dropItem metoda chybi
             //Najde a odevzda Item
             return null;
+        }
+
+        public String writeItems(){
+            ArrayList<String> names = new ArrayList<>(10);
+            for (String key : items.keySet()){
+                ArrayList<Item> temp = items.get(key);
+                names.add(temp.size() + "x " +temp.get(0).getName());
+            }
+            if (names.isEmpty()){
+                return "Batoh je prázdný";
+            }
+            return String.join(", ", names);
+        }
+
+        public double getCapacity() {
+            return capacity;
+        }
+
+        public double getWeight() {
+            return weight;
         }
     }
 }

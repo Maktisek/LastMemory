@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Čtvrté patro",
+    "code": "HALLWAY_001",
+    "description": "Nejedná se o klasickou chodbu, protože se nachází v podkroví budovy školy. Po straně trčí trámy označené výstražnou izolepou. Už si tady tolik lidí nabilo hlavu, asi budu další.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+    ],
+    "safe": null
+  },
+  {
+    "name": "Třetí patro",
+    "code": "HALLWAY_002",
+    "description": "Jedná se o klasickou chodbu. Možná tak zajímavé jsou plakáty na stěnách.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+    ],
+    "safe": null
+  },
+  {
+    "name": "Druhé patro",
+    "code": "HALLWAY_003",
+    "description": "Jedná se o klasickou chodbu.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+    ],
+    "safe": null
+  },
+  {
+    "name": "První patro patro",
+    "code": "HALLWAY_004",
+    "description": "Jedná se o klasickou chodbu.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+    ],
+    "safe": null
+  },
+  {
+    "name": "Přízemí",
+    "code": "HALLWAY_005",
+    "description": "Jedná se o přízemí školy. Nachází se zde skříňky pro studenty, vjezd do školy, dílny a tělocvična.",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+    ],
+    "safe": null
+  }
+]

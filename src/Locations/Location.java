@@ -23,86 +23,109 @@ public class Location {
     }
 
 
-    public boolean addEnemyNPC(EnemyNPC NPC){
+    public boolean addEnemyNPC(EnemyNPC NPC) {
         //TODO addEnemyNPC metoda chybi
         return true;
     }
 
-    public boolean addFriendlyNPC(FriendlyNPC NPC){
+    public boolean addFriendlyNPC(FriendlyNPC NPC) {
         //TODO addFriendlyNPC metoda chybi
         return true;
     }
 
-    public boolean addItem(Item item){
+    public boolean addItem(Item item) {
         //TODO addItem metoda chybi
         return true;
     }
 
-    public Item findAndRemoveItem(String name){
+    public Item findAndRemoveItem(String name) {
         //TODO findAndRemoveItem metoda chybi
         //Najde a odevzda Item
         return null;
     }
 
-    public boolean addSafe(Safe addSafe){
+    public boolean addSafe(Safe addSafe) {
         //TODO addSafe metoda chybi
         return true;
     }
 
-    public boolean tryOpenSafe(String code){
+    public boolean tryOpenSafe(String code) {
         //TODO tryCodeSafe metoda chybi
         return true;
     }
 
-    public ArrayList<String> extractSafe(){
+    public ArrayList<String> extractSafe() {
         //TODO addItems metoda chybi
         //Prida vsechny itemy ze safu do listu itemu
         return null;
     }
 
-    public boolean addPossibleLocation(Location location){
+    public boolean addPossibleLocation(Location location) {
         return possibleLocations.add(location);
     }
 
-    public Location findLocation(String name){
+    public Location findLocation(String name) {
         //TODO findLocation metoda chybi
         //Projde vsechny mozne lokace a najde shodu jmen
         return null;
     }
 
-    public boolean isPossible(){
+    public boolean isPossible() {
         //TODO isPossible metoda chybi
         //Vrati zda muzeme v lokaci operovat
         return true;
     }
 
-    public boolean answerNPC(String answer){
+    public boolean answerNPC(String answer) {
         //TODO answerNPC metoda chybi
         //Odpovi na otazku NPC
         return true;
     }
 
-    public String writeItemsNames(){
+    public String writeItemsNames() {
         ArrayList<String> names = new ArrayList<>();
-        for (Item item: items){
+        for (Item item : items) {
             names.add(item.getName());
+        }
+        if (names.isEmpty()) {
+            return "Místnost je prázdná";
+        } else {
+            return String.join(",", names);
+        }
+    }
+
+    public String writeAllPossibleLocations() {
+        ArrayList<String> names = new ArrayList<>(25);
+        for (Location location : possibleLocations) {
+            names.add(location.getName());
         }
         return String.join(",", names);
     }
 
-    public String writeAllPossibleLocations(){
-        ArrayList<String> names = new ArrayList<>(25);
-        for (Location location: possibleLocations){
-            names.add(location.getName());
+    public String writeFriendlyNPCName() {
+        if (friendlyNPC != null) {
+            return this.friendlyNPC.getName();
+        } else {
+            return "Nikdo se zde nenachází";
         }
-        return String.join(",",names);
+    }
+
+    public String writeSafe() {
+        if (safe != null) {
+            return "Přítomný";
+        } else {
+            return "Nepřítomný";
+        }
     }
 
 
     @Override
     public String toString() {
-        return "--------------Aktuální lokace-------------- \n"+
-        "Jméno: " + this.name + "\n" +
+        return "------------------" + this.name + "------------------ \n" +
+                "Postava: " + writeFriendlyNPCName() + "\n" +
+                "Předměty: " + writeItemsNames() + "\n" +
+                "Safe: " + writeSafe() + "\n" +
+                "Další možné místnosti: " + writeAllPossibleLocations();
 
     }
 
