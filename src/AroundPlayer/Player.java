@@ -109,6 +109,62 @@ public class Player {
         return null;
     }
 
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+
+    public Mode getMode() {
+        return mode;
+    }
+
+    public void setMode(Mode mode) {
+        this.mode = mode;
+    }
+
+    public Location getPreviousLocation() {
+        return previousLocation;
+    }
+
+    public void setPreviousLocation(Location previousLocation) {
+        this.previousLocation = previousLocation;
+    }
+
+    public Location getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(Location currentLocation) {
+        this.currentLocation = currentLocation;
+    }
+
+    public Task getCurrentTask() {
+        return currentTask;
+    }
+
+    public void setCurrentTask(Task currentTask) {
+        this.currentTask = currentTask;
+    }
+
+    public ArrayList<Memory> getCollectedMemories() {
+        return collectedMemories;
+    }
+
+    public void setCollectedMemories(ArrayList<Memory> collectedMemories) {
+        this.collectedMemories = collectedMemories;
+    }
+
+    public ArrayList<Task> getDoneTasks() {
+        return doneTasks;
+    }
+
+    public void setDoneTasks(ArrayList<Task> doneTasks) {
+        this.doneTasks = doneTasks;
+    }
+
     private static class Inventory{
         private final double capacity;
         private double weight;

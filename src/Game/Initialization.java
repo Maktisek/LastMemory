@@ -89,12 +89,11 @@ public class Initialization {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        loadPlayer();
     }
 
-
-
     public void loadPlayer(){
-        //TODO loadPlayerAndConnectOthers metoda chybi
+        this.player = new Player(locations.get(11));
     }
 
     public Player getPlayer() {

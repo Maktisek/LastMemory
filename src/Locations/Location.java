@@ -101,16 +101,9 @@ public class Location {
 
     @Override
     public String toString() {
-        return "Location{" +
-                "name='" + name + '\'' +
-                ", code='" + code + '\'' +
-                ", description='" + description + '\'' +
-                ", enemyNPC=" + enemyNPC +
-                ", friendlyNPC=" + friendlyNPC +
-                ", items=" + items +
-                ", safe=" + safe +
-                ", possibleLocations=" + possibleLocations +
-                '}';
+        return "--------------Aktuální lokace-------------- \n"+
+        "Jméno: " + this.name + "\n" +
+
     }
 
     public String getName() {

@@ -11,21 +11,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Initialization init = new Initialization();
-        ArrayList<Location> locations = init.getLocations();
-        int i = 0;
-        for (Location location: locations){
-            System.out.println(i+". "+location.writeAllPossibleLocations());
-            i++;
-        }
-        Player player = init.getPlayer();
+        testLoader3();
 
-        int ii = 0;
-        for (Location location: locations) {
-            if (location.getFriendlyNPC() != null && location.getFriendlyNPC().getTask().getMemoryPrice().getLocationGift() != null) {
-                System.out.println(location.getFriendlyNPC().getTask().getMemoryPrice().getLocationGift().writeAllPossibleLocations());
-            }
-        }
+
     }
     public static void testLoader1(){
         ObjectMapper mapper = new ObjectMapper();
@@ -46,5 +34,30 @@ public class Main {
         for (Location location: locations){
             System.out.println(location.toString());
         }
+    }
+
+    public static void testLoader2(){
+        Initialization init = new Initialization();
+        ArrayList<Location> locations = init.getLocations();
+        int i = 0;
+        for (Location location: locations){
+            System.out.println(i+". "+location.getName());
+            i++;
+        }
+
+        int ii = 0;
+        for (Location location: locations) {
+            if (location.getFriendlyNPC() != null && location.getFriendlyNPC().getTask().getMemoryPrice().getLocationGift() != null) {
+                System.out.println(location.getFriendlyNPC().getTask().getMemoryPrice().getLocationGift().writeAllPossibleLocations());
+            }
+        }
+    }
+
+    public static void testLoader3(){
+        Initialization init = new Initialization();
+        Player player = init.getPlayer();
+        System.out.println(player.getCurrentLocation());
+
+
     }
 }
