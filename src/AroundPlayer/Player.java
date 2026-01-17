@@ -85,26 +85,20 @@ public class Player {
        else return false;
     }
 
-    public String scanAndAddPossibleLocations(){
+    public String scanAndAddPossibleLocations() {
         ArrayList<String> names = new ArrayList<>();
-        for(Memory memory: collectedMemories){
-            if(memory.getLocationGift() != null && memory.getCode().equalsIgnoreCase(currentLocation.getCode())){
+        for (Memory memory : collectedMemories) {
+            if (memory.getLocationGift() != null && memory.getCode().equalsIgnoreCase(currentLocation.getCode())) {
                 currentLocation.addPossibleLocation(memory.getLocationGift());
                 memory.getLocationGift().addPossibleLocation(currentLocation);
                 names.add(memory.getLocationGift().getName());
                 memory.setLocationGift(null);
             }
-            if(names.isEmpty()){
-                return null;
+            if (!names.isEmpty()) {
+                return "Nové odemklé lokace: " + String.join(", ", names);
             }
-            return "Nové odemklé lokace: "+ String.join(", ", names);
         }
-
-
-        //TODO scanAndAddPossibleLocation metoda chybi
-        //Ten arraylist je tady, proto aby se hracovi pak mohlo vypsat jake lokace se pridaly.
-        //Prida nove lokace do lokace podle vzpominek
-        return null;
+            return null;
     }
 
     public boolean canEnd(){
@@ -126,7 +120,7 @@ public class Player {
         if(names.isEmpty()){
             return "Doposud nebyly posbírané žádné vzpomínky";
         }
-        return String.join(",",names);
+        return String.join(", ",names);
     }
 
     public String writeDoneTasks(){
@@ -137,7 +131,7 @@ public class Player {
         if(names.isEmpty()){
             return "Doposud nebyly splněny žádné úkoly";
         }
-        return String.join(",",names);
+        return String.join(", ",names);
     }
 
     @Override
@@ -222,6 +216,16 @@ public class Player {
             }
         }
 
+        public boolean checkDropCapacity(Item item){
+            double temp = weight - item.getWeight();
+            if(temp < 0){
+                return false;
+            }else {
+                this.weight = temp;
+            }
+            return true;
+        }
+
         public boolean addItem(Item item){
             if (checkAddCapacity(item)) {
                 if(items.containsKey(item.getCode())){
@@ -237,17 +241,26 @@ public class Player {
             }
         }
 
-        public Item dropItem(String name){
-            //TODO dropItem metoda chybi
-            //Najde a odevzda Item
-            return null;
-        }
+        public Item dropItem(String name) {
+                for (String key : items.keySet()) {
+                    if (items.containsKey(key) && !items.get(key).isEmpty() && items.get(key).get(0).getName().equalsIgnoreCase(name)) {
+                        Item result = items.get(key).get(0);
+                        if (checkDropCapacity(result)) {
+                            items.get(key).remove(0);
+                            return result;
+                        }
+                    }
+                }
+                return null;
+            }
 
         public String writeItems(){
             ArrayList<String> names = new ArrayList<>(10);
-            for (String key : items.keySet()){
+            for (String key : items.keySet()) {
                 ArrayList<Item> temp = items.get(key);
-                names.add(temp.size() + "x " +temp.get(0).getName());
+                if (!temp.isEmpty()) {
+                    names.add(temp.size() + "x " + temp.get(0).getName());
+                }
             }
             if (names.isEmpty()){
                 return "Batoh je prázdný";

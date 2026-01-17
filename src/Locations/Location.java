@@ -34,8 +34,7 @@ public class Location {
     }
 
     public boolean addItem(Item item) {
-        //TODO addItem metoda chybi
-        return true;
+        return items.add(item);
     }
 
     public Item findAndRemoveItem(String name) {
