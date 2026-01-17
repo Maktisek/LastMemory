@@ -85,7 +85,22 @@ public class Player {
        else return false;
     }
 
-    public ArrayList<Location> scanAndAddPossibleLocations(){
+    public String scanAndAddPossibleLocations(){
+        ArrayList<String> names = new ArrayList<>();
+        for(Memory memory: collectedMemories){
+            if(memory.getLocationGift() != null && memory.getCode().equalsIgnoreCase(currentLocation.getCode())){
+                currentLocation.addPossibleLocation(memory.getLocationGift());
+                memory.getLocationGift().addPossibleLocation(currentLocation);
+                names.add(memory.getLocationGift().getName());
+                memory.setLocationGift(null);
+            }
+            if(names.isEmpty()){
+                return null;
+            }
+            return "Nové odemklé lokace: "+ String.join(", ", names);
+        }
+
+
         //TODO scanAndAddPossibleLocation metoda chybi
         //Ten arraylist je tady, proto aby se hracovi pak mohlo vypsat jake lokace se pridaly.
         //Prida nove lokace do lokace podle vzpominek

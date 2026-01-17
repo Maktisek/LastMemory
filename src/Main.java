@@ -1,3 +1,4 @@
+import AroundPlayer.Memory;
 import AroundPlayer.Player;
 import Game.Initialization;
 import Locations.Location;
@@ -11,7 +12,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        testLocationMovement1();
+        testLoader3();
 
 
     }
@@ -56,13 +57,21 @@ public class Main {
     public static void testLoader3(){
         Initialization init = new Initialization();
         Player player = init.getPlayer();
+        player.addMemory(new Memory("Test", "Test", init.getLocations().get(6), "HALLWAY_002"));
         System.out.println(player.toString());
         player.getCurrentLocation().setEnemyNPC(null);
         System.out.println(player.toString());
+        testWait();
         player.switchLocation(player.getCurrentLocation().findLocation("třetí patro"));
+        System.out.println(player.scanAndAddPossibleLocations());
+        testWait();
         System.out.println(player.toString());
         player.runAway();
         System.out.println(player.toString());
+        player.switchLocation(player.getCurrentLocation().findLocation("třetí patro"));
+        System.out.println(player.scanAndAddPossibleLocations());
+
+
 
 //        player.switchMode(new BackpackMode());
 //        System.out.println(player.toString());
@@ -87,7 +96,7 @@ public class Main {
 
     public static void testWait(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

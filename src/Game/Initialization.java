@@ -70,11 +70,11 @@ public class Initialization {
     }
 
     public void loadBasicLocationConnection(){
-        int a = 0;
-        for (Location location: locations){
-            System.out.println(a+". "+location);
-            a++;
-        }
+//        int a = 0;
+//        for (Location location: locations){
+//            System.out.println(a+". "+location);
+//            a++;
+//        }
         try (BufferedReader br = new BufferedReader(new FileReader("res\\basicLocationConnections.csv"))){
             br.readLine();
             String line;
