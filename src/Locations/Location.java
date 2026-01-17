@@ -7,6 +7,7 @@ import NPCS.FriendlyNPC;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Location {
 
@@ -21,7 +22,6 @@ public class Location {
 
     public Location() {
     }
-
 
     public boolean addEnemyNPC(EnemyNPC NPC) {
         //TODO addEnemyNPC metoda chybi
@@ -65,8 +65,11 @@ public class Location {
     }
 
     public Location findLocation(String name) {
-        //TODO findLocation metoda chybi
-        //Projde vsechny mozne lokace a najde shodu jmen
+        for (Location location: possibleLocations){
+            if (location.getName().equalsIgnoreCase(name)) {
+                return location;
+            }
+        }
         return null;
     }
 
@@ -116,6 +119,12 @@ public class Location {
         } else {
             return "Nepřítomný";
         }
+    }
+
+    public String testNames(){
+        //TODO tahle metoda je jen pro test
+        Random random = new Random();
+        return possibleLocations.get(random.nextInt(0, possibleLocations.size())).getName();
     }
 
 

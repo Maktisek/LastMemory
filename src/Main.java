@@ -1,10 +1,6 @@
-import AroundPlayer.Memory;
 import AroundPlayer.Player;
 import Game.Initialization;
-import Items.Item;
-import Items.Task;
 import Locations.Location;
-import Modes.BackpackMode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,7 +11,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        testLoader3();
+        testLocationMovement1();
 
 
     }
@@ -63,6 +59,10 @@ public class Main {
         System.out.println(player.toString());
         player.getCurrentLocation().setEnemyNPC(null);
         System.out.println(player.toString());
+        player.switchLocation(player.getCurrentLocation().findLocation("třetí patro"));
+        System.out.println(player.toString());
+        player.runAway();
+        System.out.println(player.toString());
 
 //        player.switchMode(new BackpackMode());
 //        System.out.println(player.toString());
@@ -73,6 +73,16 @@ public class Main {
 
 
 
+    }
+
+    public static void testLocationMovement1(){
+        Initialization init = new Initialization();
+        Player player = init.getPlayer();
+        for (int i = 0; i < 100; i++) {
+            player.switchLocation(player.getCurrentLocation().findLocation(player.getCurrentLocation().testNames()));
+            System.out.println(player.toString());
+            testWait();
+        }
     }
 
     public static void testWait(){

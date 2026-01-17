@@ -68,15 +68,21 @@ public class Player {
     }
 
     public boolean switchLocation(Location location){
-        //TODO switchLocation metoda chybi
-        //Zmeni lokaci a nastavi na previousLocation currentLocation.
+        if(location != null){
+            previousLocation = currentLocation;
+            currentLocation = location;
+            return true;
+        }
         return false;
     }
 
     public boolean runAway(){
-        //TODO runAway metoda chybi
-        //Nastavi na currentLocation previousLocation, ale na previous location nastavi null
-        return true;
+       if(previousLocation != null){
+           currentLocation = previousLocation;
+           previousLocation = null;
+           return true;
+       }
+       else return false;
     }
 
     public ArrayList<Location> scanAndAddPossibleLocations(){
