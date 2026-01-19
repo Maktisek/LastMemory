@@ -10,7 +10,7 @@ public class Important {
 
     public static String colourMap(String colour) {
         HashMap<String, String> colourMap = loadColourMap("res\\colours.csv");
-        return colourMap.get(colour);
+        return colourMap.get(colour.toLowerCase());
     }
 
     private static HashMap<String, String> loadColourMap(String pathName) {

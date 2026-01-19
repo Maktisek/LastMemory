@@ -10,5 +10,6 @@
         <module name="LastMemory" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="23" />
   </component>
 </project>

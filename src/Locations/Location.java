@@ -1,5 +1,6 @@
 package Locations;
 
+import Game.Important;
 import Items.Item;
 import Items.Safe;
 import NPCS.EnemyNPC;
@@ -90,7 +91,7 @@ public class Location {
             names.add(item.getName());
         }
         if (names.isEmpty()) {
-            return "Místnost je prázdná";
+            return Important.colourMap("red")+"Místnost je prázdná"+Important.colourMap("default");
         } else {
             return String.join(", ", names);
         }
@@ -106,17 +107,17 @@ public class Location {
 
     public String writeFriendlyNPCName() {
         if (friendlyNPC != null) {
-            return this.friendlyNPC.getName();
+            return Important.colourMap("green")+this.friendlyNPC.getName()+Important.colourMap("default");
         } else {
-            return "Nikdo se zde nenachází";
+            return Important.colourMap("red") +"Nikdo se zde nenachází" + Important.colourMap("default");
         }
     }
 
     public String writeSafe() {
         if (safe != null) {
-            return "Přítomný";
+            return Important.colourMap("green")+"Přítomný"+Important.colourMap("default");
         } else {
-            return "Nepřítomný";
+            return Important.colourMap("red")+"Nepřítomný"+Important.colourMap("default");
         }
     }
 
