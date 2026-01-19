@@ -364,7 +364,7 @@
       "anotherSpeech": "Jak pěkné, to je přesně on. Děkuji moc. Jinak všimla jste si toho, co se děje před školou? Teď tam přijela záchranka a policie. Sjel se tam snad celý sbor. Snad se nestalo nic vážného. Buďte opatrná.",
       "task": {
         "name": "Uložení studentů",
-        "description" : "Pan učitel Adámek potřebuje uložit jména studentů a jejich známky. Požádal mě, jestli bych mu s tím pomohla. Nepustí mě sice k práci, ale musím mu sehnat vybavení.",
+        "description": "Pan učitel Adámek potřebuje uložit jména studentů a jejich známky. Požádal mě, jestli bych mu s tím pomohla. Nepustí mě sice k práci, ale musím mu sehnat vybavení.",
         "namesOfNeededObjects": [
           "Notebook pana Adámka",
           "USB s Excelem",
@@ -423,7 +423,7 @@
       "anotherSpeech": "Ty jo, Amy, vy jste hodná. Teď vám můžu připravit takové fajn a hezké cvičení na Moodle, mrk mrk. Teda jestli se tam ještě stihnete ukázat. Nee, vtipkuji samozřejmě. Taky, slyšela jste o té tragédii před školou? Někoho prý něco srazilo, víc nevím, ale je to hrozné, dávejte na sebe pozor, jo?",
       "task": {
         "name": "Příprava na hodinu",
-        "description" : "Paní učitelka Meitnerová potřebuje pomoct s přípravou na příští hodinu. Pověřila mě, abych jí tedy pomohla sehnat vše, co potřebuje. Taky mě poprosila, jestli jí neskočím pro třídnici C2a, prý tam včera zapomněla zapsat.",
+        "description": "Paní učitelka Meitnerová potřebuje pomoct s přípravou na příští hodinu. Pověřila mě, abych jí tedy pomohla sehnat vše, co potřebuje. Taky mě poprosila, jestli jí neskočím pro třídnici C2a, prý tam včera zapomněla zapsat.",
         "namesOfNeededObjects": [
           "Notebook paní Meitnerové",
           "USB s kódem",
@@ -458,10 +458,10 @@
       }
     ],
     "safe": {
-      "code" : 4,
-      "startPointer" : 20,
-      "currentPointer" : 20,
-      "items" : [
+      "code": 4,
+      "startPointer": 20,
+      "currentPointer": 20,
+      "items": [
         {
           "name": "Svazek strojnických tabulek",
           "description": "Strojnické tabulky, které nikdo nepoužívá",
@@ -496,7 +496,7 @@
       "anotherSpeech": "Děkuji moc, mám teď toho hodně. Musím ještě vyplnit spoustu papírů pro pojišťovnu poté, co studentku Vránovou srazila tramvaj. Je mi jí moc líto. Víte, pustili její třídu dříve ze školy, a tak se celý incident stal ještě v době výuky. Je to pak naše chyba, že jsme dali na tento incident dopustit.",
       "task": {
         "name": "Chybějící svazky učebnic",
-        "description" : "Pan učitel Rašek má prý spoustu práce a nestihl posbírat svazky učebnic po třídách. Pověřil mě tedy, abych mu je všechny přinesla. Snad je unesu.",
+        "description": "Pan učitel Rašek má prý spoustu práce a nestihl posbírat svazky učebnic po třídách. Pověřil mě tedy, abych mu je všechny přinesla. Snad je unesu.",
         "namesOfNeededObjects": [
           "Svazek učebnic chemie",
           "Svazek učebnic fyziky",
@@ -549,7 +549,7 @@
       "anotherSpeech": "Víte, je toho teď na školu nějak moc. Studenti jako vy jsou nám bohatstvím. Situace se slečnou Amy Vránovou školou otřásla, od té doby nezůstalo nic, tak jak bylo. Věříme, že se z toho slečna ještě vyléčí, ale doktoři už psali, že šance jsou mizivé. Buďte opatrná.",
       "task": {
         "name": "Příprava prezentace školy",
-        "description" : "Pan ředitel mě pověřil, abych mu přinesla potřebné věci k přípravě prezentace školy. Jestli se chci dozvědět víc, musím úkol splnit.",
+        "description": "Pan ředitel mě pověřil, abych mu přinesla potřebné věci k přípravě prezentace školy. Jestli se chci dozvědět víc, musím úkol splnit.",
         "namesOfNeededObjects": [
           "Seznam programů",
           "USB s prezentacemi",
@@ -601,7 +601,7 @@
       "anotherSpeech": "Mezitím, co má duše pomalu mizí, já stojím u vjezdu do školy. Pomalu se vše kolem mě mění na nemocniční lůžko. Ležím zde já, bez dechu, bez života. Běhá kolem mě pár doktorů, kteří neví, že už není cesty zpět. Tělo, které ještě včera bylo zdravé, teď ztrácí teplo. Obličej, který se denně usmíval, teď drží jeden výraz. Kůže, která byla známkou zdraví, teď šedne. Už tam nejsem já, není tam nic. A co rodina? Upřímně je mi jich víc líto, než je mi líto sebe samotné. Oni teď musí žít v té neuvěřitelné bolesti ztráty někoho blízkého. V té bolesti, ze které nelze odejít. Sama jsem ji nezažila, ale stala jsem se příčinou jedné z nich.  \nTohle jsem byla já, Amy Vránová. \nProsím dávejte na sebe pozor. Ne všechno je samozřejmost.",
       "task": {
         "name": "Narcis pro duši",
-        "description" : "Moje duše mě sama požádala o poslední pomoc. Mrzí mě, že to končí takhle. Jestli chci dát alespoň něco do pořádku, pak musím najít žlutý narcis a vysvobodit svojí duši.",
+        "description": "Moje duše mě sama požádala o poslední pomoc. Mrzí mě, že to končí takhle. Jestli chci dát alespoň něco do pořádku, pak musím najít žlutý narcis a vysvobodit svojí duši.",
         "namesOfNeededObjects": [
           "Žlutý narcis"
         ],
