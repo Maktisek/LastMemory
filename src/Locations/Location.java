@@ -91,7 +91,7 @@ public class Location {
             names.add(item.getName());
         }
         if (names.isEmpty()) {
-            return Important.colourMap("red")+"Místnost je prázdná"+Important.colourMap("default");
+            return Important.changeColourText("red", "Místnost je prázdná");
         } else {
             return String.join(", ", names);
         }
@@ -107,17 +107,17 @@ public class Location {
 
     public String writeFriendlyNPCName() {
         if (friendlyNPC != null) {
-            return Important.colourMap("green")+this.friendlyNPC.getName()+Important.colourMap("default");
+            return Important.changeColourText("green", this.friendlyNPC.getName());
         } else {
-            return Important.colourMap("red") +"Nikdo se zde nenachází" + Important.colourMap("default");
+            return Important.changeColourText("red", "Nikdo se zde nenachází");
         }
     }
 
     public String writeSafe() {
         if (safe != null) {
-            return Important.colourMap("green")+"Přítomný"+Important.colourMap("default");
+            return Important.changeColourText("green","Přítomný");
         } else {
-            return Important.colourMap("red")+"Nepřítomný"+Important.colourMap("default");
+            return Important.changeColourText("red", "Nepřítomný");
         }
     }
 

@@ -7,6 +7,9 @@ import java.util.HashMap;
 
 public class Important {
 
+    public static String changeColourText(String colour, String text){
+        return colourMap(colour) + text + colourMap("default");
+    }
 
     public static String colourMap(String colour) {
         HashMap<String, String> colourMap = loadColourMap("res\\colours.csv");
@@ -26,5 +29,8 @@ public class Important {
             throw new RuntimeException(e);
         }
     }
+
+
+
 }
 
