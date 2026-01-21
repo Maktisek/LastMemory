@@ -1,5 +1,7 @@
 import AroundPlayer.Memory;
 import AroundPlayer.Player;
+import Commands.Command;
+import Commands.MoveCommand;
 import Game.Initialization;
 import Items.Item;
 import Locations.Location;
@@ -10,12 +12,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
 
-
+    testMoveCommand();
 
 
     }
@@ -110,6 +114,20 @@ public class Main {
     }
 
     public static void testMoveCommand(){
+        Initialization init = new Initialization();
+        Player player = init.getPlayer();
+
+        HashMap<String, Supplier<Command>> commands = new HashMap<>();
+        commands.put("jdi", ()->{
+            String lokace = "Třetí patro";
+            return new MoveCommand(player,lokace);
+        });
+
+        System.out.println(commands.get("jdi").get().execute());
+
+        System.out.println(player.toString());
+
+
 
     }
 }
