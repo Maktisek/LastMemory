@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 public class ReadLocationDescriptionCommand implements Command{
 
@@ -12,11 +13,16 @@ public class ReadLocationDescriptionCommand implements Command{
 
     @Override
     public String execute() {
-        return player.getCurrentLocation().getDescription();
+        return Important.writeLongTexts(player.getCurrentLocation().getDescription());
     }
 
     @Override
     public boolean exit() {
         return false;
+    }
+
+    @Override
+    public boolean waitAble() {
+        return true;
     }
 }

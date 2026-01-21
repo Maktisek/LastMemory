@@ -6,4 +6,6 @@ public interface Command {
 
     boolean exit();
 
+    boolean waitAble();
+
 }

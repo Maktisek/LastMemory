@@ -3,6 +3,7 @@ package Game;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Important {
@@ -28,6 +29,21 @@ public class Important {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static String writeLongTexts(String text){
+        ArrayList<String> temp = new ArrayList<>();
+        String[] data = text.split(" ");
+        StringBuilder line = new StringBuilder();
+        for (int i = 0; i < data.length; i++) {
+            line.append(data[i]).append(" ");
+            if(i % 10 == 0 && i != 0){
+                temp.add(line.toString());
+                line = new StringBuilder();
+            }
+        }
+        temp.add(line.toString());
+        return String.join("\n", temp);
     }
 
 

@@ -10,4 +10,9 @@ public class ExitCommand implements Command{
     public boolean exit() {
         return true;
     }
+
+    @Override
+    public boolean waitAble() {
+        return false;
+    }
 }

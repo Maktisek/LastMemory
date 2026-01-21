@@ -10,4 +10,9 @@ public class ShowCurrentTaskCommand implements Command{
     public boolean exit() {
         return false;
     }
+
+    @Override
+    public boolean waitAble() {
+        return true;
+    }
 }

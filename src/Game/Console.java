@@ -65,6 +65,7 @@ public class Console {
                     Command currentCommand = commands.get(command).get();
                     System.out.println(currentCommand.execute());
                     this.exit = currentCommand.exit();
+
                 } else {
                     System.out.println("Akci " + command + " nelze nyní provést");
                 }
@@ -72,5 +73,11 @@ public class Console {
                 System.out.println("Akce " + command + " neexistuje");
             }
         }
+    }
+
+    public void waitUntilInput(){
+        System.out.println("Write anything to continue");
+        System.out.print(">> ");
+        sc.nextLine();
     }
 }

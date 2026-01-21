@@ -10,4 +10,9 @@ public class InspectOldTaskCommand implements Command {
     public boolean exit() {
         return false;
     }
+
+    @Override
+    public boolean waitAble() {
+        return false;
+    }
 }
