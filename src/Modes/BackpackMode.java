@@ -14,11 +14,17 @@ public class BackpackMode implements Mode{
 
     @Override
     public String executeHelp(Player player) {
-        return null;
+        return "Pomoc bude dodělána";
     }
 
     @Override
     public String getInfo() {
         return "backpack";
     }
+
+    @Override
+    public boolean match(Mode mode) {
+        return getInfo().equalsIgnoreCase(mode.getInfo());
+    }
+
 }

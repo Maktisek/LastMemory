@@ -134,6 +134,10 @@ public class Player {
         return String.join(", ",names);
     }
 
+    public boolean isFree(){
+        return currentLocation.getEnemyNPC() == null;
+    }
+
     @Override
     public String toString() {
         return mode.executeInfo(this);

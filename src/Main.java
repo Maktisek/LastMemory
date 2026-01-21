@@ -2,6 +2,7 @@ import AroundPlayer.Memory;
 import AroundPlayer.Player;
 import Commands.Command;
 import Commands.MoveCommand;
+import Game.Console;
 import Game.Initialization;
 import Items.Item;
 import Locations.Location;
@@ -20,7 +21,7 @@ import java.util.function.Supplier;
 public class Main {
     public static void main(String[] args) {
 
-    testMoveCommand();
+        Console console = new Console();
 
 
     }

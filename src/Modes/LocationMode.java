@@ -14,11 +14,16 @@ public class LocationMode implements Mode{
 
     @Override
     public String executeHelp(Player player) {
-        return "";
+        return "Pomoc bude doděláná";
     }
 
     @Override
     public String getInfo() {
         return "location";
+    }
+
+    @Override
+    public boolean match(Mode mode) {
+        return getInfo().equalsIgnoreCase(mode.getInfo());
     }
 }

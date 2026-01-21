@@ -10,6 +10,8 @@ public interface Mode {
 
     String getInfo();
 
+    boolean match(Mode mode);
+
 
 
 }
