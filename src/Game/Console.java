@@ -12,7 +12,6 @@ import java.util.function.Supplier;
 
 public class Console {
 
-    private Initialization init;
     private Player player;
     private HashMap<String, Supplier<Command>> commands;
     private HashMap<String, Supplier<Mode>> possibleCommands;
