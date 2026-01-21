@@ -25,7 +25,7 @@
         "name": "Nefunkční dataprojektor",
         "description": "Šváb opravuje dataprojektor v učebně 15, musím mu donést potřebné nářadí.",
         "namesOfNeededObjects": [
-          " Šroubovák",
+          "Šroubovák",
           "Výbojka"
         ],
         "codesOfNeededObjects": [

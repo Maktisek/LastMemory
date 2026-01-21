@@ -41,7 +41,7 @@ public class Console {
         commands.put("utéct", () -> new RunAwayCommand(player));
         commands.put("pomoc", () -> new HelpCommand(player));
         commands.put("opustit", ExitCommand::new);
-        commands.put("popis lokace", ()-> new ReadLocationDescriptionCommand(player));
+        commands.put("popis lokace", () -> new ReadLocationDescriptionCommand(player));
     }
 
     public void loadPossibleCommands() {
