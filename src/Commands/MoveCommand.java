@@ -1,9 +1,24 @@
 package Commands;
 
+import AroundPlayer.Player;
+
 public class MoveCommand implements Command{
+
+    private Player player;
+    private String name;
+
+    public MoveCommand(Player player, String name) {
+        this.player = player;
+        this.name = name;
+    }
+
     @Override
     public String execute() {
-        return "";
+        if(player.switchLocation(player.getCurrentLocation().findLocation(this.name))){
+            return "Přesouváš se do: " + name;
+        }else {
+            return "Lokace: " + this.name + " neexistuje";
+        }
     }
 
     @Override
