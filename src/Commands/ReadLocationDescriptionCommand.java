@@ -1,9 +1,18 @@
 package Commands;
 
+import AroundPlayer.Player;
+
 public class ReadLocationDescriptionCommand implements Command{
+
+    Player player;
+
+    public ReadLocationDescriptionCommand(Player player) {
+        this.player = player;
+    }
+
     @Override
     public String execute() {
-        return "";
+        return player.getCurrentLocation().getDescription();
     }
 
     @Override

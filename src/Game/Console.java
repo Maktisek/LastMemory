@@ -42,6 +42,7 @@ public class Console {
         commands.put("utéct", () -> new RunAwayCommand(player));
         commands.put("pomoc", () -> new HelpCommand(player));
         commands.put("opustit", ExitCommand::new);
+        commands.put("popis lokace", ()-> new ReadLocationDescriptionCommand(player));
     }
 
     public void loadPossibleCommands() {
@@ -49,6 +50,7 @@ public class Console {
         possibleCommands.put("utéct", QuestionMode::new);
         possibleCommands.put("pomoc", () -> player.getMode());
         possibleCommands.put("opusit", () -> player.getMode());
+        possibleCommands.put("popis lokace", LocationMode::new);
 
     }
 
