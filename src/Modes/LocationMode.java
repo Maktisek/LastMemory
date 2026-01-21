@@ -16,4 +16,9 @@ public class LocationMode implements Mode{
     public String executeHelp(Player player) {
         return "";
     }
+
+    @Override
+    public String getInfo() {
+        return "location";
+    }
 }

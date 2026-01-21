@@ -7,6 +7,7 @@ import Items.Item;
 import Locations.Location;
 import Modes.BackpackMode;
 import Modes.LocationMode;
+import Modes.Mode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -118,12 +119,19 @@ public class Main {
         Player player = init.getPlayer();
 
         HashMap<String, Supplier<Command>> commands = new HashMap<>();
+        HashMap<String, Mode> modes = new HashMap<>();
+        modes.put("jdi", new LocationMode());
         commands.put("jdi", ()->{
             String lokace = "Třetí patro";
             return new MoveCommand(player,lokace);
         });
 
-        System.out.println(commands.get("jdi").get().execute());
+        String key = "jdi";
+        if(commands.containsKey(key) && modes.get(key).getInfo().equalsIgnoreCase(player.getMode().getInfo())){
+            System.out.println(commands.get(key).get().execute());
+        }else {
+            System.out.println("Tenhle command není možný");
+        }
 
         System.out.println(player.toString());
 

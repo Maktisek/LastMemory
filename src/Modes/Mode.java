@@ -8,6 +8,8 @@ public interface Mode {
 
     String executeHelp(Player player);
 
+    String getInfo();
+
 
 
 }

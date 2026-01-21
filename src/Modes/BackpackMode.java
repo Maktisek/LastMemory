@@ -16,4 +16,9 @@ public class BackpackMode implements Mode{
     public String executeHelp(Player player) {
         return null;
     }
+
+    @Override
+    public String getInfo() {
+        return "backpack";
+    }
 }
