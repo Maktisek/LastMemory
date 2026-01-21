@@ -127,6 +127,9 @@ public class Location {
         return possibleLocations.get(random.nextInt(0, possibleLocations.size())).getName();
     }
 
+    public boolean isFree(){
+        return enemyNPC == null;
+    }
 
     @Override
     public String toString() {

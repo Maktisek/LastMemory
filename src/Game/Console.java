@@ -4,6 +4,7 @@ import AroundPlayer.Player;
 import Commands.*;
 import Modes.LocationMode;
 import Modes.Mode;
+import Modes.QuestionMode;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -44,18 +45,8 @@ public class Console {
     }
 
     public void loadPossibleCommands() {
-        possibleCommands.put("jdi", () -> {
-            if (player.isFree()) {
-                return new LocationMode();
-            }
-            return null;
-        });
-        possibleCommands.put("utéct", () -> {
-            if (!player.isFree()) {
-                return new LocationMode();
-            }
-            return null;
-        });
+        possibleCommands.put("jdi", LocationMode::new);
+        possibleCommands.put("utéct", QuestionMode::new);
         possibleCommands.put("pomoc", () -> player.getMode());
         possibleCommands.put("opusit", () -> player.getMode());
 
@@ -75,7 +66,7 @@ public class Console {
                 } else {
                     System.out.println("Akci " + command + " nelze nyní provést");
                 }
-            }else {
+            } else {
                 System.out.println("Akce " + command + " neexistuje");
             }
         }

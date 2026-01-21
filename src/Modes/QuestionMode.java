@@ -2,22 +2,22 @@ package Modes;
 
 import AroundPlayer.Player;
 
-public class LocationMode implements Mode {
+public class QuestionMode implements Mode{
 
     @Override
     public String executeInfo(Player player) {
-        return player.getCurrentLocation().toString();
+        return player.getCurrentLocation().getEnemyNPC().toString();
     }
 
     @Override
     public String executeHelp(Player player) {
         //TODO dodělat pomoc
-        return "Pomoc bude doděláná";
+        return "Pomoc bude dodělána";
     }
 
     @Override
     public String getInfo() {
-        return "location";
+        return "question";
     }
 
     @Override

@@ -14,6 +14,7 @@ public class BackpackMode implements Mode{
 
     @Override
     public String executeHelp(Player player) {
+        //TODO dodělat pomoc
         return "Pomoc bude dodělána";
     }
 
