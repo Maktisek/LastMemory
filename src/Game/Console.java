@@ -6,14 +6,13 @@ import Modes.LocationMode;
 import Modes.Mode;
 import Modes.QuestionMode;
 
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 import java.util.function.Supplier;
 
 public class Console {
 
     private Player player;
-    private HashMap<String, Supplier<Command>> commands;
+    private HashMap<String, Supplier<ArrayList<Command>>> commands;
     private HashMap<String, Supplier<Mode>> possibleCommands;
     private Scanner sc;
     private boolean exit;
@@ -36,12 +35,12 @@ public class Console {
             System.out.println("Další možné lokace: " + player.getCurrentLocation().writeAllPossibleLocations());
             System.out.print("Vlož vstup: ");
             String name = sc.nextLine();
-            return new MoveCommand(this.player, name);
+            return new ArrayList<>(List.of(new MoveCommand(this.player, name)));
         });
-        commands.put("utéct", () -> new RunAwayCommand(player));
-        commands.put("pomoc", () -> new HelpCommand(player));
-        commands.put("opustit", ExitCommand::new);
-        commands.put("popis lokace", () -> new ReadLocationDescriptionCommand(player));
+        commands.put("utéct", () -> new ArrayList<>(List.of(new RunAwayCommand(player))));
+        commands.put("pomoc", () -> new ArrayList<>(List.of(new HelpCommand(player))));
+        commands.put("opustit", ()-> new ArrayList<>(List.of(new ExitCommand())));
+        commands.put("popis lokace", () -> new ArrayList<>(List.of(new ReadLocationDescriptionCommand(player))));
     }
 
     public void loadPossibleCommands() {
@@ -61,10 +60,12 @@ public class Console {
             if (commands.containsKey(command)) {
                 Mode foundMode = possibleCommands.get(command).get();
                 if (foundMode != null && player.getMode().match(foundMode)) {
-                    Command currentCommand = commands.get(command).get();
-                    System.out.println(currentCommand.execute());
-                    this.exit = currentCommand.exit();
-                    waitUntilInput(currentCommand);
+                    ArrayList<Command> listOfCommands = commands.get(command).get();
+                    for (Command currentCommand : listOfCommands){
+                        System.out.println(currentCommand.execute());
+                        this.exit = currentCommand.exit();
+                        waitUntilInput(currentCommand);
+                    }
                 } else {
                     System.out.println("Akci " + command + " nelze nyní provést");
                 }
