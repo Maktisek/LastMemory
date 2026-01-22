@@ -41,6 +41,12 @@ public class Console {
         commands.put("pomoc", () -> new ArrayList<>(List.of(new HelpCommand(player))));
         commands.put("opustit", ()-> new ArrayList<>(List.of(new ExitCommand())));
         commands.put("popis lokace", () -> new ArrayList<>(List.of(new ReadLocationDescriptionCommand(player))));
+        commands.put("mod", ()->{
+            SwitchModeCommand command = new SwitchModeCommand();
+            System.out.println(command.writeNamesOfModes());
+            System.out.print("Napiš jméno módu: ");
+            return new ArrayList<>(List.of(new SwitchModeCommand(sc.nextLine(), player)));
+        });
     }
 
     public void loadPossibleCommands() {
@@ -49,6 +55,7 @@ public class Console {
         possibleCommands.put("pomoc", () -> player.getMode());
         possibleCommands.put("opusit", () -> player.getMode());
         possibleCommands.put("popis lokace", LocationMode::new);
+        possibleCommands.put("mod", () -> player.getMode());
 
     }
 

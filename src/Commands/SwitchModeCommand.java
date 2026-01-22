@@ -20,6 +20,11 @@ public class SwitchModeCommand implements Command{
         fillMap();
     }
 
+    public SwitchModeCommand() {
+        this.map = new HashMap<>();
+        fillMap();
+    }
+
     public void fillMap(){
         map.put("lokace", new LocationMode());
         map.put("inventář", new BackpackMode());
@@ -42,5 +47,13 @@ public class SwitchModeCommand implements Command{
     @Override
     public boolean waitAble() {
         return false;
+    }
+
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    public String writeNamesOfModes(){
+        return "Dostupné módy: "+String.join(", ", map.keySet());
     }
 }
