@@ -8,9 +8,11 @@ import AroundPlayer.Player;
 public class ScanAndAddCommand implements Command{
 
     private Player player;
+    private boolean wait;
 
     public ScanAndAddCommand(Player player) {
         this.player = player;
+        this.wait = true;
     }
 
     @Override
@@ -19,6 +21,7 @@ public class ScanAndAddCommand implements Command{
         if(result != null){
             return result;
         }
+        wait = false;
         return "Žádné nové lokace nebyly nalezeny";
     }
 
@@ -29,6 +32,6 @@ public class ScanAndAddCommand implements Command{
 
     @Override
     public boolean waitAble() {
-        return true;
+        return wait;
     }
 }

@@ -53,7 +53,7 @@ public class Console {
         possibleCommands.put("jdi", LocationMode::new);
         possibleCommands.put("utéct", QuestionMode::new);
         possibleCommands.put("pomoc", () -> player.getMode());
-        possibleCommands.put("opusit", () -> player.getMode());
+        possibleCommands.put("opustit", () -> player.getMode());
         possibleCommands.put("popis lokace", LocationMode::new);
         possibleCommands.put("mod", () -> player.getMode());
 
