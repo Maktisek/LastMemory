@@ -26,9 +26,5 @@ public class BackpackMode implements Mode{
         return "backpack";
     }
 
-    @Override
-    public boolean match(Mode mode) {
-        return getInfo().equalsIgnoreCase(mode.getInfo());
-    }
 
 }

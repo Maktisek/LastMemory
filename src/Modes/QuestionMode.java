@@ -23,8 +23,4 @@ public class QuestionMode implements Mode{
         return "question";
     }
 
-    @Override
-    public boolean match(Mode mode) {
-        return getInfo().equalsIgnoreCase(mode.getInfo());
-    }
 }

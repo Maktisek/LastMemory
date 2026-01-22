@@ -23,8 +23,4 @@ public class LocationMode implements Mode {
         return "location";
     }
 
-    @Override
-    public boolean match(Mode mode) {
-        return getInfo().equalsIgnoreCase(mode.getInfo());
-    }
 }

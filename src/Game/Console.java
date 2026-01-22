@@ -66,7 +66,7 @@ public class Console {
             String command = sc.nextLine();
             if (commands.containsKey(command)) {
                 Mode foundMode = possibleCommands.get(command).get();
-                if (foundMode != null && player.getMode().match(foundMode)) {
+                if (foundMode != null && player.getMode().getInfo().equalsIgnoreCase(foundMode.getInfo())) {
                     ArrayList<Command> listOfCommands = commands.get(command).get();
                     for (Command currentCommand : listOfCommands){
                         System.out.println(currentCommand.execute());

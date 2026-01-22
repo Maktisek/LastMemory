@@ -29,12 +29,7 @@ public interface Mode {
      */
     String getInfo();
 
-    /**
-     * This method looks if the mode match with the current mode.
-     * @param mode the mode to be matched
-     * @return true if they match, false if not
-     */
-    boolean match(Mode mode);
+
 
 
 
