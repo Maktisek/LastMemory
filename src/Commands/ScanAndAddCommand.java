@@ -2,6 +2,9 @@ package Commands;
 
 import AroundPlayer.Player;
 
+/**
+ * Command designed to scan and add all possible locations into current location.
+ */
 public class ScanAndAddCommand implements Command{
 
     private Player player;

@@ -2,6 +2,9 @@ package Commands;
 
 import AroundPlayer.Player;
 
+/**
+ * Command designed to write all possible commands based on players mode.
+ */
 public class HelpCommand implements Command{
 
     private Player player;

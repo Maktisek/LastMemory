@@ -1,5 +1,8 @@
 package Commands;
 
+/**
+ * Command designed to turn of the game
+ */
 public class ExitCommand implements Command{
     @Override
     public String execute() {

@@ -3,6 +3,9 @@ package Commands;
 import AroundPlayer.Player;
 import Game.Important;
 
+/**
+ * Command designed to write player's current location description
+ */
 public class ReadLocationDescriptionCommand implements Command{
 
     Player player;

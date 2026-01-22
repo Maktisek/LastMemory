@@ -2,6 +2,9 @@ package Commands;
 
 import AroundPlayer.Player;
 
+/**
+ * Command designed to exit locations with friendlyNPC.
+ */
 public class RunAwayCommand implements Command{
 
     private Player player;

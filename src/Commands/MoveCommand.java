@@ -2,6 +2,9 @@ package Commands;
 
 import AroundPlayer.Player;
 
+/**
+ * Command designed to change the player's currentLocation.
+ */
 public class MoveCommand implements Command{
 
     private Player player;

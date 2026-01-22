@@ -7,6 +7,9 @@ import Modes.Mode;
 
 import java.util.HashMap;
 
+/**
+ * More complex command designed to change player's mode
+ */
 public class SwitchModeCommand implements Command{
 
     private HashMap<String, Mode> map;
@@ -25,6 +28,9 @@ public class SwitchModeCommand implements Command{
         fillMap();
     }
 
+    /**
+     * Loads the map with inputs as a keys and values as a modes
+     */
     public void fillMap(){
         map.put("lokace", new LocationMode());
         map.put("inventář", new BackpackMode());
@@ -53,6 +59,10 @@ public class SwitchModeCommand implements Command{
         this.mode = mode;
     }
 
+    /**
+     * Writes all map keys
+     * @return map keys
+     */
     public String writeNamesOfModes(){
         return "Dostupné módy: "+String.join(", ", map.keySet());
     }
