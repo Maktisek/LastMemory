@@ -11,6 +11,7 @@ public class ReadLocationDescriptionCommand implements Command{
         this.player = player;
     }
 
+
     @Override
     public String execute() {
         return Important.writeLongTexts(player.getCurrentLocation().getDescription());

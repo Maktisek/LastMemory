@@ -8,15 +8,35 @@ import java.util.HashMap;
 
 public class Important {
 
+    /**
+     * Changes the colour of the input text, and then it sets the colour to "default" (white).
+     * @param colour
+     * @param text
+     * @return
+     */
     public static String changeColourText(String colour, String text){
         return colourMap(colour) + text + colourMap("default");
     }
 
+    /**
+     * It finds colour ANSI escape code in a hashMap.
+     * @param colour the colour to be found
+     * @return the ANSI escape code of the wanted colour. If no colour was found then it returns white colour.
+     */
     public static String colourMap(String colour) {
         HashMap<String, String> colourMap = loadColourMap("res\\colours.csv");
-        return colourMap.get(colour.toLowerCase());
+        if(colourMap.containsKey(colour)){
+            return colourMap.get(colour.toLowerCase());
+        }else {
+            return "\u001B[0m";
+        }
     }
 
+    /**
+     * It creates hashMap and load colours into it. The colours are loaded from a specific .csv file
+     * @param pathName the .csv file to be used
+     * @return the made hashMap
+     */
     private static HashMap<String, String> loadColourMap(String pathName) {
         try (BufferedReader br = new BufferedReader(new FileReader(pathName))) {
             HashMap<String, String> temp = new HashMap<>();
@@ -31,6 +51,12 @@ public class Important {
         }
     }
 
+    /**
+     * Helps to write longer texts. Every 10 words are seperated into individual lines which are added into an array list and then
+     * the method uses static method String.join to return the lines.
+     * @param text the text to be written
+     * @return the text seperated into individual lines
+     */
     public static String writeLongTexts(String text){
         ArrayList<String> temp = new ArrayList<>();
         String[] data = text.split(" ");
