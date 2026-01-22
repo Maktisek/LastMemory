@@ -68,6 +68,12 @@ public class Player {
         return false;
     }
 
+    /**
+     * Switches the current location. The current location is set to previous location before changing.
+     * If the new current location has an enemyNPC, then the mode is switched into question mode.
+     * @param location The location to be changed
+     * @return true if the operation went successful, false if not (happens only if the param location is null)
+     */
     public boolean switchLocation(Location location) {
         if (location != null) {
             previousLocation = currentLocation;
@@ -80,6 +86,10 @@ public class Player {
         return false;
     }
 
+    /**
+     * Switches current location with previous location if it's possible. Then it sets the previous location to null.
+     * @return true if the operation went successful, false if not (happens only if the previous location is null)
+     */
     public boolean runAway() {
         if (previousLocation != null) {
             currentLocation = previousLocation;
@@ -90,6 +100,12 @@ public class Player {
         return false;
     }
 
+    /**
+     * Scans whole array list of memories in order to find new locations, which can be added into current location. It goes through
+     * collected memories and if the gift location isn't null and the code of the memory matches with the code of the location, then
+     * new location will be added into current location possible locations list.
+     * @return Names of added location names.
+     */
     public String scanAndAddPossibleLocations() {
         ArrayList<String> names = new ArrayList<>();
         for (Memory memory : collectedMemories) {

@@ -64,34 +64,34 @@ public class Main {
     }
 
     public static void testLoader3(){
-        Initialization init = new Initialization();
-        Player player = init.getPlayer();
-        player.addMemory(new Memory("Test", "Test", init.getLocations().get(7), "HALLWAY_002"));
-        System.out.println(player.toString());
-        player.getCurrentLocation().setEnemyNPC(null);
-        System.out.println(player.toString());
-        testWait();
-        player.switchLocation(player.getCurrentLocation().findLocation("třetí patro"));
-        System.out.println(player.scanAndAddPossibleLocations());
-        testWait();
-        System.out.println(player.toString());
-        player.runAway();
-        System.out.println(player.toString());
-        player.switchLocation(player.getCurrentLocation().findLocation("třetí patro"));
-        System.out.println(player.scanAndAddPossibleLocations());
+//        Initialization init = new Initialization();
+//        Player player = init.getPlayer();
+//        player.addMemory(new Memory("Test", "Test", init.getLocations().get(7), "HALLWAY_002"));
+//        System.out.println(player.toString());
+//        player.getCurrentLocation().setEnemyNPC(null);
+//        System.out.println(player.toString());
+//        testWait();
+//        player.switchLocation(player.getCurrentLocation().findLocation("třetí patro"));
+//        System.out.println(player.scanAndAddPossibleLocations());
+//        testWait();
+//        System.out.println(player.toString());
+//        player.runAway();
+//        System.out.println(player.toString());
+//        player.switchLocation(player.getCurrentLocation().findLocation("třetí patro"));
+//        System.out.println(player.scanAndAddPossibleLocations());
 
 
 
-        player.switchMode(new BackpackMode());
-        System.out.println(player.toString());
-        player.getInventory().addItem(new Item("Test", "Description", "CODE_001", 2));
-        player.getInventory().addItem(new Item("Test2", "Description", "CODE_002", 2));
-        System.out.println(player.toString());
-        player.switchMode(new LocationMode());
-        player.getCurrentLocation().addItem(player.getInventory().dropItem("test"));
-        System.out.println(player.toString());
-        player.switchMode(new BackpackMode());
-        System.out.println(player.toString());
+//        player.switchMode(new BackpackMode());
+//        System.out.println(player.toString());
+//        player.getInventory().addItem(new Item("Test", "Description", "CODE_001", 2));
+//        player.getInventory().addItem(new Item("Test2", "Description", "CODE_002", 2));
+//        System.out.println(player.toString());
+//        player.switchMode(new LocationMode());
+//        player.getCurrentLocation().addItem(player.getInventory().dropItem("test"));
+//        System.out.println(player.toString());
+//        player.switchMode(new BackpackMode());
+//        System.out.println(player.toString());
 
 
 
