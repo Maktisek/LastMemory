@@ -24,6 +24,9 @@ public class Initialization {
         loadSideLocations();
     }
 
+    /**
+     * Loads all side locations from res\sideLocations.json file and adds them into locations list
+     */
     public void loadSideLocations(){
         try (InputStream input = new FileInputStream("res\\sideLocations.json");){
             Location[] sideLocations = mapper.readValue(input, Location[].class);
@@ -34,6 +37,9 @@ public class Initialization {
         loadHallwayLocationsLocations();
     }
 
+    /**
+     * Loads all hallway locations from res\hallwayLocations.json file and adds them into locations list.
+     */
     public void loadHallwayLocationsLocations(){
         try (InputStream input = new FileInputStream("res\\hallwayLocations.json");){
             Location[] hallwayLocations = mapper.readValue(input, Location[].class);
@@ -44,6 +50,9 @@ public class Initialization {
         loadMainLocations();
     }
 
+    /**
+     * Loads all main locations from res\locations.json file and adds them into temporary locations list.
+     */
     public void loadMainLocations(){
         try (InputStream input = new FileInputStream("res\\locations.json");){
             Location[] mainLocations = mapper.readValue(input, Location[].class);
@@ -54,6 +63,11 @@ public class Initialization {
         connectMainLocations();
     }
 
+    /**
+     * Connects all main location together throughout their friendlyNPC's tasks memory prices.
+     * The cycle goes from the last location to the first location always connecting the next location with the current location.
+     * Then it adds all main locations into locations list.
+     */
     public void connectMainLocations(){
         for (int i = tempLocations.size() - 1; i > 0; i--) {
             tempLocations.get(i-1).getFriendlyNPC().getTask().getMemoryPrice().setLocationGift(tempLocations.get(i));
@@ -62,6 +76,9 @@ public class Initialization {
         setReadyPossibleLocationArrays();
     }
 
+    /**
+     * Initializes all locations possible locations array list.
+     */
     public void setReadyPossibleLocationArrays(){
         for (Location location: locations){
             location.setPossibleLocations(new ArrayList<>());
@@ -69,6 +86,9 @@ public class Initialization {
         loadBasicLocationConnection();
     }
 
+    /**
+     * Connects location via special .csv file: res\basicLocationConnections.csv
+     */
     public void loadBasicLocationConnection(){
 //        int a = 0;
 //        for (Location location: locations){
@@ -92,6 +112,9 @@ public class Initialization {
         loadPlayer();
     }
 
+    /**
+     * It initializes player and sets his current location to the start location, which is location on the index 11 in locations list.
+     */
     public void loadPlayer(){
         //11 je startovní lokace
         this.player = new Player(locations.get(11));
