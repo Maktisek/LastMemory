@@ -71,6 +71,7 @@ public class Player {
     /**
      * Switches the current location. The current location is set to previous location before changing.
      * If the new current location has an enemyNPC, then the mode is switched into question mode.
+     *
      * @param location The location to be changed
      * @return true if the operation went successful, false if not (happens only if the param location is null)
      */
@@ -88,6 +89,7 @@ public class Player {
 
     /**
      * Switches current location with previous location if it's possible. Then it sets the previous location to null.
+     *
      * @return true if the operation went successful, false if not (happens only if the previous location is null)
      */
     public boolean runAway() {
@@ -104,6 +106,7 @@ public class Player {
      * Scans whole array list of memories in order to find new locations, which can be added into current location. It goes through
      * collected memories and if the gift location isn't null and the code of the memory matches with the code of the location, then
      * new location will be added into current location possible locations list.
+     *
      * @return Names of added location names.
      */
     public String scanAndAddPossibleLocations() {
@@ -128,11 +131,25 @@ public class Player {
         return true;
     }
 
+    /**
+     * Switches player's mode.
+     *
+     * @param mode The node to be changed
+     * @return true if the action was successful, false if not
+     */
     public boolean switchMode(Mode mode) {
-        this.mode = mode;
-        return true;
+        if (mode != null) {
+            this.mode = mode;
+            return true;
+        }
+        return false;
     }
 
+    /**
+     * Writes all collected memories names.
+     *
+     * @return All the names of collected memories
+     */
     public String writeMemories() {
         ArrayList<String> names = new ArrayList<>();
         for (Memory memory : collectedMemories) {
@@ -144,6 +161,11 @@ public class Player {
         return String.join(", ", names);
     }
 
+    /**
+     * Writes all write done tasks names.
+     *
+     * @return All the names of done tasks
+     */
     public String writeDoneTasks() {
         ArrayList<String> names = new ArrayList<>();
         for (Task task : doneTasks) {
@@ -228,6 +250,12 @@ public class Player {
             this.items = new HashMap<>();
         }
 
+        /**
+         * Checks if the item could be added.
+         *
+         * @param item The item that could be added.
+         * @return false if the item could not be added, false if the item could not be added.
+         */
         public boolean checkAddCapacity(Item item) {
             double temp = weight + item.getWeight();
             if (temp > capacity) {
@@ -238,6 +266,12 @@ public class Player {
             }
         }
 
+        /**
+         * Checks if the item could be dropped.
+         *
+         * @param item The item that could be dropped.
+         * @return false if the item could not be dropped, false if the item could not be dropped.
+         */
         public boolean checkDropCapacity(Item item) {
             double temp = weight - item.getWeight();
             if (temp < 0) {
@@ -248,6 +282,13 @@ public class Player {
             return true;
         }
 
+        /**
+         * Adds item to items. It checks if there is any array list on the item code in the map.
+         * If yes then it adds the item into that array list, if not then it creates new array list on the item code in the map.
+         *
+         * @param item the item to be added.
+         * @return true if the item was successfully added, false if not (mostly because of the capacity check).
+         */
         public boolean addItem(Item item) {
             if (checkAddCapacity(item)) {
                 if (items.containsKey(item.getCode())) {
@@ -263,9 +304,16 @@ public class Player {
             }
         }
 
+        /**
+         * Drops item from the items. It iterates through the items, when there is an array list and the name matches the index 0 items name
+         * , then the item is deleted from the array list.
+         *
+         * @param name the item to be dropped.
+         * @return the dropped item.
+         */
         public Item dropItem(String name) {
             for (String key : items.keySet()) {
-                if (items.containsKey(key) && !items.get(key).isEmpty() && items.get(key).get(0).getName().equalsIgnoreCase(name)) {
+                if (!items.get(key).isEmpty() && items.get(key).get(0).getName().equalsIgnoreCase(name)) {
                     Item result = items.get(key).get(0);
                     if (checkDropCapacity(result)) {
                         items.get(key).remove(0);
@@ -276,6 +324,11 @@ public class Player {
             return null;
         }
 
+        /**
+         * Writes names and numbers of items in the items map.
+         *
+         * @return names and numbers of all items.
+         */
         public String writeItems() {
             ArrayList<String> names = new ArrayList<>(10);
             for (String key : items.keySet()) {
