@@ -2,6 +2,9 @@ package Modes;
 
 import AroundPlayer.Player;
 
+/**
+ * Mode designed to operate in the area of location
+ */
 public class LocationMode implements Mode {
 
     @Override

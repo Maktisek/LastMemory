@@ -2,6 +2,9 @@ package Modes;
 
 import AroundPlayer.Player;
 
+/**
+ * Specific mode which is used only if the player stands in location where is friendlyNPC.
+ */
 public class QuestionMode implements Mode{
 
     @Override
