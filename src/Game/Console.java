@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 public class Console {
 
     private Player player;
-    private HashMap<String, Supplier<ArrayList<Command>>> commands;
+    private HashMap<String, Supplier<List<Command>>> commands;
     private HashMap<String, Supplier<Mode>> possibleCommands;
     private Scanner sc;
     private boolean exit;
@@ -67,7 +67,7 @@ public class Console {
             if (commands.containsKey(command)) {
                 Mode foundMode = possibleCommands.get(command).get();
                 if (foundMode != null && player.getMode().getInfo().equalsIgnoreCase(foundMode.getInfo())) {
-                    ArrayList<Command> listOfCommands = commands.get(command).get();
+                    List<Command> listOfCommands = commands.get(command).get();
                     for (Command currentCommand : listOfCommands){
                         System.out.println(currentCommand.execute());
                         this.exit = currentCommand.exit();
