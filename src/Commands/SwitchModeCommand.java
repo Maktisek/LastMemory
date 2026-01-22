@@ -1,6 +1,8 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Modes.BackpackMode;
+import Modes.LocationMode;
 import Modes.Mode;
 
 import java.util.HashMap;
@@ -15,16 +17,21 @@ public class SwitchModeCommand implements Command{
         this.map = new HashMap<>();
         this.mode = mode;
         this.player = player;
+        fillMap();
     }
 
     public void fillMap(){
-        //TODO fillMap metoda chybi
-        //Naplni mapu klicovymi slovy a jejich mody
+        map.put("lokace", new LocationMode());
+        map.put("inventář", new BackpackMode());
     }
 
     @Override
     public String execute() {
-        return "";
+        if (map.containsKey(mode)) {
+            player.switchMode(map.get(mode));
+            return "Mód změněn na: " + mode;
+        }
+        return "Mód: " + mode + " neexistuje";
     }
 
     @Override
