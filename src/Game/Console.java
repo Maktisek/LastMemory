@@ -35,7 +35,7 @@ public class Console {
             System.out.println("Další možné lokace: " + player.getCurrentLocation().writeAllPossibleLocations());
             System.out.print("Vlož vstup: ");
             String name = sc.nextLine();
-            return new ArrayList<>(List.of(new MoveCommand(this.player, name)));
+            return new ArrayList<>(List.of(new MoveCommand(this.player, name), new ScanAndAddCommand(player)));
         });
         commands.put("utéct", () -> new ArrayList<>(List.of(new RunAwayCommand(player))));
         commands.put("pomoc", () -> new ArrayList<>(List.of(new HelpCommand(player))));

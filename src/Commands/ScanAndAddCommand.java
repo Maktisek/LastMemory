@@ -12,7 +12,11 @@ public class ScanAndAddCommand implements Command{
 
     @Override
     public String execute() {
-        return player.scanAndAddPossibleLocations();
+        String result = player.scanAndAddPossibleLocations();
+        if(result != null){
+            return result;
+        }
+        return "Žádné nové lokace nebyly nalezeny";
     }
 
     @Override

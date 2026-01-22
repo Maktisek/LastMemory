@@ -46,7 +46,7 @@
   {
     "name": "Toalety3",
     "code": "TOILET_001",
-    "description": " Pánské toalety ve třetím patře. Nejedná se o úplně vábné místo. Kluci asi naschvál rádi znečišťují zem svým jablkovým džusem. Alespoň mýdlo na umytí rukou tu páni mají, mohlo jim být hůř.",
+    "description": "Pánské toalety ve třetím patře. Nejedná se o úplně vábné místo. Kluci asi naschvál rádi znečišťují zem svým jablkovým džusem. Alespoň mýdlo na umytí rukou tu páni mají, mohlo jim být hůř.",
     "enemyNPC": null,
     "friendlyNPC": null,
     "items": [
