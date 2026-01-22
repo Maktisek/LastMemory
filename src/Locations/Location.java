@@ -24,16 +24,6 @@ public class Location {
     public Location() {
     }
 
-    public boolean addEnemyNPC(EnemyNPC NPC) {
-        //TODO addEnemyNPC metoda chybi
-        return true;
-    }
-
-    public boolean addFriendlyNPC(FriendlyNPC NPC) {
-        //TODO addFriendlyNPC metoda chybi
-        return true;
-    }
-
     public boolean addItem(Item item) {
         return items.add(item);
     }
@@ -44,10 +34,6 @@ public class Location {
         return null;
     }
 
-    public boolean addSafe(Safe addSafe) {
-        //TODO addSafe metoda chybi
-        return true;
-    }
 
     public boolean tryOpenSafe(String code) {
         //TODO tryCodeSafe metoda chybi
@@ -64,6 +50,11 @@ public class Location {
         return possibleLocations.add(location);
     }
 
+    /**
+     * Iterates through possible location list. Searches the right location.
+     * @param name the name of the location to be found
+     * @return null if the location was not found and the instance of Location if the location was found.
+     */
     public Location findLocation(String name) {
         for (Location location: possibleLocations){
             if (location.getName().equalsIgnoreCase(name)) {
@@ -73,18 +64,17 @@ public class Location {
         return null;
     }
 
-    public boolean isPossible() {
-        //TODO isPossible metoda chybi
-        //Vrati zda muzeme v lokaci operovat
-        return true;
-    }
-
     public boolean answerNPC(String answer) {
         //TODO answerNPC metoda chybi
         //Odpovi na otazku NPC
         return true;
     }
 
+    /**
+     * Writes all names of items in items
+     * @return names of all items if there are any.
+     * If there are no items, then it returns information about that.
+     */
     public String writeItemsNames() {
         ArrayList<String> names = new ArrayList<>();
         for (Item item : items) {
@@ -97,6 +87,10 @@ public class Location {
         }
     }
 
+    /**
+     * Writes all names of locations in possibleLocations
+     * @return names of all locations
+     */
     public String writeAllPossibleLocations() {
         ArrayList<String> names = new ArrayList<>(25);
         for (Location location : possibleLocations) {
@@ -104,6 +98,7 @@ public class Location {
         }
         return String.join(",", names);
     }
+
 
     public String writeFriendlyNPCName() {
         if (friendlyNPC != null) {
