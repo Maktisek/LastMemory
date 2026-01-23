@@ -148,7 +148,7 @@ public class Console {
 
     public void waitUntilInput(Command command) {
         if (command.waitAble()) {
-            System.out.println("Write anything to continue");
+            System.out.println("Napiš cokoli pro pokračování");
             System.out.print(">> ");
             sc.nextLine();
         }
