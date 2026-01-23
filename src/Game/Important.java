@@ -4,36 +4,40 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Important {
 
     /**
      * Changes the colour of the input text, and then it sets the colour to "default" (white).
+     *
      * @param colour
      * @param text
      * @return
      */
-    public static String changeColourText(String colour, String text){
+    public static String changeColourText(String colour, String text) {
         return colourMap(colour) + text + colourMap("default");
     }
 
     /**
      * It finds colour ANSI escape code in a hashMap.
+     *
      * @param colour the colour to be found
      * @return the ANSI escape code of the wanted colour. If no colour was found then it returns white colour.
      */
     public static String colourMap(String colour) {
         HashMap<String, String> colourMap = loadColourMap("res\\colours.csv");
-        if(colourMap.containsKey(colour)){
+        if (colourMap.containsKey(colour)) {
             return colourMap.get(colour.toLowerCase());
-        }else {
+        } else {
             return "\u001B[0m";
         }
     }
 
     /**
      * It creates hashMap and load colours into it. The colours are loaded from a specific .csv file
+     *
      * @param pathName the .csv file to be used
      * @return the made hashMap
      */
@@ -54,16 +58,17 @@ public class Important {
     /**
      * Helps to write longer texts. Every 10 words are seperated into individual lines which are added into an array list and then
      * the method uses static method String.join to return the lines.
+     *
      * @param text the text to be written
      * @return the text seperated into individual lines
      */
-    public static String writeLongTexts(String text){
+    public static String writeLongTexts(String text) {
         ArrayList<String> temp = new ArrayList<>();
         String[] data = text.split(" ");
         StringBuilder line = new StringBuilder();
         for (int i = 0; i < data.length; i++) {
             line.append(data[i]).append(" ");
-            if(i % 10 == 0 && i != 0){
+            if (i % 10 == 0 && i != 0) {
                 temp.add(line.toString());
                 line = new StringBuilder();
             }
@@ -72,7 +77,14 @@ public class Important {
         return String.join("\n", temp);
     }
 
-
+    public static String writeStringArrays(ArrayList<String> input) {
+        StringBuilder line = new StringBuilder();
+        for (int i = 0; i < input.size() - 1; i++) {
+            line.append(input.get(i)).append(", ");
+        }
+        line.append(input.get(input.size() - 1));
+        return line.toString();
+    }
 
 }
 

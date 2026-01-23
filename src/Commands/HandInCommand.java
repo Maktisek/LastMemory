@@ -13,8 +13,8 @@ public class HandInCommand implements Command{
     @Override
     public String execute() {
         if(player.getCurrentLocation().getFriendlyNPC() != null && player.getCurrentLocation().getFriendlyNPC().getTask() != null) {
-            String result = player.getCurrentLocation().getFriendlyNPC().getTask().scanAndSolveTask(player.getInventory().getItems());
-            player.setCurrentTask(player.getCurrentLocation().getFriendlyNPC().getTask());
+            String result = player.getCurrentTask().scanAndSolveTask(player);
+            player.getCurrentLocation().getFriendlyNPC().setTask(player.getCurrentTask());
             return result;
         }
         return "Nelze nyní odevzdávat předměty do úkolu";

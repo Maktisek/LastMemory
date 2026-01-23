@@ -1,6 +1,7 @@
 package Items;
 
 import AroundPlayer.Memory;
+import AroundPlayer.Player;
 import Game.Important;
 
 import java.util.ArrayList;
@@ -19,17 +20,20 @@ public class Task {
     public Task() {
     }
 
-    public String scanAndSolveTask(HashMap<String, ArrayList<Item>> input){
+    public String scanAndSolveTask(Player player){
         ArrayList<String> temp = new ArrayList<>();
-        for (String key: input.keySet()){
+        for (String key: player.getInventory().getItems().keySet()){
             if(codesOfNeededObjects.contains(key)){
-                temp.add(namesOfNeededObjects.get(codesOfNeededObjects.indexOf(key)));
-                input.get(key).remove(0);
-                codesOfNeededObjects.remove(key);
+                Item solvedItem = player.getInventory().dropItem(namesOfNeededObjects.get(codesOfNeededObjects.indexOf(key)));
+                if(solvedItem != null) {
+                    temp.add(solvedItem.getName());
+                    namesOfNeededObjects.remove(codesOfNeededObjects.indexOf(key));
+                    codesOfNeededObjects.remove(key);
+                }
             }
         }
         if(!temp.isEmpty()) {
-            return "Odevzdané předměty: " + String.join(", " + temp);
+            return "Odevzdané předměty: " + Important.writeStringArrays(temp);
         }
         return "Nelze odevzdat žádný předmět";
     }
