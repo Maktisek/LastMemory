@@ -14,27 +14,8 @@ public class Task {
     private ArrayList<String> codesOfNeededObjects;
     private Memory memoryPrice;
 
-    public Task(String name, String description, String[] namesOfNeededObjects, String[] codesOfNeededObjects, Memory memoryPrice) {
-        this.name = name;
-        this.memoryPrice = memoryPrice;
-        this.codesOfNeededObjects = new ArrayList<>();
-        this.namesOfNeededObjects = new ArrayList<>();
-        this.description = description;
-        this.namesOfNeededObjects.addAll(List.of(namesOfNeededObjects));
-        this.codesOfNeededObjects.addAll(List.of(codesOfNeededObjects));
-    }
 
     public Task() {
-    }
-
-    public boolean addNameOfNeededObject(){
-        //TODO addNameOfNeededObject metoda chybi
-        return true;
-    }
-
-    public boolean addCodeOfNeededObject(){
-        //TODO addCodeOfNeededObject metoda chybi
-        return true;
     }
 
     public ArrayList<String> scanAndSolveTask(HashMap<String, ArrayList<Item>> input){
