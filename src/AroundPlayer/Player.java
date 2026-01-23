@@ -119,7 +119,6 @@ public class Player {
         for (Memory memory : collectedMemories) {
             if (memory.getLocationGift() != null && memory.getCode().equalsIgnoreCase(currentLocation.getCode())) {
                 currentLocation.addPossibleLocation(memory.getLocationGift());
-                memory.getLocationGift().addPossibleLocation(currentLocation);
                 names.add(memory.getLocationGift().getName());
                 memory.setLocationGift(null);
             }

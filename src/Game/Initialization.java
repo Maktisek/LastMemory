@@ -90,11 +90,11 @@ public class Initialization {
      * Connects location via special .csv file: res\basicLocationConnections.csv
      */
     public void loadBasicLocationConnection(){
-//        int a = 0;
-//        for (Location location: locations){
-//            System.out.println(a+". "+location);
-//            a++;
-//        }
+        int a = 0;
+        for (Location location: locations){
+            System.out.println(a+". "+location);
+            a++;
+        }
         try (BufferedReader br = new BufferedReader(new FileReader("res\\basicLocationConnections.csv"))){
             br.readLine();
             String line;
@@ -108,6 +108,11 @@ public class Initialization {
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+        int b = 0;
+        for (Location location: locations){
+            System.out.println(b+". "+location);
+            b++;
         }
         loadPlayer();
     }
