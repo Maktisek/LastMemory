@@ -339,6 +339,11 @@ public class Player {
             return String.join(", ", names);
         }
 
+        /**
+         * Returns description of needed item.
+         * @param name the item to be found
+         * @return the description of the found item
+         */
         public String descriptionItem(String name) {
             if (weight != 0) {
                 for (String key : items.keySet()) {

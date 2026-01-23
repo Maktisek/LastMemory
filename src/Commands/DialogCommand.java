@@ -3,6 +3,9 @@ package Commands;
 import AroundPlayer.Player;
 import Game.Important;
 
+/**
+ * Command designed to write current location’s friendlyNPC current speech
+ */
 public class DialogCommand implements Command{
 
     private Player player;
