@@ -27,6 +27,7 @@ public class Location {
 
     /**
      * Adds item into items list
+     *
      * @param item the item to be added
      * @return true if the action was successful, false if not
      */
@@ -37,15 +38,14 @@ public class Location {
         return false;
     }
 
-    /**
-     * Removes an item from items list.
-     * @param name the items name to be removed
-     * @return the removed item
-     */
-    public Item findAndRemoveItem(String name) {
+
+    public boolean removeItem(Item item) {
+        return items.remove(item);
+    }
+
+    public Item hasItem(String name) {
         for (Item item : items) {
             if (item.getName().equalsIgnoreCase(name)) {
-                items.remove(item);
                 return item;
             }
         }
@@ -54,11 +54,11 @@ public class Location {
 
 
     public String tryOpenSafe(String code) {
-        if(safe.openSafe(code)){
+        if (safe.openSafe(code)) {
             ArrayList<Item> temp = safe.dropItems();
             items.addAll(temp);
             ArrayList<String> names = new ArrayList<>();
-            for (Item item : temp){
+            for (Item item : temp) {
                 names.add(item.getName());
             }
             return "V trezoru se nachází: " + Important.writeStringArrays(names);
@@ -66,7 +66,7 @@ public class Location {
         return "Kód " + code + " není správný, či srávně zapsaný";
     }
 
-    public boolean availableSafe(){
+    public boolean availableSafe() {
         return safe != null && safe.isLocked();
     }
 
@@ -92,11 +92,12 @@ public class Location {
 
     /**
      * Evaluates and enemyNPC's question. It
+     *
      * @param answer the answer to be evaluated
      * @return true if the answer was correct and false if not
      */
     public boolean answerNPC(String answer) {
-        if(enemyNPC.evaluateQuestion(answer)){
+        if (enemyNPC.evaluateQuestion(answer)) {
             this.enemyNPC = null;
             return true;
         }
@@ -148,7 +149,7 @@ public class Location {
             return Important.changeColourText("green", "Přítomný");
         }
         return Important.changeColourText("red", "Nepřítomný");
-        }
+    }
 
     public String testNames() {
         //TODO tahle metoda je jen pro test

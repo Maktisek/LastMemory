@@ -15,21 +15,20 @@ public class PickItemCommand implements Command {
 
     @Override
     public String execute() {
-        if (!player.getCurrentLocation().getItems().isEmpty()) {
-            Item temp = player.getCurrentLocation().findAndRemoveItem(name);
-            if (temp != null) {
-                if (player.getInventory().checkAddCapacity(temp)) {
-                    if (player.getInventory().addItem(temp)) {
-                        return "Sebral si " + name;
-                    }
-                } else {
-                    return "V inventáři není dostatek místa. Volné místo: " + player.getInventory().leftSpace() + ", Váha " + name + ": " + temp.getWeight();
-                }
-            }
-        } else {
+        if (player.getCurrentLocation().getItems().isEmpty()){
             return "Lokace " + player.getCurrentLocation().getName() + " neobsahuje žádné itemy";
         }
-        return name + " se v lokaci nenachází";
+        Item temp = player.getCurrentLocation().hasItem(name);
+        if(temp == null){
+            return name + " se v lokaci nenachází";
+        }
+        if (!player.getInventory().checkAddCapacity(temp)){
+            return "V inventáři není dostatek místa. Volné místo: " + player.getInventory().leftSpace() + ", Váha " + name + ": " + temp.getWeight();
+        }
+        if (player.getInventory().addItem(temp)) {
+            player.getCurrentLocation().removeItem(temp);
+        }
+        return "Sebral si " + name;
     }
 
     @Override

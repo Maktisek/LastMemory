@@ -13,15 +13,16 @@ public class EvaluateTaskCommand implements Command{
 
     @Override
     public String execute() {
-        if(player.getCurrentTask().isDone()){
-            Memory memory = player.getCurrentTask().giveMemory();
-            player.addMemory(memory);
-            String temp = player.getCurrentTask().getName();
-            player.deleteTask();
-            player.getCurrentLocation().getFriendlyNPC().setTask(null);
-            return "Splnil si úkol: " + temp + " a dostáváš novou vzpomínku: " + memory.getName();
+        if(!player.getCurrentTask().isDone()){
+            return "Další předměty k odevzdání: " + player.getCurrentLocation().getFriendlyNPC().getTask().writeAllNeededItems();
         }
-        return "Další předměty k odevzdání: " + player.getCurrentLocation().getFriendlyNPC().getTask().writeAllNeededItems();
+        Memory memory = player.getCurrentTask().giveMemory();
+        player.addMemory(memory);
+        String temp = player.getCurrentTask().getName();
+        player.deleteTask();
+        player.getCurrentLocation().getFriendlyNPC().setTask(null);
+        player.getCurrentLocation().getFriendlyNPC().switchSpeeches();
+        return "Splnil si úkol: " + temp + " a dostáváš novou vzpomínku: " + memory.getName();
     }
 
     @Override
