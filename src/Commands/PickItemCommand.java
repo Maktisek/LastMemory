@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Items.Item;
 
 public class PickItemCommand implements Command {
 
@@ -15,11 +16,16 @@ public class PickItemCommand implements Command {
     @Override
     public String execute() {
         if (!player.getCurrentLocation().getItems().isEmpty()) {
-            if (player.getInventory().addItem(player.getCurrentLocation().findAndRemoveItem(name))) {
-                return "Sebral si " + name;
+            Item temp = player.getCurrentLocation().findAndRemoveItem(name);
+            if (player.getInventory().checkAddCapacity(temp)) {
+                if (player.getInventory().addItem(temp)) {
+                    return "Sebral si " + name;
+                }
+                return "Item " + name + " se v lokaci nenachází";
+            }else {
+                return "V inventáři není dostatek místa. Volné místo: " + player.getInventory().leftSpace() + ", Váha " + name + ": " + temp.getWeight();
             }
-            return "Item " + name + " se v lokaci nenachází";
-        }else {
+        } else {
             return "Lokace " + player.getCurrentLocation().getName() + " neobsahuje žádné itemy";
         }
     }

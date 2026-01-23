@@ -257,7 +257,7 @@ public class Player {
          * @param item The item that could be added.
          * @return false if the item could not be added, false if the item could not be added.
          */
-        private boolean checkAddCapacity(Item item) {
+        public boolean checkAddCapacity(Item item) {
             if(item != null) {
                 double temp = weight + item.getWeight();
                 if (temp > capacity) {
@@ -275,7 +275,7 @@ public class Player {
          * @param item The item that could be dropped.
          * @return false if the item could not be dropped, false if the item could not be dropped.
          */
-        private boolean checkDropCapacity(Item item) {
+        public boolean checkDropCapacity(Item item) {
             if (item != null) {
                 double temp = weight - item.getWeight();
                 if (temp < 0) {
@@ -363,6 +363,10 @@ public class Player {
             }else {
                 return "Inventář je prázdný, žádný předmět nelze prohlédnout";
             }
+        }
+
+        public double leftSpace(){
+            return capacity - weight;
         }
 
         public double getCapacity() {

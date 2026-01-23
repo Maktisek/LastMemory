@@ -65,6 +65,12 @@
         "description": "To je třídnice mojí třídy! Vždycky ji nosí Švec",
         "code": "ESSENTIALS_002",
         "weight": 2.5
+      },
+      {
+        "name": "Šroubovák",
+        "description": "Klasický křížový šroubovák",
+        "code": "ESSENTIALS_016",
+        "weight": 21
       }
     ],
     "safe": null
