@@ -91,6 +91,14 @@ public class Console {
             System.out.print(">>");
             return List.of(new InspectOldTaskCommand(player, sc.nextLine()));
         });
+        commands.put("otevřít safe", () ->{
+           if(player.getCurrentLocation().availableSafe()){
+               System.out.println("Napiš kód");
+               System.out.print(">>");
+               return List.of(new OpenSafeCommand(player, sc.nextLine()));
+           }
+           return List.of(new OpenSafeCommand(player, null));
+        });
     }
 
 
@@ -112,6 +120,7 @@ public class Console {
         possibleCommands.put("odevzdat úkol", LocationMode::new);
         possibleCommands.put("vzpomenout", BackpackMode::new);
         possibleCommands.put("prohlédnout úkol", BackpackMode::new);
+        possibleCommands.put("otevřít safe" , LocationMode::new);
     }
 
     public void execute() {

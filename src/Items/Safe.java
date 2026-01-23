@@ -76,7 +76,7 @@ public class Safe {
     }
 
     public ArrayList<Item> dropItems() {
-        ArrayList<Item> temp = new ArrayList<>();
+        ArrayList<Item> temp = new ArrayList<>(items);
         this.items.clear();
         return temp;
     }
@@ -86,17 +86,7 @@ public class Safe {
         currentPointer = startPointer;
     }
 
-    private boolean isLocked() {
+    public boolean isLocked() {
         return !items.isEmpty();
-    }
-
-    @Override
-    public String toString() {
-        return "Safe{" +
-                "items=" + items +
-                ", code='" + code + '\'' +
-                ", startPointer=" + startPointer +
-                ", currentPointer=" + currentPointer +
-                '}';
     }
 }

@@ -7,6 +7,7 @@ import NPCS.EnemyNPC;
 import NPCS.FriendlyNPC;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -52,16 +53,23 @@ public class Location {
     }
 
 
-    public boolean tryOpenSafe(String code) {
-        //TODO tryCodeSafe metoda chybi
-        return true;
+    public String tryOpenSafe(String code) {
+        if(safe.openSafe(code)){
+            ArrayList<Item> temp = safe.dropItems();
+            items.addAll(temp);
+            ArrayList<String> names = new ArrayList<>();
+            for (Item item : temp){
+                names.add(item.getName());
+            }
+            return "V trezoru se nachází: " + Important.writeStringArrays(names);
+        }
+        return "Kód " + code + " není správný, či srávně zapsaný";
     }
 
-    public ArrayList<String> extractSafe() {
-        //TODO addItems metoda chybi
-        //Prida vsechny itemy ze safu do listu itemu
-        return null;
+    public boolean availableSafe(){
+        return safe != null && safe.isLocked();
     }
+
 
     public boolean addPossibleLocation(Location location) {
         return possibleLocations.add(location);
@@ -136,12 +144,11 @@ public class Location {
     }
 
     public String writeSafe() {
-        if (safe != null) {
+        if (safe != null && safe.isLocked()) {
             return Important.changeColourText("green", "Přítomný");
-        } else {
-            return Important.changeColourText("red", "Nepřítomný");
         }
-    }
+        return Important.changeColourText("red", "Nepřítomný");
+        }
 
     public String testNames() {
         //TODO tahle metoda je jen pro test
