@@ -17,7 +17,7 @@ public class EvaluateTaskCommand implements Command{
             Memory memory = player.getCurrentTask().giveMemory();
             player.addMemory(memory);
             String temp = player.getCurrentTask().getName();
-            player.setCurrentTask(null);
+            player.deleteTask();
             player.getCurrentLocation().getFriendlyNPC().setTask(null);
             return "Splnil si úkol: " + temp + " a dostáváš novou vzpomínku: " + memory.getName();
         }
