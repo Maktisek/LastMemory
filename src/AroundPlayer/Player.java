@@ -1,5 +1,6 @@
 package AroundPlayer;
 
+import Game.Important;
 import Items.Item;
 import Items.Task;
 import Locations.Location;
@@ -41,19 +42,22 @@ public class Player {
     }
 
     public String writeMemory(String name) {
-        //TODO writeMemory chybi
-        //Vypise pozadovanou vzpominku
-        return null;
+       for (Memory memory: collectedMemories){
+           if (memory.getName().equalsIgnoreCase(name)) {
+               return Important.writeLongTexts(memory.getDescription());
+           }
+       }
+       return "Vzpomínka " + name + " neexistuje";
     }
 
-    public boolean addDoneTask(Task task) {
-        return doneTasks.add(task);
-    }
 
     public String writeOldTask(String name) {
-        //TODO findTask metoda chybi
-        //Vypise pozadovany ukol
-        return null;
+        for (Task task : doneTasks){
+            if (task.getName().equalsIgnoreCase(name)) {
+                return task.getName() + "\n" + Important.writeLongTexts(task.getDescription());
+            }
+        }
+        return "Úkol " + name + " neexistuje";
     }
 
     public boolean addCurrentTask(Task task) {

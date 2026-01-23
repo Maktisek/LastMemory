@@ -81,7 +81,19 @@ public class Console {
         commands.put("přijmout úkol" , () -> List.of(new AcceptTaskCommand(player)));
         commands.put("zobrazit úkol", () -> List.of(new ShowCurrentTaskCommand(player)));
         commands.put("odevzdat úkol", () -> List.of(new HandInCommand(player), new EvaluateTaskCommand(player)));
+        commands.put("vzpomenout" , () ->{
+            System.out.println("Napiš jméno vzpomínky");
+            System.out.print(">>");
+            return List.of(new RecallMemoryCommand(player, sc.nextLine()));
+        });
+        commands.put("prohlédnout úkol" , () ->{
+            System.out.println("Napiš jméno úkolu");
+            System.out.print(">>");
+            return List.of(new InspectOldTaskCommand(player, sc.nextLine()));
+        });
     }
+
+
 
     public void loadPossibleCommands() {
         possibleCommands.put("jdi", LocationMode::new);
@@ -98,6 +110,8 @@ public class Console {
         possibleCommands.put("přijmout úkol", LocationMode::new);
         possibleCommands.put("zobrazit úkol", () -> player.getMode());
         possibleCommands.put("odevzdat úkol", LocationMode::new);
+        possibleCommands.put("vzpomenout", BackpackMode::new);
+        possibleCommands.put("prohlédnout úkol", BackpackMode::new);
     }
 
     public void execute() {
