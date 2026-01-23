@@ -6,7 +6,7 @@ import Game.Important;
 /**
  * Command designed to write current location’s friendlyNPC current speech
  */
-public class DialogCommand implements Command{
+public class DialogCommand implements Command {
 
     private Player player;
 
@@ -16,7 +16,11 @@ public class DialogCommand implements Command{
 
     @Override
     public String execute() {
-        return Important.writeLongTexts(player.getCurrentLocation().writeSpeech());
+        if (player.getCurrentLocation().getFriendlyNPC() != null) {
+            return Important.writeLongTexts(player.getCurrentLocation().getFriendlyNPC().getCurrentSpeech());
+        } else {
+            return "V lokaci se nidko nenachází";
+        }
     }
 
     @Override

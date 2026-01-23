@@ -26,6 +26,7 @@ public class FriendlyNPC extends NPC{
         //TODO switchSpeeches metoda chybi
     }
 
+
     public String getCurrentSpeech() {
         return currentSpeech;
     }
