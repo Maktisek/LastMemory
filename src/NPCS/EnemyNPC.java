@@ -1,7 +1,6 @@
 package NPCS;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class EnemyNPC extends NPC{
 
@@ -16,15 +15,8 @@ public class EnemyNPC extends NPC{
     }
 
 
-    public boolean addPossibleAnswer(String answer){
-        //TODO addPossibleAnswer metoda chybi
-        return true;
-    }
-
     public boolean evaluateQuestion(String answer){
-        //TODO evaluateQuestion metoda chybi
-        //Vyhodnoti, zda je dana odpoved spravne
-        return true;
+        return possibleAnswers.contains(answer);
     }
 
     @Override

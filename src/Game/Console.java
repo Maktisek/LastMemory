@@ -72,6 +72,11 @@ public class Console {
             }
             return new ArrayList<>(List.of(new InspectItemCommand(player, null)));
         });
+        commands.put("odpovědět" , () ->{
+            System.out.println("Napiš odpověď");
+            System.out.print(">>");
+            return List.of(new AnswerEnemyNPCCommand(player, sc.nextLine()));
+        });
     }
 
     public void loadPossibleCommands() {
@@ -84,6 +89,7 @@ public class Console {
         possibleCommands.put("sebrat", LocationMode::new);
         possibleCommands.put("položit", LocationMode::new);
         possibleCommands.put("prohlédnout", BackpackMode::new);
+        possibleCommands.put("odpovědět", QuestionMode::new);
 
     }
 
