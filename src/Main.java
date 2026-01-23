@@ -122,6 +122,7 @@ public class Main {
         HashMap<String, Supplier<Command>> commands = new HashMap<>();
         HashMap<String, Mode> modes = new HashMap<>();
         modes.put("jdi", new LocationMode());
+
         commands.put("jdi", ()->{
             String lokace = "Třetí patro";
             return new MoveCommand(player,lokace);

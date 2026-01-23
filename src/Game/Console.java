@@ -47,6 +47,14 @@ public class Console {
             System.out.print("Napiš jméno módu: ");
             return new ArrayList<>(List.of(new SwitchModeCommand(sc.nextLine(), player)));
         });
+        commands.put("sebrat", () ->{
+            if(!player.getCurrentLocation().getItems().isEmpty()) {
+                System.out.println("Napiš předmět, který chceš sebrat");
+                System.out.print(">>");
+                return new ArrayList<>(List.of(new PickItemCommand(player, sc.nextLine())));
+            }
+            return new ArrayList<>(List.of(new PickItemCommand(player, null)));
+        });
     }
 
     public void loadPossibleCommands() {
@@ -56,6 +64,7 @@ public class Console {
         possibleCommands.put("opustit", () -> player.getMode());
         possibleCommands.put("popis lokace", LocationMode::new);
         possibleCommands.put("mod", () -> player.getMode());
+        possibleCommands.put("sebrat", LocationMode::new);
 
     }
 

@@ -29,8 +29,12 @@ public class Location {
     }
 
     public Item findAndRemoveItem(String name) {
-        //TODO findAndRemoveItem metoda chybi
-        //Najde a odevzda Item
+        for (Item item: items){
+            if(item.getName().equalsIgnoreCase(name)){
+                items.remove(item);
+                return item;
+            }
+        }
         return null;
     }
 

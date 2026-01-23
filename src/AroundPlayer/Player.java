@@ -256,7 +256,7 @@ public class Player {
          * @param item The item that could be added.
          * @return false if the item could not be added, false if the item could not be added.
          */
-        public boolean checkAddCapacity(Item item) {
+        private boolean checkAddCapacity(Item item) {
             double temp = weight + item.getWeight();
             if (temp > capacity) {
                 return false;
@@ -268,11 +268,10 @@ public class Player {
 
         /**
          * Checks if the item could be dropped.
-         *
          * @param item The item that could be dropped.
          * @return false if the item could not be dropped, false if the item could not be dropped.
          */
-        public boolean checkDropCapacity(Item item) {
+        private boolean checkDropCapacity(Item item) {
             double temp = weight - item.getWeight();
             if (temp < 0) {
                 return false;
@@ -285,7 +284,6 @@ public class Player {
         /**
          * Adds item to items. It checks if there is any array list on the item code in the map.
          * If yes then it adds the item into that array list, if not then it creates new array list on the item code in the map.
-         *
          * @param item the item to be added.
          * @return true if the item was successfully added, false if not (mostly because of the capacity check).
          */
@@ -307,7 +305,6 @@ public class Player {
         /**
          * Drops item from the items. It iterates through the items, when there is an array list and the name matches the index 0 items name
          * , then the item is deleted from the array list.
-         *
          * @param name the item to be dropped.
          * @return the dropped item.
          */
@@ -326,7 +323,6 @@ public class Player {
 
         /**
          * Writes names and numbers of items in the items map.
-         *
          * @return names and numbers of all items.
          */
         public String writeItems() {
