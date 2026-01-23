@@ -77,6 +77,7 @@ public class Console {
             System.out.print(">>");
             return List.of(new AnswerEnemyNPCCommand(player, sc.nextLine()));
         });
+        commands.put("mluv", () -> List.of(new DialogCommand(player)));
     }
 
     public void loadPossibleCommands() {
@@ -90,6 +91,7 @@ public class Console {
         possibleCommands.put("položit", LocationMode::new);
         possibleCommands.put("prohlédnout", BackpackMode::new);
         possibleCommands.put("odpovědět", QuestionMode::new);
+        possibleCommands.put("mluv", LocationMode::new);
 
     }
 

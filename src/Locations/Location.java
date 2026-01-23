@@ -134,6 +134,14 @@ public class Location {
         return possibleLocations.get(random.nextInt(0, possibleLocations.size())).getName();
     }
 
+    public String writeSpeech(){
+        if(friendlyNPC != null){
+            return friendlyNPC.getCurrentSpeech();
+        }else {
+            return "V lokaci se nidko nenachází";
+        }
+    }
+
     public boolean isFree() {
         return enemyNPC == null;
     }

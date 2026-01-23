@@ -1,12 +1,9 @@
-import AroundPlayer.Memory;
 import AroundPlayer.Player;
 import Commands.Command;
 import Commands.MoveCommand;
 import Game.Console;
 import Game.Initialization;
-import Items.Item;
 import Locations.Location;
-import Modes.BackpackMode;
 import Modes.LocationMode;
 import Modes.Mode;
 import com.fasterxml.jackson.databind.ObjectMapper;
