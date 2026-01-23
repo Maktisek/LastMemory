@@ -1,5 +1,8 @@
 package Commands;
 
+/**
+ * Nejsem si jistý, zda to zatím potřebuji
+ */
 public class CheckTaskCommand implements Command{
     @Override
     public String execute() {

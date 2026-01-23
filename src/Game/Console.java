@@ -78,6 +78,8 @@ public class Console {
             return List.of(new AnswerEnemyNPCCommand(player, sc.nextLine()));
         });
         commands.put("mluv", () -> List.of(new DialogCommand(player)));
+        commands.put("přijmout" , () -> List.of(new AcceptTaskCommand(player)));
+        commands.put("zobrazit úkol", () -> List.of(new ShowCurrentTaskCommand(player)));
     }
 
     public void loadPossibleCommands() {
@@ -92,7 +94,8 @@ public class Console {
         possibleCommands.put("prohlédnout", BackpackMode::new);
         possibleCommands.put("odpovědět", QuestionMode::new);
         possibleCommands.put("mluv", LocationMode::new);
-
+        possibleCommands.put("přijmout", LocationMode::new);
+        possibleCommands.put("zobrazit úkol", () -> player.getMode());
     }
 
     public void execute() {

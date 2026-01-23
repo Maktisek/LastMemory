@@ -50,15 +50,17 @@ public class Player {
         return doneTasks.add(task);
     }
 
-    public String writeTask(String name) {
+    public String writeOldTask(String name) {
         //TODO findTask metoda chybi
         //Vypise pozadovany ukol
         return null;
     }
 
     public boolean addCurrentTask(Task task) {
-        //TODO addCurrentTask metoda chybi
-        //Prida aktualni ukol
+        if(currentTask == null){
+            this.currentTask = task;
+            return true;
+        }
         return false;
     }
 

@@ -1,6 +1,7 @@
 package Items;
 
 import AroundPlayer.Memory;
+import Game.Important;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,15 +39,15 @@ public class Task {
         return null;
     }
 
+    public String writeAllNeededItems(){
+        return String.join(", ", namesOfNeededObjects);
+    }
+
     @Override
     public String toString() {
-        return "Task{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", namesOfNeededObjects=" + namesOfNeededObjects +
-                ", codesOfNeededObjects=" + codesOfNeededObjects +
-                ", memoryPrice=" + memoryPrice +
-                '}';
+        return "--------------------Úkol: "+this.name+"-------------------- \n"+
+                Important.writeLongTexts(this.description) +
+                "Zbývající potřebné předměty: " + writeAllNeededItems();
     }
 
     public String getName() {
