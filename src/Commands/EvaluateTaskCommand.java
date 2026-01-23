@@ -1,5 +1,6 @@
 package Commands;
 
+import AroundPlayer.Memory;
 import AroundPlayer.Player;
 
 public class EvaluateTaskCommand implements Command{
@@ -12,7 +13,15 @@ public class EvaluateTaskCommand implements Command{
 
     @Override
     public String execute() {
-        return "";
+        if(player.getCurrentTask().isDone()){
+            Memory memory = player.getCurrentTask().giveMemory();
+            player.addMemory(memory);
+            String temp = player.getCurrentTask().getName();
+            player.setCurrentTask(null);
+            player.getCurrentLocation().getFriendlyNPC().setTask(null);
+            return "Splnil si úkol: " + temp + " a dostáváš novou vzpomínku: " + memory.getName();
+        }
+        return "Další předměty k odevzdání: " + player.getCurrentLocation().getFriendlyNPC().getTask().writeAllNeededItems();
     }
 
     @Override

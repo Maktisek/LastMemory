@@ -49,7 +49,7 @@ public class Task {
     }
 
     public String writeAllNeededItems(){
-        return String.join(", ", namesOfNeededObjects);
+        return Important.writeStringArrays(namesOfNeededObjects);
     }
 
     @Override

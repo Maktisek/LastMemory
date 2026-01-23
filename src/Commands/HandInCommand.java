@@ -27,6 +27,6 @@ public class HandInCommand implements Command{
 
     @Override
     public boolean waitAble() {
-        return true;
+        return false;
     }
 }
