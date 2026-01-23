@@ -64,10 +64,9 @@ public class Player {
         return false;
     }
 
-    public boolean deleteTask() {
-        //TODO deleteTask metoda chybi - pozor currentTask se presune do doneTasks
-        //Odstrani aktualni ukol
-        return false;
+    public void deleteTask() {
+        this.doneTasks.add(currentTask);
+        currentTask = null;
     }
 
     /**

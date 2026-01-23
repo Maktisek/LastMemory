@@ -19,24 +19,29 @@ public class Task {
     public Task() {
     }
 
-    public ArrayList<String> scanAndSolveTask(HashMap<String, ArrayList<Item>> input){
-        //TODO scanAndSolveTask metoda chybi
-        //Projde input a odevzda ty predmety, ktere ma.
-        //Vraci arraylist nazvu itemu, aby hrac videl, co odevzdal.
-        //Resi celou logiku vyhodnocovani ukolu
-        return null;
+    public String scanAndSolveTask(HashMap<String, ArrayList<Item>> input){
+        ArrayList<String> temp = new ArrayList<>();
+        for (String key: input.keySet()){
+            if(codesOfNeededObjects.contains(key)){
+                input.get(key).remove(0);
+                temp.add(namesOfNeededObjects.get(namesOfNeededObjects.indexOf(key)));
+                codesOfNeededObjects.remove(key);
+            }
+        }
+        if(!temp.isEmpty()) {
+            return "Odevzdané předměty: " + String.join(", " + temp);
+        }
+        return "Nelze odevzdat žádný předmět";
     }
 
     public boolean isDone(){
-        //TODO isDone metoda chybi
-        //Podiva se, zda nahodou neni ukol uz hotovy
-        return true;
+        return codesOfNeededObjects.isEmpty();
     }
 
     public Memory giveMemory(){
-        //TODO giveMemory metoda chybi
-        //Odevzda vypominku a nastavi si ji na null.
-        return null;
+        Memory temp = memoryPrice;
+        this.memoryPrice = null;
+        return temp;
     }
 
     public String writeAllNeededItems(){
