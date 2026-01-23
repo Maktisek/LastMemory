@@ -73,9 +73,11 @@ public class Location {
     }
 
     public boolean answerNPC(String answer) {
-        //TODO answerNPC metoda chybi
-        //Odpovi na otazku NPC
-        return true;
+        if(enemyNPC.evaluateQuestion(answer)){
+            this.enemyNPC = null;
+            return true;
+        }
+        return false;
     }
 
     /**
