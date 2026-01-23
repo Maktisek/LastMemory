@@ -99,6 +99,7 @@ public class Console {
            }
            return List.of(new OpenSafeCommand(player, null));
         });
+        commands.put("info postava", () -> List.of(new ReadFriendlyNPCDescriptionCommand(player)));
     }
 
 
@@ -121,6 +122,7 @@ public class Console {
         possibleCommands.put("vzpomenout", BackpackMode::new);
         possibleCommands.put("prohlédnout úkol", BackpackMode::new);
         possibleCommands.put("otevřít safe" , LocationMode::new);
+        possibleCommands.put("info postava", LocationMode::new);
     }
 
     public void execute() {
