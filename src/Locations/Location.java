@@ -24,6 +24,11 @@ public class Location {
     public Location() {
     }
 
+    /**
+     * Adds item into items list
+     * @param item the item to be added
+     * @return true if the action was successful, false if not
+     */
     public boolean addItem(Item item) {
         if (item != null) {
             return items.add(item);
@@ -31,6 +36,11 @@ public class Location {
         return false;
     }
 
+    /**
+     * Removes an item from items list.
+     * @param name the items name to be removed
+     * @return the removed item
+     */
     public Item findAndRemoveItem(String name) {
         for (Item item : items) {
             if (item.getName().equalsIgnoreCase(name)) {
@@ -72,6 +82,11 @@ public class Location {
         return null;
     }
 
+    /**
+     * Evaluates and enemyNPC's question. It
+     * @param answer the answer to be evaluated
+     * @return true if the answer was correct and false if not
+     */
     public boolean answerNPC(String answer) {
         if(enemyNPC.evaluateQuestion(answer)){
             this.enemyNPC = null;
