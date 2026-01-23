@@ -2,6 +2,7 @@ package Game;
 
 import AroundPlayer.Player;
 import Commands.*;
+import Modes.BackpackMode;
 import Modes.LocationMode;
 import Modes.Mode;
 import Modes.QuestionMode;
@@ -55,6 +56,22 @@ public class Console {
             }
             return new ArrayList<>(List.of(new PickItemCommand(player, null)));
         });
+        commands.put("položit", () ->{
+           if(player.getInventory().getWeight() != 0){
+               System.out.println("Napiš předmět, který chceš položit");
+               System.out.print(">>");
+               return new ArrayList<>(List.of(new DropItemCommand(player, sc.nextLine())));
+           }
+           return new ArrayList<>(List.of(new DropItemCommand(player, null)));
+        });
+        commands.put("prohlédnout", () ->{
+            if(player.getInventory().getWeight() != 0){
+                System.out.println("Napiš předmět, který si chceš prohlédnout");
+                System.out.print(">>");
+                return new ArrayList<>(List.of(new InspectItemCommand(player, sc.nextLine())));
+            }
+            return new ArrayList<>(List.of(new InspectItemCommand(player, null)));
+        });
     }
 
     public void loadPossibleCommands() {
@@ -65,6 +82,8 @@ public class Console {
         possibleCommands.put("popis lokace", LocationMode::new);
         possibleCommands.put("mod", () -> player.getMode());
         possibleCommands.put("sebrat", LocationMode::new);
+        possibleCommands.put("položit", LocationMode::new);
+        possibleCommands.put("prohlédnout", BackpackMode::new);
 
     }
 

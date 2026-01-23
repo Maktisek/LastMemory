@@ -339,6 +339,19 @@ public class Player {
             return String.join(", ", names);
         }
 
+        public String descriptionItem(String name) {
+            if (weight != 0) {
+                for (String key : items.keySet()) {
+                    if (!items.get(key).isEmpty() && items.get(key).get(0).getName().equalsIgnoreCase(name)) {
+                        return items.get(key).get(0).getDescription();
+                    }
+                }
+                return "Item " + name + " se v inventáři nenachází";
+            }else {
+                return "Inventář je prázdný, žádný předmět nelze prohlédnout";
+            }
+        }
+
         public double getCapacity() {
             return capacity;
         }

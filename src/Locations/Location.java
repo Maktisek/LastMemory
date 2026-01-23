@@ -25,12 +25,15 @@ public class Location {
     }
 
     public boolean addItem(Item item) {
-        return items.add(item);
+        if (item != null) {
+            return items.add(item);
+        }
+        return false;
     }
 
     public Item findAndRemoveItem(String name) {
-        for (Item item: items){
-            if(item.getName().equalsIgnoreCase(name)){
+        for (Item item : items) {
+            if (item.getName().equalsIgnoreCase(name)) {
                 items.remove(item);
                 return item;
             }
@@ -56,11 +59,12 @@ public class Location {
 
     /**
      * Iterates through possible location list. Searches the right location.
+     *
      * @param name the name of the location to be found
      * @return null if the location was not found and the instance of Location if the location was found.
      */
     public Location findLocation(String name) {
-        for (Location location: possibleLocations){
+        for (Location location : possibleLocations) {
             if (location.getName().equalsIgnoreCase(name)) {
                 return location;
             }
@@ -76,6 +80,7 @@ public class Location {
 
     /**
      * Writes all names of items in items
+     *
      * @return names of all items if there are any.
      * If there are no items, then it returns information about that.
      */
@@ -93,6 +98,7 @@ public class Location {
 
     /**
      * Writes all names of locations in possibleLocations
+     *
      * @return names of all locations
      */
     public String writeAllPossibleLocations() {
@@ -114,19 +120,19 @@ public class Location {
 
     public String writeSafe() {
         if (safe != null) {
-            return Important.changeColourText("green","Přítomný");
+            return Important.changeColourText("green", "Přítomný");
         } else {
             return Important.changeColourText("red", "Nepřítomný");
         }
     }
 
-    public String testNames(){
+    public String testNames() {
         //TODO tahle metoda je jen pro test
         Random random = new Random();
         return possibleLocations.get(random.nextInt(0, possibleLocations.size())).getName();
     }
 
-    public boolean isFree(){
+    public boolean isFree() {
         return enemyNPC == null;
     }
 
