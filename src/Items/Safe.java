@@ -2,7 +2,7 @@ package Items;
 
 import java.util.ArrayList;
 
-public class Safe{
+public class Safe {
 
 
     private ArrayList<Item> items;
@@ -52,33 +52,42 @@ public class Safe{
         this.code = code;
     }
 
-    public boolean openSafe(String code){
-        //TODO openSafe metoda chybi
-        //Zde se bude nachazet cela logika otevirani safu. Pokud budu potreboval dalsi metodu, tak ji pridam pozdeji
-        return false;
+    public boolean openSafe(String code) {
+        String[] data = code.split(";");
+        int password = 0;
+        for (int i = 0; i < data.length; i++) {
+            if (data[i].contains("R")) {
+                data[i] = data[i].replaceAll("R", "");
+                currentPointer += Integer.parseInt(data[i]);
+            } else {
+                data[i] = data[i].replaceAll("L", "");
+                currentPointer -= Integer.parseInt(data[i]);
+            }
+            currentPointer = currentPointer % 100;
+            if (currentPointer == 0) {
+                password++;
+            }
+        }
+        return isDone(password);
     }
 
-    public ArrayList<Item> dropItems(){
-        //TODO dropItems metoda chybi
-        //Vysype vsechny predmety do lokace.
-        return null;
+    public boolean isDone(int password) {
+        return password == Integer.parseInt(code);
     }
 
-    public String safeContent(){
-        //TODO safeContent metoda chybi
-        //Vypise vsechny predmety, ktere se v safu nachazi (uzitecne pri otevreni safu)
-        return null;
+    public ArrayList<Item> dropItems() {
+        ArrayList<Item> temp = new ArrayList<>();
+        this.items.clear();
+        return temp;
     }
 
-    public void resetCurrentPointer(){
-        //TODO resetCurrentPointer metoda chybi
-        //Resetuje pozici pointeru na startPointer
+
+    public void resetCurrentPointer() {
+        currentPointer = startPointer;
     }
 
-    private boolean isLocked(){
-        //TODO isLocked metoda chybi
-        //Pomoci isEmpty() zkontroluje, zda je safe jeste zamknuty
-        return true;
+    private boolean isLocked() {
+        return !items.isEmpty();
     }
 
     @Override
