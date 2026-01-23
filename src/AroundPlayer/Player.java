@@ -258,13 +258,16 @@ public class Player {
          * @return false if the item could not be added, false if the item could not be added.
          */
         private boolean checkAddCapacity(Item item) {
-            double temp = weight + item.getWeight();
-            if (temp > capacity) {
-                return false;
-            } else {
-                this.weight = temp;
-                return true;
+            if(item != null) {
+                double temp = weight + item.getWeight();
+                if (temp > capacity) {
+                    return false;
+                } else {
+                    this.weight = temp;
+                    return true;
+                }
             }
+            return false;
         }
 
         /**
@@ -273,13 +276,16 @@ public class Player {
          * @return false if the item could not be dropped, false if the item could not be dropped.
          */
         private boolean checkDropCapacity(Item item) {
-            double temp = weight - item.getWeight();
-            if (temp < 0) {
-                return false;
-            } else {
-                this.weight = temp;
+            if (item != null) {
+                double temp = weight - item.getWeight();
+                if (temp < 0) {
+                    return false;
+                } else {
+                    this.weight = temp;
+                }
+                return true;
             }
-            return true;
+            return false;
         }
 
         /**
@@ -365,6 +371,10 @@ public class Player {
 
         public double getWeight() {
             return weight;
+        }
+
+        public HashMap<String, ArrayList<Item>> getItems() {
+            return items;
         }
     }
 }

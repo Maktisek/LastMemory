@@ -12,7 +12,12 @@ public class HandInCommand implements Command{
 
     @Override
     public String execute() {
-        return "";
+        if(player.getCurrentLocation().getFriendlyNPC() != null && player.getCurrentLocation().getFriendlyNPC().getTask() != null) {
+            String result = player.getCurrentLocation().getFriendlyNPC().getTask().scanAndSolveTask(player.getInventory().getItems());
+            player.setCurrentTask(player.getCurrentLocation().getFriendlyNPC().getTask());
+            return result;
+        }
+        return "Nelze nyní odevzdávat předměty do úkolu";
     }
 
     @Override
@@ -22,6 +27,6 @@ public class HandInCommand implements Command{
 
     @Override
     public boolean waitAble() {
-        return false;
+        return true;
     }
 }
