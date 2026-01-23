@@ -57,7 +57,7 @@ public class Player {
     }
 
     public boolean addCurrentTask(Task task) {
-        if(currentTask == null){
+        if (currentTask == null) {
             this.currentTask = task;
             return true;
         }
@@ -258,7 +258,7 @@ public class Player {
          * @return false if the item could not be added, false if the item could not be added.
          */
         public boolean checkAddCapacity(Item item) {
-            if(item != null) {
+            if (item != null) {
                 double temp = weight + item.getWeight();
                 if (temp > capacity) {
                     return false;
@@ -272,6 +272,7 @@ public class Player {
 
         /**
          * Checks if the item could be dropped.
+         *
          * @param item The item that could be dropped.
          * @return false if the item could not be dropped, false if the item could not be dropped.
          */
@@ -291,21 +292,18 @@ public class Player {
         /**
          * Adds item to items. It checks if there is any array list on the item code in the map.
          * If yes then it adds the item into that array list, if not then it creates new array list on the item code in the map.
+         *
          * @param item the item to be added.
          * @return true if the item was successfully added, false if not (mostly because of the capacity check).
          */
         public boolean addItem(Item item) {
-            if (checkAddCapacity(item)) {
-                if (items.containsKey(item.getCode())) {
-                    return items.get(item.getCode()).add(item);
-                } else {
-                    ArrayList<Item> temp = new ArrayList<>();
-                    temp.add(item);
-                    items.put(item.getCode(), temp);
-                    return true;
-                }
+            if (items.containsKey(item.getCode())) {
+                return items.get(item.getCode()).add(item);
             } else {
-                return false;
+                ArrayList<Item> temp = new ArrayList<>();
+                temp.add(item);
+                items.put(item.getCode(), temp);
+                return true;
             }
         }
 

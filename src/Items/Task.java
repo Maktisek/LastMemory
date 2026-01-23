@@ -23,7 +23,7 @@ public class Task {
         ArrayList<String> temp = new ArrayList<>();
         for (String key: input.keySet()){
             if(codesOfNeededObjects.contains(key)){
-                temp.add(namesOfNeededObjects.get(namesOfNeededObjects.indexOf(key)));
+                temp.add(namesOfNeededObjects.get(codesOfNeededObjects.indexOf(key)));
                 input.get(key).remove(0);
                 codesOfNeededObjects.remove(key);
             }
