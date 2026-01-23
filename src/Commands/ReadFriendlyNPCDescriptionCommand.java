@@ -1,9 +1,21 @@
 package Commands;
 
+import AroundPlayer.Player;
+
 public class ReadFriendlyNPCDescriptionCommand implements Command{
+
+    private Player player;
+
+    public ReadFriendlyNPCDescriptionCommand(Player player) {
+        this.player = player;
+    }
+
     @Override
     public String execute() {
-        return "";
+        if(player.getCurrentLocation().getFriendlyNPC() == null){
+            return "V lokaci se nikdo nenachází";
+        }
+        return player.getCurrentLocation().getFriendlyNPC().writeDescription();
     }
 
     @Override

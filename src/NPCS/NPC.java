@@ -16,6 +16,10 @@ public abstract class NPC {
     public NPC() {
     }
 
+    public String writeDescription(){
+        return position + ": " + name + ", " + age;
+    }
+
     public String getName() {
         return name;
     }
