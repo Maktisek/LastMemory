@@ -15,15 +15,9 @@ public class FriendlyNPC extends NPC{
     public FriendlyNPC() {
     }
 
-    public FriendlyNPC(String name, String position, String age, String currentSpeech, String anotherSpeech, Task task) {
-        super(name, position, age);
-        this.currentSpeech = currentSpeech;
-        this.anotherSpeech = anotherSpeech;
-        this.task = task;
-    }
-
     public void switchSpeeches(){
-        //TODO switchSpeeches metoda chybi
+        this.currentSpeech = anotherSpeech;
+        this.anotherSpeech = null;
     }
 
 
