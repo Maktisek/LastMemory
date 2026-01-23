@@ -19,7 +19,7 @@ public class Console {
     private boolean exit;
 
 
-    public Console() {
+    public Console() throws Exception {
         this.commands = new HashMap<>();
         this.possibleCommands = new HashMap<>();
         this.sc = new Scanner(System.in);
@@ -40,68 +40,67 @@ public class Console {
         });
         commands.put("utéct", () -> new ArrayList<>(List.of(new RunAwayCommand(player))));
         commands.put("pomoc", () -> new ArrayList<>(List.of(new HelpCommand(player))));
-        commands.put("opustit", ()-> new ArrayList<>(List.of(new ExitCommand())));
+        commands.put("opustit", () -> new ArrayList<>(List.of(new ExitCommand())));
         commands.put("popis lokace", () -> new ArrayList<>(List.of(new ReadLocationDescriptionCommand(player))));
-        commands.put("mod", ()->{
+        commands.put("mod", () -> {
             SwitchModeCommand command = new SwitchModeCommand();
             System.out.println(command.writeNamesOfModes());
             System.out.print("Napiš jméno módu: ");
             return new ArrayList<>(List.of(new SwitchModeCommand(sc.nextLine(), player)));
         });
-        commands.put("sebrat", () ->{
-            if(!player.getCurrentLocation().getItems().isEmpty()) {
+        commands.put("sebrat", () -> {
+            if (!player.getCurrentLocation().getItems().isEmpty()) {
                 System.out.println("Napiš předmět, který chceš sebrat");
                 System.out.print(">>");
                 return new ArrayList<>(List.of(new PickItemCommand(player, sc.nextLine())));
             }
             return new ArrayList<>(List.of(new PickItemCommand(player, null)));
         });
-        commands.put("položit", () ->{
-           if(player.getInventory().getWeight() != 0){
-               System.out.println("Napiš předmět, který chceš položit");
-               System.out.print(">>");
-               return new ArrayList<>(List.of(new DropItemCommand(player, sc.nextLine())));
-           }
-           return new ArrayList<>(List.of(new DropItemCommand(player, null)));
+        commands.put("položit", () -> {
+            if (player.getInventory().getWeight() != 0) {
+                System.out.println("Napiš předmět, který chceš položit");
+                System.out.print(">>");
+                return new ArrayList<>(List.of(new DropItemCommand(player, sc.nextLine())));
+            }
+            return new ArrayList<>(List.of(new DropItemCommand(player, null)));
         });
-        commands.put("prohlédnout", () ->{
-            if(player.getInventory().getWeight() != 0){
+        commands.put("prohlédnout", () -> {
+            if (player.getInventory().getWeight() != 0) {
                 System.out.println("Napiš předmět, který si chceš prohlédnout");
                 System.out.print(">>");
                 return new ArrayList<>(List.of(new InspectItemCommand(player, sc.nextLine())));
             }
             return new ArrayList<>(List.of(new InspectItemCommand(player, null)));
         });
-        commands.put("odpovědět" , () ->{
+        commands.put("odpovědět", () -> {
             System.out.println("Napiš odpověď");
             System.out.print(">>");
             return List.of(new AnswerEnemyNPCCommand(player, sc.nextLine()));
         });
         commands.put("mluv", () -> List.of(new DialogCommand(player)));
-        commands.put("přijmout úkol" , () -> List.of(new AcceptTaskCommand(player)));
+        commands.put("přijmout úkol", () -> List.of(new AcceptTaskCommand(player)));
         commands.put("zobrazit úkol", () -> List.of(new ShowCurrentTaskCommand(player)));
         commands.put("odevzdat úkol", () -> List.of(new HandInCommand(player), new EvaluateTaskCommand(player)));
-        commands.put("vzpomenout" , () ->{
+        commands.put("vzpomenout", () -> {
             System.out.println("Napiš jméno vzpomínky");
             System.out.print(">>");
             return List.of(new RecallMemoryCommand(player, sc.nextLine()));
         });
-        commands.put("prohlédnout úkol" , () ->{
+        commands.put("prohlédnout úkol", () -> {
             System.out.println("Napiš jméno úkolu");
             System.out.print(">>");
             return List.of(new InspectOldTaskCommand(player, sc.nextLine()));
         });
-        commands.put("otevřít safe", () ->{
-           if(player.getCurrentLocation().availableSafe()){
-               System.out.println("Napiš kód");
-               System.out.print(">>");
-               return List.of(new OpenSafeCommand(player, sc.nextLine()));
-           }
-           return List.of(new OpenSafeCommand(player, null));
+        commands.put("otevřít safe", () -> {
+            if (player.getCurrentLocation().availableSafe()) {
+                System.out.println("Napiš kód");
+                System.out.print(">>");
+                return List.of(new OpenSafeCommand(player, sc.nextLine()));
+            }
+            return List.of(new OpenSafeCommand(player, null));
         });
         commands.put("info postava", () -> List.of(new ReadFriendlyNPCDescriptionCommand(player)));
     }
-
 
 
     public void loadPossibleCommands() {
@@ -121,32 +120,36 @@ public class Console {
         possibleCommands.put("odevzdat úkol", LocationMode::new);
         possibleCommands.put("vzpomenout", BackpackMode::new);
         possibleCommands.put("prohlédnout úkol", BackpackMode::new);
-        possibleCommands.put("otevřít safe" , LocationMode::new);
+        possibleCommands.put("otevřít safe", LocationMode::new);
         possibleCommands.put("info postava", LocationMode::new);
     }
 
-    public void execute() {
+
+    public void execute() throws Exception {
         while (!exit) {
             System.out.println(player.toString());
             System.out.print(">> ");
             String command = sc.nextLine();
-            if (commands.containsKey(command)) {
-                Mode foundMode = possibleCommands.get(command).get();
-                if (foundMode != null && player.getMode().getInfo().equalsIgnoreCase(foundMode.getInfo())) {
-                    List<Command> listOfCommands = commands.get(command).get();
-                    for (Command currentCommand : listOfCommands){
-                        System.out.println(currentCommand.execute());
-                        this.exit = currentCommand.exit();
-                        waitUntilInput(currentCommand);
-                    }
-                } else {
-                    System.out.println("Akci " + command + " nelze nyní provést");
-                }
-            } else {
+            if (!commands.containsKey(command)) {
                 System.out.println("Akce " + command + " neexistuje");
+                continue;
+            }
+            Mode foundMode = possibleCommands.get(command).get();
+            if (foundMode != null && !player.getMode().getInfo().equalsIgnoreCase(foundMode.getInfo())) {
+                System.out.println("Akci " + command + " nelze nyní provést");
+                continue;
+            } else if(foundMode == null) {
+                throw new Exception("Commands were loaded badly");
+            }
+            List<Command> listOfCommands = commands.get(command).get();
+            for (Command currentCommand : listOfCommands) {
+                System.out.println(currentCommand.execute());
+                this.exit = currentCommand.exit();
+                waitUntilInput(currentCommand);
             }
         }
     }
+
 
     public void waitUntilInput(Command command) {
         if (command.waitAble()) {

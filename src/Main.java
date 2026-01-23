@@ -18,7 +18,11 @@ import java.util.function.Supplier;
 public class Main {
     public static void main(String[] args) {
 
-        Console console = new Console();
+        try {
+            Console console = new Console();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
 
     }
