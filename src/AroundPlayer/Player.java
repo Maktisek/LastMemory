@@ -312,10 +312,13 @@ public class Player {
          */
         public Item dropItem(String name) {
             for (String key : items.keySet()) {
-                if (!items.get(key).isEmpty() && items.get(key).get(0).getName().equalsIgnoreCase(name)) {
+                if (items.get(key).get(0).getName().equalsIgnoreCase(name)) {
                     Item result = items.get(key).get(0);
                     if (checkDropCapacity(result)) {
                         items.get(key).remove(0);
+                        if(items.get(key).isEmpty()){
+                            items.remove(key);
+                        }
                         return result;
                     }
                 }
@@ -331,9 +334,7 @@ public class Player {
             ArrayList<String> names = new ArrayList<>(10);
             for (String key : items.keySet()) {
                 ArrayList<Item> temp = items.get(key);
-                if (!temp.isEmpty()) {
-                    names.add(temp.size() + "x " + temp.get(0).getName());
-                }
+                names.add(temp.size() + "x " + temp.get(0).getName());
             }
             if (names.isEmpty()) {
                 return "Batoh je prázdný";
