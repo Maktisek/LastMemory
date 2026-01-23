@@ -80,7 +80,7 @@ public class Console {
         commands.put("mluv", () -> List.of(new DialogCommand(player)));
         commands.put("přijmout úkol" , () -> List.of(new AcceptTaskCommand(player)));
         commands.put("zobrazit úkol", () -> List.of(new ShowCurrentTaskCommand(player)));
-        commands.put("odevzdat úkol", () -> List.of(new HandInCommand(player)));
+        commands.put("odevzdat úkol", () -> List.of(new HandInCommand(player), new EvaluateTaskCommand(player)));
     }
 
     public void loadPossibleCommands() {

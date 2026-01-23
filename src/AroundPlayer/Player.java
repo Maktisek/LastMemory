@@ -310,6 +310,7 @@ public class Player {
         /**
          * Drops item from the items. It iterates through the items, when there is an array list and the name matches the index 0 items name
          * , then the item is deleted from the array list.
+         *
          * @param name the item to be dropped.
          * @return the dropped item.
          */
@@ -319,7 +320,7 @@ public class Player {
                     Item result = items.get(key).get(0);
                     if (checkDropCapacity(result)) {
                         items.get(key).remove(0);
-                        if(items.get(key).isEmpty()){
+                        if (items.get(key).isEmpty()) {
                             items.remove(key);
                         }
                         return result;
@@ -331,6 +332,7 @@ public class Player {
 
         /**
          * Writes names and numbers of items in the items map.
+         *
          * @return names and numbers of all items.
          */
         public String writeItems() {
@@ -347,6 +349,7 @@ public class Player {
 
         /**
          * Returns description of needed item.
+         *
          * @param name the item to be found
          * @return the description of the found item
          */
@@ -358,12 +361,18 @@ public class Player {
                     }
                 }
                 return "Item " + name + " se v inventáři nenachází";
-            }else {
+            } else {
                 return "Inventář je prázdný, žádný předmět nelze prohlédnout";
             }
         }
 
-        public double leftSpace(){
+        public void removeMore(ArrayList<Item> input) {
+            for (Item item : input) {
+                dropItem(item.getName());
+            }
+        }
+
+        public double leftSpace() {
             return capacity - weight;
         }
 

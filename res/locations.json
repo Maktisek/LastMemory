@@ -71,6 +71,12 @@
         "description": "Klasický křížový šroubovák",
         "code": "ESSENTIALS_016",
         "weight": 1
+      },
+      {
+        "name": "Výbojka",
+        "description": "Slouží k projekci obrazu z dataprojektoru",
+        "code": "ESSENTIALS_017",
+        "weight": 2
       }
     ],
     "safe": null

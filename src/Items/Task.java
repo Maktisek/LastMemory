@@ -22,10 +22,12 @@ public class Task {
 
     public String scanAndSolveTask(Player player){
         ArrayList<String> temp = new ArrayList<>();
+        ArrayList<Item> deletedItems = new ArrayList<>();
         for (String key: player.getInventory().getItems().keySet()){
             if(codesOfNeededObjects.contains(key)){
-                Item solvedItem = player.getInventory().dropItem(namesOfNeededObjects.get(codesOfNeededObjects.indexOf(key)));
+                Item solvedItem = player.getInventory().getItems().get(key).get(0);
                 if(solvedItem != null) {
+                    deletedItems.add(solvedItem);
                     temp.add(solvedItem.getName());
                     namesOfNeededObjects.remove(codesOfNeededObjects.indexOf(key));
                     codesOfNeededObjects.remove(key);
@@ -33,6 +35,7 @@ public class Task {
             }
         }
         if(!temp.isEmpty()) {
+            player.getInventory().removeMore(deletedItems);
             return "Odevzdané předměty: " + Important.writeStringArrays(temp);
         }
         return "Nelze odevzdat žádný předmět";
