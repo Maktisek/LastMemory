@@ -22,24 +22,24 @@ public class MoveCommand implements Command {
     public String execute() {
         boolean action = player.switchLocation(player.getCurrentLocation().findLocation(this.name));
         if (!action) {
-            return "Lokace: " + this.name + " neexistuje";
+            return Important.changeText("red", "Lokace: " + this.name + " neexistuje");
         }
 
         if (player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
             Important.stopAudio(player.getPreviousLocation().getName());
             Important.playAudio("question mode");
-            return "Přesouváš se do: " + name;
+            return Important.changeText("green", "Přesouváš se do: " + name);
         }
 
         if (player.getCurrentLocation().getType() == Type.HALLWAY && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
             Important.playAudio("walk");
             Important.changeTitle(player.getPreviousLocation().getName(), player.getCurrentLocation().getName());
-            return "Přesouváš se do: " + name;
+            return Important.changeText("green", "Přesouváš se do: " + name);
         }
         Important.stopAudio(player.getPreviousLocation().getName());
         Important.playAudio("walk");
         Important.playLocationSong(player.getCurrentLocation());
-        return "Přesouváš se do: " + name;
+        return Important.changeText("green", "Přesouváš se do: " + name);
     }
 
     @Override
