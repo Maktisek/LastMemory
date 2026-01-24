@@ -8,5 +8,10 @@
     "title" : "walk",
     "filePath" : "audio\\walk.WAV",
     "infiniteLoop" : false
+  },
+  {
+    "title" : "třetí patro",
+    "filePath" : "audio\\třetí patro.WAV",
+    "infiniteLoop" : true
   }
 ]

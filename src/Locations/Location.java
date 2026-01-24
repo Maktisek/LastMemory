@@ -1,5 +1,6 @@
 package Locations;
 
+import AudioSystem.Audio;
 import Game.Important;
 import Items.Item;
 import Items.Safe;
@@ -7,8 +8,6 @@ import NPCS.EnemyNPC;
 import NPCS.FriendlyNPC;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 public class Location {
@@ -39,8 +38,8 @@ public class Location {
     }
 
 
-    public boolean removeItem(Item item) {
-        return items.remove(item);
+    public void removeItem(Item item) {
+        items.remove(item);
     }
 
     public Item hasItem(String name) {
@@ -71,8 +70,8 @@ public class Location {
     }
 
 
-    public boolean addPossibleLocation(Location location) {
-        return possibleLocations.add(location);
+    public void addPossibleLocation(Location location) {
+        possibleLocations.add(location);
     }
 
     /**

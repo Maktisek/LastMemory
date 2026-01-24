@@ -29,6 +29,7 @@ public class Console {
         Initialization init = new Initialization();
         player = init.getPlayer();
         this.audioLibrary = new AudioLibrary();
+        Important.playLocationSong(player.getCurrentLocation(), audioLibrary);
         loadCommands();
         loadPossibleCommands();
         execute();

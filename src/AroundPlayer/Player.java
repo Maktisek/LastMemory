@@ -86,6 +86,7 @@ public class Player {
             currentLocation = location;
             if (!currentLocation.isFree()) {
                 switchMode(new QuestionMode());
+                return true;
             }
             return true;
         }

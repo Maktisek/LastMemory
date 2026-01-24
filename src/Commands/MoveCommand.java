@@ -2,6 +2,7 @@ package Commands;
 
 import AroundPlayer.Player;
 import AudioSystem.AudioLibrary;
+import Game.Important;
 
 /**
  * Command designed to change the player's currentLocation.
@@ -21,7 +22,9 @@ public class MoveCommand implements Command{
     @Override
     public String execute() {
         if(player.switchLocation(player.getCurrentLocation().findLocation(this.name))){
+            Important.stopLocationSong(player.getPreviousLocation(), audioLibrary);
             audioLibrary.playAudio("walk");
+            Important.playLocationSong(player.getCurrentLocation(), audioLibrary);
             return "Přesouváš se do: " + name;
         }else {
             return "Lokace: " + this.name + " neexistuje";

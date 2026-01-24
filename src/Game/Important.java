@@ -1,5 +1,9 @@
 package Game;
 
+import AudioSystem.Audio;
+import AudioSystem.AudioLibrary;
+import Locations.Location;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -86,5 +90,17 @@ public class Important {
         return line.toString();
     }
 
+    public static void playLocationSong(Location location, AudioLibrary audioLibrary) {
+        if (location.isFree()) {
+            audioLibrary.playAudio(location.getName());
+            return;
+        }
+        audioLibrary.playAudio("test.wav");
+
+    }
+
+    public static void stopLocationSong(Location location, AudioLibrary audioLibrary){
+        audioLibrary.stopAudio(location.getName());
+    }
 }
 
