@@ -2,6 +2,7 @@ package Commands;
 
 import AroundPlayer.Memory;
 import AroundPlayer.Player;
+import Game.Important;
 
 public class EvaluateTaskCommand implements Command{
 
@@ -22,7 +23,8 @@ public class EvaluateTaskCommand implements Command{
         player.deleteTask();
         player.getCurrentLocation().getFriendlyNPC().setTask(null);
         player.getCurrentLocation().getFriendlyNPC().switchSpeeches();
-        return "Splnil si úkol: " + temp + " a dostáváš novou vzpomínku: " + memory.getName();
+        Important.playAudio("new memory");
+        return "Ou, myslím, že si na něco vzpomínám...";
     }
 
     @Override

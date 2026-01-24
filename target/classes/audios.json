@@ -1,7 +1,7 @@
 [
   {
     "title" : "test",
-    "filePath" : "audio\\Test.wav",
+    "filePath" : "audio\\třetí patro.wav",
     "infiniteLoop" : true
   },
   {
@@ -22,6 +22,11 @@
   {
     "title" : "toalety",
     "filePath" : "audio\\toalety.wav",
+    "infiniteLoop" : true
+  },
+  {
+    "title" : "new memory",
+    "filePath" : "audio\\new memory.wav",
     "infiniteLoop" : false
   }
 ]
