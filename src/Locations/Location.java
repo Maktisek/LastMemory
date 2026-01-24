@@ -1,6 +1,6 @@
 package Locations;
 
-import AudioSystem.Audio;
+
 import Game.Important;
 import Items.Item;
 import Items.Safe;
@@ -8,18 +8,25 @@ import NPCS.EnemyNPC;
 import NPCS.FriendlyNPC;
 
 import java.util.ArrayList;
-import java.util.Random;
+
 
 public class Location {
 
+    //Basic information
     private String name;
     private String code;
     private String description;
     private Type type;
+
+    //NPCs
     private EnemyNPC enemyNPC;
     private FriendlyNPC friendlyNPC;
+
+    //Items
     private ArrayList<Item> items;
     private Safe safe;
+
+    //Locations
     private ArrayList<Location> possibleLocations;
 
     public Location() {
