@@ -45,4 +45,9 @@ public class AnswerEnemyNPCCommand implements Command{
     public boolean timeWaitAble() {
         return timeWait;
     }
+
+    @Override
+    public boolean continuing() {
+        return true;
+    }
 }

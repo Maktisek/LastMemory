@@ -71,4 +71,9 @@ public class SwitchModeCommand implements Command{
     public String writeNamesOfModes(){
         return "Dostupné módy: "+String.join(", ", map.keySet());
     }
+
+    @Override
+    public boolean continuing() {
+        return true;
+    }
 }

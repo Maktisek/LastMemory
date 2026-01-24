@@ -34,4 +34,9 @@ public class OpenSafeCommand implements Command{
     public boolean timeWaitAble() {
         return false;
     }
+
+    @Override
+    public boolean continuing() {
+        return true;
+    }
 }

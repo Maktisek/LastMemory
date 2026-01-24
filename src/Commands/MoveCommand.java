@@ -56,4 +56,9 @@ public class MoveCommand implements Command {
     public boolean timeWaitAble() {
         return true;
     }
+
+    @Override
+    public boolean continuing() {
+        return true;
+    }
 }
