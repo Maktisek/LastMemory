@@ -13,6 +13,7 @@ public class Audio {
     private boolean infiniteLoop;
     private long pausePosition;
     private String title;
+    boolean paused;
 
     public Audio() {
     }
@@ -49,8 +50,9 @@ public class Audio {
      * ChatGPT assisted with the microsecond usage idea.
      */
     public void pauseMusic(){
-        if(clip != null){
+        if(clip != null && !paused){
             pausePosition = clip.getMicrosecondPosition();
+            paused = true;
             clip.stop();
         }
     }
@@ -59,7 +61,8 @@ public class Audio {
      * Method which resumes music through clip.getMicrosecondPosition.
      */
     public void resumeMusic(){
-        if(clip != null){
+        if(clip != null && paused){
+            paused = false;
             clip.setMicrosecondPosition(pausePosition);
             clip.start();
         }
@@ -114,5 +117,21 @@ public class Audio {
 
     public boolean isInfiniteLoop() {
         return infiniteLoop;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
+    public void setInfiniteLoop(boolean infiniteLoop) {
+        this.infiniteLoop = infiniteLoop;
+    }
+
+    public boolean isPaused() {
+        return paused;
+    }
+
+    public void setPaused(boolean paused) {
+        this.paused = paused;
     }
 }

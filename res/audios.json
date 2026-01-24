@@ -2,36 +2,43 @@
   {
     "title" : "test",
     "filePath" : "audio\\třetí patro.wav",
-    "infiniteLoop" : true
+    "infiniteLoop" : true,
+    "paused" : false
   },
   {
     "title" : "walk",
     "filePath" : "audio\\walk.WAV",
-    "infiniteLoop" : false
+    "infiniteLoop" : false,
+    "paused" : false
   },
   {
     "title" : "třetí patro",
     "filePath" : "audio\\třetí patro.WAV",
-    "infiniteLoop" : true
+    "infiniteLoop" : true,
+    "paused" : false
   },
   {
     "title" : "keyboard click",
     "filePath" : "audio\\keyboard click.WAV",
-    "infiniteLoop" : false
+    "infiniteLoop" : false,
+    "paused" : false
   },
   {
     "title" : "toalety",
     "filePath" : "audio\\toalety.wav",
-    "infiniteLoop" : true
+    "infiniteLoop" : true,
+    "paused" : false
   },
   {
     "title" : "new memory",
     "filePath" : "audio\\new memory.wav",
-    "infiniteLoop" : false
+    "infiniteLoop" : false,
+    "paused" : false
   },
   {
     "title" : "question mode",
     "filePath" : "audio\\question mode.wav",
-    "infiniteLoop" : true
+    "infiniteLoop" : true,
+    "paused" : false
   }
 ]

@@ -9,6 +9,7 @@ import Modes.Mode;
 import Modes.QuestionMode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class Player {
@@ -36,15 +37,15 @@ public class Player {
         return collectedMemories.add(memory);
     }
 
-    public void sortMemories() {
-        //TODO sortMemories metoda chybi
-        //Seradi vzpominky podle boolean
+    private void sortMemories() {
+        Collections.sort(collectedMemories);
     }
 
     public String writeMemory(String name) {
        for (Memory memory: collectedMemories){
            if (memory.getName().equalsIgnoreCase(name)) {
-               return Important.writeLongTexts(memory.getDescription());
+               memory.switchOpened();
+               return Important.writeSpace(25)+Important.writeLongTexts(memory.getDescription());
            }
        }
        return "Vzpomínka " + name + " neexistuje";
@@ -115,9 +116,8 @@ public class Player {
         ArrayList<String> names = new ArrayList<>();
         for (Memory memory : collectedMemories) {
             if (memory.getLocationGift() != null && memory.getCode().equalsIgnoreCase(currentLocation.getCode())) {
-                currentLocation.addPossibleLocation(memory.getLocationGift());
+                currentLocation.addPossibleLocation(memory.giveLocation());
                 names.add(Important.changeText("underline", memory.getLocationGift().getName()));
-                memory.setLocationGift(null);
             }
             if (!names.isEmpty()) {
                 return "Nové odemklé lokace: " + String.join(", ", names);
@@ -153,8 +153,9 @@ public class Player {
      */
     public String writeMemories() {
         ArrayList<String> names = new ArrayList<>();
+        sortMemories();
         for (Memory memory : collectedMemories) {
-            names.add(memory.getName());
+            names.add(Important.changeText("underline", memory.writeName()));
         }
         if (names.isEmpty()) {
             return "Doposud nebyly posbírané žádné vzpomínky";

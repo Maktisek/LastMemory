@@ -1,8 +1,10 @@
 package AroundPlayer;
 
+import Game.Important;
 import Locations.Location;
+import Modes.BackpackMode;
 
-public class Memory {
+public class Memory implements Comparable<Memory>{
 
 
     private String name;
@@ -16,26 +18,20 @@ public class Memory {
     }
 
     public String writeName(){
-        //TODO writeName metoda chybi
-        //Vypise jmeno vypominky odlisnymi barvami podle boolean opened
-        return null;
+        if(!opened){
+            return Important.changeText("green", name);
+        }
+        return name;
     }
 
     public void switchOpened(){
-        //TODO switchOpened metoda chybi
-        //Jednoducha metoda na prepnuti boolean opened na true
+        this.opened = true;
     }
 
     public Location giveLocation(){
-        //TODO giveLocation metoda chybi
-        //Odevzda lokaci a used se nastavi na true.
-        return null;
-    }
-
-    @Override
-    public String toString() {
-        //TODO toString metoda chybi
-        return null;
+        Location location = locationGift;
+        this.locationGift = null;
+        return location;
     }
 
     public String getCode() {
@@ -76,5 +72,11 @@ public class Memory {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+
+    @Override
+    public int compareTo(Memory o) {
+        return Boolean.compare(this.isOpened(), o.isOpened());
     }
 }

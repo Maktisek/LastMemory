@@ -130,5 +130,13 @@ public class Important {
         }
     }
 
+    public static String writeSpace(int lines){
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < lines; i++) {
+            result.append("\n");
+        }
+        return result.toString();
+    }
+
 }
 

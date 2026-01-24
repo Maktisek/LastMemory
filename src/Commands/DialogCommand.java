@@ -17,7 +17,7 @@ public class DialogCommand implements Command {
     @Override
     public String execute() {
         if (player.getCurrentLocation().getFriendlyNPC() != null) {
-            return Important.writeLongTexts(player.getCurrentLocation().getFriendlyNPC().getCurrentSpeech());
+            return Important.writeSpace(25)+Important.writeLongTexts(player.getCurrentLocation().getFriendlyNPC().getCurrentSpeech());
         } else {
             return "V lokaci se nidko nenachází";
         }
@@ -30,7 +30,7 @@ public class DialogCommand implements Command {
 
     @Override
     public boolean waitAble() {
-        return false;
+        return true;
     }
 
     @Override
