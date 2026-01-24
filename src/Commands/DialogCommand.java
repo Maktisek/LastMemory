@@ -32,4 +32,9 @@ public class DialogCommand implements Command {
     public boolean waitAble() {
         return false;
     }
+
+    @Override
+    public boolean timeWaitAble() {
+        return false;
+    }
 }

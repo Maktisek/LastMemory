@@ -29,4 +29,9 @@ public class ReadLocationDescriptionCommand implements Command{
     public boolean waitAble() {
         return true;
     }
+
+    @Override
+    public boolean timeWaitAble() {
+        return false;
+    }
 }

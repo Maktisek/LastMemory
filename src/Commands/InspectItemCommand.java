@@ -27,4 +27,9 @@ public class InspectItemCommand implements Command{
     public boolean waitAble() {
         return true;
     }
+
+    @Override
+    public boolean timeWaitAble() {
+        return false;
+    }
 }

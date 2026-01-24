@@ -27,4 +27,9 @@ public class ReadFriendlyNPCDescriptionCommand implements Command{
     public boolean waitAble() {
         return true;
     }
+
+    @Override
+    public boolean timeWaitAble() {
+        return false;
+    }
 }

@@ -34,4 +34,9 @@ public class ScanAndAddCommand implements Command{
     public boolean waitAble() {
         return wait;
     }
+
+    @Override
+    public boolean timeWaitAble() {
+        return false;
+    }
 }

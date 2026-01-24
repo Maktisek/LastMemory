@@ -55,6 +55,11 @@ public class SwitchModeCommand implements Command{
         return false;
     }
 
+    @Override
+    public boolean timeWaitAble() {
+        return false;
+    }
+
     public void setMode(String mode) {
         this.mode = mode;
     }

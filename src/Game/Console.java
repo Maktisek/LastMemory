@@ -157,4 +157,8 @@ public class Console {
             Important.loadText();
         }
     }
+
+    public void waitUntilTime(Command command){
+
+    }
 }

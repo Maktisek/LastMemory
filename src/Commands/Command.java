@@ -20,4 +20,6 @@ public interface Command {
      */
     boolean waitAble();
 
+    boolean timeWaitAble();
+
 }
