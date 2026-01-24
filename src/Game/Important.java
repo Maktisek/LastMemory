@@ -4,6 +4,7 @@ import AudioSystem.AudioLibrary;
 import Locations.Location;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -131,11 +132,20 @@ public class Important {
     }
 
     public static String writeSpace(int lines){
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < lines; i++) {
-            result.append("\n");
+        return "\n".repeat(Math.max(0, lines));
+    }
+
+    public static String readTxtFiles(String pathName){
+        try (BufferedReader br = new BufferedReader(new FileReader(pathName))){
+            StringBuilder sb = new StringBuilder();
+            String line;
+            while ((line = br.readLine()) != null){
+                sb.append(line).append("\n");
+            }
+            return sb.toString();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-        return result.toString();
     }
 
 }

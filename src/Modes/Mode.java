@@ -18,10 +18,9 @@ public interface Mode {
 
     /**
      * Shows all command, which can be done in the specific mode
-     * @param player
-     * @return
+     * @return the commands which can be done
      */
-    String executeHelp(Player player);
+    String executeHelp();
 
     /**
      * Works such as "identifier"

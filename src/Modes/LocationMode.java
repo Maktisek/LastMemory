@@ -13,7 +13,7 @@ public class LocationMode implements Mode {
     }
 
     @Override
-    public String executeHelp(Player player) {
+    public String executeHelp() {
         //TODO dodělat pomoc
         return "Pomoc bude doděláná";
     }

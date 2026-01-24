@@ -1,6 +1,7 @@
 package Modes;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 /**
  * Mode designed to operate in the area of inventory
@@ -16,9 +17,8 @@ public class BackpackMode implements Mode{
     }
 
     @Override
-    public String executeHelp(Player player) {
-        //TODO dodělat pomoc
-        return "Pomoc bude dodělána";
+    public String executeHelp() {
+        return Important.readTxtFiles("res\\backpackHelp.txt");
     }
 
     @Override

@@ -15,7 +15,7 @@ public class HelpCommand implements Command{
 
     @Override
     public String execute() {
-        return player.getMode().executeHelp(player);
+        return player.getMode().executeHelp();
     }
 
     @Override
