@@ -95,17 +95,13 @@ public class Player {
 
     /**
      * Switches current location with previous location if it's possible. Then it sets the previous location to null.
-     *
-     * @return true if the operation went successful, false if not (happens only if the previous location is null)
      */
-    public boolean runAway() {
+    public void runAway() {
         if (previousLocation != null) {
             currentLocation = previousLocation;
             previousLocation = null;
             switchMode(new LocationMode());
-            return true;
         }
-        return false;
     }
 
     /**

@@ -95,7 +95,7 @@ public class Important {
             audioLibrary.playAudio(location.getName());
             return;
         }
-        audioLibrary.playAudio("test.wav");
+        audioLibrary.playAudio("test");
     }
 
 
