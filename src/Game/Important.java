@@ -104,10 +104,15 @@ public class Important {
         audioLibrary.stopAudio(name);
     }
 
+    public static void changeTitle(String previousTitle, String newTitle){
+        audioLibrary.changeTitle(previousTitle, newTitle);
+    }
+
     public static String loadText(){
         String result = sc.nextLine();
         audioLibrary.playAudio("keyboard click");
         return result;
     }
+
 }
 
