@@ -145,6 +145,9 @@ public class Console {
                 this.exit = currentCommand.exit();
                 waitUntilInput(currentCommand);
                 waitUntilTime(currentCommand);
+                if(!currentCommand.continuing()){
+                    break;
+                }
             }
         }
     }

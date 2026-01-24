@@ -12,16 +12,19 @@ public class MoveCommand implements Command {
 
     private final Player player;
     private final String name;
+    private boolean continues;
 
     public MoveCommand(Player player, String name) {
         this.player = player;
         this.name = name;
+        this.continues = true;
     }
 
     @Override
     public String execute() {
         boolean action = player.switchLocation(player.getCurrentLocation().findLocation(this.name));
         if (!action) {
+            this.continues = false;
             return Important.changeText("red", "Lokace: " + this.name + " neexistuje");
         }
 
@@ -59,6 +62,6 @@ public class MoveCommand implements Command {
 
     @Override
     public boolean continuing() {
-        return true;
+        return continues;
     }
 }
