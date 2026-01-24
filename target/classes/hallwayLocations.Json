@@ -7,7 +7,8 @@
     "friendlyNPC": null,
     "items": [
     ],
-    "safe": null
+    "safe": null,
+    "type" : "HALLWAY"
   },
   {
     "name": "Třetí patro",
@@ -17,7 +18,8 @@
     "friendlyNPC": null,
     "items": [
     ],
-    "safe": null
+    "safe": null,
+    "type" : "HALLWAY"
   },
   {
     "name": "Druhé patro",
@@ -27,7 +29,8 @@
     "friendlyNPC": null,
     "items": [
     ],
-    "safe": null
+    "safe": null,
+    "type" : "HALLWAY"
   },
   {
     "name": "První patro",
@@ -37,7 +40,8 @@
     "friendlyNPC": null,
     "items": [
     ],
-    "safe": null
+    "safe": null,
+    "type" : "HALLWAY"
   },
   {
     "name": "Přízemí",
@@ -47,6 +51,7 @@
     "friendlyNPC": null,
     "items": [
     ],
-    "safe": null
+    "safe": null,
+    "type" : "HALLWAY"
   }
 ]

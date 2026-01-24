@@ -15,6 +15,7 @@ public class Location {
     private String name;
     private String code;
     private String description;
+    private Type type;
     private EnemyNPC enemyNPC;
     private FriendlyNPC friendlyNPC;
     private ArrayList<Item> items;
@@ -232,5 +233,13 @@ public class Location {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
 }
