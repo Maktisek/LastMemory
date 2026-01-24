@@ -44,7 +44,7 @@
     "safe": null
   },
   {
-    "name": "Toalety3",
+    "name": "Toalety",
     "code": "TOILET_001",
     "description": "Pánské toalety ve třetím patře. Nejedná se o úplně vábné místo. Kluci asi naschvál rádi znečišťují zem svým jablkovým džusem. Alespoň mýdlo na umytí rukou tu páni mají, mohlo jim být hůř.",
     "enemyNPC": null,
@@ -54,7 +54,7 @@
         "name": "Myš",
         "description": "Školní počítačová myš",
         "code": "ESSENTIALS_015",
-        "weight": 21
+        "weight": 1
       }
     ],
     "safe": {

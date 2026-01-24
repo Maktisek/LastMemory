@@ -10,16 +10,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Important {
 
-    /**
-     * Changes the colour of the input text, and then it sets the colour to "default" (white).
-     *
-     * @param colour
-     * @param text
-     * @return
-     */
+
+
+    private static final Scanner sc = new Scanner(System.in);
+    private static final AudioLibrary audioLibrary = new AudioLibrary();
+
+
     public static String changeColourText(String colour, String text) {
         return colourMap(colour) + text + colourMap("default");
     }
@@ -90,17 +90,27 @@ public class Important {
         return line.toString();
     }
 
-    public static void playLocationSong(Location location, AudioLibrary audioLibrary) {
+    public static void playLocationSong(Location location) {
         if (location.isFree()) {
             audioLibrary.playAudio(location.getName());
             return;
         }
         audioLibrary.playAudio("test.wav");
-
     }
 
-    public static void stopLocationSong(Location location, AudioLibrary audioLibrary){
-        audioLibrary.stopAudio(location.getName());
+
+    public static void playAudio(String name){
+        audioLibrary.playAudio(name);
+    }
+
+    public static void stopAudio(String name){
+        audioLibrary.stopAudio(name);
+    }
+
+    public static String loadText(){
+        String result = sc.nextLine();
+        audioLibrary.playAudio("keyboard click");
+        return result;
     }
 }
 

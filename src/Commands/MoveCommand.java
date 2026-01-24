@@ -11,20 +11,18 @@ public class MoveCommand implements Command{
 
     private Player player;
     private String name;
-    private AudioLibrary audioLibrary;
 
-    public MoveCommand(Player player, String name, AudioLibrary audioLibrary) {
+    public MoveCommand(Player player, String name) {
         this.player = player;
         this.name = name;
-        this.audioLibrary = audioLibrary;
     }
 
     @Override
     public String execute() {
         if(player.switchLocation(player.getCurrentLocation().findLocation(this.name))){
-            Important.stopLocationSong(player.getPreviousLocation(), audioLibrary);
-            audioLibrary.playAudio("walk");
-            Important.playLocationSong(player.getCurrentLocation(), audioLibrary);
+            Important.stopAudio(player.getPreviousLocation().getName());
+            Important.playAudio("walk");
+            Important.playLocationSong(player.getCurrentLocation());
             return "Přesouváš se do: " + name;
         }else {
             return "Lokace: " + this.name + " neexistuje";

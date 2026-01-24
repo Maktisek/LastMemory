@@ -13,5 +13,15 @@
     "title" : "třetí patro",
     "filePath" : "audio\\třetí patro.WAV",
     "infiniteLoop" : true
+  },
+  {
+    "title" : "keyboard click",
+    "filePath" : "audio\\keyboard click.WAV",
+    "infiniteLoop" : false
+  },
+  {
+    "title" : "toalety",
+    "filePath" : "audio\\toalety.wav",
+    "infiniteLoop" : false
   }
 ]
