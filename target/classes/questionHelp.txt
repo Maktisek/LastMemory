@@ -1,0 +1,9 @@
+Co dělat, když se NPC tázá na otázku:
+"odpovědět" -> "odpověď" = odpoví protivníkovi na otázku
+"utéct" = uteče do poslední navštívené lokace
+
+Ostatní volně použitelné příkazy:
+"pomoc" = vypíše návod jak ovládat konzoli
+"mod" -> "název módu" = přepne mód hry (inventář/lokace)
+"zobrazit úkol" = vypíše blížší informace ohledně nynějšího úkolu
+"opustit" = vypne hru

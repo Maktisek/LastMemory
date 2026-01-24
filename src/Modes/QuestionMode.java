@@ -1,6 +1,7 @@
 package Modes;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 /**
  * Specific mode which is used only if the player stands in location where is friendlyNPC.
@@ -14,8 +15,7 @@ public class QuestionMode implements Mode{
 
     @Override
     public String executeHelp() {
-        //TODO dodělat pomoc
-        return "Pomoc bude dodělána";
+        return Important.readTxtFiles("res\\questionHelp.txt");
     }
 
     @Override

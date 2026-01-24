@@ -1,6 +1,7 @@
 package Modes;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 /**
  * Mode designed to operate in the area of location
@@ -14,8 +15,7 @@ public class LocationMode implements Mode {
 
     @Override
     public String executeHelp() {
-        //TODO dodělat pomoc
-        return "Pomoc bude doděláná";
+        return Important.readTxtFiles("res\\locationHelp.txt");
     }
 
     @Override
