@@ -151,12 +151,6 @@ public class Location {
         return Important.changeText("red", "Nepřítomný");
     }
 
-    public String testNames() {
-        //TODO tahle metoda je jen pro test
-        Random random = new Random();
-        return possibleLocations.get(random.nextInt(0, possibleLocations.size())).getName();
-    }
-
 
     public boolean isFree() {
         return enemyNPC == null;
@@ -167,8 +161,7 @@ public class Location {
         return Important.changeText("bold", "----------------------------") + Important.changeText("underline", Important.changeText("bold", this.name)) + Important.changeText("bold", "----------------------------\n") +
                 Important.changeText("bold", "Postava: ") + writeFriendlyNPCName() + "\n" +
                 Important.changeText("bold", "Předměty: ") + writeItemsNames() + "\n" +
-                Important.changeText("bold", "Safe: ") + writeSafe() + "\n" +
-                type;
+                Important.changeText("bold", "Safe: ") + writeSafe();
 
     }
 
