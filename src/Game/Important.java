@@ -104,6 +104,14 @@ public class Important {
         audioLibrary.stopAudio(name);
     }
 
+    public static void pauseAudio(String name){
+        audioLibrary.pauseAudio(name);
+    }
+
+    public static void resumeAudio(String name){
+        audioLibrary.resumeAudio(name);
+    }
+
     public static void changeTitle(String previousTitle, String newTitle){
         audioLibrary.changeTitle(previousTitle, newTitle);
     }

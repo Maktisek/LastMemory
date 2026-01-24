@@ -28,5 +28,10 @@
     "title" : "new memory",
     "filePath" : "audio\\new memory.wav",
     "infiniteLoop" : false
+  },
+  {
+    "title" : "question mode",
+    "filePath" : "audio\\question mode.wav",
+    "infiniteLoop" : true
   }
 ]

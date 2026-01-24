@@ -151,6 +151,7 @@ public class Console {
 
     public void waitUntilInput(Command command) {
         if (command.waitAble()) {
+            Important.resumeAudio(player.getCurrentLocation().getName());
             System.out.println("Napiš cokoli pro pokračování");
             System.out.print(">> ");
             Important.loadText();

@@ -3,11 +3,12 @@ package Commands;
 import AroundPlayer.Player;
 import Game.Important;
 import Locations.Type;
+import Modes.QuestionMode;
 
 /**
  * Command designed to change the player's currentLocation.
  */
-public class MoveCommand implements Command{
+public class MoveCommand implements Command {
 
     private Player player;
     private String name;
@@ -23,6 +24,13 @@ public class MoveCommand implements Command{
         if (!action) {
             return "Lokace: " + this.name + " neexistuje";
         }
+
+        if (player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
+            Important.stopAudio(player.getPreviousLocation().getName());
+            Important.playAudio("question mode");
+            return "Přesouváš se do: " + name;
+        }
+
         if (player.getCurrentLocation().getType() == Type.HALLWAY && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
             Important.playAudio("walk");
             Important.changeTitle(player.getPreviousLocation().getName(), player.getCurrentLocation().getName());

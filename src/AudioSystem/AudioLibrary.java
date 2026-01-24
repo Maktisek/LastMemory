@@ -44,6 +44,23 @@ public class AudioLibrary {
         }
     }
 
+    public void pauseAudio(String name) {
+        for (Audio audio : audios) {
+            if (audio.getTitle().equalsIgnoreCase(name)) {
+                audio.pauseMusic();
+            }
+        }
+    }
+
+    public void resumeAudio(String name) {
+        for (Audio audio : audios) {
+            if (audio.getTitle().equalsIgnoreCase(name)) {
+                audio.resumeMusic();
+            }
+        }
+    }
+
+
     public void changeTitle(String previousTitle, String newTitle){
         for (Audio audio: audios){
             if(audio.getTitle().equalsIgnoreCase(previousTitle)){

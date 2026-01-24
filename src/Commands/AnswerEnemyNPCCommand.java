@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 import Modes.LocationMode;
 
 public class AnswerEnemyNPCCommand implements Command{
@@ -17,6 +18,8 @@ public class AnswerEnemyNPCCommand implements Command{
     public String execute() {
         if(player.getCurrentLocation().answerNPC(answer)){
             player.switchMode(new LocationMode());
+            Important.stopAudio("question mode");
+            Important.playAudio(player.getCurrentLocation().getName());
             return "Odpověď " + answer + " je správně!\n Lokace " + player.getCurrentLocation().getName() + " je nyní otevřená";
         }
         return "Odpověď " + answer + " není správně";
