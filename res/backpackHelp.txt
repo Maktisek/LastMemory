@@ -1,1 +1,4 @@
 Návod na používání inventáře:
+"prohlédnout" -> "název předmětu" = vypíše blížší informace ohledně požadovaného předmětu
+"vzpomenout" -> "název vzpomínky" = vypíše bližší informace ohledně požadované vzpomínky
+"prohlédnout úkol" -> "jméno úkolu" = vypíše bližší informace ohledně požadovaného úkolu (platí pouze pro hotové úkoly)
