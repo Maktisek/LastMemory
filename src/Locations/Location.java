@@ -115,7 +115,7 @@ public class Location {
             names.add(item.getName());
         }
         if (names.isEmpty()) {
-            return Important.changeColourText("red", "Místnost je prázdná");
+            return Important.changeText("red", "Místnost je prázdná");
         } else {
             return String.join(", ", names);
         }
@@ -129,7 +129,7 @@ public class Location {
     public String writeAllPossibleLocations() {
         ArrayList<String> names = new ArrayList<>(25);
         for (Location location : possibleLocations) {
-            names.add(location.getName());
+            names.add(Important.changeText("underline", location.getName()));
         }
         return String.join(",", names);
     }
@@ -137,17 +137,17 @@ public class Location {
 
     public String writeFriendlyNPCName() {
         if (friendlyNPC != null) {
-            return Important.changeColourText("green", this.friendlyNPC.getName());
+            return Important.changeText("green", this.friendlyNPC.getName());
         } else {
-            return Important.changeColourText("red", "Nikdo se zde nenachází");
+            return Important.changeText("red", "Nikdo se zde nenachází");
         }
     }
 
     public String writeSafe() {
         if (safe != null && safe.isLocked()) {
-            return Important.changeColourText("green", "Přítomný");
+            return Important.changeText("green", "Přítomný");
         }
-        return Important.changeColourText("red", "Nepřítomný");
+        return Important.changeText("red", "Nepřítomný");
     }
 
     public String testNames() {
@@ -163,11 +163,10 @@ public class Location {
 
     @Override
     public String toString() {
-        return "------------------" + this.name + "------------------ \n" +
-                "Postava: " + writeFriendlyNPCName() + "\n" +
-                "Předměty: " + writeItemsNames() + "\n" +
-                "Safe: " + writeSafe() + "\n" +
-                "Další možné místnosti: " + writeAllPossibleLocations();
+        return Important.changeText("bold", "----------------------------") + Important.changeText("underline", Important.changeText("bold", this.name)) + Important.changeText("bold", "----------------------------\n") +
+                Important.changeText("bold", "Postava: ") + writeFriendlyNPCName() + "\n" +
+                Important.changeText("bold", "Předměty: ") + writeItemsNames() + "\n" +
+                Important.changeText("bold", "Safe: ") + writeSafe();
 
     }
 

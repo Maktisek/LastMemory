@@ -1,6 +1,5 @@
 package Game;
 
-import AudioSystem.Audio;
 import AudioSystem.AudioLibrary;
 import Locations.Location;
 
@@ -8,7 +7,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -20,20 +18,20 @@ public class Important {
     private static final AudioLibrary audioLibrary = new AudioLibrary();
 
 
-    public static String changeColourText(String colour, String text) {
-        return colourMap(colour) + text + colourMap("default");
+    public static String changeText(String update, String text) {
+        return colourMap(update.toLowerCase()) + text + colourMap("default");
     }
 
     /**
-     * It finds colour ANSI escape code in a hashMap.
+     * It finds text update ANSI escape code in a hashMap.
      *
-     * @param colour the colour to be found
-     * @return the ANSI escape code of the wanted colour. If no colour was found then it returns white colour.
+     * @param update the text update to be found
+     * @return the ANSI escape code of the wanted update. If no update was found then it returns white colour as a default.
      */
-    public static String colourMap(String colour) {
-        HashMap<String, String> colourMap = loadColourMap("res\\colours.csv");
-        if (colourMap.containsKey(colour)) {
-            return colourMap.get(colour.toLowerCase());
+    public static String colourMap(String update) {
+        HashMap<String, String> textUpdate = loadTextUpdater();
+        if (textUpdate.containsKey(update)) {
+            return textUpdate.get(update.toLowerCase());
         } else {
             return "\u001B[0m";
         }
@@ -42,11 +40,10 @@ public class Important {
     /**
      * It creates hashMap and load colours into it. The colours are loaded from a specific .csv file
      *
-     * @param pathName the .csv file to be used
      * @return the made hashMap
      */
-    private static HashMap<String, String> loadColourMap(String pathName) {
-        try (BufferedReader br = new BufferedReader(new FileReader(pathName))) {
+    private static HashMap<String, String> loadTextUpdater() {
+        try (BufferedReader br = new BufferedReader(new FileReader("res\\textUpdate.csv"))) {
             HashMap<String, String> temp = new HashMap<>();
             String line;
             while ((line = br.readLine()) != null) {
