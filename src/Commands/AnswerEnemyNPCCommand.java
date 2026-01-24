@@ -6,8 +6,8 @@ import Modes.LocationMode;
 
 public class AnswerEnemyNPCCommand implements Command{
 
-    private Player player;
-    private String answer;
+    private final Player player;
+    private final String answer;
     private boolean inputWait;
     private boolean timeWait;
 

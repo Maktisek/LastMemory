@@ -7,7 +7,7 @@ import AroundPlayer.Player;
  */
 public class HelpCommand implements Command{
 
-    private Player player;
+    private final Player player;
 
     public HelpCommand(Player player) {
         this.player = player;

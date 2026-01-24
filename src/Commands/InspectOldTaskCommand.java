@@ -4,8 +4,8 @@ import AroundPlayer.Player;
 
 public class InspectOldTaskCommand implements Command {
 
-    private Player player;
-    private String name;
+    private final Player player;
+    private final String name;
 
     public InspectOldTaskCommand(Player player, String name) {
         this.player = player;

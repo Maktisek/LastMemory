@@ -4,7 +4,7 @@ import AroundPlayer.Player;
 
 public class ShowCurrentTaskCommand implements Command{
 
-    private Player player;
+    private final Player player;
 
     public ShowCurrentTaskCommand(Player player) {
         this.player = player;

@@ -4,7 +4,7 @@ import AroundPlayer.Player;
 
 public class HandInCommand implements Command{
 
-    private Player player;
+    private final Player player;
 
     public HandInCommand(Player player) {
         this.player = player;

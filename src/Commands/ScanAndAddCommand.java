@@ -8,7 +8,7 @@ import Game.Important;
  */
 public class ScanAndAddCommand implements Command{
 
-    private Player player;
+    private final Player player;
     private boolean waitInput;
     private boolean waitTime;
 

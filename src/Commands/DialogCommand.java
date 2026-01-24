@@ -8,10 +8,12 @@ import Game.Important;
  */
 public class DialogCommand implements Command {
 
-    private Player player;
+    private final Player player;
+    private boolean inputWait;
 
     public DialogCommand(Player player) {
         this.player = player;
+        this.inputWait = true;
     }
 
     @Override
@@ -19,6 +21,7 @@ public class DialogCommand implements Command {
         if (player.getCurrentLocation().getFriendlyNPC() != null) {
             return Important.writeSpace(25)+Important.writeLongTexts(player.getCurrentLocation().getFriendlyNPC().getCurrentSpeech());
         } else {
+            this.inputWait = false;
             return "V lokaci se nidko nenachází";
         }
     }
@@ -30,7 +33,7 @@ public class DialogCommand implements Command {
 
     @Override
     public boolean waitAble() {
-        return true;
+        return inputWait;
     }
 
     @Override

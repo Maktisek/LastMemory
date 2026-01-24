@@ -8,7 +8,7 @@ import Game.Important;
  */
 public class RunAwayCommand implements Command{
 
-    private Player player;
+    private final Player player;
 
 
     public RunAwayCommand(Player player) {

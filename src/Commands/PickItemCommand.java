@@ -5,8 +5,8 @@ import Items.Item;
 
 public class PickItemCommand implements Command {
 
-    private Player player;
-    private String name;
+    private final Player player;
+    private final String name;
 
     public PickItemCommand(Player player, String name) {
         this.player = player;

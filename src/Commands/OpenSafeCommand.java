@@ -4,8 +4,8 @@ import AroundPlayer.Player;
 
 public class OpenSafeCommand implements Command{
 
-   private Player player;
-   private String code;
+   private final Player player;
+   private final String code;
 
     public OpenSafeCommand(Player player, String code) {
         this.player = player;

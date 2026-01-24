@@ -8,7 +8,7 @@ import Game.Important;
  */
 public class ReadLocationDescriptionCommand implements Command{
 
-    Player player;
+    private final Player player;
 
     public ReadLocationDescriptionCommand(Player player) {
         this.player = player;

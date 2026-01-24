@@ -9,7 +9,7 @@ import NPCS.FriendlyNPC;
  */
 public class AcceptTaskCommand implements Command{
 
-    private Player player;
+    private final Player player;
 
     public AcceptTaskCommand(Player player) {
         this.player = player;

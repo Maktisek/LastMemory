@@ -4,7 +4,7 @@ import AroundPlayer.Player;
 
 public class ReadFriendlyNPCDescriptionCommand implements Command{
 
-    private Player player;
+    private final Player player;
 
     public ReadFriendlyNPCDescriptionCommand(Player player) {
         this.player = player;

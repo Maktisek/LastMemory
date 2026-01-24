@@ -6,7 +6,7 @@ import Game.Important;
 
 public class EvaluateTaskCommand implements Command{
 
-    private Player player;
+    private final Player player;
 
     public EvaluateTaskCommand(Player player) {
         this.player = player;

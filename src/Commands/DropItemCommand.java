@@ -4,8 +4,8 @@ import AroundPlayer.Player;
 
 public class DropItemCommand implements Command {
 
-    private Player player;
-    private String name;
+    private final Player player;
+    private final String name;
 
     public DropItemCommand(Player player, String name) {
         this.player = player;

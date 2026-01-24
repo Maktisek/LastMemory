@@ -12,7 +12,7 @@ import java.util.HashMap;
  */
 public class SwitchModeCommand implements Command{
 
-    private HashMap<String, Mode> map;
+    private final HashMap<String, Mode> map;
     private Player player;
     private String mode;
 

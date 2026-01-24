@@ -10,8 +10,8 @@ import Modes.QuestionMode;
  */
 public class MoveCommand implements Command {
 
-    private Player player;
-    private String name;
+    private final Player player;
+    private final String name;
 
     public MoveCommand(Player player, String name) {
         this.player = player;

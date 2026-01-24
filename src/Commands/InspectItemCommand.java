@@ -5,8 +5,8 @@ import Game.Important;
 
 public class InspectItemCommand implements Command{
 
-    private Player player;
-    private String name;
+    private final Player player;
+    private final String name;
 
     public InspectItemCommand(Player player, String name) {
         this.player = player;
