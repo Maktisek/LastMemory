@@ -8,10 +8,14 @@ public class AnswerEnemyNPCCommand implements Command{
 
     private Player player;
     private String answer;
+    private boolean inputWait;
+    private boolean timeWait;
 
     public AnswerEnemyNPCCommand(Player player, String answer) {
         this.player = player;
         this.answer = answer;
+        this.inputWait = true;
+        this.timeWait = false;
     }
 
     @Override
@@ -20,9 +24,11 @@ public class AnswerEnemyNPCCommand implements Command{
             player.switchMode(new LocationMode());
             Important.stopAudio("question mode");
             Important.playAudio(player.getCurrentLocation().getName());
-            return "Odpověď " + answer + " je správně!\n Lokace " + player.getCurrentLocation().getName() + " je nyní otevřená";
+            return "Odpověď " + answer + Important.changeText("green", " je správně!") +"\nLokace " + Important.changeText("underline", player.getCurrentLocation().getName()) + " je nyní otevřená";
         }
-        return "Odpověď " + answer + " není správně";
+        this.inputWait = false;
+        this.timeWait = true;
+        return Important.changeText("red", "Odpověď " + Important.changeText("underline", answer) + Important.changeText("red", " není správně"));
     }
 
     @Override
@@ -32,11 +38,11 @@ public class AnswerEnemyNPCCommand implements Command{
 
     @Override
     public boolean waitAble() {
-        return true;
+        return inputWait;
     }
 
     @Override
     public boolean timeWaitAble() {
-        return false;
+        return timeWait;
     }
 }

@@ -129,12 +129,12 @@ public class Console {
             System.out.print(">> ");
             String command = Important.loadText();
             if (!commands.containsKey(command)) {
-                System.out.println("Akce " + command + " neexistuje");
+                System.out.println(Important.changeText("red", "Akce " + Important.changeText("underline", command) + Important.changeText("red", " neexistuje")));
                 continue;
             }
             Mode foundMode = possibleCommands.get(command).get();
             if (foundMode != null && !player.getMode().getInfo().equalsIgnoreCase(foundMode.getInfo())) {
-                System.out.println("Akci " + command + " nelze nyní provést");
+                System.out.println(Important.changeText("red", "Akci " + Important.changeText("underline", command) + Important.changeText("red", " nelze nyní provést")));
                 continue;
             } else if(foundMode == null) {
                 throw new Exception("Commands were loaded badly");
