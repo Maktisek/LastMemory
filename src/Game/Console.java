@@ -1,6 +1,7 @@
 package Game;
 
 import AroundPlayer.Player;
+import AudioSystem.AudioLibrary;
 import Commands.*;
 import Modes.BackpackMode;
 import Modes.LocationMode;
@@ -17,6 +18,7 @@ public class Console {
     private HashMap<String, Supplier<Mode>> possibleCommands;
     private Scanner sc;
     private boolean exit;
+    private AudioLibrary audioLibrary;
 
 
     public Console() throws Exception {
@@ -26,6 +28,7 @@ public class Console {
         this.exit = false;
         Initialization init = new Initialization();
         player = init.getPlayer();
+        this.audioLibrary = new AudioLibrary();
         loadCommands();
         loadPossibleCommands();
         execute();
@@ -36,7 +39,7 @@ public class Console {
             System.out.println("Další možné lokace: " + player.getCurrentLocation().writeAllPossibleLocations());
             System.out.print("Vlož vstup: ");
             String name = sc.nextLine();
-            return new ArrayList<>(List.of(new MoveCommand(this.player, name), new ScanAndAddCommand(player)));
+            return new ArrayList<>(List.of(new MoveCommand(this.player, name, audioLibrary), new ScanAndAddCommand(player)));
         });
         commands.put("utéct", () -> new ArrayList<>(List.of(new RunAwayCommand(player))));
         commands.put("pomoc", () -> new ArrayList<>(List.of(new HelpCommand(player))));

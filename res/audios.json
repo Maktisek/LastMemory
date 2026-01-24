@@ -1,0 +1,12 @@
+[
+  {
+    "title" : "test",
+    "filePath" : "audio\\Test.wav",
+    "infiniteLoop" : true
+  },
+  {
+    "title" : "walk",
+    "filePath" : "audio\\walk.WAV",
+    "infiniteLoop" : false
+  }
+]
