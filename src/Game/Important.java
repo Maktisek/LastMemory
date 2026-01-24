@@ -124,7 +124,7 @@ public class Important {
 
     public static void waitConsole(double inputSeconds){
         try {
-            Thread.sleep((long) inputSeconds*1000);
+            Thread.sleep((long) (inputSeconds*1000));
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

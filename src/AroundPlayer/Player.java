@@ -116,7 +116,7 @@ public class Player {
         for (Memory memory : collectedMemories) {
             if (memory.getLocationGift() != null && memory.getCode().equalsIgnoreCase(currentLocation.getCode())) {
                 currentLocation.addPossibleLocation(memory.getLocationGift());
-                names.add(memory.getLocationGift().getName());
+                names.add(Important.changeText("underline", memory.getLocationGift().getName()));
                 memory.setLocationGift(null);
             }
             if (!names.isEmpty()) {

@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 /**
  * Command designed to scan and add all possible locations into current location.
@@ -8,11 +9,13 @@ import AroundPlayer.Player;
 public class ScanAndAddCommand implements Command{
 
     private Player player;
-    private boolean wait;
+    private boolean waitInput;
+    private boolean waitTime;
 
     public ScanAndAddCommand(Player player) {
         this.player = player;
-        this.wait = true;
+        this.waitInput = true;
+        this.waitTime = false;
     }
 
     @Override
@@ -21,8 +24,9 @@ public class ScanAndAddCommand implements Command{
         if(result != null){
             return result;
         }
-        wait = false;
-        return "Žádné nové lokace nebyly nalezeny";
+        waitInput = false;
+        waitTime = true;
+        return Important.changeText("red", "Žádné nové lokace nebyly nalezeny");
     }
 
     @Override
@@ -32,11 +36,11 @@ public class ScanAndAddCommand implements Command{
 
     @Override
     public boolean waitAble() {
-        return wait;
+        return waitInput;
     }
 
     @Override
     public boolean timeWaitAble() {
-        return false;
+        return waitTime;
     }
 }
