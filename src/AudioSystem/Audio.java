@@ -1,9 +1,6 @@
 package AudioSystem;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.LineEvent;
+import javax.sound.sampled.*;
 import java.io.File;
 
 public class Audio {
@@ -54,9 +51,22 @@ public class Audio {
      */
     public void pauseMusic(){
         if(clip != null && !paused){
-            pausePosition = clip.getMicrosecondPosition();
-            paused = true;
-            clip.stop();
+            Thread t = new Thread(() ->{
+                fadeOut();
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                pausePosition = clip.getMicrosecondPosition();
+                paused = true;
+                clip.stop();
+            });
+            t.start();
+
+
+
+
         }
     }
 
@@ -65,9 +75,18 @@ public class Audio {
      */
     public void resumeMusic(){
         if(clip != null && paused){
-            paused = false;
-            clip.setMicrosecondPosition(pausePosition);
-            clip.start();
+            Thread t = new Thread(() ->{
+                fadeIn();
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                paused = false;
+                clip.setMicrosecondPosition(pausePosition);
+                clip.start();
+            });
+            t.start();
         }
     }
 
@@ -89,6 +108,43 @@ public class Audio {
             clip.start();
         }
     }
+
+    public void setVolume(float db) {
+        if (clip != null && clip.isControlSupported(FloatControl.Type.MASTER_GAIN)) {
+            FloatControl gain = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+            gain.setValue(db);
+        }
+    }
+
+    public void fadeIn(){
+        Thread t = new Thread(() ->{
+               for (float f = -10f; f < 0f; f++) {
+                   setVolume(f);
+                   try {
+                       Thread.sleep(100);
+                   } catch (InterruptedException e) {
+                       throw new RuntimeException(e);
+                   }
+               }
+
+        });
+        t.start();
+    }
+
+    public void fadeOut(){
+        Thread t = new Thread(() ->{
+            for (float f = 0f; f > -80f; f -= 0.5f) {
+                setVolume(f);
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+        t.start();
+    }
+
 
     public String getFilePath() {
         return filePath;
