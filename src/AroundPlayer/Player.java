@@ -119,8 +119,9 @@ public class Player {
         ArrayList<String> names = new ArrayList<>();
         for (Memory memory : collectedMemories) {
             if (memory.getLocationGift() != null && memory.getCode().equalsIgnoreCase(currentLocation.getCode())) {
-                currentLocation.addPossibleLocation(memory.giveLocation());
-                names.add(Important.changeText("underline", memory.getLocationGift().getName()));
+                Location temp = memory.giveLocation();
+                currentLocation.addPossibleLocation(temp);
+                names.add(Important.changeText("underline", temp.getName()));
             }
             if (!names.isEmpty()) {
                 return "Nové odemklé lokace: " + String.join(", ", names);

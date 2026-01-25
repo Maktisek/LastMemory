@@ -4,6 +4,12 @@
       "name": "test",
       "scene": "testing",
       "requiredMemories": 0
+    },
+    {
+      "name": "test2",
+      "scene": "testing2",
+      "requiredMemories": 1
     }
+
   ]
 }
