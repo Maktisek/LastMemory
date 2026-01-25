@@ -1,5 +1,6 @@
 package AroundPlayer;
 
+import Cutscenes.CutsceneLoader;
 import Game.Important;
 import Items.Item;
 import Items.Task;
@@ -22,6 +23,7 @@ public class Player {
     private Location currentLocation;
     private Location previousLocation;
     private Mode mode;
+    private CutsceneLoader cutscenes;
 
     public Player(Location startLocation) {
         this.inventory = new Inventory();
@@ -31,6 +33,7 @@ public class Player {
         this.currentLocation = startLocation;
         this.previousLocation = null;
         this.mode = new LocationMode();
+        this.cutscenes = CutsceneLoader.loadCutscenes();
     }
 
     public boolean addMemory(Memory memory) {

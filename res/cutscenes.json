@@ -1,0 +1,9 @@
+{
+  "cutscenes": [
+    {
+      "name": "test",
+      "scene": "testing",
+      "requiredMemories": 0
+    }
+  ]
+}
