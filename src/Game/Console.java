@@ -148,8 +148,7 @@ public class Console {
             } else if (foundMode == null) {
                 throw new Exception("Commands were loaded badly");
             }
-            List<Command> listOfCommands = commands.get(command).get();
-            execute(listOfCommands);
+            execute(commands.get(command).get());
         }
     }
 
