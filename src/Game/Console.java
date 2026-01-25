@@ -98,6 +98,7 @@ public class Console {
             return List.of(new OpenSafeCommand(player, null));
         });
         commands.put("info postava", () -> List.of(new ReadFriendlyNPCDescriptionCommand(player)));
+        commands.put("cutscene", () -> List.of(new CutscenePlayerCommand(player)));
     }
 
 
@@ -120,14 +121,21 @@ public class Console {
         possibleCommands.put("prohlédnout úkol", BackpackMode::new);
         possibleCommands.put("otevřít safe", LocationMode::new);
         possibleCommands.put("info postava", LocationMode::new);
+        possibleCommands.put("cutscene", player::getMode);
     }
 
 
     public void execute() throws Exception {
         while (!exit) {
-            System.out.println(player.toString());
-            System.out.print(">> ");
-            String command = Important.loadText();
+            String command;
+            if (player.canPlayCutscene()) {
+                command = "cutscene";
+            } else {
+                System.out.println(player.toString());
+                System.out.print(">> ");
+                command = Important.loadText();
+            }
+
             if (!commands.containsKey(command)) {
                 System.out.println(Important.changeText("red", "Akce " + Important.changeText("underline", command) + Important.changeText("red", " neexistuje")));
                 continue;
@@ -136,7 +144,7 @@ public class Console {
             if (foundMode != null && !player.getMode().getInfo().equalsIgnoreCase(foundMode.getInfo())) {
                 System.out.println(Important.changeText("red", "Akci " + Important.changeText("underline", command) + Important.changeText("red", " nelze nyní provést")));
                 continue;
-            } else if(foundMode == null) {
+            } else if (foundMode == null) {
                 throw new Exception("Commands were loaded badly");
             }
             List<Command> listOfCommands = commands.get(command).get();
@@ -145,7 +153,7 @@ public class Console {
                 this.exit = currentCommand.exit();
                 waitUntilInput(currentCommand);
                 waitUntilTime(currentCommand);
-                if(!currentCommand.continuing()){
+                if (!currentCommand.continuing()) {
                     break;
                 }
             }
@@ -163,8 +171,8 @@ public class Console {
         }
     }
 
-    public void waitUntilTime(Command command){
-        if(command.timeWaitAble()){
+    public void waitUntilTime(Command command) {
+        if (command.timeWaitAble()) {
             Important.waitConsole(0.5);
         }
     }

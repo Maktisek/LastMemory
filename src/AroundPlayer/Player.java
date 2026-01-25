@@ -183,6 +183,10 @@ public class Player {
     }
 
     public boolean canPlayCutscene(){
+        if(cutscenes.peekCutscene() == null){
+            return false;
+        }
+
         return this.collectedMemories.size() == cutscenes.peekCutscene().getRequiredMemories();
     }
 
