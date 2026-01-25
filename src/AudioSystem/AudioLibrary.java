@@ -55,7 +55,7 @@ public class AudioLibrary {
     public void pause(String name) {
         for (Audio audio : audios) {
             if (audio.getTitle().equalsIgnoreCase(name)) {
-                audio.pauseMusic();
+                audio.pause();
             }
         }
     }
@@ -63,7 +63,7 @@ public class AudioLibrary {
     public void resume(String name) {
         for (Audio audio : audios) {
             if (audio.getTitle().equalsIgnoreCase(name)) {
-                audio.resumeMusic();
+                audio.resume();
             }
         }
     }
