@@ -38,7 +38,7 @@ public class Audio {
             if (music) {
                 fadeIn(10);
             }
-            clip.start();
+            //If there are problems with the sound, then this is the place where originally clip.start() used to be.
             loop(infiniteLoop);
         } catch (Exception e) {
             System.err.println(e.getMessage());
@@ -144,11 +144,16 @@ public class Audio {
     }
 
     /**
-     * Method which can make the audio file to loop.
-     *
-     *
-     * @param loop = true if the audio should be looped.
-     * @author ChatGPT
+     * Loops the audio if requested.
+     * Uses {@link #clip} method addLineListener to attach new lineListener.
+     * listener reacts to STOP events by restarting the audio.
+     *<p>
+     * If the event.getType() is LineEvent.Type.STOP then it checks if the STOP state was because of end of the audio file.
+     * If yes, then it resets the audio via setting the microsecond position to 0.
+     * <p>
+     * Also, starts the audio initially, do not call clip.start() before this method.
+     * @param loop is true if the audio should be looped.
+     * @author ChatGPT (originally made for my first game S.T.A.L.K.E.R. Echoes of Chernobyl in May 2025)
      */
     public void loop(boolean loop) {
         if (loop) {
@@ -160,8 +165,8 @@ public class Audio {
                     }
                 }
             });
-            clip.start();
         }
+        clip.start();
     }
 
     public void setVolume(float db) {
