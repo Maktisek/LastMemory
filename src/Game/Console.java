@@ -26,7 +26,7 @@ public class Console {
         player = init.getPlayer();
         loadCommands();
         loadPossibleCommands();
-        PreExecute();
+        preExecute();
     }
 
     public void loadCommands() {
@@ -122,7 +122,7 @@ public class Console {
     }
 
 
-    public void PreExecute() throws Exception {
+    public void preExecute() throws Exception {
         while (!exit) {
             String command;
             if (player.canPlayCutscene()) {
