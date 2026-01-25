@@ -169,6 +169,14 @@ public class Audio {
         clip.start();
     }
 
+    /**
+     * Sets the desired volume in decibels.
+     * <p>
+     * Uses FloatControl.TYPE.MASTER_GAIN to control volume gain.
+     * The clip has to be initialized and the clip has to support the MASTER_GAIN FloatControl.
+     * Gets the clip’s MASTER_GAIN FloatControl and sets its value.
+     * @param db requested volume in decibels (-80.0 to 0.0 accepted)
+     */
     public void setVolume(float db) {
         if (clip != null && clip.isControlSupported(FloatControl.Type.MASTER_GAIN)) {
             FloatControl gain = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
@@ -176,6 +184,12 @@ public class Audio {
         }
     }
 
+    /**
+     * Fades in audio from -10 to 0 decibels.
+     * Uses {@link #setVolume(float)}} to set the current volume level.
+     * @param milliseconds the desired time that the thread will wait until updating the volume again.
+     *                     More millisecond the more time the fade will take.
+     */
     public void fadeIn(long milliseconds) {
         Thread t = new Thread(() -> {
             for (float f = -10f; f < 0f; f++) {
@@ -190,6 +204,10 @@ public class Audio {
         t.start();
     }
 
+    /**
+     * Fades out audio from 0 to -80 decibels.
+     * Uses {@link #setVolume(float)}} to set the current volume level.
+     */
     public void fadeOut() {
         Thread t = new Thread(() -> {
             for (float f = 0f; f > -80f; f -= 0.5f) {
