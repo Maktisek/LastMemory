@@ -15,11 +15,14 @@ public class Audio {
     public Audio() {
     }
 
-    public void implementAudio() {
+    public void implementAudio(boolean music) {
         try {
             final AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(this.filePath));
             this.clip = AudioSystem.getClip();
             clip.open(audioStream);
+            if(music){
+                fadeIn();
+            }
             clip.start();
             loop(infiniteLoop);
         } catch (Exception e) {
@@ -30,7 +33,7 @@ public class Audio {
 
     public void implementMusic(){
         if(clip == null) {
-            implementAudio();
+            implementAudio(true);
         }
     }
 
@@ -44,7 +47,7 @@ public class Audio {
     }
 
     public void startAudio() {
-        final Thread playThread = new Thread(this::implementAudio);
+        final Thread playThread = new Thread(() -> implementAudio(false));
         playThread.start();
     }
 
