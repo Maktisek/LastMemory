@@ -96,6 +96,14 @@ public class Important {
         audioLibrary.playAudio("test");
     }
 
+    public static void implementLocationSong(Location location){
+        if (location.isFree()) {
+            audioLibrary.implementAudio(location.getName());
+            return;
+        }
+        audioLibrary.implementAudio("test");
+    }
+
 
     public static void playAudio(String name){
         audioLibrary.playAudio(name);

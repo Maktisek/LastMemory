@@ -18,21 +18,24 @@ public class Audio {
     public Audio() {
     }
 
+    public void implementAudio(){
+        try {
+            final AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(this.filePath));
+            this.clip = AudioSystem.getClip();
+            clip.open(audioStream);
+            clip.start();
+            loop(infiniteLoop);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+
     /**
      * Method which starts the audio.
      */
     public void startAudio() {
-        final Thread playThread = new Thread(() -> {
-            try {
-                final AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(this.filePath));
-                this.clip = AudioSystem.getClip();
-                clip.open(audioStream);
-                clip.start();
-                loop(infiniteLoop);
-            } catch (Exception e) {
-                System.err.println(e.getMessage());
-            }
-        });
+        final Thread playThread = new Thread(this::implementAudio);
         playThread.start();
     }
 

@@ -36,6 +36,14 @@ public class AudioLibrary {
         }
     }
 
+    public void implementAudio(String name) {
+        for (Audio audio : audios) {
+            if (audio.getTitle().equalsIgnoreCase(name)) {
+                audio.implementAudio();
+            }
+        }
+    }
+
     public void stopAudio(String name) {
         for (Audio audio : audios) {
             if (audio.getTitle().equalsIgnoreCase(name)) {

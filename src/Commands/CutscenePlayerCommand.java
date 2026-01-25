@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 public class CutscenePlayerCommand implements Command{
 
