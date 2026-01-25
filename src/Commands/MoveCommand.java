@@ -29,18 +29,18 @@ public class MoveCommand implements Command {
         }
 
         if (player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
-            Important.stopAudio(player.getPreviousLocation().getName());
-            Important.playAudio("question mode");
+            Important.stop(player.getPreviousLocation().getName());
+            Important.playMusic("question mode");
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
 
         if (player.getCurrentLocation().getType() == Type.HALLWAY && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
-            Important.playAudio("walk");
+            Important.playSound("walk");
             Important.changeTitle(player.getPreviousLocation().getName(), player.getCurrentLocation().getName());
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
-        Important.stopAudio(player.getPreviousLocation().getName());
-        Important.playAudio("walk");
+        Important.stop(player.getPreviousLocation().getName());
+        Important.playSound("walk");
         Important.playLocationSong(player.getCurrentLocation());
         return Important.changeText("green", "Přesouváš se do: " + name);
     }

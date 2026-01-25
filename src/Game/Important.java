@@ -4,7 +4,6 @@ import AudioSystem.AudioLibrary;
 import Locations.Location;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -90,35 +89,31 @@ public class Important {
 
     public static void playLocationSong(Location location) {
         if (location.isFree()) {
-            audioLibrary.playAudio(location.getName());
+            audioLibrary.playMusic(location.getName());
             return;
         }
-        audioLibrary.playAudio("test");
-    }
-
-    public static void implementLocationSong(Location location){
-        if (location.isFree()) {
-            audioLibrary.implementAudio(location.getName());
-            return;
-        }
-        audioLibrary.implementAudio("test");
+        audioLibrary.playMusic("test");
     }
 
 
-    public static void playAudio(String name){
+    public static void playMusic(String name){
+        audioLibrary.playMusic(name);
+    }
+
+    public static void playSound(String name){
         audioLibrary.playAudio(name);
     }
 
-    public static void stopAudio(String name){
-        audioLibrary.stopAudio(name);
+    public static void stop(String name){
+        audioLibrary.stop(name);
     }
 
-    public static void pauseAudio(String name){
-        audioLibrary.pauseAudio(name);
+    public static void pause(String name){
+        audioLibrary.pause(name);
     }
 
-    public static void resumeAudio(String name){
-        audioLibrary.resumeAudio(name);
+    public static void resume(String name){
+        audioLibrary.resume(name);
     }
 
     public static void changeTitle(String previousTitle, String newTitle){

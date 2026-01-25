@@ -15,7 +15,7 @@ public class Audio {
     public Audio() {
     }
 
-    public void implementAudio(){
+    public void implementAudio() {
         try {
             final AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(this.filePath));
             this.clip = AudioSystem.getClip();
@@ -28,9 +28,21 @@ public class Audio {
     }
 
 
+    public void implementMusic(){
+        if(clip == null) {
+            implementAudio();
+        }
+    }
+
+
     /**
-     * Method which starts the audio.
+     * Method which starts music.
      */
+    public void startMusic() {
+        final Thread playThread = new Thread(this::implementMusic);
+        playThread.start();
+    }
+
     public void startAudio() {
         final Thread playThread = new Thread(this::implementAudio);
         playThread.start();
@@ -42,6 +54,7 @@ public class Audio {
     public void stopMusic() {
         if (clip != null) {
             this.clip.close();
+            this.clip = null;
         }
     }
 
@@ -63,10 +76,6 @@ public class Audio {
                 clip.stop();
             });
             t.start();
-
-
-
-
         }
     }
 
@@ -126,7 +135,6 @@ public class Audio {
                        throw new RuntimeException(e);
                    }
                }
-
         });
         t.start();
     }

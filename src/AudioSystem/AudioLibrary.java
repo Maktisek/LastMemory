@@ -28,6 +28,14 @@ public class AudioLibrary {
         }
     }
 
+    public void playMusic(String name) {
+        for (Audio audio : audios) {
+            if (audio.getTitle().equalsIgnoreCase(name)) {
+                audio.startMusic();
+            }
+        }
+    }
+
     public void playAudio(String name) {
         for (Audio audio : audios) {
             if (audio.getTitle().equalsIgnoreCase(name)) {
@@ -36,15 +44,7 @@ public class AudioLibrary {
         }
     }
 
-    public void implementAudio(String name) {
-        for (Audio audio : audios) {
-            if (audio.getTitle().equalsIgnoreCase(name)) {
-                audio.implementAudio();
-            }
-        }
-    }
-
-    public void stopAudio(String name) {
+    public void stop(String name) {
         for (Audio audio : audios) {
             if (audio.getTitle().equalsIgnoreCase(name)) {
                 audio.stopMusic();
@@ -52,7 +52,7 @@ public class AudioLibrary {
         }
     }
 
-    public void pauseAudio(String name) {
+    public void pause(String name) {
         for (Audio audio : audios) {
             if (audio.getTitle().equalsIgnoreCase(name)) {
                 audio.pauseMusic();
@@ -60,7 +60,7 @@ public class AudioLibrary {
         }
     }
 
-    public void resumeAudio(String name) {
+    public void resume(String name) {
         for (Audio audio : audios) {
             if (audio.getTitle().equalsIgnoreCase(name)) {
                 audio.resumeMusic();

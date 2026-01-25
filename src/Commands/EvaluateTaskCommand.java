@@ -22,8 +22,8 @@ public class EvaluateTaskCommand implements Command{
         player.deleteTask();
         player.getCurrentLocation().getFriendlyNPC().setTask(null);
         player.getCurrentLocation().getFriendlyNPC().switchSpeeches();
-        Important.pauseAudio(player.getCurrentLocation().getName());
-        Important.playAudio("new memory");
+        Important.pause(player.getCurrentLocation().getName());
+        Important.playSound("new memory");
         return Important.writeSpace(25)+"Ou, myslím, že si na něco vzpomínám...";
     }
 

@@ -26,7 +26,6 @@ public class Console {
         player = init.getPlayer();
         loadCommands();
         loadPossibleCommands();
-        Important.implementLocationSong(player.getCurrentLocation());
         execute();
     }
 
@@ -130,7 +129,8 @@ public class Console {
                 cutscenePlayer();
                 continue;
             } else {
-                System.out.println(player.toString());
+                Important.playLocationSong(player.getCurrentLocation());
+                System.out.println(player);
                 System.out.print(">> ");
                 command = Important.loadText();
             }
@@ -160,7 +160,7 @@ public class Console {
     }
 
     public void cutscenePlayer() {
-        Important.pauseAudio(player.getCurrentLocation().getName());
+        Important.pause(player.getCurrentLocation().getName());
         Command command = new CutscenePlayerCommand(player);
         System.out.println(command.execute());
         waitUntilInput(command);
@@ -173,7 +173,7 @@ public class Console {
             System.out.println("Napiš cokoli pro pokračování");
             System.out.print(">> ");
             Important.loadText();
-            Important.resumeAudio(player.getCurrentLocation().getName());
+            Important.resume(player.getCurrentLocation().getName());
         }
     }
 
