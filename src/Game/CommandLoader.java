@@ -122,10 +122,6 @@ public class CommandLoader {
         return commands;
     }
 
-    public Player getPlayer() {
-        return player;
-    }
-
     public HashMap<String, Supplier<Mode>> getPossibleCommands() {
         return possibleCommands;
     }
