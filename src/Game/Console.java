@@ -26,7 +26,7 @@ public class Console {
         player = init.getPlayer();
         loadCommands();
         loadPossibleCommands();
-        execute();
+        PreExecute();
     }
 
     public void loadCommands() {
@@ -122,14 +122,16 @@ public class Console {
     }
 
 
-    public void execute() throws Exception {
+    public void PreExecute() throws Exception {
         while (!exit) {
             String command;
             if (player.canPlayCutscene()) {
                 cutscenePlayer();
                 continue;
             } else {
-                Important.playLocationSong(player.getCurrentLocation());
+                if(!player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())){
+                    Important.playLocationSong(player.getCurrentLocation());
+                }
                 System.out.println(player);
                 System.out.print(">> ");
                 command = Important.loadText();
@@ -147,14 +149,18 @@ public class Console {
                 throw new Exception("Commands were loaded badly");
             }
             List<Command> listOfCommands = commands.get(command).get();
-            for (Command currentCommand : listOfCommands) {
-                System.out.println(currentCommand.execute());
-                this.exit = currentCommand.exit();
-                waitUntilInput(currentCommand);
-                waitUntilTime(currentCommand);
-                if (!currentCommand.continuing()) {
-                    break;
-                }
+            execute(listOfCommands);
+        }
+    }
+
+    public void execute(List<Command> listOfCommands){
+        for (Command currentCommand : listOfCommands) {
+            System.out.println(currentCommand.execute());
+            this.exit = currentCommand.exit();
+            waitUntilInput(currentCommand);
+            waitUntilTime(currentCommand);
+            if (!currentCommand.continuing()) {
+                break;
             }
         }
     }

@@ -23,7 +23,7 @@ public class AnswerEnemyNPCCommand implements Command{
         if(player.getCurrentLocation().answerNPC(answer)){
             player.switchMode(new LocationMode());
             Important.stop("question mode");
-            Important.playLocationSong(player.getCurrentLocation());
+            Important.stop(player.getCurrentLocation().getName());
             return "Odpověď " + answer + Important.changeText("green", " je správně!") +"\nLokace " + Important.changeText("underline", player.getCurrentLocation().getName()) + " je nyní otevřená";
         }
         this.inputWait = false;
