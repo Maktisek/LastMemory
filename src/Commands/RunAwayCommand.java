@@ -20,9 +20,8 @@ public class RunAwayCommand implements Command{
         if(player.getPreviousLocation() == null){
             return "Další útěk není možný";
         }
-        Important.stop(player.getCurrentLocation().getName());
+        Important.stop("question mode");
         player.runAway();
-        Important.playLocationSong(player.getCurrentLocation());
         return "Utíkáš zpět do: " + player.getCurrentLocation().getName();
 
     }

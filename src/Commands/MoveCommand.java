@@ -29,7 +29,7 @@ public class MoveCommand implements Command {
         }
 
         if (player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
-            Important.pause(player.getPreviousLocation().getName());
+            Important.stop(player.getPreviousLocation().getName());
             Important.playMusic("question mode");
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
