@@ -9,10 +9,10 @@
       "age": "50 let",
       "question": "Co znamená zkratka RAM?",
       "possibleAnswers": [
-        "Random-access memory",
-        "Random access memory",
-        "Ryba-access memory",
-        "Ryba access memory"
+        "random-access memory",
+        "random access memory",
+        "ryba-access memory",
+        "ryba access memory"
       ]
     },
     "friendlyNPC": {
@@ -92,7 +92,6 @@
       "age": "28 let",
       "question": "Jaké zvláštní písmeno české abecedy bylo kódované ve znakové sadě KOI8-CS?",
       "possibleAnswers": [
-        "Ch",
         "ch"
       ]
     },
@@ -157,10 +156,11 @@
       "age": "55 let",
       "question": "Můžeme protnout kótovací čáru?",
       "possibleAnswers": [
-        "V žádném případě",
-        "Ne",
-        "Nein",
-        "No"
+        "v žádném případě",
+        "ne",
+        "nein",
+        "no",
+        "vůbec"
       ]
     },
     "friendlyNPC": {
@@ -236,7 +236,7 @@
       "age": "23 let",
       "question": "Jak se nazývá prvek, podle kterého algoritmus Quick Sort rozděluje pole?",
       "possibleAnswers": [
-        "Pivot"
+        "pivot"
       ]
     },
     "friendlyNPC": {
@@ -314,7 +314,7 @@
       "age": "16 let",
       "question": "Jak se říká materiálu, ze kterého se tiskne na 3d tiskárně (Také jinak tiskové vlákno)?",
       "possibleAnswers": [
-        "Filament"
+        "filament"
       ]
     },
     "friendlyNPC": {
@@ -368,9 +368,9 @@
       "age": "27 let",
       "question": "Kde se ukládají data webové aplikace?",
       "possibleAnswers": [
-        "V databázi",
-        "Databáze",
-        "Do databáze"
+        "v databázi",
+        "databáze",
+        "do databáze"
       ]
     },
     "friendlyNPC": {
@@ -428,9 +428,9 @@
       "age": "25 let",
       "question": "Jakou třídu použijete v Javě, pokud chcete přečíst obsah souboru řádek po řádku?",
       "possibleAnswers": [
-        "BufferedReader",
-        "Buffered něco",
-        "Něco reader"
+        "bufferedreader",
+        "buffered něco",
+        "něco reader"
       ]
     },
     "friendlyNPC": {
@@ -500,11 +500,11 @@
       "age": "65 let",
       "question": "Jak vypadá vzoreček pro výpočet síly?",
       "possibleAnswers": [
-        "F=m*a",
+        "f=m*a",
         "ma",
         "m*a",
-        "F-ma",
-        "F-m*a"
+        "f-ma",
+        "f-m*a"
       ]
     },
     "friendlyNPC": {

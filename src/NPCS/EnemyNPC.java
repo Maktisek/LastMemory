@@ -16,7 +16,7 @@ public class EnemyNPC extends NPC{
 
 
     public boolean evaluateQuestion(String answer){
-        return possibleAnswers.contains(answer);
+        return possibleAnswers.contains(answer.toLowerCase());
     }
 
     @Override

@@ -137,7 +137,7 @@ public class Console {
                 command = Important.loadText();
             }
 
-            if (!commands.containsKey(command)) {
+            if (!commands.containsKey(command.toLowerCase())) {
                 System.out.println(Important.changeText("red", "Akce " + Important.changeText("underline", command) + Important.changeText("red", " neexistuje")));
                 continue;
             }

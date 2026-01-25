@@ -23,6 +23,7 @@ public class EvaluateTaskCommand implements Command{
         player.deleteTask();
         player.getCurrentLocation().getFriendlyNPC().setTask(null);
         player.getCurrentLocation().getFriendlyNPC().switchSpeeches();
+        Important.pauseAudio(player.getCurrentLocation().getName());
         Important.playAudio("new memory");
         return "Ou, myslím, že si na něco vzpomínám...";
     }
@@ -34,7 +35,7 @@ public class EvaluateTaskCommand implements Command{
 
     @Override
     public boolean waitAble() {
-        return false;
+        return true;
     }
 
     @Override
