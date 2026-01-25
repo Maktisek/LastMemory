@@ -182,6 +182,10 @@ public class Player {
         return String.join(", ", names);
     }
 
+    public boolean canPlayCutscene(){
+        return this.collectedMemories.size() == cutscenes.peekCutscene().getRequiredMemories();
+    }
+
 
     @Override
     public String toString() {
@@ -242,6 +246,14 @@ public class Player {
 
     public void setDoneTasks(ArrayList<Task> doneTasks) {
         this.doneTasks = doneTasks;
+    }
+
+    public CutsceneLoader getCutscenes() {
+        return cutscenes;
+    }
+
+    public void setCutscenes(CutsceneLoader cutscenes) {
+        this.cutscenes = cutscenes;
     }
 
     public static class Inventory {

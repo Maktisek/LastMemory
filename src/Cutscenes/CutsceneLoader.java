@@ -14,11 +14,19 @@ public class CutsceneLoader {
     public static CutsceneLoader loadCutscenes(){
         ObjectMapper mapper = new ObjectMapper();
         try (InputStream input = new FileInputStream("res\\cutscenes.json")){
-            CutsceneLoader temp = mapper.readValue(input, CutsceneLoader.class);
-            return temp;
+            return mapper.readValue(input, CutsceneLoader.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+
+    public Cutscene pollCutscene(){
+        return cutscenes.poll();
+    }
+
+    public Cutscene peekCutscene(){
+        return cutscenes.peek();
     }
 
     public Queue<Cutscene> getCutscenes() {
