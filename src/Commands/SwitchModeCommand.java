@@ -4,13 +4,14 @@ import AroundPlayer.Player;
 import Modes.BackpackMode;
 import Modes.LocationMode;
 import Modes.Mode;
+import Modes.QuestionMode;
 
 import java.util.HashMap;
 
 /**
  * More complex command designed to change player's mode
  */
-public class SwitchModeCommand implements Command{
+public class SwitchModeCommand implements Command {
 
     private final HashMap<String, Mode> map;
     private Player player;
@@ -31,18 +32,24 @@ public class SwitchModeCommand implements Command{
     /**
      * Loads the map with inputs as a keys and values as a modes
      */
-    public void fillMap(){
+    public void fillMap() {
         map.put("lokace", new LocationMode());
         map.put("inventář", new BackpackMode());
     }
 
     @Override
     public String execute() {
-        if (map.containsKey(mode)) {
-            player.switchMode(map.get(mode));
+        if (!map.containsKey(mode)) {
+            return "Mód: " + mode + " neexistuje";
+        }
+
+        if (map.get(mode).getInfo().equalsIgnoreCase(new LocationMode().getInfo()) && !player.getCurrentLocation().isFree()) {
+            player.switchMode(new QuestionMode());
             return "Mód změněn na: " + mode;
         }
-        return "Mód: " + mode + " neexistuje";
+
+        player.switchMode(map.get(mode));
+        return "Mód změněn na: " + mode;
     }
 
     @Override
@@ -66,10 +73,11 @@ public class SwitchModeCommand implements Command{
 
     /**
      * Writes all map keys
+     *
      * @return map keys
      */
-    public String writeNamesOfModes(){
-        return "Dostupné módy: "+String.join(", ", map.keySet());
+    public String writeNamesOfModes() {
+        return "Dostupné módy: " + String.join(", ", map.keySet());
     }
 
     @Override
