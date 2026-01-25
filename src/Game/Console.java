@@ -98,7 +98,6 @@ public class Console {
             return List.of(new OpenSafeCommand(player, null));
         });
         commands.put("info postava", () -> List.of(new ReadFriendlyNPCDescriptionCommand(player)));
-        commands.put("cutscene", () -> List.of(new CutscenePlayerCommand(player)));
     }
 
 
@@ -121,7 +120,6 @@ public class Console {
         possibleCommands.put("prohlédnout úkol", BackpackMode::new);
         possibleCommands.put("otevřít safe", LocationMode::new);
         possibleCommands.put("info postava", LocationMode::new);
-        possibleCommands.put("cutscene", player::getMode);
     }
 
 
@@ -129,8 +127,8 @@ public class Console {
         while (!exit) {
             String command;
             if (player.canPlayCutscene()) {
-                Important.pauseAudio(player.getCurrentLocation().getName());
-                command = "cutscene";
+                cutscenePlayer();
+                continue;
             } else {
                 System.out.println(player.toString());
                 System.out.print(">> ");
@@ -159,6 +157,13 @@ public class Console {
                 }
             }
         }
+    }
+
+    public void cutscenePlayer() {
+        Important.pauseAudio(player.getCurrentLocation().getName());
+        Command command = new CutscenePlayerCommand(player);
+        System.out.println(command.execute());
+        waitUntilInput(command);
     }
 
 
