@@ -29,7 +29,7 @@ public class MoveCommand implements Command {
         }
 
         if (player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
-            Important.stop(player.getPreviousLocation().getName());
+            Important.stopMusic(player.getPreviousLocation().getName());
             Important.playMusic("question mode");
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
@@ -39,7 +39,7 @@ public class MoveCommand implements Command {
             Important.changeTitle(player.getPreviousLocation().getName(), player.getCurrentLocation().getName());
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
-        Important.stop(player.getPreviousLocation().getName());
+        Important.stopMusic(player.getPreviousLocation().getName());
         Important.playSound("walk");
         Important.playLocationSong(player.getCurrentLocation());
         return Important.changeText("green", "Přesouváš se do: " + name);

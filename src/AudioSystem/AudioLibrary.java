@@ -44,10 +44,18 @@ public class AudioLibrary {
         }
     }
 
-    public void stop(String name) {
+    public void stopMusic(String name) {
         for (Audio audio : audios) {
             if (audio.getTitle().equalsIgnoreCase(name)) {
                 audio.stopMusic();
+            }
+        }
+    }
+
+    public void stopSound(String name) {
+        for (Audio audio : audios) {
+            if (audio.getTitle().equalsIgnoreCase(name)) {
+                audio.stopSound();
             }
         }
     }

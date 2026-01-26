@@ -105,211 +105,212 @@ public class Audio {
     }
 
     /**
-     * Method which pauses the audio.
-     * There is a value {@link #paused} which holds an information if the audio is paused.
-     * This value has to be false in order to proceed. Also, the clip has to be initialized. If it's null then it can't be stopped.
-     * <p>
-     * Sets {@link #pausePosition} to current microsecond position, so the audio can be resumed later.
-     * <p>
-     * Uses {@link #fadeOut()} method for cleaner transition.
+     * Method which stops the sound by {@link #clip} method close()
      */
-    public void pause() {
-        if (clip != null && !paused) {
-            Thread t = new Thread(() -> {
-                fadeOut();
-                try {
-                    Thread.sleep(1200);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-                pausePosition = clip.getMicrosecondPosition();
-                paused = true;
-                clip.stop();
-            });
-            t.start();
+    public void stopSound() {
+        if (clip != null) {
+            this.clip.close();
         }
     }
 
-    /**
-     * Method which resumes the audio
-     * There is a value {@link #paused} which holds an information if the audio is paused.
-     * This value has to be true in order to proceed. Also, the clip has to be initialized. If it's null then it can't be resumed.
-     * <p>
-     * Uses {@link #pausePosition} to set current microsecond position, so the audio can be resumed, where it stopped.
-     * <p>
-     * Uses {@link #fadeIn(long)}} method for cleaner transition.
-     */
-    public void resume() {
-        if (clip != null && paused) {
-            Thread t = new Thread(() -> {
-                fadeIn(20);
-                paused = false;
-                clip.setMicrosecondPosition(pausePosition);
-                clip.start();
-            });
-            t.start();
-        }
-    }
-
-    /**
-     * Loops the audio if requested.
-     * Uses {@link #clip} method addLineListener to attach new lineListener.
-     * listener reacts to STOP events by restarting the audio.
-     * <p>
-     * If the event.getType() is LineEvent.Type.STOP then it checks if the STOP state was because of end of the audio file.
-     * If yes, then it resets the audio via setting the microsecond position to 0.
-     * <p>
-     * Also, starts the audio initially, do not call clip.start() before this method.
-     *
-     * @param loop is true if the audio should be looped.
-     * @author ChatGPT (originally made for my first game S.T.A.L.K.E.R. Echoes of Chernobyl in May 2025)
-     */
-    public void loop(boolean loop) {
-        if (loop) {
-            clip.addLineListener(event -> {
-                if (event.getType() == LineEvent.Type.STOP) {
-                    if (clip.getMicrosecondPosition() >= clip.getMicrosecondLength()) {
-                        clip.setMicrosecondPosition(0);
-                        clip.start();
-                    }
-                }
-            });
-        }
-        try {
-            Thread.sleep(50);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        clip.start();
-    }
-
-    /**
-     * Sets the desired volume in decibels.
-     * <p>
-     * Uses FloatControl.TYPE.MASTER_GAIN to control volume gain.
-     * The clip has to be initialized and the clip has to support the MASTER_GAIN FloatControl.
-     * Gets the clip’s MASTER_GAIN FloatControl and sets its value.
-     *
-     * @param db requested volume in decibels (-80.0 to 0.0 accepted)
-     */
-    public void setVolume(float db) {
-        if (clip != null && clip.isControlSupported(FloatControl.Type.MASTER_GAIN)) {
-            FloatControl gain = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-            gain.setValue(db);
-        }
-    }
-
-    /**
-     * Fades in audio from {@link #initialVolume} -15 to {@link #initialVolume} decibels.
-     * Uses {@link #setVolume(float)}} to set the current volume level.
-     *
-     * @param milliseconds the desired time that the thread will wait until updating the volume again.
-     *                     More millisecond the more time the fade will take.
-     */
-    public void fadeIn(long milliseconds) {
+/**
+ * Method which pauses the audio.
+ * There is a value {@link #paused} which holds an information if the audio is paused.
+ * This value has to be false in order to proceed. Also, the clip has to be initialized. If it's null then it can't be stopped.
+ * <p>
+ * Sets {@link #pausePosition} to current microsecond position, so the audio can be resumed later.
+ */
+public void pause() {
+    if (clip != null && !paused) {
         Thread t = new Thread(() -> {
-            float start = this.initialVolume - 15;
-            float end = this.initialVolume;
-            float steps = 100;
-            float stepSize = (end - start) / 100;
-
-
-            for (float f = 0; f <= steps; f++) {
-                setVolume(start + (stepSize * f));
-                try {
-                    Thread.sleep(milliseconds);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            }
+            pausePosition = clip.getMicrosecondPosition();
+            paused = true;
+            clip.stop();
         });
         t.start();
     }
+}
 
-    /**
-     * Fades out audio from {@link #initialVolume} to {@link #initialVolume} - 60 decibels.
-     * Uses {@link #setVolume(float)} to set the current volume level.
-     */
-    public void fadeOut() {
+/**
+ * Method which resumes the audio
+ * There is a value {@link #paused} which holds an information if the audio is paused.
+ * This value has to be true in order to proceed. Also, the clip has to be initialized. If it's null then it can't be resumed.
+ * <p>
+ * Uses {@link #pausePosition} to set current microsecond position, so the audio can be resumed, where it stopped.
+ * <p>
+ * Uses {@link #fadeIn(long)}} method for cleaner transition.
+ */
+public void resume() {
+    if (clip != null && paused) {
         Thread t = new Thread(() -> {
-            float start = initialVolume;
-            float end = initialVolume - 60;
-            float steps = 100;
-            float stepSize = (start - end) / steps;
-
-            for (float f = steps; f >= 0; f--) {
-                setVolume(start - (stepSize * f));
-                try {
-                    Thread.sleep(20);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            }
+            fadeIn(20);
+            paused = false;
+            clip.setMicrosecondPosition(pausePosition);
+            clip.start();
         });
         t.start();
     }
+}
 
-
-    public String getFilePath() {
-        return filePath;
+/**
+ * Loops the audio if requested.
+ * Uses {@link #clip} method addLineListener to attach new lineListener.
+ * listener reacts to STOP events by restarting the audio.
+ * <p>
+ * If the event.getType() is LineEvent.Type.STOP then it checks if the STOP state was because of end of the audio file.
+ * If yes, then it resets the audio via setting the microsecond position to 0.
+ * <p>
+ * Also, starts the audio initially, do not call clip.start() before this method.
+ *
+ * @param loop is true if the audio should be looped.
+ * @author ChatGPT (originally made for my first game S.T.A.L.K.E.R. Echoes of Chernobyl in May 2025)
+ */
+public void loop(boolean loop) {
+    if (loop) {
+        clip.addLineListener(event -> {
+            if (event.getType() == LineEvent.Type.STOP) {
+                if (clip.getMicrosecondPosition() >= clip.getMicrosecondLength()) {
+                    clip.setMicrosecondPosition(0);
+                    clip.start();
+                }
+            }
+        });
     }
-
-    public String getTitle() {
-        return title;
+    try {
+        Thread.sleep(50);
+    } catch (InterruptedException e) {
+        throw new RuntimeException(e);
     }
+    clip.start();
+}
 
-    public void setTitle(String title) {
-        this.title = title;
+/**
+ * Sets the desired volume in decibels.
+ * <p>
+ * Uses FloatControl.TYPE.MASTER_GAIN to control volume gain.
+ * The clip has to be initialized and the clip has to support the MASTER_GAIN FloatControl.
+ * Gets the clip’s MASTER_GAIN FloatControl and sets its value.
+ *
+ * @param db requested volume in decibels (-80.0 to 0.0 accepted)
+ */
+public void setVolume(float db) {
+    if (clip != null && clip.isControlSupported(FloatControl.Type.MASTER_GAIN)) {
+        FloatControl gain = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gain.setValue(db);
     }
+}
 
-    public long getPausePosition() {
-        return pausePosition;
-    }
+/**
+ * Fades in audio from {@link #initialVolume} -15 to {@link #initialVolume} decibels.
+ * Uses {@link #setVolume(float)}} to set the current volume level.
+ *
+ * @param milliseconds the desired time that the thread will wait until updating the volume again.
+ *                     More millisecond the more time the fade will take.
+ */
+public void fadeIn(long milliseconds) {
+    Thread t = new Thread(() -> {
+        float start = this.initialVolume - 15;
+        float end = this.initialVolume;
+        float steps = 100;
+        float stepSize = (end - start) / 100;
 
-    public void setPausePosition(long pausePosition) {
-        this.pausePosition = pausePosition;
-    }
 
-    public Clip getClip() {
-        return clip;
-    }
+        for (float f = 0; f <= steps; f++) {
+            setVolume(start + (stepSize * f));
+            try {
+                Thread.sleep(milliseconds);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    });
+    t.start();
+}
 
-    public void setClip(Clip clip) {
-        this.clip = clip;
-    }
+/**
+ * Fades out audio from {@link #initialVolume} to {@link #initialVolume} - 60 decibels.
+ * Uses {@link #setVolume(float)} to set the current volume level.
+ */
+public void fadeOut() {
+    Thread t = new Thread(() -> {
+        float start = initialVolume;
+        float end = initialVolume - 60;
+        float steps = 100;
+        float stepSize = (start - end) / steps;
 
-    public boolean isInfiniteLoop() {
-        return infiniteLoop;
-    }
+        for (float f = steps; f >= 0; f--) {
+            setVolume(start - (stepSize * f));
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    });
+    t.start();
+}
 
-    public void setFilePath(String filePath) {
-        this.filePath = filePath;
-    }
 
-    public void setInfiniteLoop(boolean infiniteLoop) {
-        this.infiniteLoop = infiniteLoop;
-    }
+public String getFilePath() {
+    return filePath;
+}
 
-    public boolean isPaused() {
-        return paused;
-    }
+public String getTitle() {
+    return title;
+}
 
-    public void setPaused(boolean paused) {
-        this.paused = paused;
-    }
+public void setTitle(String title) {
+    this.title = title;
+}
 
-    public float getInitialVolume() {
-        return initialVolume;
-    }
+public long getPausePosition() {
+    return pausePosition;
+}
 
-    public void setInitialVolume(float initialVolume) {
-        this.initialVolume = initialVolume;
-    }
+public void setPausePosition(long pausePosition) {
+    this.pausePosition = pausePosition;
+}
 
-    @Override
-    public String toString() {
-        return "Audio{" +
-                "initialVolume=" + initialVolume +
-                '}';
-    }
+public Clip getClip() {
+    return clip;
+}
+
+public void setClip(Clip clip) {
+    this.clip = clip;
+}
+
+public boolean isInfiniteLoop() {
+    return infiniteLoop;
+}
+
+public void setFilePath(String filePath) {
+    this.filePath = filePath;
+}
+
+public void setInfiniteLoop(boolean infiniteLoop) {
+    this.infiniteLoop = infiniteLoop;
+}
+
+public boolean isPaused() {
+    return paused;
+}
+
+public void setPaused(boolean paused) {
+    this.paused = paused;
+}
+
+public float getInitialVolume() {
+    return initialVolume;
+}
+
+public void setInitialVolume(float initialVolume) {
+    this.initialVolume = initialVolume;
+}
+
+@Override
+public String toString() {
+    return "Audio{" +
+            "initialVolume=" + initialVolume +
+            '}';
+}
 }

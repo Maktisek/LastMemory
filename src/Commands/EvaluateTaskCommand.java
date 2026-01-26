@@ -49,6 +49,6 @@ public class EvaluateTaskCommand implements Command{
 
     @Override
     public void endAudio() {
-
+        Important.stopSound("new memory");
     }
 }

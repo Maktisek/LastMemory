@@ -104,8 +104,12 @@ public class Important {
         audioLibrary.playAudio(name);
     }
 
-    public static void stop(String name){
-        audioLibrary.stop(name);
+    public static void stopMusic(String name){
+        audioLibrary.stopMusic(name);
+    }
+
+    public static void stopSound(String name){
+        audioLibrary.stopSound(name);
     }
 
     public static void pause(String name){

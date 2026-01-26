@@ -45,6 +45,6 @@ public class RecallMemoryCommand implements Command{
 
     @Override
     public void endAudio() {
-        Important.stop(name);
+        Important.stopMusic(name);
     }
 }
