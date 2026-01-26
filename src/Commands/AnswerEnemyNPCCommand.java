@@ -51,10 +51,6 @@ public class AnswerEnemyNPCCommand implements Command{
         return true;
     }
 
-    @Override
-    public void startAudio() {
-
-    }
 
     @Override
     public void endAudio() {

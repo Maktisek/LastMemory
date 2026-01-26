@@ -79,6 +79,7 @@ public class Console {
             System.out.println("Napiš cokoli pro pokračování");
             System.out.print(">> ");
             Important.loadText();
+            command.endAudio();
             Important.resume(player.getCurrentLocation().getName());
         }
     }

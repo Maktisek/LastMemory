@@ -50,10 +50,6 @@ public class AcceptTaskCommand implements Command{
         return true;
     }
 
-    @Override
-    public void startAudio() {
-
-    }
 
     @Override
     public void endAudio() {

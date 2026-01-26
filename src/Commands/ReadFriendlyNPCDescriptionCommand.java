@@ -37,10 +37,6 @@ public class ReadFriendlyNPCDescriptionCommand implements Command{
     public boolean continuing() {
         return true;
     }
-    @Override
-    public void startAudio() {
-
-    }
 
     @Override
     public void endAudio() {
