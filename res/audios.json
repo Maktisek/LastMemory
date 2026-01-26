@@ -32,7 +32,7 @@
     "filePath" : "audio\\toalety.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : 0.0
+    "initialVolume" : -10
   },
   {
     "title" : "new memory",
@@ -53,6 +53,6 @@
     "filePath" : "audio\\Učebna 15.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : 0.0
+    "initialVolume" : -10.0
   }
 ]
