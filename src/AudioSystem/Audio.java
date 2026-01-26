@@ -109,7 +109,7 @@ public class Audio {
             Thread t = new Thread(() -> {
                 fadeOut();
                 try {
-                    Thread.sleep(50);
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -134,11 +134,6 @@ public class Audio {
         if (clip != null && paused) {
             Thread t = new Thread(() -> {
                 fadeIn(20);
-                try {
-                    Thread.sleep(10);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
                 paused = false;
                 clip.setMicrosecondPosition(pausePosition);
                 clip.start();
@@ -228,10 +223,15 @@ public class Audio {
      */
     public void fadeOut() {
         Thread t = new Thread(() -> {
-            for (float f = this.initialVolume; f > -80f; f -= 0.5f) {
-                setVolume(f);
+            float start = initialVolume;
+            float end = initialVolume - 40;
+            float steps = 100;
+            float stepSize = (start - end) / steps;
+
+            for (float f = steps; f >= 0; f --) {
+                setVolume(start - (stepSize * f));
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(20);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
