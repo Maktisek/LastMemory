@@ -23,7 +23,6 @@ public class AudioLibrary {
         try (InputStream input = new FileInputStream("res\\audios.json")) {
             Audio[] sounds = mapper.readValue(input, Audio[].class);
             audios.addAll(List.of(sounds));
-            System.out.println(audios);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -18,14 +18,14 @@
     "filePath" : "audio\\třetí patro.WAV",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : 0.0
+    "initialVolume" : -10.0
   },
   {
     "title" : "keyboard click",
     "filePath" : "audio\\keyboard click.WAV",
     "infiniteLoop" : false,
     "paused" : false,
-    "initialVolume" : -50.0
+    "initialVolume" : -15.0
   },
   {
     "title" : "toalety",

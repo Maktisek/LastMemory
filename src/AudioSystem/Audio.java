@@ -37,7 +37,6 @@ public class Audio {
             this.clip = AudioSystem.getClip();
             clip.open(audioStream);
             setVolume(this.initialVolume);
-            System.out.println(this.initialVolume);
             if (music) {
                 fadeIn(10);
             }
@@ -57,6 +56,8 @@ public class Audio {
      */
     public void implementMusic() {
         if (clip == null) {
+            final Thread playThread = new Thread(() -> implementAudio(true));
+            playThread.start();
             implementAudio(true);
         }
     }
