@@ -64,4 +64,13 @@ public class MoveCommand implements Command {
     public boolean continuing() {
         return continues;
     }
+    @Override
+    public void startAudio() {
+
+    }
+
+    @Override
+    public void endAudio() {
+
+    }
 }
