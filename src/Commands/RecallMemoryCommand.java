@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 public class RecallMemoryCommand implements Command{
 
@@ -14,6 +15,11 @@ public class RecallMemoryCommand implements Command{
 
     @Override
     public String execute() {
+        if (!player.hasCollectedMemory(name)){
+            return "Vzpomínka " + name + " neexistuje";
+        }
+        Important.pause(player.getCurrentLocation().getName());
+        Important.playSound(name);
         return player.writeMemory(name);
     }
 
@@ -39,6 +45,6 @@ public class RecallMemoryCommand implements Command{
 
     @Override
     public void endAudio() {
-
+        Important.stop(name);
     }
 }

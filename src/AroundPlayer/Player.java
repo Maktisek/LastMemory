@@ -44,6 +44,16 @@ public class Player {
         Collections.sort(collectedMemories);
     }
 
+    public boolean hasCollectedMemory(String name) {
+        for (Memory memory: collectedMemories){
+            if (memory.getName().equalsIgnoreCase(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
     public String writeMemory(String name) {
        for (Memory memory: collectedMemories){
            if (memory.getName().equalsIgnoreCase(name)) {
