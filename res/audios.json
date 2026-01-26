@@ -3,48 +3,56 @@
     "title" : "test",
     "filePath" : "audio\\třetí patro.wav",
     "infiniteLoop" : true,
-    "paused" : false
+    "paused" : false,
+    "volume" : 20
   },
   {
     "title" : "walk",
     "filePath" : "audio\\walk.WAV",
     "infiniteLoop" : false,
-    "paused" : false
+    "paused" : false,
+    "volume" : 0
   },
   {
     "title" : "třetí patro",
     "filePath" : "audio\\třetí patro.WAV",
     "infiniteLoop" : true,
-    "paused" : false
+    "paused" : false,
+    "volume" : 0
   },
   {
     "title" : "keyboard click",
     "filePath" : "audio\\keyboard click.WAV",
     "infiniteLoop" : false,
-    "paused" : false
+    "paused" : false,
+    "volume" : 0
   },
   {
     "title" : "toalety",
     "filePath" : "audio\\toalety.wav",
     "infiniteLoop" : true,
-    "paused" : false
+    "paused" : false,
+    "volume" : 0
   },
   {
     "title" : "new memory",
     "filePath" : "audio\\new memory.wav",
     "infiniteLoop" : false,
-    "paused" : false
+    "paused" : false,
+    "volume" : 0
   },
   {
     "title" : "question mode",
     "filePath" : "audio\\question mode.wav",
     "infiniteLoop" : true,
-    "paused" : false
+    "paused" : false,
+    "volume" : 0
   },
   {
     "title" : "Učebna 15",
     "filePath" : "audio\\Učebna 15.wav",
     "infiniteLoop" : true,
-    "paused" : false
+    "paused" : false,
+    "volume" : 0
   }
 ]

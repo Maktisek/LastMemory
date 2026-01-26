@@ -18,6 +18,7 @@ public class Audio {
     private boolean infiniteLoop;
     private long pausePosition;
     boolean paused;
+    float volume;
 
     public Audio() {
     }
@@ -192,7 +193,7 @@ public class Audio {
      */
     public void fadeIn(long milliseconds) {
         Thread t = new Thread(() -> {
-            for (float f = -10f; f < 0f; f++) {
+            for (float f = this.volume -10; f < this.volume; f++) {
                 setVolume(f);
                 try {
                     Thread.sleep(milliseconds);
@@ -210,7 +211,7 @@ public class Audio {
      */
     public void fadeOut() {
         Thread t = new Thread(() -> {
-            for (float f = 0f; f > -80f; f -= 0.5f) {
+            for (float f = this.volume; f > -80f; f -= 0.5f) {
                 setVolume(f);
                 try {
                     Thread.sleep(10);
@@ -269,5 +270,9 @@ public class Audio {
 
     public void setPaused(boolean paused) {
         this.paused = paused;
+    }
+
+    public float getVolume() {
+        return volume;
     }
 }

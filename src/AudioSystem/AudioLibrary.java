@@ -23,8 +23,15 @@ public class AudioLibrary {
         try (InputStream input = new FileInputStream("res\\audios.json")) {
             Audio[] sounds = mapper.readValue(input, Audio[].class);
             audios.addAll(List.of(sounds));
+            setVolumeToAllAudios();
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    private void setVolumeToAllAudios(){
+        for (Audio audio: audios) {
+            audio.setVolume(audio.getVolume());
         }
     }
 
