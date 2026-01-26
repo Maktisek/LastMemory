@@ -32,14 +32,14 @@
     "filePath" : "audio\\toalety.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -10
+    "initialVolume" : -10.0
   },
   {
     "title" : "new memory",
     "filePath" : "audio\\new memory.wav",
     "infiniteLoop" : false,
     "paused" : false,
-    "initialVolume" : 0.0
+    "initialVolume" : -9.0
   },
   {
     "title" : "question mode",
@@ -51,6 +51,20 @@
   {
     "title" : "Učebna 15",
     "filePath" : "audio\\Učebna 15.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -10.0
+  },
+  {
+    "title" : "Učebna 8",
+    "filePath" : "audio\\Učebna 8.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -10.0
+  },
+  {
+    "title" : "Kumbál",
+    "filePath" : "audio\\kumbál.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -10.0
