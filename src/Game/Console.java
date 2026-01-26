@@ -30,14 +30,13 @@ public class Console {
             if (player.canPlayCutscene()) {
                 cutscenePlayer();
                 continue;
-            } else {
-                if(!player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())){
-                    Important.playLocationSong(player.getCurrentLocation());
-                }
-                System.out.println(player);
-                System.out.print(">> ");
-                command = Important.loadText();
             }
+            if (!player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
+                Important.playLocationSong(player.getCurrentLocation());
+            }
+            System.out.println(player);
+            System.out.print(">> ");
+            command = Important.loadText();
 
             if (!gameLoader.getCommands().containsKey(command.toLowerCase())) {
                 System.out.println(Important.changeText("red", "Akce " + Important.changeText("underline", command) + Important.changeText("red", " neexistuje")));
@@ -54,7 +53,7 @@ public class Console {
         }
     }
 
-    public void execute(List<Command> listOfCommands){
+    public void execute(List<Command> listOfCommands) {
         for (Command currentCommand : listOfCommands) {
             System.out.println(currentCommand.execute());
             this.exit = currentCommand.exit();
