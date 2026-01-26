@@ -18,7 +18,7 @@ public class Audio {
     private boolean infiniteLoop;
     private long pausePosition;
     boolean paused;
-    float volume;
+    private float initialVolume;
 
     public Audio() {
     }
@@ -36,6 +36,8 @@ public class Audio {
             final AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(this.filePath));
             this.clip = AudioSystem.getClip();
             clip.open(audioStream);
+            setVolume(this.initialVolume);
+            System.out.println(this.initialVolume);
             if (music) {
                 fadeIn(10);
             }
@@ -193,7 +195,7 @@ public class Audio {
      */
     public void fadeIn(long milliseconds) {
         Thread t = new Thread(() -> {
-            for (float f = this.volume -10; f < this.volume; f++) {
+            for (float f =  this.initialVolume -20; f < this.initialVolume; f++) {
                 setVolume(f);
                 try {
                     Thread.sleep(milliseconds);
@@ -211,7 +213,7 @@ public class Audio {
      */
     public void fadeOut() {
         Thread t = new Thread(() -> {
-            for (float f = this.volume; f > -80f; f -= 0.5f) {
+            for (float f = this.initialVolume; f > -80f; f -= 0.5f) {
                 setVolume(f);
                 try {
                     Thread.sleep(10);
@@ -272,7 +274,18 @@ public class Audio {
         this.paused = paused;
     }
 
-    public float getVolume() {
-        return volume;
+    public float getInitialVolume() {
+        return initialVolume;
+    }
+
+    public void setInitialVolume(float initialVolume) {
+        this.initialVolume = initialVolume;
+    }
+
+    @Override
+    public String toString() {
+        return "Audio{" +
+                "initialVolume=" + initialVolume +
+                '}';
     }
 }
