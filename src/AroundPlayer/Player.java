@@ -267,7 +267,7 @@ public class Player {
         private HashMap<String, ArrayList<Item>> items;
 
         public Inventory() {
-            this.capacity = 20.0;
+            this.capacity = 5.0;
             this.weight = 0;
             this.items = new HashMap<>();
         }
