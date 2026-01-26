@@ -56,8 +56,6 @@ public class Audio {
      */
     public void implementMusic() {
         if (clip == null) {
-            final Thread playThread = new Thread(() -> implementAudio(true));
-            playThread.start();
             implementAudio(true);
         }
     }

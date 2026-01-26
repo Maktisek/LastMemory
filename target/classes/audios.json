@@ -46,7 +46,7 @@
     "filePath" : "audio\\question mode.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : 0.0
+    "initialVolume" : -10.0
   },
   {
     "title" : "Učebna 15",

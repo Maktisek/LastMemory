@@ -24,7 +24,7 @@ public class EnemyNPC extends NPC{
         return "------------------Protivník------------------" + "\n" +
                 "Oh ne " + this.name + " mi stojí v cestě! \nMusím odpovědět na otázku, abych mohla pokračovat dále." + "\n" +
                 "Otázka: " + this.question + "\n" +
-                "Hra: " + "Lokace se otevře až zodpovíš na otázku (command unknown)";
+                "Hra: " + "Lokace se otevře až zodpovíš na otázku (příkaz \"odpovědět\")";
     }
 
     public String getQuestion() {
