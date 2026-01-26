@@ -29,6 +29,7 @@ public class Audio {
      * Then it uses {@link #loop(boolean)} to start looping the audio.
      * <p>
      * This system was originally taken from Matěj Chaloupka, but implemented in a different way.
+     *
      * @param music true if the audio file is music. When true, then the audio will fade in via {@link #fadeIn(long)} method
      */
     private void implementAudio(boolean music) {
@@ -36,15 +37,15 @@ public class Audio {
             final AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(this.filePath));
             this.clip = AudioSystem.getClip();
             clip.open(audioStream);
-            setVolume(this.initialVolume);
             if (music) {
-                fadeIn(10);
+                fadeIn(20);
+            } else {
+                setVolume(this.initialVolume);
             }
-            //If there are problems with the sound, then this is the place where originally clip.start() used to be.
-            loop(infiniteLoop);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
+        loop(infiniteLoop);
     }
 
     /**
@@ -149,11 +150,12 @@ public class Audio {
      * Loops the audio if requested.
      * Uses {@link #clip} method addLineListener to attach new lineListener.
      * listener reacts to STOP events by restarting the audio.
-     *<p>
+     * <p>
      * If the event.getType() is LineEvent.Type.STOP then it checks if the STOP state was because of end of the audio file.
      * If yes, then it resets the audio via setting the microsecond position to 0.
      * <p>
      * Also, starts the audio initially, do not call clip.start() before this method.
+     *
      * @param loop is true if the audio should be looped.
      * @author ChatGPT (originally made for my first game S.T.A.L.K.E.R. Echoes of Chernobyl in May 2025)
      */
@@ -168,6 +170,11 @@ public class Audio {
                 }
             });
         }
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         clip.start();
     }
 
@@ -177,6 +184,7 @@ public class Audio {
      * Uses FloatControl.TYPE.MASTER_GAIN to control volume gain.
      * The clip has to be initialized and the clip has to support the MASTER_GAIN FloatControl.
      * Gets the clip’s MASTER_GAIN FloatControl and sets its value.
+     *
      * @param db requested volume in decibels (-80.0 to 0.0 accepted)
      */
     public void setVolume(float db) {
@@ -189,12 +197,13 @@ public class Audio {
     /**
      * Fades in audio from -10 to 0 decibels.
      * Uses {@link #setVolume(float)}} to set the current volume level.
+     *
      * @param milliseconds the desired time that the thread will wait until updating the volume again.
      *                     More millisecond the more time the fade will take.
      */
     public void fadeIn(long milliseconds) {
         Thread t = new Thread(() -> {
-            for (float f =  this.initialVolume -20; f < this.initialVolume; f++) {
+            for (float f = this.initialVolume - 50; f < this.initialVolume; f += 0.8f) {
                 setVolume(f);
                 try {
                     Thread.sleep(milliseconds);
