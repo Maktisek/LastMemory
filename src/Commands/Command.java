@@ -24,4 +24,8 @@ public interface Command {
 
     boolean continuing();
 
+    void startAudio();
+
+    void endAudio();
+
 }
