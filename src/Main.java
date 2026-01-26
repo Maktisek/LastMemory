@@ -22,6 +22,12 @@ public class Main {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+        Important.stop("třetí patro");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
 
         try {

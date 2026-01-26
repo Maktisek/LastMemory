@@ -90,8 +90,17 @@ public class Audio {
      */
     public void stopMusic() {
         if (clip != null) {
-            this.clip.close();
-            this.clip = null;
+            Thread t = new Thread(() -> {
+                fadeOut();
+                try {
+                    Thread.sleep(1200);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                this.clip.close();
+                this.clip = null;
+            });
+            t.start();
         }
     }
 
@@ -109,7 +118,7 @@ public class Audio {
             Thread t = new Thread(() -> {
                 fadeOut();
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(1200);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -191,7 +200,7 @@ public class Audio {
     }
 
     /**
-     * Fades in audio from -10 to 0 decibels.
+     * Fades in audio from {@link #initialVolume} -15 to {@link #initialVolume} decibels.
      * Uses {@link #setVolume(float)}} to set the current volume level.
      *
      * @param milliseconds the desired time that the thread will wait until updating the volume again.
@@ -206,7 +215,7 @@ public class Audio {
 
 
             for (float f = 0; f <= steps; f++) {
-                setVolume(start + (stepSize*f));
+                setVolume(start + (stepSize * f));
                 try {
                     Thread.sleep(milliseconds);
                 } catch (InterruptedException e) {
@@ -218,17 +227,17 @@ public class Audio {
     }
 
     /**
-     * Fades out audio from 0 to -80 decibels.
-     * Uses {@link #setVolume(float)}} to set the current volume level.
+     * Fades out audio from {@link #initialVolume} to {@link #initialVolume} - 60 decibels.
+     * Uses {@link #setVolume(float)} to set the current volume level.
      */
     public void fadeOut() {
         Thread t = new Thread(() -> {
             float start = initialVolume;
-            float end = initialVolume - 40;
+            float end = initialVolume - 60;
             float steps = 100;
             float stepSize = (start - end) / steps;
 
-            for (float f = steps; f >= 0; f --) {
+            for (float f = steps; f >= 0; f--) {
                 setVolume(start - (stepSize * f));
                 try {
                     Thread.sleep(20);
