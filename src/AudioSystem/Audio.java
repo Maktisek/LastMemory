@@ -37,6 +37,7 @@ public class Audio {
             final AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(this.filePath));
             this.clip = AudioSystem.getClip();
             clip.open(audioStream);
+            setVolume(this.initialVolume - 15);
             if (music) {
                 fadeIn(20);
             } else {
@@ -132,7 +133,7 @@ public class Audio {
     public void resume() {
         if (clip != null && paused) {
             Thread t = new Thread(() -> {
-                fadeIn(100);
+                fadeIn(20);
                 try {
                     Thread.sleep(10);
                 } catch (InterruptedException e) {
@@ -203,8 +204,14 @@ public class Audio {
      */
     public void fadeIn(long milliseconds) {
         Thread t = new Thread(() -> {
-            for (float f = this.initialVolume - 50; f < this.initialVolume; f += 0.8f) {
-                setVolume(f);
+            float start = this.initialVolume - 15;
+            float end = this.initialVolume;
+            float steps = 100;
+            float stepSize = (end - start) / 100;
+
+
+            for (float f = 0; f <= steps; f++) {
+                setVolume(start + (stepSize*f));
                 try {
                     Thread.sleep(milliseconds);
                 } catch (InterruptedException e) {
