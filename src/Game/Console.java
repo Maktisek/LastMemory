@@ -104,7 +104,9 @@ public class Console {
             String command = Important.loadText();
             if(checkCommand(command)){
                 execute(gameLoader.getCommands().get(command).get());
-                exitIntro = gameLoader.getCommands().get(command).get().get(0).continuing();
+                if(gameLoader.getCommands().get(command).get().get(0) instanceof StartGameCommand){
+                    exitIntro = ((StartGameCommand) gameLoader.getCommands().get(command).get().get(0)).endIntro();
+                }
             }
         }
         preExecute();
