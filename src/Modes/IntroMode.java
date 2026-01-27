@@ -1,11 +1,16 @@
 package Modes;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 public class IntroMode implements Mode{
     @Override
     public String executeInfo(Player player) {
-        return "Beta beta beta head text";
+        String ascii = Important.changeText("bold", Important.changeText("pink", Important.readTxtFiles("res\\introText.txt")));
+        ascii += "                                                                                                                    Made by Maktis";
+        ascii += "\nAbyste si hru zahráli napište to konzole příkaz \"spustit hru\".";
+        ascii += "\nUžijte si hru!";
+        return ascii;
     }
 
     @Override

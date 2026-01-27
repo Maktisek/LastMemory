@@ -25,6 +25,7 @@ public class Console {
 
 
     public void preExecute() throws Exception {
+        System.out.println(Important.writeSpace(50));
         while (!exit) {
             String command;
             if (player.canPlayCutscene()) {
@@ -99,8 +100,8 @@ public class Console {
     public void executeIntro() throws Exception{
         boolean exitIntro = false;
         Important.playMusic("intro music");
+        System.out.println(player);
         while (!exitIntro) {
-            System.out.println(player);
             System.out.print(">> ");
             String command = Important.loadText();
             if(checkCommand(command)){

@@ -140,11 +140,6 @@ public class Initialization {
 
     public void loadPlayer() {
         //11 je startovní lokace
-        int b = 0;
-        for (Location location : locations) {
-            System.out.println(b + ". " + location);
-            b++;
-        }
         this.player = new Player(locations.get(11));
     }
 
