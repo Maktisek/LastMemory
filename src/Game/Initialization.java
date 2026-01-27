@@ -2,12 +2,15 @@ package Game;
 
 
 import AroundPlayer.Player;
+import AudioSystem.Audio;
+import Exceptions.WrongInitializationException;
 import Locations.Location;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Initialization {
 
@@ -17,7 +20,7 @@ public class Initialization {
     ArrayList<Location> tempLocations;
     Player player;
 
-    public Initialization() {
+    public Initialization() throws Exception{
         this.locations = new ArrayList<>();
         this.tempLocations = new ArrayList<>();
         this.mapper = new ObjectMapper();
@@ -27,12 +30,12 @@ public class Initialization {
     /**
      * Loads all side locations from res\sideLocations.json file and adds them into locations list
      */
-    public void loadSideLocations(){
+    public void loadSideLocations() throws WrongInitializationException {
         try (InputStream input = new FileInputStream("res\\sideLocations.json");){
             Location[] sideLocations = mapper.readValue(input, Location[].class);
             locations.addAll(List.of(sideLocations));
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new WrongInitializationException("Wrong side locations load");
         }
         loadHallwayLocationsLocations();
     }
@@ -40,12 +43,12 @@ public class Initialization {
     /**
      * Loads all hallway locations from res\hallwayLocations.json file and adds them into locations list.
      */
-    public void loadHallwayLocationsLocations(){
+    public void loadHallwayLocationsLocations() throws WrongInitializationException {
         try (InputStream input = new FileInputStream("res\\hallwayLocations.json");){
             Location[] hallwayLocations = mapper.readValue(input, Location[].class);
             locations.addAll(List.of(hallwayLocations));
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new WrongInitializationException("Wrong hallway locations load");
         }
         loadMainLocations();
     }
@@ -53,12 +56,12 @@ public class Initialization {
     /**
      * Loads all main locations from res\locations.json file and adds them into temporary locations list.
      */
-    public void loadMainLocations(){
+    public void loadMainLocations() throws WrongInitializationException {
         try (InputStream input = new FileInputStream("res\\locations.json");){
             Location[] mainLocations = mapper.readValue(input, Location[].class);
             tempLocations.addAll(List.of(mainLocations));
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new WrongInitializationException("Wrong main locations load");
         }
         connectMainLocations();
     }
@@ -68,7 +71,7 @@ public class Initialization {
      * The cycle goes from the last location to the first location always connecting the next location with the current location.
      * Then it adds all main locations into locations list.
      */
-    public void connectMainLocations(){
+    public void connectMainLocations() throws WrongInitializationException {
         for (int i = tempLocations.size() - 1; i > 0; i--) {
             tempLocations.get(i-1).getFriendlyNPC().getTask().getMemoryPrice().setLocationGift(tempLocations.get(i));
         }
@@ -79,7 +82,7 @@ public class Initialization {
     /**
      * Initializes all locations possible locations array list.
      */
-    public void setReadyPossibleLocationArrays(){
+    public void setReadyPossibleLocationArrays() throws WrongInitializationException {
         for (Location location: locations){
             location.setPossibleLocations(new ArrayList<>());
         }
@@ -89,7 +92,7 @@ public class Initialization {
     /**
      * Connects location via special .csv file: res\basicLocationConnections.csv
      */
-    public void loadBasicLocationConnection(){
+    public void loadBasicLocationConnection() throws WrongInitializationException {
 //        int a = 0;
 //        for (Location location: locations){
 //            System.out.println(a+". "+location);
@@ -107,23 +110,58 @@ public class Initialization {
                 index++;
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new WrongInitializationException("There is a problem with BufferedReader");
         }
 //        int b = 0;
 //        for (Location location: locations){
 //            System.out.println(b+". "+location);
 //            b++;
 //        }
+        setAllMusic();
+    }
+
+
+    public void setAllMusic() throws WrongInitializationException {
+        Audio[] audios = loadAllSongs();
+        for (Audio audio : audios) {
+            Location location = findLocation(audio.getTitle());
+            if (location != null) {
+                Objects.requireNonNull(findLocation(location.getName())).setSong(audio);
+            }else {
+                throw new WrongInitializationException("Wrong song name input");
+            }
+        }
         loadPlayer();
     }
 
     /**
      * It initializes player and sets his current location to the start location, which is location on the index 11 in locations list.
      */
+
     public void loadPlayer(){
         //11 je startovní lokace
         this.player = new Player(locations.get(11));
     }
+
+    public Audio[] loadAllSongs() throws WrongInitializationException {
+        try (InputStream input = new FileInputStream("res\\locationMusic.json")){
+            return mapper.readValue(input, Audio[].class);
+        } catch (IOException e) {
+            throw new WrongInitializationException("Audios were not loaded properly");
+        }
+    }
+
+    private Location findLocation(String name){
+        for (Location location : locations) {
+            if (location.getName().equalsIgnoreCase(name)) {
+                return location;
+            }
+        }
+        return null;
+    }
+
+
+
 
     public Player getPlayer() {
         return player;
