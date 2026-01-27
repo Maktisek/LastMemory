@@ -97,22 +97,27 @@ public class Console {
         }
     }
 
-    public void executeIntro() throws Exception{
+    public void executeIntro() throws Exception {
         boolean exitIntro = false;
         Important.playMusic("intro music");
         System.out.println(player);
         while (!exitIntro) {
             System.out.print(">> ");
             String command = Important.loadText();
-            if(checkCommand(command)){
+            if (checkCommand(command)) {
                 execute(gameLoader.getCommands().get(command).get());
-                if(gameLoader.getCommands().get(command).get().get(0) instanceof StartGameCommand){
+                if (gameLoader.getCommands().get(command).get().get(0) instanceof StartGameCommand) {
                     exitIntro = ((StartGameCommand) gameLoader.getCommands().get(command).get().get(0)).endIntro();
+                }
+                if (gameLoader.getCommands().get(command).get().get(0) instanceof ExitCommand) {
+                    exitIntro = true;
                 }
             }
         }
-        Important.stopSound("intro music");
-        preExecute();
+        if (!exit) {
+            Important.stopSound("intro music");
+            preExecute();
+        }
     }
 
 }

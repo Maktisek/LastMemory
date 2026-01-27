@@ -4,34 +4,34 @@
     "filePath" : "audio\\třetí patro.WAV",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -10.0
+    "initialVolume" : -8.0
   },
   {
     "title" : "toalety",
     "filePath" : "audio\\toalety.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -10.0
+    "initialVolume" : -8.0
   },
   {
     "title" : "Učebna 15",
     "filePath" : "audio\\Učebna 15.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -10.0
+    "initialVolume" : -8.0
   },
   {
     "title" : "Učebna 8",
     "filePath" : "audio\\Učebna 8.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -10.0
+    "initialVolume" : -8.0
   },
   {
     "title" : "Kumbál",
     "filePath" : "audio\\kumbál.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -10.0
+    "initialVolume" : -8.0
   }
 ]
