@@ -32,7 +32,7 @@ public class Console {
                 continue;
             }
             if (!player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
-                Important.playLocationSong(player.getCurrentLocation());
+                player.getCurrentLocation().playMusic();
             }
             System.out.println(player);
             System.out.print(">> ");
@@ -80,7 +80,7 @@ public class Console {
             System.out.print(">> ");
             Important.loadText();
             command.endAudio();
-            Important.resume(player.getCurrentLocation().getName());
+            player.getCurrentLocation().resumeMusic();
         }
     }
 

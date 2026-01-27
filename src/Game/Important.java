@@ -87,14 +87,6 @@ public class Important {
         return line.toString();
     }
 
-    public static void playLocationSong(Location location) {
-        if (location.isFree()) {
-            audioLibrary.playMusic(location.getName());
-            return;
-        }
-        audioLibrary.playMusic("test");
-    }
-
 
     public static void playMusic(String name){
         audioLibrary.playMusic(name);
