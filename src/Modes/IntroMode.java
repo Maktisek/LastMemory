@@ -22,4 +22,9 @@ public class IntroMode implements Mode{
     public String getInfo() {
         return "intro";
     }
+
+    @Override
+    public boolean special() {
+        return false;
+    }
 }

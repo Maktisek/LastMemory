@@ -23,4 +23,9 @@ public class QuestionMode implements Mode{
         return "question";
     }
 
+    @Override
+    public boolean special() {
+        return false;
+    }
+
 }

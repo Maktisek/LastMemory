@@ -28,6 +28,8 @@ public interface Mode {
      */
     String getInfo();
 
+    boolean special();
+
 
 
 

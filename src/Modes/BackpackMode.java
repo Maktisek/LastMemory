@@ -26,5 +26,10 @@ public class BackpackMode implements Mode{
         return "backpack";
     }
 
+    @Override
+    public boolean special() {
+        return false;
+    }
+
 
 }

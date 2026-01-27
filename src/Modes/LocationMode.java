@@ -23,4 +23,9 @@ public class LocationMode implements Mode {
         return "location";
     }
 
+    @Override
+    public boolean special() {
+        return false;
+    }
+
 }
