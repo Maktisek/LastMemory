@@ -25,6 +25,6 @@ public class IntroMode implements Mode{
 
     @Override
     public boolean special() {
-        return false;
+        return true;
     }
 }

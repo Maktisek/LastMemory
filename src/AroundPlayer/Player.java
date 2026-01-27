@@ -220,6 +220,13 @@ public class Player {
         return mode;
     }
 
+    public Mode specialGetMode(){
+        if(!mode.special()){
+            return mode;
+        }
+        return new LocationMode();
+    }
+
     public void setMode(Mode mode) {
         this.mode = mode;
     }

@@ -101,14 +101,14 @@ public class CommandLoader {
         possibleCommands.put("pomoc", player::getMode);
         possibleCommands.put("opustit", player::getMode);
         possibleCommands.put("popis lokace", LocationMode::new);
-        possibleCommands.put("mod", player::getMode);
+        possibleCommands.put("mod", player::specialGetMode);
         possibleCommands.put("sebrat", LocationMode::new);
         possibleCommands.put("položit", LocationMode::new);
         possibleCommands.put("prohlédnout", BackpackMode::new);
         possibleCommands.put("odpovědět", QuestionMode::new);
         possibleCommands.put("mluv", LocationMode::new);
         possibleCommands.put("přijmout úkol", LocationMode::new);
-        possibleCommands.put("zobrazit úkol", player::getMode);
+        possibleCommands.put("zobrazit úkol", player::specialGetMode);
         possibleCommands.put("odevzdat úkol", LocationMode::new);
         possibleCommands.put("vzpomenout", BackpackMode::new);
         possibleCommands.put("prohlédnout úkol", BackpackMode::new);
