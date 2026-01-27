@@ -167,6 +167,7 @@ public class Location {
         return enemyNPC == null;
     }
 
+
     @Override
     public String toString() {
         return Important.changeText("bold", "----------------------------") + Important.changeText("underline", Important.changeText("bold", this.name)) + Important.changeText("bold", "----------------------------\n") +

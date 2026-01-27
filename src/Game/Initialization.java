@@ -20,7 +20,7 @@ public class Initialization {
     ArrayList<Location> tempLocations;
     Player player;
 
-    public Initialization() throws Exception{
+    public Initialization() throws Exception {
         this.locations = new ArrayList<>();
         this.tempLocations = new ArrayList<>();
         this.mapper = new ObjectMapper();
@@ -31,7 +31,7 @@ public class Initialization {
      * Loads all side locations from res\sideLocations.json file and adds them into locations list
      */
     public void loadSideLocations() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\sideLocations.json");){
+        try (InputStream input = new FileInputStream("res\\sideLocations.json");) {
             Location[] sideLocations = mapper.readValue(input, Location[].class);
             locations.addAll(List.of(sideLocations));
         } catch (IOException e) {
@@ -44,7 +44,7 @@ public class Initialization {
      * Loads all hallway locations from res\hallwayLocations.json file and adds them into locations list.
      */
     public void loadHallwayLocationsLocations() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\hallwayLocations.json");){
+        try (InputStream input = new FileInputStream("res\\hallwayLocations.json");) {
             Location[] hallwayLocations = mapper.readValue(input, Location[].class);
             locations.addAll(List.of(hallwayLocations));
         } catch (IOException e) {
@@ -57,7 +57,7 @@ public class Initialization {
      * Loads all main locations from res\locations.json file and adds them into temporary locations list.
      */
     public void loadMainLocations() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\locations.json");){
+        try (InputStream input = new FileInputStream("res\\locations.json");) {
             Location[] mainLocations = mapper.readValue(input, Location[].class);
             tempLocations.addAll(List.of(mainLocations));
         } catch (IOException e) {
@@ -73,7 +73,7 @@ public class Initialization {
      */
     public void connectMainLocations() throws WrongInitializationException {
         for (int i = tempLocations.size() - 1; i > 0; i--) {
-            tempLocations.get(i-1).getFriendlyNPC().getTask().getMemoryPrice().setLocationGift(tempLocations.get(i));
+            tempLocations.get(i - 1).getFriendlyNPC().getTask().getMemoryPrice().setLocationGift(tempLocations.get(i));
         }
         locations.addAll(tempLocations);
         setReadyPossibleLocationArrays();
@@ -83,7 +83,7 @@ public class Initialization {
      * Initializes all locations possible locations array list.
      */
     public void setReadyPossibleLocationArrays() throws WrongInitializationException {
-        for (Location location: locations){
+        for (Location location : locations) {
             location.setPossibleLocations(new ArrayList<>());
         }
         loadBasicLocationConnection();
@@ -98,11 +98,11 @@ public class Initialization {
 //            System.out.println(a+". "+location);
 //            a++;
 //        }
-        try (BufferedReader br = new BufferedReader(new FileReader("res\\basicLocationConnections.csv"))){
+        try (BufferedReader br = new BufferedReader(new FileReader("res\\basicLocationConnections.csv"))) {
             br.readLine();
             String line;
             int index = 0;
-            while ((line = br.readLine()) != null){
+            while ((line = br.readLine()) != null) {
                 String[] data = line.split(">");
                 for (int i = 0; i < data.length; i++) {
                     locations.get(index).addPossibleLocation(locations.get(Integer.parseInt(data[i])));
@@ -127,7 +127,7 @@ public class Initialization {
             Location location = findLocation(audio.getTitle());
             if (location != null) {
                 Objects.requireNonNull(findLocation(location.getName())).setSong(audio);
-            }else {
+            } else {
                 throw new WrongInitializationException("Wrong song name input");
             }
         }
@@ -138,20 +138,25 @@ public class Initialization {
      * It initializes player and sets his current location to the start location, which is location on the index 11 in locations list.
      */
 
-    public void loadPlayer(){
+    public void loadPlayer() {
         //11 je startovní lokace
+        int b = 0;
+        for (Location location : locations) {
+            System.out.println(b + ". " + location);
+            b++;
+        }
         this.player = new Player(locations.get(11));
     }
 
     public Audio[] loadAllSongs() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\locationMusic.json")){
+        try (InputStream input = new FileInputStream("res\\locationMusic.json")) {
             return mapper.readValue(input, Audio[].class);
         } catch (IOException e) {
             throw new WrongInitializationException("Audios were not loaded properly");
         }
     }
 
-    private Location findLocation(String name){
+    private Location findLocation(String name) {
         for (Location location : locations) {
             if (location.getName().equalsIgnoreCase(name)) {
                 return location;
@@ -159,8 +164,6 @@ public class Initialization {
         }
         return null;
     }
-
-
 
 
     public Player getPlayer() {
