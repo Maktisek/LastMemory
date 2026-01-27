@@ -18,8 +18,6 @@ public class RecallMemoryCommand implements Command{
         if (!player.hasCollectedMemory(name)){
             return "Vzpomínka " + name + " neexistuje";
         }
-        Important.pause(player.getCurrentLocation().getName());
-        Important.playSound(name);
         return player.writeMemory(name);
     }
 
