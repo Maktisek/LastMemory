@@ -20,7 +20,7 @@ public class Console {
         Initialization init = new Initialization();
         this.player = init.getPlayer();
         this.gameLoader = new CommandLoader(player);
-        preExecute();
+        executeIntro();
     }
 
 
@@ -37,19 +37,10 @@ public class Console {
             System.out.println(player);
             System.out.print(">> ");
             command = Important.loadText();
+            if (checkCommand(command)) {
+                execute(gameLoader.getCommands().get(command).get());
+            }
 
-            if (!gameLoader.getCommands().containsKey(command.toLowerCase())) {
-                System.out.println(Important.changeText("red", "Akce " + Important.changeText("underline", command) + Important.changeText("red", " neexistuje")));
-                continue;
-            }
-            Mode foundMode = gameLoader.getPossibleCommands().get(command).get();
-            if (foundMode != null && !player.getMode().getInfo().equalsIgnoreCase(foundMode.getInfo())) {
-                System.out.println(Important.changeText("red", "Akci " + Important.changeText("underline", command) + Important.changeText("red", " nelze nyní provést")));
-                continue;
-            } else if (foundMode == null) {
-                throw new Exception("Commands were loaded badly");
-            }
-            execute(gameLoader.getCommands().get(command).get());
         }
     }
 
@@ -63,6 +54,21 @@ public class Console {
                 break;
             }
         }
+    }
+
+    private boolean checkCommand(String command) throws Exception {
+        if (!gameLoader.getCommands().containsKey(command.toLowerCase())) {
+            System.out.println(Important.changeText("red", "Akce " + Important.changeText("underline", command) + Important.changeText("red", " neexistuje")));
+            return false;
+        }
+        Mode foundMode = gameLoader.getPossibleCommands().get(command).get();
+        if (foundMode != null && !player.getMode().getInfo().equalsIgnoreCase(foundMode.getInfo())) {
+            System.out.println(Important.changeText("red", "Akci " + Important.changeText("underline", command) + Important.changeText("red", " nelze nyní provést")));
+            return false;
+        } else if (foundMode == null) {
+            throw new Exception("Commands were loaded badly");
+        }
+        return true;
     }
 
     public void cutscenePlayer() {
@@ -89,4 +95,19 @@ public class Console {
             Important.waitConsole(0.5);
         }
     }
+
+    public void executeIntro() throws Exception{
+        boolean exitIntro = false;
+        while (!exitIntro) {
+            System.out.println(player);
+            System.out.print(">> ");
+            String command = Important.loadText();
+            if(checkCommand(command)){
+                execute(gameLoader.getCommands().get(command).get());
+                exitIntro = gameLoader.getCommands().get(command).get().get(0).continuing();
+            }
+        }
+        preExecute();
+    }
+
 }
