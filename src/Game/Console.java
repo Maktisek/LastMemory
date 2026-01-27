@@ -98,6 +98,7 @@ public class Console {
 
     public void executeIntro() throws Exception{
         boolean exitIntro = false;
+        Important.playMusic("intro music");
         while (!exitIntro) {
             System.out.println(player);
             System.out.print(">> ");
@@ -109,6 +110,7 @@ public class Console {
                 }
             }
         }
+        Important.stopSound("intro music");
         preExecute();
     }
 

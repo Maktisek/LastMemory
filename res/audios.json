@@ -68,5 +68,12 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -10.0
+  },
+  {
+    "title" : "intro music",
+    "filePath" : "audio\\introMusic.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -10.0
   }
 ]
