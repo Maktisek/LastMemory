@@ -1,6 +1,7 @@
 package Locations;
 
 
+import AudioSystem.Audio;
 import Game.Important;
 import Items.Item;
 import Items.Safe;
@@ -28,6 +29,9 @@ public class Location {
 
     //Locations
     private ArrayList<Location> possibleLocations;
+
+    //Audio
+    private Audio song;
 
     public Location() {
     }
@@ -242,5 +246,13 @@ public class Location {
 
     public void setType(Type type) {
         this.type = type;
+    }
+
+    public Audio getSong() {
+        return song;
+    }
+
+    public void setSong(Audio song) {
+        this.song = song;
     }
 }
