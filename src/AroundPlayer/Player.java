@@ -5,6 +5,7 @@ import Game.Important;
 import Items.Item;
 import Items.Task;
 import Locations.Location;
+import Modes.IntroMode;
 import Modes.LocationMode;
 import Modes.Mode;
 import Modes.QuestionMode;
@@ -32,7 +33,7 @@ public class Player {
         this.currentTask = null;
         this.currentLocation = startLocation;
         this.previousLocation = null;
-        this.mode = new LocationMode();
+        this.mode = new IntroMode();
         this.cutscenes = CutsceneLoader.loadCutscenes();
     }
 
