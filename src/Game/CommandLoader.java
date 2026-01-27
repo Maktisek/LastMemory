@@ -2,10 +2,7 @@ package Game;
 
 import AroundPlayer.Player;
 import Commands.*;
-import Modes.BackpackMode;
-import Modes.LocationMode;
-import Modes.Mode;
-import Modes.QuestionMode;
+import Modes.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -94,6 +91,7 @@ public class CommandLoader {
             return List.of(new OpenSafeCommand(player, null));
         });
         commands.put("info postava", () -> List.of(new ReadFriendlyNPCDescriptionCommand(player)));
+        commands.put("spustit hru", () -> List.of(new StartGameCommand(player)));
     }
 
 
@@ -116,6 +114,7 @@ public class CommandLoader {
         possibleCommands.put("prohlédnout úkol", BackpackMode::new);
         possibleCommands.put("otevřít safe", LocationMode::new);
         possibleCommands.put("info postava", LocationMode::new);
+        possibleCommands.put("spustit hru", IntroMode::new);
     }
 
     public HashMap<String, Supplier<List<Command>>> getCommands() {
