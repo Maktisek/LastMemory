@@ -14,6 +14,7 @@ public class EvaluateTaskCommand implements Command{
 
     @Override
     public String execute() {
+
         if(!player.getCurrentTask().isDone()){
             return "Další předměty k odevzdání: " + player.getCurrentLocation().getFriendlyNPC().getTask().writeAllNeededItems();
         }

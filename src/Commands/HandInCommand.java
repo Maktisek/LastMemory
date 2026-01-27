@@ -5,18 +5,21 @@ import AroundPlayer.Player;
 public class HandInCommand implements Command{
 
     private final Player player;
+    private boolean continues;
 
     public HandInCommand(Player player) {
         this.player = player;
+        this.continues = true;
     }
 
     @Override
     public String execute() {
-        if(player.getCurrentLocation().getFriendlyNPC() != null && player.getCurrentLocation().getFriendlyNPC().getTask() != null) {
+        if(player.getCurrentLocation().getFriendlyNPC() != null && player.getCurrentLocation().getFriendlyNPC().getTask() != null && player.getCurrentTask() != null) {
             String result = player.getCurrentTask().scanAndSolveTask(player);
             player.getCurrentLocation().getFriendlyNPC().setTask(player.getCurrentTask());
             return result;
         }
+        continues = false;
         return "Nelze nyní odevzdávat předměty do úkolu";
     }
 
@@ -37,7 +40,7 @@ public class HandInCommand implements Command{
 
     @Override
     public boolean continuing() {
-        return true;
+        return continues;
     }
 
     @Override
