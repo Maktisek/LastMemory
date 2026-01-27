@@ -167,6 +167,22 @@ public class Location {
         return enemyNPC == null;
     }
 
+    public void pauseMusic(){
+        song.pause();
+    }
+
+    public void resumeMusic(){
+        song.resume();
+    }
+
+    public void playMusic(){
+        song.startMusic();
+    }
+
+    public void stopMusic(){
+        song.stopMusic();
+    }
+
 
     @Override
     public String toString() {
