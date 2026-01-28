@@ -1,4 +1,4 @@
-Návod na ovládábí menu hry:
+Návod na ovládání herního start menu:
 "spustit hru" = spustí hru
 "pomoc" = vypíše návod jak ovládat konzoli
 "opustit" = vypne hru

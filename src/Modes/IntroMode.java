@@ -15,7 +15,7 @@ public class IntroMode implements Mode{
 
     @Override
     public String executeHelp() {
-        return "Textík";
+        return Important.readTxtFiles("res\\introHelp.txt");
     }
 
     @Override
