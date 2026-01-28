@@ -138,9 +138,17 @@ public class Important {
     public static String readTxtFiles(String pathName){
         try (BufferedReader br = new BufferedReader(new FileReader(pathName))){
             StringBuilder sb = new StringBuilder();
+            ArrayList<String> lines = new ArrayList<>();
             String line;
             while ((line = br.readLine()) != null){
-                sb.append(line).append("\n");
+                lines.add(line);
+            }
+            for (int i = 0; i < lines.size(); i++) {
+                if(i == lines.size() - 1){
+                    sb.append(lines.get(i));
+                }else {
+                    sb.append(lines.get(i)).append("\n");
+                }
             }
             return sb.toString();
         } catch (IOException e) {

@@ -94,8 +94,7 @@ public class Console {
     public void waitUntilInput(Command command) {
         if (command.waitAble()) {
             Important.waitConsole(0.4);
-            System.out.println("Napiš cokoli pro pokračování");
-            System.out.print(">> ");
+            System.out.print("Napiš cokoli pro pokračování:");
             Important.loadText();
             command.endAudio();
             player.getCurrentLocation().resumeMusic();
@@ -113,6 +112,7 @@ public class Console {
         Important.playMusic("intro music");
         System.out.println(player);
         while (!exitIntro) {
+            System.out.println("\nNapiš příkaz");
             System.out.print(">> ");
             String command = Important.loadText();
             if (checkCommand(command)) {
@@ -137,6 +137,7 @@ public class Console {
         System.out.println(Important.writeSpace(50));
         System.out.println(player);
         while (!exitOutro) {
+            System.out.println("\nNapiš příkaz");
             System.out.print(">> ");
             String command = Important.loadText();
             if (checkCommand(command)) {
