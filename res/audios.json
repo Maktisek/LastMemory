@@ -23,7 +23,7 @@
   {
     "title" : "new memory",
     "filePath" : "audio\\new memory.wav",
-    "infiniteLoop" : false,
+    "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
   },

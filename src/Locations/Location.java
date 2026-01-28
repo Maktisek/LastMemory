@@ -167,20 +167,28 @@ public class Location {
         return enemyNPC == null;
     }
 
-    public void pauseMusic(){
-        song.pause();
+    public void pauseMusic() {
+        if (song != null) {
+            song.pause();
+        }
     }
 
-    public void resumeMusic(){
-        song.resume();
+    public void resumeMusic() {
+        if (song != null) {
+            song.resume();
+        }
     }
 
-    public void playMusic(){
-        song.startMusic();
+    public void playMusic() {
+        if (song != null) {
+            song.startMusic();
+        }
     }
 
-    public void stopMusic(){
-        song.stopMusic();
+    public void stopMusic() {
+        if (song != null) {
+            song.stopMusic();
+        }
     }
 
 
