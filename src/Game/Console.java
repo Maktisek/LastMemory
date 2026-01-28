@@ -93,7 +93,6 @@ public class Console {
 
     public void waitUntilInput(Command command) {
         if (command.waitAble()) {
-            Important.waitConsole(0.4);
             System.out.print("Napiš cokoli pro pokračování:");
             Important.loadText();
             command.endAudio();

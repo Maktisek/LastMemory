@@ -92,6 +92,7 @@ public class CommandLoader {
         });
         commands.put("info postava", () -> List.of(new ReadFriendlyNPCDescriptionCommand(player)));
         commands.put("spustit hru", () -> List.of(new StartGameCommand(player)));
+        commands.put("informace", () -> List.of(new GameEndInformationCommand()));
     }
 
 
@@ -115,6 +116,7 @@ public class CommandLoader {
         possibleCommands.put("otevřít safe", LocationMode::new);
         possibleCommands.put("info postava", LocationMode::new);
         possibleCommands.put("spustit hru", IntroMode::new);
+        possibleCommands.put("informace", OutroMode::new);
     }
 
     public HashMap<String, Supplier<List<Command>>> getCommands() {
