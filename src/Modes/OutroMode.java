@@ -1,12 +1,14 @@
 package Modes;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 public class OutroMode implements Mode{
 
     @Override
     public String executeInfo(Player player) {
-        return "test";
+        String ascii = Important.changeText("bold", Important.changeText("pink", Important.readTxtFiles("res\\outroText.txt")));
+        return ascii;
     }
 
     @Override
