@@ -142,9 +142,7 @@ public class Player {
     }
 
     public boolean canEnd() {
-        //TODO canEnd metoda chybi
-        //Posoudi zda ma hrac uz 10 vzpominek
-        return true;
+      return collectedMemories.size() == 1;
     }
 
     /**
