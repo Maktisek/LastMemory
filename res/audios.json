@@ -40,5 +40,12 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
+  },
+  {
+    "title" : "outro music",
+    "filePath" : "audio\\outroMusic.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : 0
   }
 ]

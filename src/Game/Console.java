@@ -3,6 +3,7 @@ package Game;
 import AroundPlayer.Player;
 import Commands.*;
 import Modes.Mode;
+import Modes.OutroMode;
 import Modes.QuestionMode;
 
 import java.util.*;
@@ -28,10 +29,20 @@ public class Console {
         System.out.println(Important.writeSpace(50));
         while (!exit) {
             String command;
+
             if (player.canPlayCutscene()) {
                 cutscenePlayer();
                 continue;
             }
+
+            if(player.canEnd()){
+                exit = true;
+                player.setMode(new OutroMode());
+                player.getCurrentLocation().stopMusic();
+                executeOutro();
+                continue;
+            }
+
             if (!player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
                 player.getCurrentLocation().playMusic();
             }
@@ -117,6 +128,22 @@ public class Console {
         if (!exit) {
             Important.stopSound("intro music");
             preExecute();
+        }
+    }
+
+    public void executeOutro() throws Exception {
+        boolean exitOutro = false;
+        Important.playMusic("outro music");
+        System.out.println(player);
+        while (!exitOutro) {
+            System.out.print(">> ");
+            String command = Important.loadText();
+            if (checkCommand(command)) {
+                execute(gameLoader.getCommands().get(command).get());
+                if (gameLoader.getCommands().get(command).get().get(0) instanceof ExitCommand) {
+                    exitOutro = true;
+                }
+            }
         }
     }
 

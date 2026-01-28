@@ -91,12 +91,6 @@ public class Audio {
     public void stopMusic() {
         if (clip != null) {
             Thread t = new Thread(() -> {
-                fadeOut();
-                try {
-                    Thread.sleep(1200);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
                 this.clip.close();
                 this.clip = null;
             });
@@ -219,29 +213,6 @@ public class Audio {
                 setVolume(start + (stepSize * f));
                 try {
                     Thread.sleep(milliseconds);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        });
-        t.start();
-    }
-
-    /**
-     * Fades out audio from {@link #initialVolume} to {@link #initialVolume} - 60 decibels.
-     * Uses {@link #setVolume(float)} to set the current volume level.
-     */
-    public void fadeOut() {
-        Thread t = new Thread(() -> {
-            float start = initialVolume;
-            float end = initialVolume - 60;
-            float steps = 100;
-            float stepSize = (start - end) / steps;
-
-            for (float f = steps; f >= 0; f--) {
-                setVolume(start - (stepSize * f));
-                try {
-                    Thread.sleep(20);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
