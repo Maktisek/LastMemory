@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Important {
@@ -143,6 +144,19 @@ public class Important {
             }
             return sb.toString();
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static String randomLineReader(String pathName){
+        try (BufferedReader br = new BufferedReader(new FileReader(pathName))){
+            ArrayList<String> lines = new ArrayList<>();
+            String line;
+            while ((line = br.readLine()) != null){
+                lines.add(line);
+            }
+            return lines.get(new Random().nextInt(0, lines.size() - 1));
+        }catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
