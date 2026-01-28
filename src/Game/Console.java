@@ -134,6 +134,7 @@ public class Console {
     public void executeOutro() throws Exception {
         boolean exitOutro = false;
         Important.playMusic("outro music");
+        System.out.println(Important.writeSpace(50));
         System.out.println(player);
         while (!exitOutro) {
             System.out.print(">> ");
