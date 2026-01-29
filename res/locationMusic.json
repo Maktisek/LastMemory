@@ -25,13 +25,13 @@
     "filePath" : "audio\\Učebna 8.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -6.0
+    "initialVolume" : -2.0
   },
   {
     "title" : "Kumbál",
     "filePath" : "audio\\kumbál.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -4.0
+    "initialVolume" : -2.0
   }
 ]

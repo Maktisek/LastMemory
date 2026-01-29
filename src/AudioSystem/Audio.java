@@ -144,6 +144,11 @@ public class Audio {
                 fadeIn(20);
                 paused = false;
                 clip.setMicrosecondPosition(pausePosition);
+                try {
+                    Thread.sleep(20);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 clip.start();
             });
             t.start();
