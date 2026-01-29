@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 public class OpenSafeCommand implements Command{
 
@@ -17,7 +18,7 @@ public class OpenSafeCommand implements Command{
         if(player.getCurrentLocation().getSafe() != null && player.getCurrentLocation().getSafe().isLocked()){
            return player.getCurrentLocation().tryOpenSafe(code);
         }
-        return "Safe se v lokaci nenachází";
+        return Important.changeText("red", "Safe se v lokaci nenachází");
     }
 
     @Override

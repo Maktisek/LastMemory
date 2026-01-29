@@ -112,9 +112,7 @@ public class Important {
         audioLibrary.resume(name);
     }
 
-    public static void changeTitle(String previousTitle, String newTitle){
-        audioLibrary.changeTitle(previousTitle, newTitle);
-    }
+
 
     public static String loadText(){
         String result = sc.nextLine();

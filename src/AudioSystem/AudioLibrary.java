@@ -75,13 +75,4 @@ public class AudioLibrary {
             }
         }
     }
-
-
-    public void changeTitle(String previousTitle, String newTitle){
-        for (Audio audio: audios){
-            if(audio.getTitle().equalsIgnoreCase(previousTitle)){
-                audio.setTitle(newTitle);
-            }
-        }
-    }
 }
