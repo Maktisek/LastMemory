@@ -36,9 +36,17 @@ public class MoveCommand implements Command {
 
         if (player.getCurrentLocation().getType() == Type.HALLWAY && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
             Important.playSound("walk");
-            Important.changeTitle(player.getPreviousLocation().getName(), player.getCurrentLocation().getName());
+            player.getCurrentLocation().setSong(player.getPreviousLocation().getSong());
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
+
+        if(player.getCurrentLocation().getType() == Type.FADE && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()){
+            Important.playSound("walk");
+            player.getCurrentLocation().playMusic();
+            player.getCurrentLocation().getSong().getClip().setMicrosecondPosition(player.getPreviousLocation().getSong().getClip().getMicrosecondPosition());
+            return Important.changeText("green", "Přesouváš se do: " + name);
+        }
+
         player.getPreviousLocation().stopMusic();
         Important.playSound("walk");
         player.getCurrentLocation().playMusic();

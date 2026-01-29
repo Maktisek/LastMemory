@@ -2,5 +2,5 @@ package Locations;
 
 public enum Type {
 
-    HALLWAY, LOCATION
+    HALLWAY, LOCATION, FADE
 }

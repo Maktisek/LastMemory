@@ -154,7 +154,7 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "FADE"
   },
   {
     "name": "Aula",
@@ -251,7 +251,7 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "FADE"
   }
 
 
