@@ -1,5 +1,7 @@
 package Cutscenes;
 
+import Game.Important;
+
 public class Cutscene {
 
     private String name;
@@ -35,6 +37,6 @@ public class Cutscene {
 
     @Override
     public String toString() {
-        return name + ": " + scene;
+        return Important.changeText("bold", Important.changeText("pink", name)) + "\n" + Important.writeLongTexts(scene);
     }
 }
