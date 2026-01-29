@@ -41,15 +41,15 @@ public class MoveCommand implements Command {
         }
 
         if(player.getCurrentLocation().getType() == Type.FADE && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()){
+            player.getPreviousLocation().stopMusic();
             Important.playSound("walk");
-            player.getCurrentLocation().playMusic();
-            player.getCurrentLocation().getSong().getClip().setMicrosecondPosition(player.getPreviousLocation().getSong().getClip().getMicrosecondPosition());
+            player.getCurrentLocation().playMusic(player.getPreviousLocation().getSong().getClip().getMicrosecondPosition());
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
 
         player.getPreviousLocation().stopMusic();
         Important.playSound("walk");
-        player.getCurrentLocation().playMusic();
+        player.getCurrentLocation().playMusic(0);
         return Important.changeText("green", "Přesouváš se do: " + name);
     }
 

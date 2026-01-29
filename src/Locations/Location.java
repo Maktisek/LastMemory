@@ -179,9 +179,9 @@ public class Location {
         }
     }
 
-    public void playMusic() {
+    public void playMusic(long startPosition) {
         if (song != null) {
-            song.startMusic();
+            song.startMusic(startPosition);
         }
     }
 

@@ -45,7 +45,7 @@ public class Console {
             }
 
             if (!player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
-                player.getCurrentLocation().playMusic();
+                player.getCurrentLocation().playMusic(0);
             }
             System.out.println(player);
             System.out.print(">> ");

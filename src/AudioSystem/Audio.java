@@ -32,14 +32,18 @@ public class Audio {
      *
      * @param music true if the audio file is music. When true, then the audio will fade in via {@link #fadeIn(long)} method
      */
-    private void implementAudio(boolean music) {
+    private void implementAudio(boolean music, long startPosition) {
         try {
             final AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(this.filePath));
             this.clip = AudioSystem.getClip();
             clip.open(audioStream);
             setVolume(this.initialVolume - 15);
             if (music) {
-                fadeIn(20);
+                if (startPosition == 0) {
+                    fadeIn(20);
+                } else {
+                    clip.setMicrosecondPosition(startPosition);
+                }
             } else {
                 setVolume(this.initialVolume);
             }
@@ -52,23 +56,23 @@ public class Audio {
     /**
      * Created just for playing background music.
      * <p>
-     * Uses {@link #implementAudio(boolean)} method to play music.
+     * Uses {@link #implementAudio(boolean, long)} method to play music.
      * <p>
      * It will only proceed further if the clip is null. This prevents some in game bugs where music is playing while another is playing too.
      */
-    public void implementMusic() {
+    public void implementMusic(long startingPosition) {
         if (clip == null) {
-            implementAudio(true);
+            implementAudio(true, startingPosition);
         }
     }
 
 
     /**
      * Method which starts music via thread.
-     * Uses {@link #implementMusic()} method to play the audio.
+     * Uses {@link #implementMusic(long)} method to play the audio.
      */
-    public void startMusic() {
-        final Thread playThread = new Thread(this::implementMusic);
+    public void startMusic(long startingPosition) {
+        final Thread playThread = new Thread(() -> implementMusic(startingPosition));
         playThread.start();
     }
 
@@ -76,10 +80,10 @@ public class Audio {
      * Method which starts sound via thread.
      * The clip have not to be null to play the sound.
      * Created for basic one shot sounds.
-     * Uses {@link #implementAudio(boolean)} method to play the audio.
+     * Uses {@link #implementAudio(boolean, long)} method to play the audio.
      */
     public void startAudio() {
-        final Thread playThread = new Thread(() -> implementAudio(false));
+        final Thread playThread = new Thread(() -> implementAudio(false, 0));
         playThread.start();
     }
 

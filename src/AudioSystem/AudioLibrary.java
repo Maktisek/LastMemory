@@ -31,7 +31,7 @@ public class AudioLibrary {
     public void playMusic(String name) {
         for (Audio audio : audios) {
             if (audio.getTitle().equalsIgnoreCase(name)) {
-                audio.startMusic();
+                audio.startMusic(0);
             }
         }
     }
