@@ -18,6 +18,8 @@ public class RecallMemoryCommand implements Command{
         if (!player.hasCollectedMemory(name)){
             return "Vzpomínka " + name + " neexistuje";
         }
+        player.getCurrentLocation().getSong().pause();
+        Important.playMusic("memory song");
         return player.writeMemory(name);
     }
 
@@ -43,6 +45,6 @@ public class RecallMemoryCommand implements Command{
 
     @Override
     public void endAudio() {
-        Important.stopMusic(name);
+        Important.stopMusic("memory song");
     }
 }

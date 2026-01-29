@@ -61,5 +61,12 @@
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -2.0
+  },
+  {
+    "title" : "memory song",
+    "filePath" : "audio\\memory song.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : 0
   }
 ]
