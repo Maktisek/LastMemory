@@ -11,6 +11,15 @@ public class Cutscene {
     public Cutscene() {
     }
 
+    private String writeName(){
+        String[] data = name.split("\n");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < data.length; i++) {
+            sb.append(Important.writeBlank(15)).append(data[i]).append("\n");
+        }
+        return sb.toString();
+    }
+
     public String getName() {
         return name;
     }
@@ -37,6 +46,6 @@ public class Cutscene {
 
     @Override
     public String toString() {
-        return Important.writeDash(15)+Important.changeText("bold", Important.changeText("pink", name))+ Important.writeDash(15) + "\n" + Important.writeLongTexts(scene);
+        return Important.changeText("bold", Important.changeText("pink", writeName()))+ "\n" + Important.writeLongTexts(scene);
     }
 }

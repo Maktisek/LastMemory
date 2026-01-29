@@ -134,6 +134,9 @@ public class Important {
     public static String writeSpace(int lines){
         return "\n".repeat(Math.max(0, lines));
     }
+    public static String writeBlank(int amount){
+        return " ".repeat(amount);
+    }
 
     public static String readTxtFiles(String pathName){
         try (BufferedReader br = new BufferedReader(new FileReader(pathName))){

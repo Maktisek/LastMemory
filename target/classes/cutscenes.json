@@ -11,23 +11,23 @@
       "requiredMemories": 4
     },
     {
-      "name": "test2",
-      "scene": "testing2",
+      "name": "test3",
+      "scene": "testing3",
       "requiredMemories": 5
     },
     {
-      "name": "test2",
-      "scene": "testing2",
+      "name": "test4",
+      "scene": "testing4",
       "requiredMemories": 7
     },
     {
-      "name": "test2",
-      "scene": "testing2",
+      "name": "test4",
+      "scene": "testing4",
       "requiredMemories": 9
     },
     {
-      "name": "test2",
-      "scene": "testing2",
+      "name": "test5",
+      "scene": "testing5",
       "requiredMemories": 10
     }
   ]
