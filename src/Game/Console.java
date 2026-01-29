@@ -88,6 +88,7 @@ public class Console {
         Command command = new CutscenePlayerCommand(player);
         System.out.println(command.execute());
         waitUntilInput(command);
+        System.out.println(Important.writeSpace(40));
     }
 
 

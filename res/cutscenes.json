@@ -1,32 +1,26 @@
 {
   "cutscenes": [
     {
-      "name": " .---..----..----.---. \n{_   _| {_ { {__{_   _}\n  | | | {__.-._} }| |  \n  `-' `----`----' `-'  ",
-      "scene": "testing",
+      "scene": "Tohle je naprosto normální text a není na něm nic dovného ba znepokujujícího, jenomže mi neuznali ted .flac odpovědě%d když nikdo nespecifikoval jak to má být.... ",
       "requiredMemories": 0
     },
     {
-      "name": "test2",
       "scene": "testing2",
       "requiredMemories": 4
     },
     {
-      "name": "test3",
       "scene": "testing3",
       "requiredMemories": 5
     },
     {
-      "name": "test4",
       "scene": "testing4",
       "requiredMemories": 7
     },
     {
-      "name": "test4",
       "scene": "testing4",
       "requiredMemories": 9
     },
     {
-      "name": "test5",
       "scene": "testing5",
       "requiredMemories": 10
     }

@@ -15,7 +15,7 @@ public class QuestionMode implements Mode{
 
     @Override
     public String executeHelp() {
-        return Important.readTxtFiles("res\\questionHelp.txt");
+        return Important.readTxtFiles("res\\questionHelp.txt", 0);
     }
 
     @Override

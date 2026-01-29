@@ -138,7 +138,7 @@ public class Important {
         return " ".repeat(amount);
     }
 
-    public static String readTxtFiles(String pathName){
+    public static String readTxtFiles(String pathName, int space){
         try (BufferedReader br = new BufferedReader(new FileReader(pathName))){
             StringBuilder sb = new StringBuilder();
             ArrayList<String> lines = new ArrayList<>();
@@ -148,9 +148,9 @@ public class Important {
             }
             for (int i = 0; i < lines.size(); i++) {
                 if(i == lines.size() - 1){
-                    sb.append(lines.get(i));
+                    sb.append(writeBlank(space)).append(lines.get(i));
                 }else {
-                    sb.append(lines.get(i)).append("\n");
+                    sb.append(writeBlank(space)).append(lines.get(i)).append("\n");
                 }
             }
             return sb.toString();

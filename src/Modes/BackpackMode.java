@@ -18,7 +18,7 @@ public class BackpackMode implements Mode{
 
     @Override
     public String executeHelp() {
-        return Important.readTxtFiles("res\\backpackHelp.txt");
+        return Important.readTxtFiles("res\\backpackHelp.txt", 0);
     }
 
     @Override

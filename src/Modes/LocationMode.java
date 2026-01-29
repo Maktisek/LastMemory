@@ -15,7 +15,7 @@ public class LocationMode implements Mode {
 
     @Override
     public String executeHelp() {
-        return Important.readTxtFiles("res\\locationHelp.txt");
+        return Important.readTxtFiles("res\\locationHelp.txt", 0);
     }
 
     @Override

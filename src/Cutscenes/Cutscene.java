@@ -4,29 +4,16 @@ import Game.Important;
 
 public class Cutscene {
 
-    private String name;
     private String scene;
     private int requiredMemories;
 
     public Cutscene() {
     }
 
-    private String writeName(){
-        String[] data = name.split("\n");
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < data.length; i++) {
-            sb.append(Important.writeBlank(15)).append(data[i]).append("\n");
-        }
-        return sb.toString();
+    private String writeHeadText(){
+        return Important.changeText("bold", Important.readTxtFiles("res\\cutsceneAscii.txt", 5));
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getScene() {
         return scene;
@@ -46,6 +33,6 @@ public class Cutscene {
 
     @Override
     public String toString() {
-        return Important.changeText("bold", Important.changeText("pink", writeName()))+ "\n" + Important.writeLongTexts(scene);
+        return Important.changeText("bold", Important.changeText("pink", writeHeadText()))+ "\n" + Important.writeLongTexts(scene);
     }
 }
