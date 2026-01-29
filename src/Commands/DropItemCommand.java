@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 public class DropItemCommand implements Command {
 
@@ -16,6 +17,7 @@ public class DropItemCommand implements Command {
     public String execute() {
         if (player.getInventory().getWeight() != 0) {
             if (player.getCurrentLocation().addItem(player.getInventory().dropItem(name))) {
+                Important.playSound("dropping sound");
                 return "Položil si " + name + " do " + player.getCurrentLocation().getName();
             }
             return "Momentálně u sebe nemáš " + name;

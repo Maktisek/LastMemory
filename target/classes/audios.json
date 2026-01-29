@@ -47,5 +47,19 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
+  },
+  {
+    "title" : "picking sound",
+    "filePath" : "audio\\picking sound.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : 0
+  },
+  {
+    "title" : "dropping sound",
+    "filePath" : "audio\\dropping sound.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -1.0
   }
 ]

@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 import Items.Item;
 
 public class PickItemCommand implements Command {
@@ -28,6 +29,7 @@ public class PickItemCommand implements Command {
         if (player.getInventory().addItem(temp)) {
             player.getCurrentLocation().removeItem(temp);
         }
+        Important.playSound("picking sound");
         return "Sebral si " + name;
     }
 
