@@ -37,6 +37,6 @@ public class Cutscene {
 
     @Override
     public String toString() {
-        return Important.changeText("bold", Important.changeText("pink", name)) + "\n" + Important.writeLongTexts(scene);
+        return Important.writeDash(15)+Important.changeText("bold", Important.changeText("pink", name))+ Important.writeDash(15) + "\n" + Important.writeLongTexts(scene);
     }
 }

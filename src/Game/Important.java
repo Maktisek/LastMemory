@@ -169,5 +169,10 @@ public class Important {
         }
     }
 
+    public static String writeDash(int amount){
+        String dash = "-";
+        return dash.repeat(amount);
+    }
+
 }
 
