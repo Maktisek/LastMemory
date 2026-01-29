@@ -241,7 +241,14 @@
     "code": "SPECIALS_004 ",
     "description": "Zvláštní malá místnost obsahující pomůcky k výuce fyziky. Nachází se v ní poměrně velký nepořádek. Vždycky jsem to tu chtěla celé projít, ale moje hlava si nevymyslí, jak to tu doopravdy vypadá.",
     "enemyNPC": null,
-    "friendlyNPC": null,
+    "friendlyNPC": {
+      "name": "Sergei",
+      "position": "Náhodný loner",
+      "age": "20 let",
+      "currentSpeech": "Ah nu cheeki breeki iv damke, Amy! Poslouchej, jedna lahev vodky a hardbass jam spraví tvůj smutek... A na Toma už nemysli, toho stejně sežere zóna, haha.",
+      "anotherSpeech": "None",
+      "task": null
+    },
     "items": [
       {
         "name": "Licenční klíč VariCAD",

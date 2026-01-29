@@ -22,7 +22,7 @@ public class AcceptTaskCommand implements Command{
             return "V lokaci se nyní nikdo nenachází";
         }
         if(friendlyNPC.getTask() == null){
-            return friendlyNPC.getName() + " již žádný úkol nenabízí";
+            return friendlyNPC.getName() + " žádný úkol nenabízí";
         }
         if (player.addCurrentTask(friendlyNPC.getTask())){
             return "Nový úkol " + friendlyNPC.getTask().getName() + " byl přijat";

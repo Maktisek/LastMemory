@@ -14,7 +14,7 @@ public class HandInCommand implements Command{
 
     @Override
     public String execute() {
-        if(player.getCurrentLocation().getFriendlyNPC() != null && player.getCurrentLocation().getFriendlyNPC().getTask() != null && player.getCurrentTask() != null) {
+        if(player.getCurrentLocation().getFriendlyNPC() != null && player.getCurrentLocation().getFriendlyNPC().getTask() != null && player.getCurrentTask() != null && player.getCurrentTask().getName().equalsIgnoreCase(player.getCurrentLocation().getFriendlyNPC().getTask().getName())) {
             String result = player.getCurrentTask().scanAndSolveTask(player);
             player.getCurrentLocation().getFriendlyNPC().setTask(player.getCurrentTask());
             return result;
