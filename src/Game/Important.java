@@ -1,7 +1,6 @@
 package Game;
 
 import AudioSystem.AudioLibrary;
-import Locations.Location;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -155,7 +154,7 @@ public class Important {
             }
             return sb.toString();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            return "soubor " + pathName + " ve hře chybí, zkus zkontrolovat herní soubory.";
         }
     }
 
@@ -168,7 +167,7 @@ public class Important {
             }
             return lines.get(new Random().nextInt(0, lines.size() - 1));
         }catch (IOException e) {
-            throw new RuntimeException(e);
+            return "soubor " + pathName + " ve hře chybí, zkus zkontrolovat herní soubory.";
         }
     }
 
