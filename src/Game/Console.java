@@ -2,6 +2,7 @@ package Game;
 
 import AroundPlayer.Player;
 import Commands.*;
+import Exceptions.WrongInitializationException;
 import Modes.Mode;
 import Modes.OutroMode;
 import Modes.QuestionMode;
@@ -16,7 +17,7 @@ public class Console {
     private boolean exit;
 
 
-    public Console() throws Exception {
+    public Console() throws WrongInitializationException {
         this.exit = false;
         Initialization init = new Initialization();
         this.player = init.getPlayer();
@@ -25,7 +26,7 @@ public class Console {
     }
 
 
-    public void preExecute() throws Exception {
+    public void preExecute(){
         System.out.println(Important.writeSpace(50));
         while (!exit) {
             String command;
@@ -35,7 +36,7 @@ public class Console {
                 continue;
             }
 
-            if(player.canEnd()){
+            if (player.canEnd()) {
                 exit = true;
                 player.setMode(new OutroMode());
                 player.getCurrentLocation().stopMusic();
@@ -68,7 +69,7 @@ public class Console {
         }
     }
 
-    private boolean checkCommand(String command) throws Exception {
+    private boolean checkCommand(String command) {
         if (!gameLoader.getCommands().containsKey(command.toLowerCase())) {
             System.out.println(Important.changeText("red", "Akce " + Important.changeText("underline", command) + Important.changeText("red", " neexistuje")));
             return false;
@@ -77,8 +78,6 @@ public class Console {
         if (foundMode != null && !player.getMode().getInfo().equalsIgnoreCase(foundMode.getInfo())) {
             System.out.println(Important.changeText("red", "Akci " + Important.changeText("underline", command) + Important.changeText("red", " nelze nyní provést")));
             return false;
-        } else if (foundMode == null) {
-            throw new Exception("Commands were loaded badly");
         }
         return true;
     }
@@ -107,7 +106,7 @@ public class Console {
         }
     }
 
-    public void executeIntro() throws Exception {
+    public void executeIntro(){
         boolean exitIntro = false;
         Important.playMusic("intro music");
         System.out.println(player);
@@ -131,7 +130,7 @@ public class Console {
         }
     }
 
-    public void executeOutro() throws Exception {
+    public void executeOutro(){
         boolean exitOutro = false;
         Important.playMusic("outro music");
         System.out.println(Important.writeSpace(50));
