@@ -75,5 +75,12 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
+  },
+  {
+    "title" : "safe open",
+    "filePath" : "audio\\safe open.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -4.0
   }
 ]

@@ -64,8 +64,7 @@ public class Location {
     }
 
 
-    public String tryOpenSafe(String code) {
-        if (safe.openSafe(code)) {
+    public String openSafe() {
             ArrayList<Item> temp = safe.dropItems();
             items.addAll(temp);
             ArrayList<String> names = new ArrayList<>();
@@ -74,8 +73,6 @@ public class Location {
             }
             return "V trezoru se nachází: " + Important.writeStringArrays(names);
         }
-        return "Kód " + code + " není správný, či srávně zapsaný";
-    }
 
     public boolean availableSafe() {
         return safe != null && safe.isLocked();
