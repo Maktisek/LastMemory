@@ -33,5 +33,19 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -2.0
+  },
+  {
+    "title" : "Učebna 19",
+    "filePath" : "audio\\Prokletí.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -8.0
+  },
+  {
+    "title" : "Kabinet K12",
+    "filePath" : "audio\\Obstacles.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -8.0
   }
 ]

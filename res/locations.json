@@ -43,7 +43,7 @@
     },
     "items": [
       {
-        "name": "Safe toalety",
+        "name": "Kód toalety",
         "description": "Papírek obsahující: R1;L2;R2",
         "code": "PAPERS_001",
         "weight": 0.2
@@ -277,7 +277,7 @@
         "weight": 4
       },
       {
-        "name": "Safe kancelář",
+        "name": "Kód kancelář",
         "description": "Papírek obsahující: L50;R21;L1;R21",
         "code": "PAPERS_003",
         "weight": 0.2
@@ -409,7 +409,7 @@
         "weight": 5
       },
       {
-        "name": "Safe kabinet K12",
+        "name": "Kód kabinet K12",
         "description": "Papírek obsahující: L20;R41;L41;L20;R21;L1;R8;L8",
         "code": "PAPERS_004",
         "weight": 0.2
@@ -469,7 +469,7 @@
         "weight": 1
       },
       {
-        "name": "Safe sekretariát",
+        "name": "Kód sekretariát",
         "description": "Papírek obsahující: L16;R28;L24;R4;L8",
         "code": "PAPERS_005",
         "weight": 0.2
