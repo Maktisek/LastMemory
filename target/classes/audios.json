@@ -68,5 +68,12 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
+  },
+  {
+    "title" : "cutscene",
+    "filePath" : "audio\\cutscene.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : 0
   }
 ]

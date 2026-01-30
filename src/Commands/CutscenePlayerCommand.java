@@ -6,7 +6,7 @@ import Game.Important;
 public class CutscenePlayerCommand implements Command{
 
 
-    private Player player;
+    private final Player player;
 
     public CutscenePlayerCommand(Player player) {
         this.player = player;
@@ -14,6 +14,8 @@ public class CutscenePlayerCommand implements Command{
 
     @Override
     public String execute() {
+        player.getCurrentLocation().pauseMusic();
+        Important.playMusic("cutscene");
         return player.getCutscenes().pollCutscene().toString();
     }
 
@@ -39,6 +41,6 @@ public class CutscenePlayerCommand implements Command{
 
     @Override
     public void endAudio() {
-
+        Important.stopMusic("cutscene");
     }
 }
