@@ -47,5 +47,12 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -8.0
+  },
+  {
+    "title" : "Učebna 8a",
+    "filePath" : "audio\\Učebna 8a.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -10.0
   }
 ]

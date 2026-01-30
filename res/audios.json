@@ -53,7 +53,7 @@
     "filePath" : "audio\\picking sound.wav",
     "infiniteLoop" : false,
     "paused" : false,
-    "initialVolume" : -1.0
+    "initialVolume" : -5.0
   },
   {
     "title" : "dropping sound",
