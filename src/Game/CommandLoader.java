@@ -50,6 +50,7 @@ public class CommandLoader {
         commands.put("položit", () -> {
             if (player.getInventory().getWeight() != 0) {
                 System.out.println("Napiš předmět, který chceš položit");
+                System.out.println("Tvé předměty: " + player.getInventory().writeItems());
                 System.out.print(">>");
                 return new ArrayList<>(List.of(new DropItemCommand(player, Important.loadText())));
             }

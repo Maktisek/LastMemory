@@ -60,7 +60,7 @@
     "filePath" : "audio\\dropping sound.wav",
     "infiniteLoop" : false,
     "paused" : false,
-    "initialVolume" : -2.0
+    "initialVolume" : -4.0
   },
   {
     "title" : "memory song",
