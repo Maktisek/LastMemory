@@ -19,6 +19,7 @@
       "name": "Ing. Jan Šváb",
       "position": "Učitel",
       "age": "50 let",
+      "type" : "AKTIVNÍ",
       "currentSpeech": "Hele, to víte, že se vám ve třídě rozbil dataprojektor? Budu ho muset opravit, ale potřebuji k tomu šroubovák a novou výbojku. Myslíš, že byste mi je mohla přinést?",
       "anotherSpeech": "Díky moc, ty dataprojektory většinou vydrží dlouho, ale tenhle tu nebyl ani dva roky. Jinak ředitel už schválil vaše samostudium na příští týden, říkám vám to, abyste tam už nemusela chodit. Užijte si to.",
       "task": {
@@ -43,7 +44,7 @@
     },
     "items": [
       {
-        "name": "Safe toalety",
+        "name": "Kód toalety",
         "description": "Papírek obsahující: R1;L2;R2",
         "code": "PAPERS_001",
         "weight": 0.2
@@ -99,6 +100,7 @@
       "name": "Bc. Adam Papula",
       "position": "Učitel",
       "age": "28 let",
+      "type" : "AKTIVNÍ",
       "currentSpeech": "Dobrý den, Amy, zrovna tady řeším rozbitý monitor. Já bych to neřešil, ale tenhle týden je to už podruhé... Připadá mi, že se to teď děje naschvál takhle dva týdny před Vánocemi. Chyba bude asi v kabelu, možná i v konektoru. Nemohla byste mi prosím přinést nový HDMI kabel a stlačený vzduch?",
       "anotherSpeech": "Děkuji vám moc, snad to pomůže... Ano, už jsem si vzpomněl. Já jsem udělal chybu v plánování a omylem jsem vám řekl, že budeme dělat příští týden JSON. Na to teď zapomeňte, protože budeme probírat UNICODE. Prezentaci najdete na Moodlu, takže vše se dozvíte. Kdyžtak vám pak ve škole spolužáci látku dovysvětlí.",
       "task": {
@@ -167,6 +169,7 @@
       "name": "Petr Procházka",
       "position": "Učitel",
       "age": "55 let",
+      "type" : "AKTIVNÍ",
       "currentSpeech": "Zase nějaký vtipálek odhlásil VariCAD... Já už nemůžu, nebudu to dělat! Kdybych si alespoň pamatoval licenční klíč k VariCADU. Zkusím tam něco naťukat... Co? Co je s tou klávesnicí! Ty vole, pardon, já už fakt nechápu, co se to poslední dobou děje. Mám hlad, jsem unavenej, nic nefunguje. Heleď nemohla bys mi, prosím, sehnat ten klíč a novou klávesnici?",
       "anotherSpeech": "Děkuji, Amy, jooo i bagetu, jo? Víte co, Amy, měla byste na sebe dávat pozor... Ne fakt myslím to vážně. Byla by to škoda, kdyby o vás škola přišla. Fakt dávejte pozor.",
       "task": {
@@ -243,6 +246,7 @@
       "name": "Kateřina Haasová",
       "position": "Učitel",
       "age": "23 let",
+      "type" : "AKTIVNÍ",
       "currentSpeech": "Jee, dobrý den, Amy... Em, víte já už tady dobrých 10 minut hledám svojí ztracenou flešku. Neviděla jste ji? Hodilo by se mi to stihnout, dokud nezačne hodina. Možná jestli bych vás mohla poprosit, zda mi nepomůžete?",
       "anotherSpeech": "Jo! To je ona! Moc vám děkuji, opravdu. Jinak, Amy, co je to, že jste tak veselá, a dokonce vám to nadprůměrně sluší! Jste celá rozzářená. Ale pamatujte, pozornost. Dávejte na sebe pozor.",
       "task": {
@@ -277,7 +281,7 @@
         "weight": 4
       },
       {
-        "name": "Safe kancelář",
+        "name": "Kód kancelář",
         "description": "Papírek obsahující: L50;R21;L1;R21",
         "code": "PAPERS_003",
         "weight": 0.2
@@ -321,6 +325,7 @@
       "name": "Antonín Franěk",
       "position": "Kamarád",
       "age": "16 let",
+      "type" : "AKTIVNÍ",
       "currentSpeech": "Ahoj, Amy, neviděla si Mari? Já jsem s Mari chtěl něco tisknout, ale není tu ani Mari ani moje filamenty... Prostě jsem je někde musel položit a jsou fuč. Co bych taky dělal v 8a co? Prosím pomůžeš mi je najít, já jsem dneska nějakej slepej.",
       "anotherSpeech": "Ou, wow, díky moc. Teď už bude jenom muset někde vyplavat i Mari, nebo víš co? Já si jí vytisknu, haha. Heleď, Amy, ještě jsem ti chtěl říct, že docela důležité je brát v potaz, že někdy musíme být velice opatrní a pozorní na to, co děláme, víš? Chybějící pozornost je často příčinou selhání. Anyway jinými slovy, nechceš hledat všude po škole svoje filamenty...",
       "task": {
@@ -377,6 +382,7 @@
       "name": "Bc. Daniel Adámek",
       "position": "Učitel",
       "age": "27 let",
+      "type" : "AKTIVNÍ",
       "currentSpeech": "Dobrý den, Amy, jsem rád, že jste se ukázala. Zrovna tady potřebuji vyřešit něco školního, ale nevzal jsem si s sebou nic. Rád bych si totiž uložil všechny studenty a jejich známky. Nemohla byste mi prosím sehnat můj notebook, myš a flešku, na který mám takový Excelový soubor? Děkuji.",
       "anotherSpeech": "Jak pěkné, to je přesně on. Děkuji moc. Jinak všimla jste si toho, co se děje před školou? Teď tam přijela záchranka a policie. Sjel se tam snad celý sbor. Snad se nestalo nic vážného. Buďte opatrná.",
       "task": {
@@ -409,7 +415,7 @@
         "weight": 5
       },
       {
-        "name": "Safe kabinet K12",
+        "name": "Kód kabinet K12",
         "description": "Papírek obsahující: L20;R41;L41;L20;R21;L1;R8;L8",
         "code": "PAPERS_004",
         "weight": 0.2
@@ -437,6 +443,7 @@
       "name": "Michaela Meitnerová",
       "position": "Učitel",
       "age": "25 let",
+      "type" : "AKTIVNÍ",
       "currentSpeech": "Amy, co vy tu děláte? Na tom nesejde. Když už jste tady, hodila by se mi pomocná ruka. Ne teda, že byste něco opravovala, ale spíš, jestli byste mi někam neskočila. Potřebuji sehnat notebook a moje ztracené USB s kódem. Když vás ještě takhle vidím, tak mi dochází, že jsem vám včera zapomněla zapsat do třídnice... Nemohla byste ji sehnat také? Děkuji.",
       "anotherSpeech": "Ty jo, Amy, vy jste hodná. Teď vám můžu připravit takové fajn a hezké cvičení na Moodle, mrk mrk. Teda jestli se tam ještě stihnete ukázat. Nee, vtipkuji samozřejmě. Taky, slyšela jste o té tragédii před školou? Někoho prý něco srazilo, víc nevím, ale je to hrozné, dávejte na sebe pozor, jo?",
       "task": {
@@ -469,7 +476,7 @@
         "weight": 1
       },
       {
-        "name": "Safe sekretariát",
+        "name": "Kód sekretariát",
         "description": "Papírek obsahující: L16;R28;L24;R4;L8",
         "code": "PAPERS_005",
         "weight": 0.2
@@ -511,6 +518,7 @@
       "name": "RNDr. Luboš Rašek",
       "position": "Učitel",
       "age": "65 let",
+      "type" : "AKTIVNÍ",
       "currentSpeech": "Dobrý den, pilná studentko, já moc nestíhám, jenom jestli bych vás takhle nemohl rychle poprosit, zda byste mi nesehnala svazky učebnic. Tedy přímo matematiky, strojnických tabulek, chemie a fyziky. Vy jste taková pracovitá, rozhodně to pro vás nebude problém.",
       "anotherSpeech": "Děkuji moc, mám teď toho hodně. Musím ještě vyplnit spoustu papírů pro pojišťovnu poté, co studentku Vránovou srazila tramvaj. Je mi jí moc líto. Víte, pustili její třídu dříve ze školy, a tak se celý incident stal ještě v době výuky. Je to pak naše chyba, že jsme dali na tento incident dopustit.",
       "task": {
@@ -565,6 +573,7 @@
       "name": "Ing. Ondřej Mandík",
       "position": "Ředitel",
       "age": "38 let",
+      "type" : "AKTIVNÍ",
       "currentSpeech": "Dobrý den, já se teď nemůžu nijak zdržovat. Připravuji totiž prezentaci naší školy žákům devátých tříd. Pokud byste byla hodná, hodila by se mi vaše pomoc. Potřebuji sehnat plakáty o C# a Pythonu, také potřebuji sehnat USB s prezentací, seznam programů a papíry. Čisté bílé prázdné papíry jsou ideál. Děkuji moc.",
       "anotherSpeech": "Víte, je toho teď na školu nějak moc. Studenti jako vy jsou nám bohatstvím. Situace se slečnou Amy Vránovou školou otřásla, od té doby nezůstalo nic, tak jak bylo. Věříme, že se z toho slečna ještě vyléčí, ale doktoři už psali, že šance jsou mizivé. Buďte opatrná.",
       "task": {
@@ -618,6 +627,7 @@
       "name": "Duše Amy",
       "position": "Amy sama",
       "age": "17 let",
+      "type" : "AKTIVNÍ",
       "currentSpeech": "Kam si myslíš, že jako jdeš, Amy! Je to jenom tvoje chyba! Kdyby ses netáhla za tím Tomášem a dávala třeba větší pozor, nemusely jsme tady takhle obě stát! Ani nevíš, jak moc se zlobím. Celý život tě lidi učí dávat si na sebe pozor a ty se prostě nerozhlédneš? To nemyslíš snad vážně... Poslední, co chci, abys udělala je mě vysvobodit. Potřebuji k tomu jedno kvítí narcisu. Narcis totiž symbolizuje nový začátek, jako když se krajina začne probouzet z věčné zimy. Pokud mi ten narcis přineseš, bude mi líp.",
       "anotherSpeech": "Mezitím, co má duše pomalu mizí, já stojím u vjezdu do školy. Pomalu se vše kolem mě mění na nemocniční lůžko. Ležím zde já, bez dechu, bez života. Běhá kolem mě pár doktorů, kteří neví, že už není cesty zpět. Tělo, které ještě včera bylo zdravé, teď ztrácí teplo. Obličej, který se denně usmíval, teď drží jeden výraz. Kůže, která byla známkou zdraví, teď šedne. Už tam nejsem já, není tam nic. A co rodina? Upřímně je mi jich víc líto, než je mi líto sebe samotné. Oni teď musí žít v té neuvěřitelné bolesti ztráty někoho blízkého. V té bolesti, ze které nelze odejít. Sama jsem ji nezažila, ale stala jsem se příčinou jedné z nich.  \nTohle jsem byla já, Amy Vránová. \nProsím dávejte na sebe pozor. Ne všechno je samozřejmost.",
       "task": {

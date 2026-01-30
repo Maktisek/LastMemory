@@ -245,6 +245,7 @@
       "name": "Sergei",
       "position": "Náhodný loner",
       "age": "20 let",
+      "type" : "PASIVNÍ",
       "currentSpeech": "Ah nu cheeki breeki iv damke, Amy! Poslouchej, jedna lahev vodky a hardbass jam spraví tvůj smutek... A na Toma už nemysli, toho stejně sežere zóna, haha.",
       "anotherSpeech": "None",
       "task": null

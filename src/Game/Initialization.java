@@ -35,7 +35,7 @@ public class Initialization {
             Location[] sideLocations = mapper.readValue(input, Location[].class);
             locations.addAll(List.of(sideLocations));
         } catch (IOException e) {
-            throw new WrongInitializationException("Wrong side locations load");
+            throw new WrongInitializationException(e.getMessage());
         }
         loadHallwayLocationsLocations();
     }

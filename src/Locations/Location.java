@@ -149,7 +149,7 @@ public class Location {
 
     public String writeFriendlyNPCName() {
         if (friendlyNPC != null) {
-            return Important.changeText("green", this.friendlyNPC.getName());
+            return Important.changeText("green", this.friendlyNPC.writeName());
         } else {
             return Important.changeText("red", "Nikdo se zde nenachází");
         }
