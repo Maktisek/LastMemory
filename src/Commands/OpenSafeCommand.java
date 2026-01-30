@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Exceptions.WrongSafeCodeException;
 import Game.Important;
 
 public class OpenSafeCommand implements Command{
@@ -18,9 +19,10 @@ public class OpenSafeCommand implements Command{
         if(player.getCurrentLocation().getSafe() == null || !player.getCurrentLocation().getSafe().isLocked()){
             return Important.changeText("red", "Safe se v lokaci nenachází");
         }
-
-        if(!player.getCurrentLocation().getSafe().openSafe(code)){
-            return "Kód " + code + " není správný, či srávně zapsaný";
+        try {
+            player.getCurrentLocation().getSafe().openSafe(code);
+        }catch (WrongSafeCodeException e){
+            return e.getMessage();
         }
         Important.playSound("safe open");
         return player.getCurrentLocation().openSafe();

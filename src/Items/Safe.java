@@ -1,5 +1,7 @@
 package Items;
 
+import Exceptions.WrongSafeCodeException;
+
 import java.util.ArrayList;
 
 public class Safe {
@@ -52,23 +54,32 @@ public class Safe {
         this.code = code;
     }
 
-    public boolean openSafe(String code) {
+    public void openSafe(String code) throws WrongSafeCodeException {
+        code = code.replaceAll(" ", "");
         String[] data = code.split(";");
         int password = 0;
         for (int i = 0; i < data.length; i++) {
             if (data[i].contains("R")) {
                 data[i] = data[i].replaceAll("R", "");
-                currentPointer += Integer.parseInt(data[i]);
+                try {
+                    currentPointer += Integer.parseInt(data[i]);
+                }catch (NumberFormatException e){
+                    throw new WrongSafeCodeException("Kód " + code + " není správný, či srávně zapsaný");
+                }
             } else {
                 data[i] = data[i].replaceAll("L", "");
-                currentPointer -= Integer.parseInt(data[i]);
+                try {
+                    currentPointer -= Integer.parseInt(data[i]);
+                }catch (NumberFormatException e){
+                    throw new WrongSafeCodeException("Kód " + code + " není správný, či srávně zapsaný");
+                }
             }
             currentPointer = currentPointer % 100;
             if (currentPointer == 0) {
                 password++;
             }
         }
-        return isDone(password);
+        isDone(password);
     }
 
     public boolean isDone(int password) {
