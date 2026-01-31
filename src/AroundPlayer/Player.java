@@ -205,7 +205,6 @@ public class Player {
         if (cutscenes.peekCutscene() == null) {
             return false;
         }
-
         return this.collectedMemories.size() == cutscenes.peekCutscene().getRequiredMemories();
     }
 

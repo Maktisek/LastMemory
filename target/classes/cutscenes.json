@@ -6,7 +6,7 @@
     },
     {
       "scene": "testing2",
-      "requiredMemories": 4
+      "requiredMemories": 1
     },
     {
       "scene": "testing3",

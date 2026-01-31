@@ -26,7 +26,7 @@ public class Console {
     }
 
 
-    public void preExecute(){
+    public void preExecute() {
         System.out.println(Important.writeSpace(50));
         while (!exit) {
             String command;
@@ -85,7 +85,7 @@ public class Console {
     }
 
     public void cutscenePlayer() {
-        Important.pause(player.getCurrentLocation().getName());
+        player.getCurrentLocation().pauseMusic();
         Command command = new CutscenePlayerCommand(player);
         System.out.println(command.execute());
         waitUntilInput(command);
@@ -98,7 +98,9 @@ public class Console {
             System.out.print("Napiš cokoli pro pokračování:");
             Important.loadText();
             command.endAudio();
-            player.getCurrentLocation().resumeMusic();
+            if(!player.canPlayCutscene()) {
+                player.getCurrentLocation().resumeMusic();
+            }
         }
     }
 
@@ -108,7 +110,7 @@ public class Console {
         }
     }
 
-    public void executeIntro(){
+    public void executeIntro() {
         boolean exitIntro = false;
         Important.playMusic("intro music");
         System.out.println(player);
@@ -132,7 +134,7 @@ public class Console {
         }
     }
 
-    public void executeOutro(){
+    public void executeOutro() {
         boolean exitOutro = false;
         Important.playMusic("outro music");
         System.out.println(Important.writeSpace(50));
