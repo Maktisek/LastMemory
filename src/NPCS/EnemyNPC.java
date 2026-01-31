@@ -1,5 +1,7 @@
 package NPCS;
 
+import Game.Important;
+
 import java.util.ArrayList;
 
 public class EnemyNPC extends NPC{
@@ -19,12 +21,15 @@ public class EnemyNPC extends NPC{
         return possibleAnswers.contains(answer.toLowerCase());
     }
 
+    private String forToString(){
+        return "Oh ne " + Important.changeText("bold", Important.changeText("underline", this.name)) + " mi stojí v cestě! \nMusím odpovědět na otázku, abych mohla pokračovat dále." + "\n" +
+                Important.changeText("bold", "Otázka: ") + this.question + "\n" +
+                Important.changeText("bold", "Hra: ") + "Lokace se otevře až zodpovíš na otázku (příkaz: "+Important.changeText("underline", "\"odpovědět\"") + ")";
+    }
+
     @Override
     public String toString() {
-        return "------------------Protivník------------------" + "\n" +
-                "Oh ne " + this.name + " mi stojí v cestě! \nMusím odpovědět na otázku, abych mohla pokračovat dále." + "\n" +
-                "Otázka: " + this.question + "\n" +
-                "Hra: " + "Lokace se otevře až zodpovíš na otázku (příkaz \"odpovědět\")";
+        return Important.dashToString(forToString(), "Čas na zkoušeníčko:)");
     }
 
     public String getQuestion() {

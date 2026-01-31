@@ -443,11 +443,11 @@ public class Player {
             double onePercent = capacity / 100;
             double percent = weight / onePercent;
             if(percent <= 50){
-                return Important.changeText("green", Double.toString(weight));
+                return Important.changeText("green", Integer.toString((int) weight));
             } else if(percent < 100){
-                return Important.changeText("yellow", Double.toString(weight));
+                return Important.changeText("yellow", Integer.toString((int) weight));
             }
-            return Important.changeText("red", Double.toString(weight));
+            return Important.changeText("red", Integer.toString((int) weight));
         }
 
         public HashMap<String, ArrayList<Item>> getItems() {
