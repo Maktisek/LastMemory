@@ -189,12 +189,15 @@ public class Location {
     }
 
 
-    @Override
-    public String toString() {
-        return Important.changeText("bold", "----------------------------") + Important.changeText("underline", Important.changeText("bold", this.name)) + Important.changeText("bold", "----------------------------\n") +
-                Important.changeText("bold", "Postava: ") + writeFriendlyNPCName() + "\n" +
+    private String forToString(){
+        return Important.changeText("bold", "Postava: ") + writeFriendlyNPCName() + "\n" +
                 Important.changeText("bold", "Předměty: ") + writeItemsNames() + "\n" +
                 Important.changeText("bold", "Safe: ") + writeSafe();
+    }
+
+    @Override
+    public String toString() {
+        return Important.dashToString(forToString(), name);
 
     }
 

@@ -171,8 +171,22 @@ public class Important {
 
     public static String writeDash(int amount){
         String dash = "-";
-        return dash.repeat(amount);
+        return changeText("bold", dash.repeat(amount));
     }
+
+
+    public static String dashToString(String input, String headText){
+        String[] data = input.split("\n");
+        int longest = 0;
+        for (String line : data) {
+            if (line.length() > longest) {
+                longest = line.length();
+            }
+        }
+        longest = longest - headText.length();
+        return writeDash(longest/2) + changeText("bold", changeText("underline", headText)) + writeDash(longest/2) + "\n" + input;
+    }
+
 
 }
 
