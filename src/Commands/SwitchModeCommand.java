@@ -1,11 +1,13 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 import Modes.BackpackMode;
 import Modes.LocationMode;
 import Modes.Mode;
 import Modes.QuestionMode;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -71,13 +73,22 @@ public class SwitchModeCommand implements Command {
         this.mode = mode;
     }
 
+    private String keys(){
+        ArrayList<String> keys = new ArrayList<>();
+        for (String key : map.keySet()){
+            keys.add(Important.changeText("underline", key));
+        }
+        return String.join(", ", keys);
+    }
+
+
     /**
      * Writes all map keys
      *
      * @return map keys
      */
     public String writeNamesOfModes() {
-        return "Dostupné módy: " + String.join(", ", map.keySet());
+        return "Dostupné módy: " + keys();
     }
 
     @Override
