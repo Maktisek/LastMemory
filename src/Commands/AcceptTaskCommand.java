@@ -32,7 +32,7 @@ public class AcceptTaskCommand implements Command{
             return Important.changeText("green", "Nový úkol " + friendlyNPC.getTask().getName() + " byl přijat");
         }
         Important.playSound("wrong sound");
-        return "Nyní nemůžeš přijmat žádné úkoly";
+        return Important.changeText("red", "Nyní nemůžeš přijmat žádné úkoly");
     }
 
     @Override

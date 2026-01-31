@@ -109,7 +109,7 @@
     "filePath" : "audio\\new location.wav",
     "infiniteLoop" : false,
     "paused" : false,
-    "initialVolume" : -8.0
+    "initialVolume" : -12.0
   },
   {
     "title" : "hand in",

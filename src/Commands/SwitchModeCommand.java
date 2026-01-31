@@ -43,16 +43,16 @@ public class SwitchModeCommand implements Command {
     public String execute() {
         if (!map.containsKey(mode)) {
             Important.playSound("wrong sound");
-            return "Mód: " + mode + " neexistuje";
+            return Important.changeText("red", "Mód: " + mode + " neexistuje");
         }
 
         if (map.get(mode).getInfo().equalsIgnoreCase(new LocationMode().getInfo()) && !player.getCurrentLocation().isFree()) {
             player.switchMode(new QuestionMode());
-            return "Mód změněn na: " + mode;
+            return Important.changeText("green", "Mód změněn na: " + mode);
         }
 
         player.switchMode(map.get(mode));
-        return "Mód změněn na: " + mode;
+        return Important.changeText("green", "Mód změněn na: " + mode);
     }
 
     @Override

@@ -45,7 +45,7 @@ public class Console {
             }
 
             if(!player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())){
-                if(player.getCurrentLocation().getSong().getClip() != null) {
+                if(player.getCurrentLocation().getSongClip() != null) {
                     player.getCurrentLocation().getSong().resume();
                 }else {
                     player.getCurrentLocation().playMusic(0);

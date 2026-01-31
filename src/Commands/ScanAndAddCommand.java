@@ -53,6 +53,10 @@ public class ScanAndAddCommand implements Command{
 
     @Override
     public void endAudio() {
-
+        if (player.getCurrentLocation().getSongClip() != null) {
+            player.getCurrentLocation().resumeMusic();
+        } else {
+            player.getCurrentLocation().playMusic(0);
+        }
     }
 }

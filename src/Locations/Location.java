@@ -8,6 +8,7 @@ import Items.Safe;
 import NPCS.EnemyNPC;
 import NPCS.FriendlyNPC;
 
+import javax.sound.sampled.Clip;
 import java.util.ArrayList;
 
 
@@ -275,6 +276,13 @@ public class Location {
 
     public Audio getSong() {
         return song;
+    }
+
+    public Clip getSongClip(){
+        if(song != null){
+            return song.getClip();
+        }
+        return null;
     }
 
     public void setSong(Audio song) {

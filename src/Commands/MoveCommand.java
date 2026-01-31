@@ -47,14 +47,8 @@ public class MoveCommand implements Command {
             player.getCurrentLocation().playMusic(player.getPreviousLocation().getSong().getClip().getMicrosecondPosition());
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
-
         player.getPreviousLocation().pauseMusic();
         Important.playSound("walk");
-        if (player.getCurrentLocation().getSong().getClip() != null) {
-            player.getCurrentLocation().resumeMusic();
-        } else {
-            player.getCurrentLocation().playMusic(0);
-        }
         return Important.changeText("green", "Přesouváš se do: " + name);
     }
 
