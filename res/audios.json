@@ -82,5 +82,19 @@
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -4.0
+  },
+  {
+    "title" : "right answer",
+    "filePath" : "audio\\right answer.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -4.0
+  },
+  {
+    "title" : "wrong sound",
+    "filePath" : "audio\\wrong sound.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -4.0
   }
 ]
