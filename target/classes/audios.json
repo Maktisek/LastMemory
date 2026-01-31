@@ -110,5 +110,12 @@
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -8.0
+  },
+  {
+    "title" : "hand in",
+    "filePath" : "audio\\hand in.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -4.0
   }
 ]

@@ -20,13 +20,23 @@ public class Task {
     public Task() {
     }
 
-    public String scanAndSolveTask(Player player){
+    public boolean canSolve(Player player) {
+        for (String key : player.getInventory().getItems().keySet()) {
+            if (codesOfNeededObjects.contains(key)) {
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+    public String scanAndSolveTask(Player player) {
         ArrayList<String> temp = new ArrayList<>();
         ArrayList<Item> deletedItems = new ArrayList<>();
-        for (String key: player.getInventory().getItems().keySet()){
-            if(codesOfNeededObjects.contains(key)){
+        for (String key : player.getInventory().getItems().keySet()) {
+            if (codesOfNeededObjects.contains(key)) {
                 Item solvedItem = player.getInventory().getItems().get(key).get(0);
-                if(solvedItem != null) {
+                if (solvedItem != null) {
                     deletedItems.add(solvedItem);
                     temp.add(solvedItem.getName());
                     namesOfNeededObjects.remove(codesOfNeededObjects.indexOf(key));
@@ -34,28 +44,28 @@ public class Task {
                 }
             }
         }
-        if(!temp.isEmpty()) {
+        if (!temp.isEmpty()) {
             player.getInventory().removeMore(deletedItems);
             return "Odevzdané předměty: " + Important.writeStringArrays(temp);
         }
-        return "Nelze odevzdat žádný předmět";
+        return "";
     }
 
-    public boolean isDone(){
+    public boolean isDone() {
         return codesOfNeededObjects.isEmpty();
     }
 
-    public Memory giveMemory(){
+    public Memory giveMemory() {
         Memory temp = memoryPrice;
         this.memoryPrice = null;
         return temp;
     }
 
-    public String writeAllNeededItems(){
+    public String writeAllNeededItems() {
         return Important.writeStringArrays(namesOfNeededObjects);
     }
 
-    public String forToString(){
+    public String forToString() {
         return Important.writeLongTexts(this.description) + "\n" +
                 "Zbývající potřebné předměty: " + writeAllNeededItems();
     }

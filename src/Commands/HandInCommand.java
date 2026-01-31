@@ -15,14 +15,35 @@ public class HandInCommand implements Command{
 
     @Override
     public String execute() {
-        if(player.getCurrentLocation().getFriendlyNPC() != null && player.getCurrentLocation().getFriendlyNPC().getTask() != null && player.getCurrentTask() != null && player.getCurrentTask().getName().equalsIgnoreCase(player.getCurrentLocation().getFriendlyNPC().getTask().getName())) {
-            String result = player.getCurrentTask().scanAndSolveTask(player);
-            player.getCurrentLocation().getFriendlyNPC().setTask(player.getCurrentTask());
-            return result;
+        if(player.getCurrentTask() == null){
+            Important.playSound("wrong sound");
+            continues = false;
+            return Important.changeText("red", "Momentálně nemáš žádný aktivní úkol");
         }
-        continues = false;
-        Important.playSound("wrong sound");
-        return "Nelze nyní odevzdávat předměty do úkolu";
+        if(player.getCurrentLocation().getFriendlyNPC() == null){
+            Important.playSound("wrong sound");
+            continues = false;
+            return Important.changeText("red", "Tady není komu odevzdávat předměty");
+        }
+        if(player.getCurrentLocation().getFriendlyNPC().getTask() == null){
+            Important.playSound("wrong sound");
+            continues = false;
+            return Important.changeText("red", "U "+player.getCurrentLocation().getFriendlyNPC().getName() + " nemáš žádný aktivní úkol.");
+        }
+        if(!player.getCurrentTask().getName().equalsIgnoreCase(player.getCurrentLocation().getFriendlyNPC().getTask().getName())){
+            Important.playSound("wrong sound");
+            continues = false;
+            return Important.changeText("red", player.getCurrentLocation().getFriendlyNPC().getName() + " ti nezadal " + player.getCurrentTask().getName());
+        }
+        if(!player.getCurrentTask().canSolve(player)){
+            Important.playSound("wrong sound");
+            continues = false;
+            return Important.changeText("red", "Nelze odevzdat žádný předmět");
+        }
+        String result = player.getCurrentTask().scanAndSolveTask(player);
+        player.getCurrentLocation().getFriendlyNPC().setTask(player.getCurrentTask());
+        Important.playSound("hand in");
+        return result;
     }
 
     @Override
@@ -32,12 +53,12 @@ public class HandInCommand implements Command{
 
     @Override
     public boolean waitAble() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean timeWaitAble() {
-        return false;
+        return true;
     }
 
     @Override

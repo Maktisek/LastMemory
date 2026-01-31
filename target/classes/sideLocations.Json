@@ -218,7 +218,7 @@
         "name": "HDMI kabel",
         "description": "Klasický HDMI kabel, nic speciálního",
         "code": "ESSENTIALS_003",
-        "weight": 3
+        "weight": 1
       }
     ],
     "safe": {
