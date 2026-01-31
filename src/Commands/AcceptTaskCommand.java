@@ -28,6 +28,7 @@ public class AcceptTaskCommand implements Command{
             return Important.changeText("red", friendlyNPC.getName() + " žádný úkol nenabízí");
         }
         if (player.addCurrentTask(friendlyNPC.getTask())){
+            Important.playSound("new task");
             return Important.changeText("green", "Nový úkol " + friendlyNPC.getTask().getName() + " byl přijat");
         }
         Important.playSound("wrong sound");

@@ -96,5 +96,12 @@
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -4.0
+  },
+  {
+    "title" : "new task",
+    "filePath" : "audio\\new task.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -2.0
   }
 ]
