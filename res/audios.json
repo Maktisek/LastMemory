@@ -103,5 +103,12 @@
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -2.0
+  },
+  {
+    "title" : "new location",
+    "filePath" : "audio\\new location.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -8.0
   }
 ]

@@ -22,6 +22,8 @@ public class ScanAndAddCommand implements Command{
     public String execute() {
         String result = player.scanAndAddPossibleLocations();
         if(result != null){
+            player.getCurrentLocation().pauseMusic();
+            Important.playSound("new location");
             return result;
         }
         waitInput = false;

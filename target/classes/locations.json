@@ -104,7 +104,7 @@
       "currentSpeech": "Dobrý den, Amy, zrovna tady řeším rozbitý monitor. Já bych to neřešil, ale tenhle týden je to už podruhé... Připadá mi, že se to teď děje naschvál takhle dva týdny před Vánocemi. Chyba bude asi v kabelu, možná i v konektoru. Nemohla byste mi prosím přinést nový HDMI kabel a stlačený vzduch?",
       "anotherSpeech": "Děkuji vám moc, snad to pomůže... Ano, už jsem si vzpomněl. Já jsem udělal chybu v plánování a omylem jsem vám řekl, že budeme dělat příští týden JSON. Na to teď zapomeňte, protože budeme probírat UNICODE. Prezentaci najdete na Moodlu, takže vše se dozvíte. Kdyžtak vám pak ve škole spolužáci látku dovysvětlí.",
       "task": {
-        "name": "Nefunkční monitor ",
+        "name": "Nefunkční monitor",
         "description": "V učebně 17 přestal fungovat monitor. Pan učitel Papula se domnívá, že je to způsobeno vadným HDMI kabelem či konektorem. Musím mu sehnat všechny potřebné předměty.",
         "namesOfNeededObjects": [
           "HDMI kabel",
