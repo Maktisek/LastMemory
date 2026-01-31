@@ -46,7 +46,7 @@ public class Task {
         }
         if (!temp.isEmpty()) {
             player.getInventory().removeMore(deletedItems);
-            return "Odevzdané předměty: " + Important.writeStringArrays(temp);
+            return Important.changeText("bold", "Odevzdané předměty: ") + Important.writeStringArrays(temp);
         }
         return "";
     }
@@ -67,7 +67,7 @@ public class Task {
 
     public String forToString() {
         return Important.writeLongTexts(this.description) + "\n" +
-                "Zbývající potřebné předměty: " + writeAllNeededItems();
+                Important.changeText("bold", "Zbývající potřebné předměty: ") + writeAllNeededItems();
     }
 
     @Override

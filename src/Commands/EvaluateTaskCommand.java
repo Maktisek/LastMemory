@@ -16,7 +16,7 @@ public class EvaluateTaskCommand implements Command{
     public String execute() {
 
         if(!player.getCurrentTask().isDone()){
-            return "Další předměty k odevzdání: " + player.getCurrentLocation().getFriendlyNPC().getTask().writeAllNeededItems();
+            return Important.changeText("bold", "Další předměty k odevzdání: ") + player.getCurrentLocation().getFriendlyNPC().getTask().writeAllNeededItems();
         }
         Memory memory = player.getCurrentTask().giveMemory();
         player.addMemory(memory);
