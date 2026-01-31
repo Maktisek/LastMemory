@@ -81,9 +81,9 @@ public class Important {
     public static String writeStringArrays(ArrayList<String> input) {
         StringBuilder line = new StringBuilder();
         for (int i = 0; i < input.size() - 1; i++) {
-            line.append(input.get(i)).append(", ");
+            line.append(Important.changeText("underline", input.get(i))).append(", ");
         }
-        line.append(input.get(input.size() - 1));
+        line.append(Important.changeText("underline", input.get(input.size() - 1)));
         return line.toString();
     }
 

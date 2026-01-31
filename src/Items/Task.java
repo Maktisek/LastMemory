@@ -55,11 +55,14 @@ public class Task {
         return Important.writeStringArrays(namesOfNeededObjects);
     }
 
+    public String forToString(){
+        return Important.writeLongTexts(this.description) + "\n" +
+                "Zbývající potřebné předměty: " + writeAllNeededItems();
+    }
+
     @Override
     public String toString() {
-        return "--------------------Úkol: "+this.name+"-------------------- \n"+
-                Important.writeLongTexts(this.description) +
-                "Zbývající potřebné předměty: " + writeAllNeededItems();
+        return Important.dashToString(forToString(), "Úkol: " + name);
     }
 
     public String getName() {
