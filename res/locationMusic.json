@@ -4,7 +4,7 @@
     "filePath" : "audio\\třetí patro.WAV",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : 0.0
+    "initialVolume" : -4.0
   },
   {
     "title" : "toalety",
