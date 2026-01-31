@@ -40,7 +40,7 @@ public class Audio {
             setVolume(this.initialVolume - 15);
             if (music) {
                 if (startPosition == 0) {
-                    fadeIn(20);
+                    fadeIn(20, -15);
                 } else {
                     clip.setMicrosecondPosition(startPosition);
                 }
@@ -136,14 +136,14 @@ public class Audio {
      * <p>
      * Uses {@link #pausePosition} to set current microsecond position, so the audio can be resumed, where it stopped.
      * <p>
-     * Uses {@link #fadeIn(long)}} method for cleaner transition.
+     * Uses {@link #fadeIn(long, float)}} method for cleaner transition.
      */
     public void resume() {
         if (clip != null && paused) {
             Thread t = new Thread(() -> {
-                fadeIn(20);
-                paused = false;
                 clip.setMicrosecondPosition(pausePosition);
+                fadeIn(20, -45);
+                paused = false;
                 try {
                     Thread.sleep(20);
                 } catch (InterruptedException e) {
@@ -204,22 +204,30 @@ public class Audio {
     }
 
     /**
-     * Fades in audio from {@link #initialVolume} -15 to {@link #initialVolume} decibels.
+     * Fades in audio from {@link #initialVolume} - minus to {@link #initialVolume} decibels.
      * Uses {@link #setVolume(float)}} to set the current volume level.
      *
      * @param milliseconds the desired time that the thread will wait until updating the volume again.
      *                     More millisecond the more time the fade will take.
+     * @param minus the desired amount of volume decrease on the start
      */
-    public void fadeIn(long milliseconds) {
+    public void fadeIn(long milliseconds, float minus) {
         Thread t = new Thread(() -> {
             float start = this.initialVolume - 15;
             float end = this.initialVolume;
-            float steps = 100;
-            float stepSize = (end - start) / 100;
+            float steps = 120;
+            float stepSize = (end - start) / steps;
 
 
             for (float f = 0; f <= steps; f++) {
                 setVolume(start + (stepSize * f));
+                if (f == 0) {
+                    try {
+                        Thread.sleep(50);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
                 try {
                     Thread.sleep(milliseconds);
                 } catch (InterruptedException e) {

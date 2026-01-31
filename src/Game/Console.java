@@ -44,9 +44,14 @@ public class Console {
                 continue;
             }
 
-            if (!player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
-                player.getCurrentLocation().playMusic(0);
+            if(!player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())){
+                if(player.getCurrentLocation().getSong().getClip() != null) {
+                    player.getCurrentLocation().getSong().resume();
+                }else {
+                    player.getCurrentLocation().playMusic(0);
+                }
             }
+
             System.out.println(player);
             System.out.print(">> ");
             command = Important.loadText();

@@ -30,7 +30,7 @@ public class MoveCommand implements Command {
         }
 
         if (player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
-            player.getPreviousLocation().stopMusic();
+            player.getPreviousLocation().pauseMusic();
             Important.playMusic("question mode");
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
@@ -41,16 +41,20 @@ public class MoveCommand implements Command {
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
 
-        if(player.getCurrentLocation().getType() == Type.FADE && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()){
+        if (player.getCurrentLocation().getType() == Type.FADE && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
             player.getPreviousLocation().stopMusic();
             Important.playSound("walk");
             player.getCurrentLocation().playMusic(player.getPreviousLocation().getSong().getClip().getMicrosecondPosition());
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
 
-        player.getPreviousLocation().stopMusic();
+        player.getPreviousLocation().pauseMusic();
         Important.playSound("walk");
-        player.getCurrentLocation().playMusic(0);
+        if (player.getCurrentLocation().getSong().getClip() != null) {
+            player.getCurrentLocation().resumeMusic();
+        } else {
+            player.getCurrentLocation().playMusic(0);
+        }
         return Important.changeText("green", "Přesouváš se do: " + name);
     }
 

@@ -9,6 +9,10 @@
       "requiredMemories": 1
     },
     {
+    "scene": "testing2",
+    "requiredMemories": 3
+    },
+    {
       "scene": "testing3",
       "requiredMemories": 5
     },
