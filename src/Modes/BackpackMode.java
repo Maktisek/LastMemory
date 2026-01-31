@@ -6,14 +6,14 @@ import Game.Important;
 /**
  * Mode designed to operate in the area of inventory
  */
-public class BackpackMode implements Mode{
+public class BackpackMode implements Mode {
 
-   private String forToString(Player player){
-       return "Kapacita: " + player.getInventory().getWeight() + "/" + player.getInventory().getCapacity() + "\n" +
-               "Sesbírané předměty: " + player.getInventory().writeItems() + "\n" +
-               "Sesbírané vzpomínky: " + player.writeMemories() + "\n" +
-               "Hotové úkoly: " + player.writeDoneTasks();
-   }
+    private String forToString(Player player) {
+        return Important.changeText("bold", "Kapacita: ") + player.getInventory().writeWeight() + "/" + player.getInventory().getCapacity() + "\n" +
+                Important.changeText("bold", "Sesbírané předměty: ") + player.getInventory().writeItems() + "\n" +
+                Important.changeText("bold", "Sesbírané vzpomínky: ") + player.writeMemories() + "\n" +
+                Important.changeText("bold", "Hotové úkoly: ") + player.writeDoneTasks();
+    }
 
     @Override
     public String executeInfo(Player player) {

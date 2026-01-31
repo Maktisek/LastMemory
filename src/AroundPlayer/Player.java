@@ -376,7 +376,7 @@ public class Player {
             ArrayList<String> names = new ArrayList<>(10);
             for (String key : items.keySet()) {
                 ArrayList<Item> temp = items.get(key);
-                names.add(temp.size() + "x " + temp.get(0).getName());
+                names.add(temp.size() + "x " + Important.changeText("underline", temp.get(0).getName()));
             }
             if (names.isEmpty()) {
                 return "Batoh je prázdný";
@@ -419,6 +419,17 @@ public class Player {
 
         public double getWeight() {
             return weight;
+        }
+
+        public String writeWeight(){
+            double onePercent = capacity / 100;
+            double percent = weight / onePercent;
+            if(percent <= 50){
+                return Important.changeText("green", Double.toString(weight));
+            } else if(percent < 100){
+                return Important.changeText("yellow", Double.toString(weight));
+            }
+            return Important.changeText("red", Double.toString(weight));
         }
 
         public HashMap<String, ArrayList<Item>> getItems() {
