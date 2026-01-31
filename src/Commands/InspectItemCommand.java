@@ -15,6 +15,16 @@ public class InspectItemCommand implements Command{
 
     @Override
     public String execute() {
+        if(player.getInventory().isEmpty()){
+            Important.playSound("wrong sound");
+            return Important.changeText("red", "Inventář je prázdný, žádný předmět nelze prohlédnout");
+        }
+
+        if(!player.getInventory().isItem(name)){
+            Important.playSound("wrong sound");
+            return Important.changeText("red", "Item " + name + " se v inventáři nenachází");
+        }
+
         return Important.writeLongTexts(player.getInventory().descriptionItem(name));
     }
 

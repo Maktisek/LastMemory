@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 public class ReadFriendlyNPCDescriptionCommand implements Command{
 
@@ -13,6 +14,7 @@ public class ReadFriendlyNPCDescriptionCommand implements Command{
     @Override
     public String execute() {
         if(player.getCurrentLocation().getFriendlyNPC() == null){
+            Important.playSound("wrong sound");
             return "V lokaci se nikdo nenachází";
         }
         return player.getCurrentLocation().getFriendlyNPC().writeDescription();

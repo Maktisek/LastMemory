@@ -29,6 +29,7 @@ public class AnswerEnemyNPCCommand implements Command{
         }
         this.inputWait = false;
         this.timeWait = true;
+        Important.playSound("wrong sound");
         return Important.changeText("red", "Odpověď " + Important.changeText("underline", answer) + Important.changeText("red", " není správně"));
     }
 

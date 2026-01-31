@@ -42,6 +42,7 @@ public class SwitchModeCommand implements Command {
     @Override
     public String execute() {
         if (!map.containsKey(mode)) {
+            Important.playSound("wrong sound");
             return "Mód: " + mode + " neexistuje";
         }
 

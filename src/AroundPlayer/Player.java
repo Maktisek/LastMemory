@@ -46,7 +46,7 @@ public class Player {
     }
 
     public boolean hasCollectedMemory(String name) {
-        for (Memory memory: collectedMemories){
+        for (Memory memory : collectedMemories) {
             if (memory.getName().equalsIgnoreCase(name)) {
                 return true;
             }
@@ -56,23 +56,32 @@ public class Player {
 
 
     public String writeMemory(String name) {
-       for (Memory memory: collectedMemories){
-           if (memory.getName().equalsIgnoreCase(name)) {
-               memory.switchOpened();
-               return Important.writeSpace(25)+Important.writeLongTexts(memory.getDescription());
-           }
-       }
-       return "Vzpomínka " + name + " neexistuje";
+        for (Memory memory : collectedMemories) {
+            if (memory.getName().equalsIgnoreCase(name)) {
+                memory.switchOpened();
+                return Important.writeSpace(25) + Important.writeLongTexts(memory.getDescription());
+            }
+        }
+        return "Vzpomínka " + name + " neexistuje";
+    }
+
+    public boolean hasOldTask(String name) {
+        for (Task task : doneTasks) {
+            if (task.getName().equalsIgnoreCase(name)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
     public String writeOldTask(String name) {
-        for (Task task : doneTasks){
+        for (Task task : doneTasks) {
             if (task.getName().equalsIgnoreCase(name)) {
                 return task.getName() + "\n" + Important.writeLongTexts(task.getDescription());
             }
         }
-        return "Úkol " + name + " neexistuje";
+        return "There is a mistake in the game";
     }
 
     public boolean addCurrentTask(Task task) {
@@ -142,7 +151,7 @@ public class Player {
     }
 
     public boolean canEnd() {
-      return collectedMemories.size() == 10;
+        return collectedMemories.size() == 10;
     }
 
     /**
@@ -192,8 +201,8 @@ public class Player {
         return String.join(", ", names);
     }
 
-    public boolean canPlayCutscene(){
-        if(cutscenes.peekCutscene() == null){
+    public boolean canPlayCutscene() {
+        if (cutscenes.peekCutscene() == null) {
             return false;
         }
 
@@ -218,8 +227,8 @@ public class Player {
         return mode;
     }
 
-    public Mode specialGetMode(){
-        if(!mode.special()){
+    public Mode specialGetMode() {
+        if (!mode.special()) {
             return mode;
         }
         return new LocationMode();
@@ -384,6 +393,19 @@ public class Player {
             return String.join(", ", names);
         }
 
+        public boolean isEmpty() {
+            return weight == 0;
+        }
+
+        public boolean isItem(String name) {
+            for (String key : items.keySet()) {
+                if (!items.get(key).isEmpty() && items.get(key).get(0).getName().equalsIgnoreCase(name)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         /**
          * Returns description of needed item.
          *
@@ -391,16 +413,12 @@ public class Player {
          * @return the description of the found item
          */
         public String descriptionItem(String name) {
-            if (weight != 0) {
-                for (String key : items.keySet()) {
-                    if (!items.get(key).isEmpty() && items.get(key).get(0).getName().equalsIgnoreCase(name)) {
-                        return items.get(key).get(0).getDescription();
-                    }
+            for (String key : items.keySet()) {
+                if (!items.get(key).isEmpty() && items.get(key).get(0).getName().equalsIgnoreCase(name)) {
+                    return items.get(key).get(0).getDescription();
                 }
-                return "Item " + name + " se v inventáři nenachází";
-            } else {
-                return "Inventář je prázdný, žádný předmět nelze prohlédnout";
             }
+            return "There is a mistake in the game";
         }
 
         public void removeMore(ArrayList<Item> input) {

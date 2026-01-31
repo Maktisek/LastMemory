@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 public class HandInCommand implements Command{
 
@@ -20,6 +21,7 @@ public class HandInCommand implements Command{
             return result;
         }
         continues = false;
+        Important.playSound("wrong sound");
         return "Nelze nyní odevzdávat předměty do úkolu";
     }
 

@@ -20,8 +20,10 @@ public class DropItemCommand implements Command {
                 Important.playSound("dropping sound");
                 return "Položil si " + name + " do " + player.getCurrentLocation().getName();
             }
+            Important.playSound("wrong sound");
             return Important.changeText("red", "Momentálně u sebe nemáš " + name);
         }else {
+            Important.playSound("wrong sound");
             return Important.changeText("red", "Momentálně u sebe nemáš ani jeden předmět");
         }
     }

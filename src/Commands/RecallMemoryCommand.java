@@ -16,6 +16,7 @@ public class RecallMemoryCommand implements Command{
     @Override
     public String execute() {
         if (!player.hasCollectedMemory(name)){
+            Important.playSound("wrong sound");
             return "Vzpomínka " + name + " neexistuje";
         }
         player.getCurrentLocation().getSong().pause();

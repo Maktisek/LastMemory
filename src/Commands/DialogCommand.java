@@ -22,6 +22,7 @@ public class DialogCommand implements Command {
             return Important.writeSpace(40)+Important.writeLongTexts(player.getCurrentLocation().getFriendlyNPC().getCurrentSpeech());
         } else {
             this.inputWait = false;
+            Important.playSound("wrong sound");
             return "V lokaci se nidko nenachází";
         }
     }

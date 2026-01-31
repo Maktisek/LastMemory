@@ -1,6 +1,8 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
+
 
 public class InspectOldTaskCommand implements Command {
 
@@ -14,7 +16,11 @@ public class InspectOldTaskCommand implements Command {
 
     @Override
     public String execute() {
-        return player.writeOldTask(name);
+        if(player.hasOldTask(name)){
+            return player.writeOldTask(name);
+        }
+        Important.playSound("wrong sound");
+        return Important.changeText("red", "Úkol " + name + " neexistuje");
     }
 
     @Override

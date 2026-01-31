@@ -1,6 +1,7 @@
 package Commands;
 
 import AroundPlayer.Player;
+import Game.Important;
 
 public class ShowCurrentTaskCommand implements Command{
 
@@ -15,7 +16,8 @@ public class ShowCurrentTaskCommand implements Command{
         if(player.getCurrentTask() != null){
             return player.getCurrentTask().toString();
         }
-        return "Momentálně nemáš přijmutý žádný úkol";
+        Important.playSound("wrong sound");
+        return Important.changeText("red", "Momentálně nemáš přijmutý žádný úkol");
     }
 
     @Override

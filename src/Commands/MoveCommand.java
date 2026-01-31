@@ -25,6 +25,7 @@ public class MoveCommand implements Command {
         boolean action = player.switchLocation(player.getCurrentLocation().findLocation(this.name));
         if (!action) {
             this.continues = false;
+            Important.playSound("wrong sound");
             return Important.changeText("red", "Lokace: " + this.name + " neexistuje");
         }
 
