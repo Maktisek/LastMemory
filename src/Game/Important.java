@@ -74,7 +74,9 @@ public class Important {
                 line = new StringBuilder();
             }
         }
-        temp.add(line.toString());
+        if(!line.toString().equalsIgnoreCase("")){
+            temp.add(line.toString());
+        }
         return String.join("\n", temp);
     }
 
