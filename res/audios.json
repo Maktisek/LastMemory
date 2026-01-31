@@ -95,7 +95,7 @@
     "filePath" : "audio\\wrong sound.wav",
     "infiniteLoop" : false,
     "paused" : false,
-    "initialVolume" : -4.0
+    "initialVolume" : -10.0
   },
   {
     "title" : "new task",

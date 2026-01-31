@@ -69,7 +69,7 @@ public class Location {
             items.addAll(temp);
             ArrayList<String> names = new ArrayList<>();
             for (Item item : temp) {
-                names.add(item.getName());
+                names.add(Important.changeText("underline", item.getName()));
             }
             return "V trezoru se nachází: " + Important.writeStringArrays(names);
         }
