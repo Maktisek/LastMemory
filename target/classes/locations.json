@@ -202,12 +202,6 @@
         "weight": 0.5
       },
       {
-        "name": "PLA filament",
-        "description": "Tondův PLA filament do jeho milované 3D tiskárny",
-        "code": "FILAMENTS_001",
-        "weight": 4
-      },
-      {
         "name": "3D tiskárny info",
         "description": "Materiál pro 3D tisk se nazývá filament",
         "code": "PAPERS_002",

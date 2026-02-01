@@ -181,11 +181,13 @@ public class Important {
         String[] data = input.split("\n");
         int longest = 0;
         for (String line : data) {
+            line = line.replaceAll("\\u001B\\[[;\\d]*m", "");
             if (line.length() > longest) {
                 longest = line.length();
             }
         }
-        longest = longest - headText.length();
+        String plainHeadText = headText.replaceAll("\\u001B\\[[;\\d]*m", "");
+        longest = longest - plainHeadText.length();
         return writeDash(longest/2) + changeText("bold", changeText("underline", headText)) + writeDash(longest/2) + "\n" + input;
     }
 
