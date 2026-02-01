@@ -181,7 +181,7 @@ public class Important {
         String[] data = input.split("\n");
         int longest = 0;
         for (String line : data) {
-            line = line.replaceAll("\\u001B\\[[;\\d]*m", "");
+            line = line.replaceAll("\u001B\\[\\d*m", "");
             if (line.length() > longest) {
                 longest = line.length();
             }
