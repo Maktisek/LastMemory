@@ -1,23 +1,23 @@
 {
   "cutscenes": [
     {
-      "scene": "Tohle je naprosto normální text a není na něm nic dovného ba znepokujujícího, jenomže mi neuznali ted .flac odpovědě%d když nikdo nespecifikoval jak to má být.... ",
+      "scene": "Ach, co se to děje? Píská mi v uších, bolí to. Ani nevím, kde jsem. Snažím se rozhlížet, ale vidím strašně rozmazaně. Vypadá to tu jako ve škole. Vždyť já jsem ve škole! Co se to stalo? Zrychlil se mi tep, začínám panikařit. Proč tu jsem a proč je mi tak divně? Co to znamená, co se to děje? Uklidni se, uklidni se, no tak! Uffff, zkusím najít nějakou pomoc... ",
       "requiredMemories": 0
     },
     {
-      "scene": "testing2",
+      "scene": "Ach, tak to jo, rozumím. Pomalu se otáčím od pana Švába, oči skloním do země. Nabíhají mi slzy, protože se cítím ztracená. Proč tu jsem, to mi moje rozbitá have nebere. Pokud to ale chci vyřešit, musím se uklidnit... ",
       "requiredMemories": 1
     },
     {
-    "scene": "testing2",
+    "scene": "Srdce mi teď konečně buší pomaleji. V hlavě mi ale vrtá, proč mi je furt připomínáno, že si na sebe mám dávat pozor... Jakoby na tom nějak teď záleželo. Celé se mi to zdá jako zlý sen. Opravdový zlý sen...",
     "requiredMemories": 3
     },
     {
-      "scene": "testing3",
+      "scene": "Hehe, s Tondou je to sranda. Akorát se divím, že nemá Mari. No říkám, že je to v tomhle světě divný, když ani Mari s Tondou nejsou u sebe... Zvedla se mi nálada, ale zase, proč tolik vět o té pozornosti? Ach jo.",
       "requiredMemories": 5
     },
     {
-      "scene": "testing4",
+      "scene": "",
       "requiredMemories": 7
     },
     {
