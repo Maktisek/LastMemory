@@ -2,6 +2,20 @@ package Game;
 
 import AroundPlayer.Player;
 import Commands.*;
+import Commands.Game.*;
+import Commands.Items.DropItemCommand;
+import Commands.Items.InspectItemCommand;
+import Commands.Items.OpenSafeCommand;
+import Commands.Items.PickItemCommand;
+import Commands.Locations.ReadLocationDescriptionCommand;
+import Commands.Memories.RecallMemoryCommand;
+import Commands.Movement.MoveCommand;
+import Commands.Movement.RunAwayCommand;
+import Commands.Movement.ScanAndAddCommand;
+import Commands.NPCs.AnswerEnemyNPCCommand;
+import Commands.NPCs.DialogCommand;
+import Commands.NPCs.ReadFriendlyNPCDescriptionCommand;
+import Commands.Tasks.*;
 import Modes.*;
 
 import java.util.ArrayList;
