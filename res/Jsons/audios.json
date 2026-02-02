@@ -11,7 +11,7 @@
     "filePath" : "Audio\\Sounds\\walk.WAV",
     "infiniteLoop" : false,
     "paused" : false,
-    "initialVolume" : 0.0
+    "initialVolume" : -2.0
   },
   {
     "title" : "keyboard click",
