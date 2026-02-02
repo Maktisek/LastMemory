@@ -16,6 +16,7 @@ public class CutscenePlayerCommand implements Command {
     @Override
     public String execute() {
         player.getCurrentLocation().pauseMusic();
+        Important.playSound("fade cutscene");
         Important.playMusic("cutscene");
         return player.getCutscenes().pollCutscene().toString();
     }
