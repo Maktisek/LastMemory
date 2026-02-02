@@ -1,119 +1,119 @@
 [
   {
     "title" : "Samostudium na příští týden",
-    "filePath" : "audio\\kumbál.wav",
+    "filePath" : "Audio\\Sounds\\kumbál.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -10.0
   },
   {
     "title" : "walk",
-    "filePath" : "audio\\walk.WAV",
+    "filePath" : "Audio\\Sounds\\walk.WAV",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : 0.0
   },
   {
     "title" : "keyboard click",
-    "filePath" : "audio\\keyboard click.WAV",
+    "filePath" : "Audio\\Sounds\\keyboard click.WAV",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -15.0
   },
   {
     "title" : "new memory",
-    "filePath" : "audio\\new memory.wav",
+    "filePath" : "Audio\\Sounds\\new memory.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -9.0
   },
   {
     "title" : "question mode",
-    "filePath" : "audio\\question mode.wav",
+    "filePath" : "Audio\\Music\\question mode.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -10.0
   },
   {
     "title" : "intro music",
-    "filePath" : "audio\\introMusic.wav",
+    "filePath" : "Audio\\Music\\introMusic.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
   },
   {
     "title" : "outro music",
-    "filePath" : "audio\\outroMusic.wav",
+    "filePath" : "Audio\\Music\\outroMusic.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
   },
   {
     "title" : "picking sound",
-    "filePath" : "audio\\picking sound.wav",
+    "filePath" : "Audio\\Sounds\\picking sound.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -5.0
   },
   {
     "title" : "dropping sound",
-    "filePath" : "audio\\dropping sound.wav",
+    "filePath" : "Audio\\Sounds\\dropping sound.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -4.0
   },
   {
     "title" : "memory song",
-    "filePath" : "audio\\memory song.wav",
+    "filePath" : "Audio\\Music\\memory song.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
   },
   {
     "title" : "cutscene",
-    "filePath" : "audio\\cutscene.wav",
+    "filePath" : "Audio\\Music\\cutscene.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
   },
   {
     "title" : "safe open",
-    "filePath" : "audio\\safe open.wav",
+    "filePath" : "Audio\\Sounds\\safe open.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -4.0
   },
   {
     "title" : "right answer",
-    "filePath" : "audio\\right answer.wav",
+    "filePath" : "Audio\\Sounds\\right answer.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -4.0
   },
   {
     "title" : "wrong sound",
-    "filePath" : "audio\\wrong sound.wav",
+    "filePath" : "Audio\\Sounds\\wrong sound.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -10.0
   },
   {
     "title" : "new task",
-    "filePath" : "audio\\new task.wav",
+    "filePath" : "Audio\\Sounds\\new task.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -2.0
   },
   {
     "title" : "new location",
-    "filePath" : "audio\\new location.wav",
+    "filePath" : "Audio\\Sounds\\new location.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -12.0
   },
   {
     "title" : "hand in",
-    "filePath" : "audio\\hand in.wav",
+    "filePath" : "Audio\\Sounds\\hand in.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -4.0

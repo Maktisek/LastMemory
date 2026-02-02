@@ -1,56 +1,56 @@
 [
   {
     "title" : "třetí patro",
-    "filePath" : "audio\\třetí patro.WAV",
+    "filePath" : "Audio\\Music\\třetí patro.WAV",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -4.0
   },
   {
     "title" : "toalety",
-    "filePath" : "audio\\toalety.wav",
+    "filePath" : "Audio\\Music\\toalety.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -8.0
   },
   {
     "title" : "Učebna 15",
-    "filePath" : "audio\\Učebna 15.wav",
+    "filePath" : "Audio\\Music\\Učebna 15.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -8.0
   },
   {
     "title" : "Učebna 8",
-    "filePath" : "audio\\Učebna 8.wav",
+    "filePath" : "Audio\\Music\\Učebna 8.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -2.0
   },
   {
     "title" : "Kumbál",
-    "filePath" : "audio\\kumbál.wav",
+    "filePath" : "Audio\\Music\\kumbál.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -2.0
   },
   {
     "title" : "Učebna 19",
-    "filePath" : "audio\\Prokletí.wav",
+    "filePath" : "Audio\\Music\\Prokletí.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -8.0
   },
   {
     "title" : "Kabinet K12",
-    "filePath" : "audio\\Obstacles.wav",
+    "filePath" : "Audio\\Music\\Obstacles.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -8.0
   },
   {
     "title" : "Učebna 8a",
-    "filePath" : "audio\\Učebna 8a.wav",
+    "filePath" : "Audio\\Music\\Učebna 8a.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -14.0
