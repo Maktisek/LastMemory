@@ -20,7 +20,7 @@ public class AudioLibrary {
     }
 
     private void loadAudios() {
-        try (InputStream input = new FileInputStream("res\\audios.json")) {
+        try (InputStream input = new FileInputStream("res\\Jsons\\audios.json")) {
             Audio[] sounds = mapper.readValue(input, Audio[].class);
             audios.addAll(List.of(sounds));
         } catch (IOException e) {

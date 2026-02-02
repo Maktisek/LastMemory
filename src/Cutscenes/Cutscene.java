@@ -11,7 +11,7 @@ public class Cutscene {
     }
 
     private String writeHeadText(){
-        return Important.changeText("bold", Important.readTxtFiles("res\\cutsceneAscii.txt", 0));
+        return Important.changeText("bold", Important.readTxtFiles("res\\TextFiles\\cutsceneAscii.txt", 0));
     }
 
 

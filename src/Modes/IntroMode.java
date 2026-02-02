@@ -6,7 +6,7 @@ import Game.Important;
 public class IntroMode implements Mode{
     @Override
     public String executeInfo(Player player) {
-        String ascii = Important.changeText("bold", Important.changeText("pink", Important.readTxtFiles("res\\introText.txt", 0)));
+        String ascii = Important.changeText("bold", Important.changeText("pink", Important.readTxtFiles("res\\TextFiles\\introText.txt", 0)));
         ascii += "                                                                                                                    Made by Maktis";
         ascii += "\nAbyste si hru zahráli napište to konzole příkaz \"spustit hru\".";
         ascii += "\nUžijte si hru!";
@@ -15,7 +15,7 @@ public class IntroMode implements Mode{
 
     @Override
     public String executeHelp() {
-        return Important.readTxtFiles("res\\introHelp.txt", 0);
+        return Important.readTxtFiles("res\\TextFiles\\introHelp.txt", 0);
     }
 
     @Override

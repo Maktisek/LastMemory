@@ -43,7 +43,7 @@ public class Important {
      * @return the made hashMap
      */
     private static HashMap<String, String> loadTextUpdater() {
-        try (BufferedReader br = new BufferedReader(new FileReader("res\\textUpdate.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("res\\CsvFiles\\textUpdate.csv"))) {
             HashMap<String, String> temp = new HashMap<>();
             String line;
             while ((line = br.readLine()) != null) {

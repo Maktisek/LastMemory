@@ -28,10 +28,10 @@ public class Initialization {
     }
 
     /**
-     * Loads all side locations from res\sideLocations.json file and adds them into locations list
+     * Loads all side locations from res\Jsons\sideLocations.json file and adds them into locations list
      */
     public void loadSideLocations() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\sideLocations.json");) {
+        try (InputStream input = new FileInputStream("res\\Jsons\\sideLocations.json");) {
             Location[] sideLocations = mapper.readValue(input, Location[].class);
             locations.addAll(List.of(sideLocations));
         } catch (IOException e) {
@@ -41,10 +41,10 @@ public class Initialization {
     }
 
     /**
-     * Loads all hallway locations from res\hallwayLocations.json file and adds them into locations list.
+     * Loads all hallway locations from res\Jsons\hallwayLocations.json file and adds them into locations list.
      */
     public void loadHallwayLocationsLocations() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\hallwayLocations.json");) {
+        try (InputStream input = new FileInputStream("res\\Jsons\\hallwayLocations.json");) {
             Location[] hallwayLocations = mapper.readValue(input, Location[].class);
             locations.addAll(List.of(hallwayLocations));
         } catch (IOException e) {
@@ -54,10 +54,10 @@ public class Initialization {
     }
 
     /**
-     * Loads all main locations from res\locations.json file and adds them into temporary locations list.
+     * Loads all main locations from res\Jsons\locations.json file and adds them into temporary locations list.
      */
     public void loadMainLocations() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\locations.json");) {
+        try (InputStream input = new FileInputStream("res\\Jsons\\locations.json");) {
             Location[] mainLocations = mapper.readValue(input, Location[].class);
             tempLocations.addAll(List.of(mainLocations));
         } catch (IOException e) {
@@ -90,7 +90,7 @@ public class Initialization {
     }
 
     /**
-     * Connects location via special .csv file: res\basicLocationConnections.csv
+     * Connects location via special .csv file: res\Jsons\basicLocationConnections.csv
      */
     public void loadBasicLocationConnection() throws WrongInitializationException {
 //        int a = 0;
@@ -98,7 +98,7 @@ public class Initialization {
 //            System.out.println(a+". "+location);
 //            a++;
 //        }
-        try (BufferedReader br = new BufferedReader(new FileReader("res\\basicLocationConnections.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("res\\CsvFiles\\basicLocationConnections.csv"))) {
             br.readLine();
             String line;
             int index = 0;
@@ -144,7 +144,7 @@ public class Initialization {
     }
 
     public Audio[] loadAllSongs() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\locationMusic.json")) {
+        try (InputStream input = new FileInputStream("res\\Jsons\\locationMusic.json")) {
             return mapper.readValue(input, Audio[].class);
         } catch (IOException e) {
             throw new WrongInitializationException("Audios were not loaded properly");

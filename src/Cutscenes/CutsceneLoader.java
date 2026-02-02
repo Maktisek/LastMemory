@@ -13,7 +13,7 @@ public class CutsceneLoader {
 
     public static CutsceneLoader loadCutscenes(){
         ObjectMapper mapper = new ObjectMapper();
-        try (InputStream input = new FileInputStream("res\\cutscenes.json")){
+        try (InputStream input = new FileInputStream("res\\Jsons\\cutscenes.json")){
             return mapper.readValue(input, CutsceneLoader.class);
         } catch (IOException e) {
             throw new RuntimeException(e);

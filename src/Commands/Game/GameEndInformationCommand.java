@@ -6,7 +6,7 @@ import Game.Important;
 public class GameEndInformationCommand implements Command {
     @Override
     public String execute() {
-        return Important.readTxtFiles("res\\aboutGame.txt", 0);
+        return Important.readTxtFiles("res\\TextFiles\\aboutGame.txt", 0);
     }
 
     @Override
