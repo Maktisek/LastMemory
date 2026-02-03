@@ -67,7 +67,7 @@ public class Task {
 
     public String forToString() {
         return this.description + "\n" +
-                Important.changeText("bold", "Zbývající potřebné předměty: ") + writeAllNeededItems();
+                Important.changeText("bold", "Zbývající potřebné předměty k odevzdání: ") + writeAllNeededItems();
     }
 
     @Override

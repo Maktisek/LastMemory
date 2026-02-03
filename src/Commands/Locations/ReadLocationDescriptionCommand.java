@@ -2,6 +2,7 @@ package Commands.Locations;
 
 import AroundPlayer.Player;
 import Commands.Command;
+import Game.Important;
 
 /**
  * Command designed to write player's current location description
@@ -17,7 +18,7 @@ public class ReadLocationDescriptionCommand implements Command {
 
     @Override
     public String execute() {
-        return player.getCurrentLocation().getDescription();
+        return Important.writeSpace(40) +player.getCurrentLocation().getDescription();
     }
 
     @Override

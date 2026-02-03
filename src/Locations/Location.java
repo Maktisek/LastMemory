@@ -122,7 +122,7 @@ public class Location {
     public String writeItemsNames() {
         ArrayList<String> names = new ArrayList<>();
         for (Item item : items) {
-            names.add(item.getName());
+            names.add(Important.changeText("underline", item.getName()));
         }
         if (names.isEmpty()) {
             return Important.changeText("red", "Místnost je prázdná");

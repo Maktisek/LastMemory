@@ -101,7 +101,7 @@
       "position": "Učitel",
       "age": "28 let",
       "type" : "AKTIVNÍ",
-      "currentSpeech": "Dobrý den, Amy, zrovna tady řeším rozbitý monitor. \nJá bych to neřešil, ale tenhle týden je to už podruhé... \nPřipadá mi, že se to teď děje naschvál takhle dva týdny před Vánocemi. \nChyba bude asi v kabelu, možná i v konektoru. \nNemohla byste mi prosím přinést nový HDMI kabel a stlačený vzduch?",
+      "currentSpeech": "Dobrý den, Amy, zrovna tady řeším rozbitý monitor. \nJá bych to neřešil, ale tenhle týden je to už podruhé... \nPřipadá mi, že se to teď děje naschvál takhle dva týdny před Vánocemi. \nChyba bude asi v kabelu, možná i v konektoru. \nNemohla byste mi prosím přinést nový HDMI kabel a stlačený vzduch? \nJo a taky se bude hodit šroubovák.",
       "anotherSpeech": "Děkuji vám moc, snad to pomůže... \nAno, už jsem si vzpomněl. \nJá jsem udělal chybu v plánování a omylem jsem vám řekl, že budeme dělat příští týden JSON. \nNa to teď zapomeňte, protože budeme probírat UNICODE. \nPrezentaci najdete na Moodlu, takže vše se dozvíte. \nKdyžtak vám pak ve škole spolužáci látku dovysvětlí.",
       "task": {
         "name": "Nefunkční monitor",
@@ -241,7 +241,7 @@
       "position": "Učitel",
       "age": "23 let",
       "type" : "AKTIVNÍ",
-      "currentSpeech": "Jee, dobrý den, Amy... \nEm, víte já už tady dobrých 10 minut hledám svojí ztracenou flešku. \nNeviděla jste ji? \nHodilo by se mi to stihnout, dokud nezačne hodina.\n Možná jestli bych vás mohla poprosit, zda mi nepomůžete?",
+      "currentSpeech": "Jee, dobrý den, Amy... \nEm, víte já už tady dobrých 10 minut hledám svojí ztracenou flešku. \nNeviděla jste ji? \nHodilo by se mi to stihnout, dokud nezačne hodina. \nMožná jestli bych vás mohla poprosit, zda mi nepomůžete?",
       "anotherSpeech": "Jo! To je ona! \nMoc vám děkuji, opravdu. \nJinak, Amy, co je to, že jste tak veselá, a dokonce vám to nadprůměrně sluší! \nJste celá rozzářená. Ale pamatujte, pozornost. \nDávejte na sebe pozor.",
       "task": {
         "name": "Ztracená fleška",
@@ -320,7 +320,7 @@
       "position": "Kamarád",
       "age": "16 let",
       "type" : "AKTIVNÍ",
-      "currentSpeech": "Ahoj, Amy, neviděla si Mari? \nJá jsem s Mari chtěl něco tisknout, ale není tu ani Mari ani moje filamenty... \nProstě jsem je někde musel položit a jsou fuč. \nCo bych taky dělal v 8a co? \nProsím pomůžeš mi je najít, já jsem dneska nějakej slepej.",
+      "currentSpeech": "Ahoj, Amy, neviděla si Mari? \nJá jsem s Mari chtěl něco tisknout, ale není tu ani Mari ani moje filamenty... \nProstě jsem je někde musel položit a jsou fuč. \nCo bych taky dělal v 8a, že jo? \nProsím pomůžeš mi je najít, já jsem dneska nějakej slepej.",
       "anotherSpeech": "Ou, wow, díky moc. \nTeď už bude jenom muset někde vyplavat i Mari, nebo víš co? Já si jí vytisknu, haha. \nHeleď, Amy, ještě jsem ti chtěl říct, že docela důležité je brát v potaz, \nže někdy musíme být velice opatrní a pozorní na to, co děláme, víš? \nChybějící pozornost je často příčinou selhání. \nAnyway jinými slovy, nechceš hledat všude po škole svoje filamenty...",
       "task": {
         "name": "Chybějící filament",

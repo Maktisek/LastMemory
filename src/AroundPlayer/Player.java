@@ -426,8 +426,8 @@ public class Player {
             }
         }
 
-        public double leftSpace() {
-            return capacity - weight;
+        public int leftSpace() {
+            return (int) (capacity - weight);
         }
 
         public double getCapacity() {
