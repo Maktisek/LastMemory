@@ -82,6 +82,19 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -2.0
+  },
+  {
+    "title" : "Sborovna",
+    "filePath" : "Audio\\Music\\Sborovna.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -7.0
+  },
+  {
+    "title" : "Dílna D2",
+    "filePath" : "Audio\\Music\\Dílna D2.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -7.0
   }
-
 ]
