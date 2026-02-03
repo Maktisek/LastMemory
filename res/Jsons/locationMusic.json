@@ -96,5 +96,12 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -12.0
+  },
+  {
+    "title" : "Sekretariát",
+    "filePath" : "Audio\\Music\\Sekretariát.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -9.0
   }
 ]
