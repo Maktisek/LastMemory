@@ -105,7 +105,7 @@
       "anotherSpeech": "Děkuji vám moc, snad to pomůže... Ano, už jsem si vzpomněl. Já jsem udělal chybu v plánování a omylem jsem vám řekl, že budeme dělat příští týden JSON. Na to teď zapomeňte, protože budeme probírat UNICODE. Prezentaci najdete na Moodlu, takže vše se dozvíte. Kdyžtak vám pak ve škole spolužáci látku dovysvětlí.",
       "task": {
         "name": "Nefunkční monitor",
-        "description": "V učebně 17 přestal fungovat monitor. Pan učitel Papula se domnívá, že je to způsobeno vadným HDMI kabelem či konektorem. Musím mu sehnat všechny potřebné předměty.",
+        "description": "V učebně 17 přestal fungovat monitor. \nPan učitel Papula se domnívá, že je to způsobeno vadným HDMI kabelem či konektorem. \nMusím mu sehnat všechny potřebné předměty.",
         "namesOfNeededObjects": [
           "HDMI kabel",
           "stlačený vzduch",
@@ -174,7 +174,7 @@
       "anotherSpeech": "Děkuji, Amy, jooo i bagetu, jo? Víte co, Amy, měla byste na sebe dávat pozor... Ne fakt myslím to vážně. Byla by to škoda, kdyby o vás škola přišla. Fakt dávejte pozor.",
       "task": {
         "name": "Instalace VariCADU",
-        "description": "Pan učitel Procházka instaluje VariCAD na školní počítač. Nejen, že mu chybí licenční kód k VariCADu, ale i se mu rozbila klávesnice. Už má z toho všeho celkem hlad, já se mu nedivím. Zkusím mu pomoct, třeba mi zase sdělí něco důležitého.",
+        "description": "Pan učitel Procházka instaluje VariCAD na školní počítač. \nNejen, že mu chybí licenční kód k VariCADu, ale i se mu rozbila klávesnice. \nUž má z toho všeho celkem hlad, já se mu nedivím. \nZkusím mu pomoct, třeba mi zase sdělí něco důležitého.",
         "namesOfNeededObjects": [
           "Licenční klíč VariCAD",
           "Klávesnice",
@@ -245,7 +245,7 @@
       "anotherSpeech": "Jo! To je ona! Moc vám děkuji, opravdu. Jinak, Amy, co je to, že jste tak veselá, a dokonce vám to nadprůměrně sluší! Jste celá rozzářená. Ale pamatujte, pozornost. Dávejte na sebe pozor.",
       "task": {
         "name": "Ztracená fleška",
-        "description": "Paní učitelka Haasová zmateně bloudí třídami a snaží se najít svojí miniaturní flešku. Prý nemá tušení, kde by se mohla nacházet. Zkusím ji najít.",
+        "description": "Paní učitelka Haasová zmateně bloudí třídami a snaží se najít svojí miniaturní flešku. \nPrý nemá tušení, kde by se mohla nacházet. \nZkusím ji najít.",
         "namesOfNeededObjects": [
           "USB paní Haasové"
         ],
@@ -324,7 +324,7 @@
       "anotherSpeech": "Ou, wow, díky moc. Teď už bude jenom muset někde vyplavat i Mari, nebo víš co? Já si jí vytisknu, haha. Heleď, Amy, ještě jsem ti chtěl říct, že docela důležité je brát v potaz, že někdy musíme být velice opatrní a pozorní na to, co děláme, víš? Chybějící pozornost je často příčinou selhání. Anyway jinými slovy, nechceš hledat všude po škole svoje filamenty...",
       "task": {
         "name": "Chybějící filament",
-        "description": "Tonda hledá po škole jeho chybějící filament. Prý ho někde položil a zapomněl na něj. Upřímně nevím, jak se mu to povedlo, když to jsou čtyři cívky filamentu, ale dobrý... Zkusím je najít.",
+        "description": "Tonda hledá po škole jeho chybějící filament. \nPrý ho někde položil a zapomněl na něj. \nUpřímně nevím, jak se mu to povedlo, když to jsou čtyři cívky filamentu, ale dobrý... \nZkusím je najít.",
         "namesOfNeededObjects": [
           "PLA filament",
           "PETG filament",
@@ -381,7 +381,7 @@
       "anotherSpeech": "Jak pěkné, to je přesně on. Děkuji moc. Jinak všimla jste si toho, co se děje před školou? Teď tam přijela záchranka a policie. Sjel se tam snad celý sbor. Snad se nestalo nic vážného. Buďte opatrná.",
       "task": {
         "name": "Uložení studentů",
-        "description": "Pan učitel Adámek potřebuje uložit jména studentů a jejich známky. Požádal mě, jestli bych mu s tím pomohla. Nepustí mě sice k práci, ale musím mu sehnat vybavení.",
+        "description": "Pan učitel Adámek potřebuje uložit jména studentů a jejich známky. \nPožádal mě, jestli bych mu s tím pomohla. \nNepustí mě sice k práci, ale musím mu sehnat vybavení.",
         "namesOfNeededObjects": [
           "Notebook pana Adámka",
           "USB s Excelem",
@@ -442,7 +442,7 @@
       "anotherSpeech": "Ty jo, Amy, vy jste hodná. Teď vám můžu připravit takové fajn a hezké cvičení na Moodle, mrk mrk. Teda jestli se tam ještě stihnete ukázat. Nee, vtipkuji samozřejmě. Taky, slyšela jste o té tragédii před školou? Někoho prý něco srazilo, víc nevím, ale je to hrozné, dávejte na sebe pozor, jo?",
       "task": {
         "name": "Příprava na hodinu",
-        "description": "Paní učitelka Meitnerová potřebuje pomoct s přípravou na příští hodinu. Pověřila mě, abych jí tedy pomohla sehnat vše, co potřebuje. Taky mě poprosila, jestli jí neskočím pro třídnici C2a, prý tam včera zapomněla zapsat.",
+        "description": "Paní učitelka Meitnerová potřebuje pomoct s přípravou na příští hodinu. \nPověřila mě, abych jí tedy pomohla sehnat vše, co potřebuje. \nTaky mě poprosila, jestli jí neskočím pro třídnici C2a, prý tam včera zapomněla zapsat.",
         "namesOfNeededObjects": [
           "Notebook paní Meitnerové",
           "USB s kódem",
@@ -517,7 +517,7 @@
       "anotherSpeech": "Děkuji moc, mám teď toho hodně. Musím ještě vyplnit spoustu papírů pro pojišťovnu poté, co studentku Vránovou srazila tramvaj. Je mi jí moc líto. Víte, pustili její třídu dříve ze školy, a tak se celý incident stal ještě v době výuky. Je to pak naše chyba, že jsme dali na tento incident dopustit.",
       "task": {
         "name": "Chybějící svazky učebnic",
-        "description": "Pan učitel Rašek má prý spoustu práce a nestihl posbírat svazky učebnic po třídách. Pověřil mě tedy, abych mu je všechny přinesla. Snad je unesu.",
+        "description": "Pan učitel Rašek má prý spoustu práce a nestihl posbírat svazky učebnic po třídách. \nPověřil mě tedy, abych mu je všechny přinesla. \nSnad je unesu.",
         "namesOfNeededObjects": [
           "Svazek učebnic chemie",
           "Svazek učebnic fyziky",
@@ -572,7 +572,7 @@
       "anotherSpeech": "Víte, je toho teď na školu nějak moc. Studenti jako vy jsou nám bohatstvím. Situace se slečnou Amy Vránovou školou otřásla, od té doby nezůstalo nic, tak jak bylo. Věříme, že se z toho slečna ještě vyléčí, ale doktoři už psali, že šance jsou mizivé. Buďte opatrná.",
       "task": {
         "name": "Příprava prezentace školy",
-        "description": "Pan ředitel mě pověřil, abych mu přinesla potřebné věci k přípravě prezentace školy. Jestli se chci dozvědět víc, musím úkol splnit.",
+        "description": "Pan ředitel mě pověřil, abych mu přinesla potřebné věci k přípravě prezentace školy. \nJestli se chci dozvědět víc, musím úkol splnit.",
         "namesOfNeededObjects": [
           "Seznam programů",
           "USB s prezentacemi",
@@ -626,7 +626,7 @@
       "anotherSpeech": "Mezitím, co má duše pomalu mizí, já stojím u vjezdu do školy. Pomalu se vše kolem mě mění na nemocniční lůžko. Ležím zde já, bez dechu, bez života. Běhá kolem mě pár doktorů, kteří neví, že už není cesty zpět. Tělo, které ještě včera bylo zdravé, teď ztrácí teplo. Obličej, který se denně usmíval, teď drží jeden výraz. Kůže, která byla známkou zdraví, teď šedne. Už tam nejsem já, není tam nic. A co rodina? Upřímně je mi jich víc líto, než je mi líto sebe samotné. Oni teď musí žít v té neuvěřitelné bolesti ztráty někoho blízkého. V té bolesti, ze které nelze odejít. Sama jsem ji nezažila, ale stala jsem se příčinou jedné z nich.  \nTohle jsem byla já, Amy Vránová. \nProsím dávejte na sebe pozor. Ne všechno je samozřejmost.",
       "task": {
         "name": "Narcis pro duši",
-        "description": "Moje duše mě sama požádala o poslední pomoc. Mrzí mě, že to končí takhle. Jestli chci dát alespoň něco do pořádku, pak musím najít žlutý narcis a vysvobodit svojí duši.",
+        "description": "Moje duše mě sama požádala o poslední pomoc. \nMrzí mě, že to končí takhle. \nJestli chci dát alespoň něco do pořádku, pak musím najít žlutý narcis a vysvobodit svojí duši.",
         "namesOfNeededObjects": [
           "Žlutý narcis"
         ],

@@ -78,7 +78,7 @@ public class Player {
     public String writeOldTask(String name) {
         for (Task task : doneTasks) {
             if (task.getName().equalsIgnoreCase(name)) {
-                return task.getName() + "\n" + Important.writeLongTexts(task.getDescription());
+                return task.getName() + "\n" + task.getDescription();
             }
         }
         return "There is a mistake in the game";
