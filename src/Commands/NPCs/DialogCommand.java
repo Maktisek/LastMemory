@@ -20,7 +20,7 @@ public class DialogCommand implements Command {
     @Override
     public String execute() {
         if (player.getCurrentLocation().getFriendlyNPC() != null) {
-            return Important.writeSpace(40)+Important.writeLongTexts(player.getCurrentLocation().getFriendlyNPC().getCurrentSpeech());
+            return Important.writeSpace(40) + player.getCurrentLocation().getFriendlyNPC().getCurrentSpeech();
         } else {
             this.inputWait = false;
             Important.playSound("wrong sound");
