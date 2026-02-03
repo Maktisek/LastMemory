@@ -68,6 +68,13 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -4.0
+  },
+  {
+    "title" : "Kancelář",
+    "filePath" : "Audio\\Music\\Kancelář.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -6.0
   }
 
 ]
