@@ -35,7 +35,15 @@
     "code": "SIDECLASS_002",
     "description": "Učebna sloužící převážně k přehrávání filmů. \nJe vybavena velkou televizí a pohodlným posezením. \nNa zemi je poležený koberec. \nTřída se nachází v podkroví, a tak strop lemují dřevěné trámy. \nPokud tu máme mít hodinu, vím, že to bude pohoda.",
     "enemyNPC": null,
-    "friendlyNPC": null,
+    "friendlyNPC": {
+      "name": "DJ Decibel",
+      "position": "Boskánský DJ",
+      "age": "50 let",
+      "type" : "PASIVNÍ",
+      "currentSpeech": "Posaď se, Amy, a poslouchej bosenskou muziku...",
+      "anotherSpeech": "None",
+      "task": null
+    },
     "items": [
       {
         "name": "Měl bys CHroCHtat",

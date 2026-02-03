@@ -25,9 +25,11 @@ public class Console {
         Initialization init = new Initialization();
         this.player = init.getPlayer();
         this.gameLoader = new CommandLoader(player);
-        executeIntro();
     }
 
+    public void start(){
+        executeIntro();
+    }
 
     public void preExecute() {
         System.out.println(Important.writeSpace(50));

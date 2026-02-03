@@ -1,3 +1,4 @@
+import Exceptions.WrongInitializationException;
 import Game.Console;
 
 public class Main {
@@ -5,7 +6,8 @@ public class Main {
 
         try {
             Console console = new Console();
-        } catch (Exception e) {
+            console.start();
+        } catch (WrongInitializationException e) {
             System.out.println(e.getMessage());
         }
     }

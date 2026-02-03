@@ -61,6 +61,13 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -10.0
+  },
+  {
+    "title" : "Učebna 20",
+    "filePath" : "Audio\\Music\\Bosna.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -4.0
   }
 
 ]
