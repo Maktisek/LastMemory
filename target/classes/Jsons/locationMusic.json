@@ -110,5 +110,12 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
+  },
+  {
+    "title" : "Učebna 18",
+    "filePath" : "Audio\\Music\\Učebna 18.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -9.0
   }
 ]
