@@ -75,6 +75,13 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -6.0
+  },
+  {
+    "title" : "Aula",
+    "filePath" : "Audio\\Music\\Aula.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -2.0
   }
 
 ]

@@ -177,7 +177,15 @@
     "code": "SPECIALS_002 ",
     "description": "Dříve to byl kostel, nyní je to jídelna. \nObrovský prostor, v nímž se ozvěna ozývá i po třech sekundách. \nNa zdech jsou křesťanské malby, které dnes připomínají starý účel této místnosti. \nÚplně vepředu se nachází stupínek se schůdky. \nNa stupínku je piano a nad pianem se nachází dataprojektor. \nJe to tu, jak bych řekla, masivní. \nNejstylovější jídelna na Praze 2, nebudu lhát.",
     "enemyNPC": null,
-    "friendlyNPC": null,
+    "friendlyNPC": {
+      "name": "Bc. Martin Váňa",
+      "position": "Učitel",
+      "age": "25 let",
+      "type" : "PASIVNÍ",
+      "currentSpeech": "Ještě vám tady zahraju, než odejdu.",
+      "anotherSpeech": "None",
+      "task": null
+    },
     "items": [
       {
         "name": "Bageta",
