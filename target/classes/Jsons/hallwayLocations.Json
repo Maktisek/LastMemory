@@ -2,7 +2,7 @@
   {
     "name": "Čtvrté patro",
     "code": "HALLWAY_001",
-    "description": "Nejedná se o klasickou chodbu, protože se nachází v podkroví budovy školy. Po straně trčí trámy označené výstražnou izolepou. Už si tady tolik lidí nabilo hlavu, asi budu další.",
+    "description": "Nejedná se o klasickou chodbu, protože se nachází v podkroví budovy školy. \nPo straně trčí trámy označené výstražnou izolepou. \nUž si tady tolik lidí nabilo hlavu, asi budu další.",
     "enemyNPC": null,
     "friendlyNPC": null,
     "items": [

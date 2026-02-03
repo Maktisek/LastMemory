@@ -31,7 +31,7 @@ public class InspectOldTaskCommand implements Command {
 
     @Override
     public boolean waitAble() {
-        return false;
+        return true;
     }
 
     @Override

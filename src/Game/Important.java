@@ -52,30 +52,6 @@ public class Important {
         }
     }
 
-    /**
-     * Helps to write longer texts. Every 10 words are seperated into individual lines which are added into an array list and then
-     * the method uses static method String.join to return the lines.
-     *
-     * @param text the text to be written
-     * @return the text seperated into individual lines
-     */
-    public static String writeLongTexts(String text) {
-        ArrayList<String> temp = new ArrayList<>();
-        String[] data = text.split(" ");
-        StringBuilder line = new StringBuilder();
-        for (int i = 0; i < data.length; i++) {
-            line.append(data[i]).append(" ");
-            if (i % 10 == 0 && i != 0) {
-                temp.add(line.toString());
-                line = new StringBuilder();
-            }
-        }
-        if (!line.toString().equalsIgnoreCase("")) {
-            temp.add(line.toString());
-        }
-        return String.join("\n", temp);
-    }
-
     public static String writeStringArrays(ArrayList<String> input) {
         StringBuilder line = new StringBuilder();
         for (int i = 0; i < input.size() - 1; i++) {
