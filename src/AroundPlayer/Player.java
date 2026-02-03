@@ -325,7 +325,6 @@ public class Player {
             if (item != null) {
                 double temp = weight - item.getWeight();
                 temp = Math.round(temp * 10.0) / 10.0;
-                System.out.println(temp);
                 if (temp < 0) {
                     return false;
                 } else {
@@ -424,7 +423,6 @@ public class Player {
 
         public void removeMore(ArrayList<Item> input) {
             for (Item item : input) {
-                System.out.println(input);
                 dropItem(item.getName());
             }
         }
@@ -445,11 +443,11 @@ public class Player {
             double onePercent = capacity / 100;
             double percent = weight / onePercent;
             if(percent <= 50){
-                return Important.changeText("green", Double.toString(Math.floor(weight)));
+                return Important.changeText("green", Double.toString(Math.floor((weight* 10))/10));
             } else if(percent < 100){
-                return Important.changeText("yellow", Double.toString(Math.floor(weight)));
+                return Important.changeText("yellow", Double.toString(Math.floor((weight* 10))/10));
             }
-            return Important.changeText("red", Double.toString(Math.floor(weight)));
+            return Important.changeText("red", Double.toString(Math.floor((weight* 10))/10));
         }
 
         public HashMap<String, ArrayList<Item>> getItems() {
