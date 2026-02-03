@@ -140,7 +140,7 @@ public class Initialization {
 
     public void loadPlayer() {
         //11 je startovní lokace
-        this.player = new Player(locations.get(22));
+        this.player = new Player(locations.get(24));
     }
 
     public Audio[] loadAllSongs() throws WrongInitializationException {
