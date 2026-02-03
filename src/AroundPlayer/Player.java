@@ -59,7 +59,7 @@ public class Player {
         for (Memory memory : collectedMemories) {
             if (memory.getName().equalsIgnoreCase(name)) {
                 memory.switchOpened();
-                return Important.writeSpace(40) + Important.writeLongTexts(memory.getDescription());
+                return Important.writeSpace(40) + memory.getDescription();
             }
         }
         return Important.changeText("red", "Vzpomínka " + Important.changeText("underline", name) + " neexistuje");

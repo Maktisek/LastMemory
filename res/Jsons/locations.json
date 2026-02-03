@@ -35,7 +35,7 @@
         ],
         "memoryPrice": {
           "name": "Samostudium na příští týden",
-          "description": "Pan Šváb tvrdí, že prý mám domluvené samostudium na příští týden. Dokonce mi popřál ať si to něco užiji... Co to ale je, je to vůbec podstatné?",
+          "description": "Pan Šváb tvrdí, že prý mám domluvené samostudium na příští týden. \nDokonce mi popřál ať si to něco užiji... \nCo to ale je? A je to vůbec podstatné?",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_002"
@@ -118,7 +118,7 @@
         ],
         "memoryPrice": {
           "name": "UNICODE místo JSON",
-          "description": "Tak asi fakt jsem měla příští týden chybět. Musela jsem oběhnout všechny učitele a zeptat se jich, co se bude příští týden dít. Mohla jsem jet na hory, nebo na chatu, nevím. Stále ale nerozumím tomu, co to má společného s tím, proč jsem tady. Možná na něco přijdu.",
+          "description": "Tak asi fakt jsem měla příští týden chybět. \nMusela jsem oběhnout všechny učitele a zeptat se jich, co se bude příští týden dít. \nMožná jedu někam s Tomem, ale proč jsem to neřekla mamce? Ví o tom vůbec? \nStále ale nerozumím tomu, co to má společného s tím, proč jsem tady. \nMožná na něco přijdu.",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_002"
@@ -187,7 +187,7 @@
         ],
         "memoryPrice": {
           "name": "Dávej si pozor",
-          "description": "Pan učitel Procházka mi až moc seriózně kladl na duši, že si mám na sebe dávat pozor. Prý by byla škoda, kdyby o mě škola přišla. Upřímně, asi jsem zapomněla, že jsem tak dobrá studentka xd.",
+          "description": "Pan učitel Procházka mi až moc seriózně kladl na duši, že si mám na sebe dávat pozor. \nPrý by byla škoda, kdyby o mě škola přišla. \nUpřímně, asi jsem zapomněla, že jsem tak dobrá studentka...",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_002"
@@ -254,7 +254,7 @@
         ],
         "memoryPrice": {
           "name": "Já jsem šťastná",
-          "description": "Podle paní učitelky Haasové mi to dneska prý sluší. Často mi to nikdo jen tak neříká, něco na tom bude. Navíc jsem dneska i šťastná, prý to jde na mně poznat. Asi mě musí čekat něco pěkného. Pokud jo, tak pak to nemohou být lyže... Navíc na konci mi řekla, že mám pamatovat na pozornost. Co s tím všichni mají?",
+          "description": "Podle paní učitelky Haasové mi to dneska prý sluší. \nČasto mi to nikdo jen tak neříká, něco na tom bude. \nAsi fakt jdu někam s Tomem... Ale na týden? \nNavíc jsem dneska i šťastná, prý to jde na mně poznat. \nJeště Haasová na konci mluvila o tom, ať si na sebe dávám pozor. \nCo s tím všichni mají?",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_003"
@@ -339,7 +339,7 @@
         ],
         "memoryPrice": {
           "name": "Tonda a filament",
-          "description": "Hehe, Tonda je vtipnej, ale docela mě vystrašil s tím svým hlubokým proslovem o chybějící pozornosti jako příčinou selhání. Já si myslím, že jsem pozorná dost... Navíc už zase, zase mi někdo připomíná pozornost? Proto jsem tady? Kvůli nepozornosti?",
+          "description": "Hehe, Tonda je vtipnej, ale docela mě vystrašil s tím svým hlubokým proslovem o chybějící pozornosti jako příčinou selhání. \nJá si myslím, že jsem pozorná dost... \nNavíc už zase, zase mi někdo připomíná pozornost? \nProto jsem tady? Kvůli nepozornosti?",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_003"
@@ -394,7 +394,7 @@
         ],
         "memoryPrice": {
           "name": "Záchranka před školou",
-          "description": "Uf, docela jsem se lekla, když pan učitel Adámek začal mluvit o jakési záchrance před školou. Máme okna hned do velmi rušné ulice, často tudy projíždí záchranky, třeba se nás to netýká. Ale když o tom tak slyším, nepozornost, záchranka... Co když to jde dohromady.",
+          "description": "Uf, docela jsem se lekla, když pan učitel Adámek začal mluvit o jakési záchrance před školou. \nMáme okna hned do velmi rušné ulice, často tudy projíždí záchranky, třeba se nás to netýká. \nAle když o tom tak slyším, nepozornost, záchranka... \nCo když to jde dohromady?",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_003"
@@ -455,7 +455,7 @@
         ],
         "memoryPrice": {
           "name": "Někdo byl sražen",
-          "description": "Ou ne, před školou byl někdo sražen. Autem nebo tramvají, na tom nesejde. Dostala jsem obrovský strach, že jsem to já. Co když jo? Co když jsem to byla já? Ty řeči o tom, že mám být opatrná by pak dávaly smysl. Bojím se. Paní učitelka ale žádné bližší informace zatím nezná. Navíc ta věta s tím, že jestli se ještě stihnu ještě ukázat, fuj, jde mi z toho úplný mráz po zádech.",
+          "description": "Ou, před školou byl někdo sražen. \nAutem nebo tramvají, na tom nesejde. \nDostala jsem obrovský strach, že jsem to já. \nCo když jo? Co když jsem to byla já? \nTy řeči o tom, že mám být opatrná by pak dávaly smysl. Bojím se. \nPaní učitelka ale žádné bližší informace zatím nezná. \nNavíc ta věta s tím, že jestli se ještě stihnu ještě ukázat, fuj, jde mi z toho úplný mráz po zádech.",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_004"
@@ -532,7 +532,7 @@
         ],
         "memoryPrice": {
           "name": "Byla jsem to já",
-          "description": "Uf, celá se klepu. Přímo do očí mi řekl, že jsem to byla já. Ale jako by mě už ani nepoznal. Vůbec si nevšiml, že to říká té Amy Vránové, té Amy, která byla sražena. Jsem to já, já jsem byla sražena tramvají. Teď ty řeči o pozornosti dávají smysl. Musím se odsud dostat, musím ven!",
+          "description": "Uf, celá se klepu. Přímo do očí mi řekl, že jsem to byla já. \nAle jako by mě už ani nepoznal. \nVůbec si nevšiml, že to říká té Amy Vránové, té Amy, která už nepřijde. \nJsem to já... Já jsem ta, která byla sražena tramvají. \nTeď ty řeči o pozornosti dávají smysl. \nMusím se odsud dostat, musím ven! \nAle co pak?",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_004"
@@ -589,7 +589,7 @@
         ],
         "memoryPrice": {
           "name": "Za chvíli tu nebudu",
-          "description": "Teď mi bylo řečeno, že prý žiji. Doktoři ale říkají, že mám malou šanci na přežití. Nechci ani vidět, jak vypadám, vždyť už mě tady ani nepoznávají. Někde tam v tom reálném světě jsou moji rodiče, kteří se musí dívat na tuhle hrůzu a já se s nimi nemohu ani rozloučit. Měla jsem být pozornější... Už to chápu. Je pozdě.",
+          "description": "Teď mi bylo řečeno, že prý žiji. \nDoktoři ale říkají, že mám malou šanci na přežití. \nNechci ani vidět, jak vypadám, vždyť už mě tady ani nepoznávají. \nNěkde tam v tom reálném světě jsou moji rodiče, \nkteří se musí dívat na tuhle hrůzu a já se s nimi nemohu ani rozloučit. \nMěla jsem být pozornější... Už to chápu. Je pozdě.",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_005"
