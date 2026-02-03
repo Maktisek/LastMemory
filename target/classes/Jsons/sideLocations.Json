@@ -18,13 +18,13 @@
         "name": "RAM info",
         "description": "RAM je zkratkou pro Ryba-access memory",
         "code": "PAPERS_007",
-        "weight": 0.2
+        "weight": 0.20
       },
       {
         "name": "USB s Excelem",
         "description": "Malá fleška pana učitele Adámka",
         "code": "ESSENTIALS_014",
-        "weight": 0.5
+        "weight": 0.50
       }
     ],
     "safe": null,
@@ -49,13 +49,13 @@
         "name": "Měl bys CHroCHtat",
         "description": "Jakýsi papírek se zvláštním významem",
         "code": "PAPERS_008",
-        "weight": 0.2
+        "weight": 0.20
       },
       {
         "name": "Sešit webových aplikací",
         "description": "Data webových aplikací se ukládají v databázi",
         "code": "NOTES_002",
-        "weight": 2
+        "weight": 2.0
       }
     ],
     "safe": null,
@@ -72,7 +72,7 @@
         "name": "Myš",
         "description": "Školní počítačová myš",
         "code": "ESSENTIALS_015",
-        "weight": 1
+        "weight": 1.0
       }
     ],
     "safe": {
@@ -84,13 +84,13 @@
           "name": "Šroubovák",
           "description": "Klasický křížový šroubovák",
           "code": "ESSENTIALS_016",
-          "weight": 1
+          "weight": 1.0
         },
         {
           "name": "Výbojka",
           "description": "Slouží k projekci obrazu z dataprojektoru",
           "code": "ESSENTIALS_017",
-          "weight": 2
+          "weight": 2.0
         }
       ]
     },
@@ -107,13 +107,13 @@
         "name": "Svazek učebnic chemie",
         "description": "Velký svazek učebnic chemie",
         "code": "ESSENTIALS_018",
-        "weight": 5
+        "weight": 5.0
       },
       {
         "name": "Svazek učebnic přírodovědy",
         "description": "Moderní učebnice přírodovědy",
         "code": "ESSENTIALS_019",
-        "weight": 5
+        "weight": 5.0
       }
     ],
     "safe": {
@@ -148,25 +148,25 @@
         "name": "Sešit technické dokumentace",
         "description": "Nesmíme protínat kótovací čáru",
         "code": "NOTES_003",
-        "weight": 2
+        "weight": 2.0
       },
       {
         "name": "Sešit informační technologie",
         "description": "BufferedWriter a BufferedReader poznámky",
         "code": "NOTES_004",
-        "weight": 2
+        "weight": 2.0
       },
       {
         "name": "Druhý Newtonův zákon",
         "description": "Výpočet síly: F=m*a",
         "code": "PAPERS_009",
-        "weight": 0.2
+        "weight": 0.20
       },
       {
         "name": "Svazek učebnic fyziky",
         "description": "Těžký svazek učebnic fyziky",
         "code": "ESSENTIALS_020",
-        "weight": 5
+        "weight": 5.0
       }
     ],
     "safe": null,
@@ -191,7 +191,7 @@
         "name": "Bageta",
         "description": "Neodolatelná bageta z Milošova bufetu",
         "code": "ESSENTIALS_021",
-        "weight": 2
+        "weight": 2.0
       }
     ],
     "safe": null,
@@ -208,7 +208,7 @@
         "name": "USB s prezentacemi",
         "description": "Nenápadné USB s prezentacemi",
         "code": "ESSENTIALS_022",
-        "weight": 0.5
+        "weight": 0.50
       }
     ],
     "safe": null,
@@ -225,7 +225,7 @@
         "name": "Šroubovák",
         "description": "Klasický křížový šroubovák",
         "code": "ESSENTIALS_016",
-        "weight": 1
+        "weight": 1.0
       }
     ],
     "safe": null,
@@ -242,7 +242,7 @@
         "name": "HDMI kabel",
         "description": "Klasický HDMI kabel, nic speciálního",
         "code": "ESSENTIALS_003",
-        "weight": 1
+        "weight": 1.0
       }
     ],
     "safe": {
@@ -254,7 +254,7 @@
           "name": "Výkaz o studentech",
           "description": "Seznam studentů s daty narození",
           "code": "ESSENTIALS_023",
-          "weight": 2
+          "weight": 2.0
         }
       ]
     },
@@ -279,7 +279,7 @@
         "name": "Licenční klíč VariCAD",
         "description": "Licenční klíč k programu VariCAD",
         "code": "ESSENTIALS_023",
-        "weight": 0.1
+        "weight": 0.10
       }
     ],
     "safe": null,

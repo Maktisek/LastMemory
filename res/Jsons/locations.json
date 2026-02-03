@@ -47,37 +47,37 @@
         "name": "Kód toalety",
         "description": "Papírek obsahující: R1;L2;R2",
         "code": "PAPERS_001",
-        "weight": 0.2
+        "weight": 0.20
       },
       {
         "name": "Stlačený vzduch",
         "description": "Klasický stlačený vzduch ve spreji",
         "code": "ESSENTIALS_001",
-        "weight": 3
+        "weight": 3.0
       },
       {
         "name": "Sešit teoretické informatiky",
         "description": "Píšou zde, že pivot se využívá k rozdělení pole během Quick Sortu.",
         "code": "NOTES_001",
-        "weight": 2
+        "weight": 2.0
       },
       {
         "name": "Třídnice C2a",
         "description": "To je třídnice mojí třídy! Vždycky ji nosí Švec",
         "code": "ESSENTIALS_002",
-        "weight": 2.5
+        "weight": 2.50
       },
       {
         "name": "Šroubovák",
         "description": "Klasický křížový šroubovák",
         "code": "ESSENTIALS_016",
-        "weight": 1
+        "weight": 1.0
       },
       {
         "name": "Výbojka",
         "description": "Slouží k projekci obrazu z dataprojektoru",
         "code": "ESSENTIALS_017",
-        "weight": 2
+        "weight": 2.0
       }
     ],
     "safe": null,
@@ -130,13 +130,13 @@
         "name": "Papíry",
         "description": "Štos bílých čistých papírů",
         "code": "ESSENTIALS_013",
-        "weight": 3
+        "weight": 3.0
       },
       {
         "name": "Klávesnice",
         "description": "Obyčejná černá kancelářská klávesnice",
         "code": "ESSENTIALS_004",
-        "weight": 2.5
+        "weight": 2.50
       },
       {
         "name": "Seznam programů",
@@ -199,25 +199,43 @@
         "name": "USB paní Haasové",
         "description": "Takové malé černé USB, lehce se ztratí",
         "code": "ESSENTIALS_006",
-        "weight": 0.5
+        "weight": 0.50
       },
       {
         "name": "3D tiskárny info",
         "description": "Materiál pro 3D tisk se nazývá filament",
         "code": "PAPERS_002",
-        "weight": 0.2
+        "weight": 0.20
       },
       {
         "name": "USB s kódem",
         "description": "Malá fleška vystupující z figurky psa",
         "code": "ESSENTIALS_007",
-        "weight": 0.5
+        "weight": 0.50
       },
       {
         "name": "Banner o C#",
         "description": "Plakát popisující výhody programovacího jazyka C#",
         "code": "BANNERS_001",
-        "weight": 3.5
+        "weight": 3.50
+      },
+      {
+        "name": "Licenční klíč VariCAD",
+        "description": "Licenční klíč k programu VariCAD",
+        "code": "ESSENTIALS_023",
+        "weight": 0.10
+      },
+      {
+        "name": "Klávesnice",
+        "description": "Obyčejná černá kancelářská klávesnice",
+        "code": "ESSENTIALS_004",
+        "weight": 2.50
+      },
+      {
+        "name": "Bageta",
+        "description": "Neodolatelná bageta z Milošova bufetu",
+        "code": "ESSENTIALS_021",
+        "weight": 2.0
       }
     ],
     "safe": null,
@@ -266,37 +284,37 @@
         "name": "PETG filament",
         "description": "Tondův PETG filament do jeho milované 3D tiskárny",
         "code": "FILAMENTS_002",
-        "weight": 4
+        "weight": 4.0
       },
       {
         "name": "PLA filament",
         "description": "Tondův PLA filament do jeho milované 3D tiskárny",
         "code": "FILAMENTS_001",
-        "weight": 4
+        "weight": 4.0
       },
       {
         "name": "Kód kancelář",
         "description": "Papírek obsahující: L50;R21;L1;R21",
         "code": "PAPERS_003",
-        "weight": 0.2
+        "weight": 0.20
       },
       {
         "name": "USB s kódem",
         "description": "Malá fleška vystupující z figurky psa",
         "code": "ESSENTIALS_007",
-        "weight": 0.5
+        "weight": 0.50
       },
       {
         "name": "Notebook paní Meitnerové",
         "description": "Notebook paní Meitnerové, který si vždycky najde čas pokazit hodinu",
         "code": "ESSENTIALS_008",
-        "weight": 3
+        "weight": 3.0
       },
       {
         "name": "Banner o Pythonu",
         "description": "Plakát popisující výhody programovacího jazyka Python",
         "code": "BANNERS_002",
-        "weight": 3.5
+        "weight": 3.50
       }
     ],
     "safe": null,
@@ -351,7 +369,7 @@
         "name": "Notebook pana Adámka",
         "description": "Notebook pana Adámka (ano, MacBook)",
         "code": "ESSENTIALS_009",
-        "weight": 3
+        "weight": 3.0
       }
     ],
     "safe": null,
@@ -406,13 +424,13 @@
         "name": "Svazek učebnic matematiky",
         "description": "Těžký svazek starých učebnic matematiky",
         "code": "ESSENTIALS_010",
-        "weight": 5
+        "weight": 5.0
       },
       {
         "name": "Kód kabinet K12",
         "description": "Papírek obsahující: L20;R41;L41;L20;R21;L1;R8;L8",
         "code": "PAPERS_004",
-        "weight": 0.2
+        "weight": 0.20
       }
     ],
     "safe": null,
@@ -467,13 +485,13 @@
         "name": "Žlutý narcis",
         "description": "Kytička připomínající kytičku na kopečku",
         "code": "ESSENTIALS_011",
-        "weight": 1
+        "weight": 1.0
       },
       {
         "name": "Kód sekretariát",
         "description": "Papírek obsahující: L16;R28;L24;R4;L8",
         "code": "PAPERS_005",
-        "weight": 0.2
+        "weight": 0.20
       }
     ],
     "safe": {
@@ -485,7 +503,7 @@
           "name": "Svazek strojnických tabulek",
           "description": "Strojnické tabulky, které nikdo nepoužívá",
           "code": "ESSENTIALS_012",
-          "weight": 5
+          "weight": 5.0
         }
       ]
     },
@@ -544,7 +562,7 @@
         "name": "Plakát o Ječné",
         "description": "Plakát zobrazující historii školy SPŠE Ječná",
         "code": "BANNERS_003",
-        "weight": 5
+        "weight": 5.0
       }
     ],
     "safe": null,
@@ -647,7 +665,7 @@
         "name": "Papíry pro pojišťovnu",
         "description": "Oficiální dokumenty o pojistné události",
         "code": "PAPERS_006",
-        "weight": 1
+        "weight": 1.0
       }
     ],
     "safe": null,

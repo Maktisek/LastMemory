@@ -292,7 +292,7 @@ public class Player {
 
         public Inventory() {
             this.capacity = 5.0;
-            this.weight = 0;
+            this.weight = 0.0;
             this.items = new HashMap<>();
         }
 
@@ -324,6 +324,8 @@ public class Player {
         public boolean checkDropCapacity(Item item) {
             if (item != null) {
                 double temp = weight - item.getWeight();
+                temp = Math.round(temp * 10.0) / 10.0;
+                System.out.println(temp);
                 if (temp < 0) {
                     return false;
                 } else {
@@ -422,6 +424,7 @@ public class Player {
 
         public void removeMore(ArrayList<Item> input) {
             for (Item item : input) {
+                System.out.println(input);
                 dropItem(item.getName());
             }
         }
@@ -442,11 +445,11 @@ public class Player {
             double onePercent = capacity / 100;
             double percent = weight / onePercent;
             if(percent <= 50){
-                return Important.changeText("green", Integer.toString((int) weight));
+                return Important.changeText("green", Double.toString(Math.floor(weight)));
             } else if(percent < 100){
-                return Important.changeText("yellow", Integer.toString((int) weight));
+                return Important.changeText("yellow", Double.toString(Math.floor(weight)));
             }
-            return Important.changeText("red", Integer.toString((int) weight));
+            return Important.changeText("red", Double.toString(Math.floor(weight)));
         }
 
         public HashMap<String, ArrayList<Item>> getItems() {
