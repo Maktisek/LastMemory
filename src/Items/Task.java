@@ -66,7 +66,7 @@ public class Task {
     }
 
     public String forToString() {
-        return Important.writeLongTexts(this.description) + "\n" +
+        return this.description + "\n" +
                 Important.changeText("bold", "Zbývající potřebné předměty: ") + writeAllNeededItems();
     }
 
