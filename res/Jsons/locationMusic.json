@@ -124,5 +124,12 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
+  },
+  {
+    "title" : "Zástupci ředitele",
+    "filePath" : "Audio\\Music\\Zástupci ředitele.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -9.0
   }
 ]
