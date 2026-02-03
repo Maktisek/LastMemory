@@ -54,5 +54,13 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -14.0
+  },
+  {
+    "title" : "Učebna 29",
+    "filePath" : "Audio\\Music\\watching stars.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -10.0
   }
+
 ]

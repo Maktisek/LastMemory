@@ -57,7 +57,7 @@
       },
       {
         "name": "Sešit teoretické informatiky",
-        "description": "Píšou zde, že pivot se využívá k rozdělení pole během Quick Sortu",
+        "description": "Píšou zde, že pivot se využívá k rozdělení pole během Quick Sortu.",
         "code": "NOTES_001",
         "weight": 2
       },

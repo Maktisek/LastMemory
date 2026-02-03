@@ -1,10 +1,18 @@
 [
   {
-    "name": "Učebna 29a",
+    "name": "Učebna 29",
     "code": "SIDECLASS_001",
     "description": "Učebna určená k výuce anglického jazyka. \nLavice jsou seskládány do půl oválu, tak že někteří žáci sedí naproti sobě. \nUčebna je vybavena projektorem a televizí. \nNachází se v podkroví budovy školy, a tak strop lemují dřevěné trámy. \nNejlepší je tady klimatizace, miluji to.",
     "enemyNPC": null,
-    "friendlyNPC": null,
+    "friendlyNPC": {
+      "name": "Ing. Bc. Šárka Páltiková",
+      "position": "Učitelka",
+      "age": "42 let",
+      "type" : "PASIVNÍ",
+      "currentSpeech": "I completely lost my train of thought, but don’t forget Amy. Keep it simple.",
+      "anotherSpeech": "None",
+      "task": null
+    },
     "items": [
       {
         "name": "RAM info",

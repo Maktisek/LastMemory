@@ -137,7 +137,7 @@ public class Console {
             }
         }
         if (!exit) {
-            Important.stopSound("intro music");
+            Important.stopMusic("intro music");
             preExecute();
         }
     }
