@@ -2,7 +2,7 @@
   {
     "name": "Učebna 29a",
     "code": "SIDECLASS_001",
-    "description": "Učebna určená k výuce anglického jazyka. Lavice jsou seskládány do půl oválu, tak že někteří žáci sedí naproti sobě. Učebna je vybavena projektorem a televizí. Nachází se v podkroví budovy školy, a tak strop lemují dřevěné trámy. Nejlepší je tady klimatizace, miluji to.",
+    "description": "Učebna určená k výuce anglického jazyka. \nLavice jsou seskládány do půl oválu, tak že někteří žáci sedí naproti sobě. \nUčebna je vybavena projektorem a televizí. \nNachází se v podkroví budovy školy, a tak strop lemují dřevěné trámy. \nNejlepší je tady klimatizace, miluji to.",
     "enemyNPC": null,
     "friendlyNPC": null,
     "items": [
@@ -25,7 +25,7 @@
   {
     "name": "Učebna 20",
     "code": "SIDECLASS_002",
-    "description": "Učebna sloužící převážně k přehrávání filmů. Je vybavena velkou televizí a pohodlným posezením. Na zemi je poležený koberec. Třída se nachází v podkroví, a tak strop lemují dřevěné trámy. Pokud tu máme mít hodinu, vím, že to bude pohoda.",
+    "description": "Učebna sloužící převážně k přehrávání filmů. \nJe vybavena velkou televizí a pohodlným posezením. \nNa zemi je poležený koberec. \nTřída se nachází v podkroví, a tak strop lemují dřevěné trámy. \nPokud tu máme mít hodinu, vím, že to bude pohoda.",
     "enemyNPC": null,
     "friendlyNPC": null,
     "items": [
@@ -48,7 +48,7 @@
   {
     "name": "Toalety",
     "code": "TOILET_001",
-    "description": "Pánské toalety ve třetím patře. Nejedná se o úplně vábné místo. Kluci asi naschvál rádi znečišťují zem svým jablkovým džusem. Alespoň mýdlo na umytí rukou tu páni mají, mohlo jim být hůř.",
+    "description": "Pánské toalety ve třetím patře. \nNejedná se o úplně vábné místo. \nKluci asi naschvál rádi znečišťují zem svým jablkovým džusem. \nAlespoň mýdlo na umytí rukou tu páni mají, mohlo jim být hůř.",
     "enemyNPC": null,
     "friendlyNPC": null,
     "items": [
@@ -83,7 +83,7 @@
   {
     "name": "Kancelář",
     "code": "SPECIALS_001",
-    "description": "Velmi malá místnost s okénkem do místnosti větší. Vzhled není moc vábný až takový komunistický. Na levé straně se nachází starý stůl osazený podél zdi s velice nepříjemně vypadajícími židlemi. Na přední zdi se nachází velké přepážkové okno. Do místnosti za oknem lze projít dveřmi rovnou z malé místnosti. Nic moc.",
+    "description": "Velmi malá místnost s okénkem do místnosti větší. \nVzhled není moc vábný až takový komunistický. \nNa levé straně se nachází starý stůl osazený podél zdi s velice nepříjemně vypadajícími židlemi. \nNa přední zdi se nachází velké přepážkové okno. \nDo místnosti za oknem lze projít dveřmi rovnou z malé místnosti. \nNic moc.",
     "enemyNPC": null,
     "friendlyNPC": null,
     "items": [
@@ -124,7 +124,7 @@
   {
     "name": "Učebna 8",
     "code": "SIDECLASS_003",
-    "description": "Učebna sloužící k výuce fyziky. Je vybavena velmi starým nábytkem. Masivní dřevěné lavice, které působí těžce, ale jsou strašně lehké, a židle, které se brzo pod někým propadnou, zdobí tuto třídu a svým starým šarmem a nahání studentům strach. Nevím, proč má tento starý vzhled takový odpudivý dojem.",
+    "description": "Učebna sloužící k výuce fyziky. \nJe vybavena velmi starým nábytkem. \nMasivní dřevěné lavice, které působí těžce, ale jsou strašně lehké, \na židle, které se brzo pod někým propadnou, zdobí tuto třídu a svým starým šarmem \na nahání studentům strach. \nNevím, proč má tento starý vzhled takový odpudivý dojem.",
     "enemyNPC": null,
     "friendlyNPC": null,
     "items": [
@@ -159,7 +159,7 @@
   {
     "name": "Aula",
     "code": "SPECIALS_002 ",
-    "description": "Dříve to byl kostel, nyní je to jídelna. Obrovský prostor, v nímž se ozvěna ozývá i po třech sekundách. Na zdech jsou křesťanské malby dnes připomínající starý účel této místnosti. Úplně vepředu se nachází stupínek se schůdky. Na stupínku je piano a nad pianem se nachází dataprojektor. Je to tu, jak bych řekla, masivní. Nejstylovější jídelna na Praze 2, nebudu lhát.",
+    "description": "Dříve to byl kostel, nyní je to jídelna. \nObrovský prostor, v nímž se ozvěna ozývá i po třech sekundách. \nNa zdech jsou křesťanské malby, které dnes připomínají starý účel této místnosti. \nÚplně vepředu se nachází stupínek se schůdky. \nNa stupínku je piano a nad pianem se nachází dataprojektor. \nJe to tu, jak bych řekla, masivní. \nNejstylovější jídelna na Praze 2, nebudu lhát.",
     "enemyNPC": null,
     "friendlyNPC": null,
     "items": [
@@ -176,7 +176,7 @@
   {
     "name": "Sborovna",
     "code": "SIDECABINET_001 ",
-    "description": "Velká místnost sloužící jako sborovna, ale zároveň i kabinet. Žáci a učitelé sem nosí třídnice. Po místnosti jsou rozsázeny stolní počítače a vzadu místnosti se nachází malý whiteboard. Já třídnici nenosím, tak jsem tu tolikrát nebyla.",
+    "description": "Velká místnost sloužící jako sborovna, ale zároveň i kabinet. \nŽáci a učitelé sem nosí třídnice. \nPo místnosti jsou rozsázeny stolní počítače a vzadu místnosti se nachází malý whiteboard. \nJá třídnici nenosím, tak jsem tu tolikrát nebyla.",
     "enemyNPC": null,
     "friendlyNPC": null,
     "items": [
@@ -193,7 +193,7 @@
   {
     "name": "Dílna D2",
     "code": "SIDEWORKROOM_001 ",
-    "description": "Nejvybavenější učebna školy určená k výuce robotiky. Robotická ramena v takovém zvláštním akváriu, jsou osazena uprostřed třídy a ke každému z nich je píchnut i počítač. Místnost působí profesionálně, ale mně je naprosto k ničemu. Ajťák se sem totiž nikdy nepodívá.",
+    "description": "Nejvybavenější učebna školy určená k výuce robotiky. \nRobotická ramena v takovém zvláštním akváriu, jsou osazena uprostřed třídy a ke každému z nich je píchnut i počítač. \nMístnost působí profesionálně, ale mně je naprosto k ničemu. \nAjťák se sem totiž nikdy nepodívá.",
     "enemyNPC": null,
     "friendlyNPC": null,
     "items": [
@@ -210,7 +210,7 @@
   {
     "name": "Sekretariát",
     "code": "SPECIALS_003 ",
-    "description": "Malá útulná místnost určená pro sekretářky školy. Na zemi je koberec. Místnost působí zabydleně, hlavně kvůli svému přehlednému nepořádku. Jedna se sekretářek si sem vodí i svého psa. Celkem cute místnost.",
+    "description": "Malá útulná místnost určená pro sekretářky školy. \nNa zemi je koberec. \nMístnost působí zabydleně, hlavně kvůli svému přehlednému nepořádku. \nJedna se sekretářek si sem vodí i svého psa. \nCelkem cute místnost.",
     "enemyNPC": null,
     "friendlyNPC": null,
     "items": [
@@ -239,7 +239,7 @@
   {
     "name": "Kumbál",
     "code": "SPECIALS_004 ",
-    "description": "Zvláštní malá místnost obsahující pomůcky k výuce fyziky. Nachází se v ní poměrně velký nepořádek. Vždycky jsem to tu chtěla celé projít, ale moje hlava si nevymyslí, jak to tu doopravdy vypadá. No, možná proto tu je Sergei, nic jinýho si tady představit nedokážu.",
+    "description": "Zvláštní malá místnost obsahující pomůcky k výuce fyziky. \nNachází se v ní poměrně velký nepořádek. \nVždycky jsem to tu chtěla celé projít, ale moje hlava si nevymyslí, jak to tu doopravdy vypadá. \nNo, možná proto tu je Sergei, nic jinýho si tady představit nedokážu.",
     "enemyNPC": null,
     "friendlyNPC": {
       "name": "Sergei",

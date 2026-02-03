@@ -2,7 +2,7 @@
   {
     "name": "Učebna 15",
     "code": "CLASS_001",
-    "description": "Kmenová učebna třídy C2a, kde třídním učitelem je sám Ing. Jan Šváb. Jedná se o typ učebny se stupínkem. Tato učebna je specifická svojí velikostí, jelikož je celkem malá. Mám ji ráda, protože je taková, no, roztomilá. ",
+    "description": "Kmenová učebna třídy C2a, kde třídním učitelem je sám Ing. Jan Šváb. \nJedná se o typ učebny se stupínkem. \nTato učebna je specifická svojí velikostí, jelikož je celkem malá. \nMám ji ráda, protože je taková, no, roztomilá. ",
     "enemyNPC": {
       "name": "Ing. Jan Šváb",
       "position": "Učitel",
@@ -86,7 +86,7 @@
   {
     "name": "Učebna 17",
     "code": "CLASS_002",
-    "description": "Jedná se o počítačovou učebnu naplněnou malými počítači, na kterých jsou položeny monitory. Je významná svým zvláštním stolem uprostřed třídy v poslední řadě. Do učebny lze vlézt dvěma vchody. Hned vedle obou dveří jsou dva dataprojektory. Řekla bych, že je to takový outsider počítačových učeben.",
+    "description": "Jedná se o počítačovou učebnu naplněnou malými počítači, na kterých jsou položeny monitory. \nJe významná svým zvláštním stolem uprostřed třídy v poslední řadě. \nDo učebny lze vlézt dvěma vchody. \nHned vedle obou dveří jsou dva dataprojektory. \nŘekla bych, že je to takový outsider počítačových učeben.",
     "enemyNPC": {
       "name": "Bc. Adam Papula",
       "position": "Učitel",
@@ -151,7 +151,7 @@
   {
     "name": "Učebna 18",
     "code": "CLASS_003",
-    "description": "Jedná se o počítačovou učebnu klasického vzhledu. Interiér je v bílých barvách. Do učebny lze vlézt dvěma vchody. Hned vedle obou dveří jsou dva dataprojektory. Na první pohled nikdy nepoznám, zda se nacházím v osmnáctce nebo devatenáctce.",
+    "description": "Jedná se o počítačovou učebnu klasického vzhledu. \nInteriér je v bílých barvách. \nDo učebny lze vlézt dvěma vchody. \nHned vedle obou dveří jsou dva dataprojektory. \nNa první pohled nikdy nepoznám, zda se nacházím v osmnáctce nebo devatenáctce.",
     "enemyNPC": {
       "name": "Petr Procházka",
       "position": "Učitel",
@@ -226,7 +226,7 @@
   {
     "name": "Učebna 19",
     "code": "CLASS_004",
-    "description": "Jedná se o počítačovou učebnu klasického vzhledu. Interiér je v bílých barvách. Do učebny lze vlézt dvěma vchody. Hned vedle obou dveří jsou dva dataprojektory. Já sama to tady mám ráda, připomíná mi to IT hodiny, které jsou fajn. Možná jsem divná, ale myslím to vážně.",
+    "description": "Jedná se o počítačovou učebnu klasického vzhledu. \nInteriér je v bílých barvách. \nDo učebny lze vlézt dvěma vchody. \nHned vedle obou dveří jsou dva dataprojektory. \nJá sama to tady mám ráda, připomíná mi to IT hodiny, které jsou fajn. \nMožná jsem divná, ale myslím to vážně.",
     "enemyNPC": {
       "name": "Kateřina Haasová",
       "position": "Učitel",
@@ -305,7 +305,7 @@
   {
     "name": "Učebna 8a",
     "code": "CLASS_005",
-    "description": "Učebna sloužící k trénování studentů v oblasti počítačových sítí. Je vybavena moderním vybavením, které je uloženo v několik rackových skříních. Po obou stranách třídy jsou rozesety počítače. Její velikost pojme pouze polovinu celé třídy. Upřímně jsem tady stála jenom dvakrát, zatím jsem sítě nikdy nedělala.",
+    "description": "Učebna sloužící k trénování studentů v oblasti počítačových sítí. \nJe vybavena moderním vybavením, které je uloženo v několik rackových skříních. \nPo obou stranách třídy jsou rozesety počítače. \nJejí velikost pojme pouze polovinu celé třídy. \nUpřímně jsem tady stála jenom dvakrát, zatím jsem sítě nikdy nedělala.",
     "enemyNPC": {
       "name": "Antonín Franěk",
       "position": "Kamarád",
@@ -421,7 +421,7 @@
   {
     "name": "Kabinet K12",
     "code": "CABINET_001",
-    "description": "Kabinet učitelů z oblasti IT. Obsahuje pár stolních počítačů a míst na sezení. Pojí se s kabinetem K13, který je na kabinet K12 napojený. Díky tomuto napojení to působí jako backrooms. Byla jsem tu dvakrát, působí to tu docela roztomile.",
+    "description": "Kabinet učitelů z oblasti IT. \nObsahuje pár stolních počítačů a míst na sezení. \nPojí se s kabinetem K13, který je na kabinet K12 napojený. \nDíky tomuto napojení to působí jako backrooms. \nByla jsem tu dvakrát, působí to tu docela roztomile.",
     "enemyNPC": {
       "name": "Michaela Meitnerová",
       "position": "Učitel",
@@ -494,7 +494,7 @@
   {
     "name": "Zástupci ředitele",
     "code": "CABINET_002",
-    "description": "Kabinet zástupců ředitele. Je rozdělen do dvou bloků, které se setkávají v relativně malé chodbičce. Každý zástupce ředitele, tam totiž má svoji místnost. Působí to tu skoro až neuklizeně, ale já budu věřit tomu, že je to ten typ přehledného nepořádku.",
+    "description": "Kabinet zástupců ředitele. \nJe rozdělen do dvou bloků, které se setkávají v relativně malé chodbičce. \nKaždý zástupce ředitele, tam totiž má svoji místnost. \nPůsobí to tu skoro až neuklizeně, ale já budu věřit tomu, že je to ten typ přehledného nepořádku.",
     "enemyNPC": {
       "name": "RNDr. Luboš Rašek",
       "position": "Učitel",
@@ -553,7 +553,7 @@
   {
     "name": "Ředitelna",
     "code": "CABINET_003",
-    "description": "Kabinet pana ředitele a pana učitele Ing. Jana Švába. Hned po příchodu se nachází mála chodbička vedoucí do dvou místností. V jedné sídlí pan učitel Ing. Jan Šváb a ve druhé pan ředitel. Párkrát jsem tu stála, ale upřímně, moc se tu od zástupců ředitele neliší.",
+    "description": "Kabinet pana ředitele a pana učitele Ing. Jana Švába. \nHned po příchodu se nachází mála chodbička vedoucí do dvou místností. \nV jedné sídlí pan učitel Ing. Jan Šváb a ve druhé pan ředitel. \nPárkrát jsem tu stála, ale upřímně, moc se tu od zástupců ředitele neliší.",
     "enemyNPC": {
       "name": "Ing. Ondřej Mandík",
       "position": "Ředitel",
@@ -604,7 +604,7 @@
   {
     "name": "Vjezd",
     "code": "HALLWAY_006",
-    "description": "Jedná se o velký vjezd do školy. Ráno tudy mohou kantoři přijíždět autem a studenti tudy prochází do školy. Příjezdová cesta je tvořena zvláštními malými špalky. Během zimních časů je zde poměrně velká zima. Je to takový symbol Ječné.",
+    "description": "Jedná se o velký vjezd do školy. \nRáno tudy mohou kantoři přijíždět autem a studenti tudy prochází do školy. \nPříjezdová cesta je tvořena zvláštními malými špalky. \nBěhem zimních časů je zde poměrně velká zima. \nJe to takový symbol Ječné.",
     "enemyNPC": {
       "name": "Duše Amy",
       "position": "Amy sama",

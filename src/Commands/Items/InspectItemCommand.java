@@ -26,7 +26,7 @@ public class InspectItemCommand implements Command {
             return Important.changeText("red", "Item " + name + " se v inventáři nenachází");
         }
 
-        return Important.writeLongTexts(player.getInventory().descriptionItem(name));
+        return player.getInventory().descriptionItem(name);
     }
 
     @Override
