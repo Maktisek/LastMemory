@@ -172,12 +172,12 @@ public class Important {
     }
 
 
-    public static int findLongestLine(String[] input){
+    public static int findLongestLine(String[] input, int amoutOfLines){
         int longest = 0;
-        for (String line : input) {
-            line = line.replaceAll("\\u001B\\[[;\\d]*m", "");
-            if (line.length() > longest) {
-                longest = line.length();
+        for (int i = 0; i < amoutOfLines; i++) {
+            input[i] = input[i].replaceAll("\\u001B\\[[;\\d]*m", "");
+            if (input[i].length() > longest) {
+                longest = input[i].length();
             }
         }
         return longest;
@@ -185,15 +185,17 @@ public class Important {
 
     public static String dashToString(String input, String headText) {
         String[] data = input.split("\n");
-        int longest = findLongestLine(data);
+        int longest = findLongestLine(data, data.length);
         String plainHeadText = headText.replaceAll("\\u001B\\[[;\\d]*m", "");
         longest = longest - plainHeadText.length();
         return writeDash(longest / 2) + changeText("bold", changeText("underline", headText)) + writeDash(longest / 2) + "\n" + input;
     }
 
     public static String asciiHeadTextHelper(String scene, String headText) {
-        int longest = findLongestLine(scene.split("\n"));
-        int headLength = findLongestLine(headText.split("\n"));
+        String[] splitScene = scene.split("\n");
+        String[] splitHeadText = headText.split("\n");
+        int longest = findLongestLine(splitScene, 5);
+        int headLength = findLongestLine(splitHeadText, splitHeadText.length);
         if(longest > headLength){
             int move = (longest - headLength) / 2;
             return moveAsciiText(headText, move);
