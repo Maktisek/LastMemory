@@ -427,8 +427,9 @@ public class Player {
             }
         }
 
-        public int leftSpace() {
-            return (int) (capacity - weight);
+        public double leftSpace() {
+            double temp = capacity - ((double) (Math.round(weight * 10)) /10);
+            return (double) Math.round((temp * 10)) /10;
         }
 
         public double getCapacity() {
@@ -443,11 +444,11 @@ public class Player {
             double onePercent = capacity / 100;
             double percent = weight / onePercent;
             if(percent <= 50){
-                return Important.changeText("green", Double.toString(Math.floor((weight* 10))/10));
+                return Important.changeText("green", Double.toString((double) Math.round((weight * 10)) /10));
             } else if(percent < 100){
-                return Important.changeText("yellow", Double.toString(Math.floor((weight* 10))/10));
+                return Important.changeText("yellow", Double.toString((double) Math.round((weight * 10)) /10));
             }
-            return Important.changeText("red", Double.toString(Math.floor((weight* 10))/10));
+            return Important.changeText("red", Double.toString((double) Math.round((weight * 10)) /10));
         }
 
         public HashMap<String, ArrayList<Item>> getItems() {
