@@ -5,13 +5,9 @@ import AudioSystem.AudioLibrary;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Important {
-
 
 
     private static final Scanner sc = new Scanner(System.in);
@@ -74,7 +70,7 @@ public class Important {
                 line = new StringBuilder();
             }
         }
-        if(!line.toString().equalsIgnoreCase("")){
+        if (!line.toString().equalsIgnoreCase("")) {
             temp.add(line.toString());
         }
         return String.join("\n", temp);
@@ -89,66 +85,18 @@ public class Important {
         return line.toString();
     }
 
-
-    public static void playMusic(String name){
-        audioLibrary.playMusic(name);
-    }
-
-    public static void playSound(String name){
-        audioLibrary.playAudio(name);
-    }
-
-    public static void stopMusic(String name){
-        audioLibrary.stopMusic(name);
-    }
-
-    public static void stopSound(String name){
-        audioLibrary.stopSound(name);
-    }
-
-    public static void pause(String name){
-        audioLibrary.pause(name);
-    }
-
-    public static void resume(String name){
-        audioLibrary.resume(name);
-    }
-
-
-
-    public static String loadText(){
-        String result = sc.nextLine();
-        audioLibrary.playAudio("keyboard click");
-        return result;
-    }
-
-    public static void waitConsole(double inputSeconds){
-        try {
-            Thread.sleep((long) (inputSeconds*1000));
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static String writeSpace(int lines){
-        return "\n".repeat(Math.max(0, lines));
-    }
-    public static String writeBlank(int amount){
-        return " ".repeat(amount);
-    }
-
-    public static String readTxtFiles(String pathName, int space){
-        try (BufferedReader br = new BufferedReader(new FileReader(pathName))){
+    public static String readTxtFiles(String pathName, int space) {
+        try (BufferedReader br = new BufferedReader(new FileReader(pathName))) {
             StringBuilder sb = new StringBuilder();
             ArrayList<String> lines = new ArrayList<>();
             String line;
-            while ((line = br.readLine()) != null){
+            while ((line = br.readLine()) != null) {
                 lines.add(line);
             }
             for (int i = 0; i < lines.size(); i++) {
-                if(i == lines.size() - 1){
+                if (i == lines.size() - 1) {
                     sb.append(writeBlank(space)).append(lines.get(i));
-                }else {
+                } else {
                     sb.append(writeBlank(space)).append(lines.get(i)).append("\n");
                 }
             }
@@ -158,39 +106,112 @@ public class Important {
         }
     }
 
-    public static String randomLineReader(String pathName){
-        try (BufferedReader br = new BufferedReader(new FileReader(pathName))){
+    public static void playMusic(String name) {
+        audioLibrary.playMusic(name);
+    }
+
+    public static void playSound(String name) {
+        audioLibrary.playAudio(name);
+    }
+
+    public static void stopMusic(String name) {
+        audioLibrary.stopMusic(name);
+    }
+
+    public static void stopSound(String name) {
+        audioLibrary.stopSound(name);
+    }
+
+    public static void pause(String name) {
+        audioLibrary.pause(name);
+    }
+
+    public static void resume(String name) {
+        audioLibrary.resume(name);
+    }
+
+    public static String loadText() {
+        String result = sc.nextLine();
+        audioLibrary.playAudio("keyboard click");
+        return result;
+    }
+
+    public static void waitConsole(double inputSeconds) {
+        try {
+            Thread.sleep((long) (inputSeconds * 1000));
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static String writeSpace(int lines) {
+        return "\n".repeat(Math.max(0, lines));
+    }
+
+    public static String writeBlank(int amount) {
+        return " ".repeat(amount);
+    }
+
+
+    public static String randomLineReader(String pathName) {
+        try (BufferedReader br = new BufferedReader(new FileReader(pathName))) {
             ArrayList<String> lines = new ArrayList<>();
             String line;
-            while ((line = br.readLine()) != null){
+            while ((line = br.readLine()) != null) {
                 lines.add(line);
             }
             return lines.get(new Random().nextInt(0, lines.size() - 1));
-        }catch (IOException e) {
+        } catch (IOException e) {
             return "soubor " + pathName + " ve hře chybí, zkus zkontrolovat herní soubory.";
         }
     }
 
-    public static String writeDash(int amount){
+    public static String writeDash(int amount) {
         String dash = "-";
         return changeText("bold", dash.repeat(amount));
     }
 
 
-    public static String dashToString(String input, String headText){
-        String[] data = input.split("\n");
+    public static int findLongestLine(String[] input){
         int longest = 0;
-        for (String line : data) {
-            line = line.replaceAll("\u001B\\[\\d*m", "");
+        for (String line : input) {
+            line = line.replaceAll("\\u001B\\[[;\\d]*m", "");
             if (line.length() > longest) {
                 longest = line.length();
             }
         }
-        String plainHeadText = headText.replaceAll("\\u001B\\[[;\\d]*m", "");
-        longest = longest - plainHeadText.length();
-        return writeDash(longest/2) + changeText("bold", changeText("underline", headText)) + writeDash(longest/2) + "\n" + input;
+        return longest;
     }
 
+    public static String dashToString(String input, String headText) {
+        String[] data = input.split("\n");
+        int longest = findLongestLine(data);
+        String plainHeadText = headText.replaceAll("\\u001B\\[[;\\d]*m", "");
+        longest = longest - plainHeadText.length();
+        return writeDash(longest / 2) + changeText("bold", changeText("underline", headText)) + writeDash(longest / 2) + "\n" + input;
+    }
 
+    public static String asciiHeadTextHelper(String scene, String headText) {
+        int longest = findLongestLine(scene.split("\n"));
+        int headLength = findLongestLine(headText.split("\n"));
+        if(longest > headLength){
+            int move = (longest - headLength) / 2;
+            return moveAsciiText(headText, move);
+        }
+        return headText;
+    }
+
+    public static String moveAsciiText(String ascii, int move){
+        String[] data = ascii.split("\n");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < data.length; i++) {
+            if(i != data.length - 1){
+                sb.append(writeBlank(move)).append(data[i]).append("\n");
+            }else {
+                sb.append(writeBlank(move)).append(data[i]);
+            }
+        }
+        return sb.toString();
+    }
 }
 

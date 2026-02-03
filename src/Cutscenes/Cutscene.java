@@ -11,7 +11,8 @@ public class Cutscene {
     }
 
     private String writeHeadText(){
-        return Important.changeText("bold", Important.readTxtFiles("res\\TextFiles\\cutsceneAscii.txt", 0));
+        String result = Important.readTxtFiles("res\\TextFiles\\cutsceneAscii.txt", 0);
+        return Important.asciiHeadTextHelper(scene, Important.changeText("bold", result));
     }
 
 
@@ -33,6 +34,6 @@ public class Cutscene {
 
     @Override
     public String toString() {
-        return Important.changeText("bold", Important.changeText("pink", writeHeadText()))+ "\n" + Important.writeLongTexts(scene);
+        return Important.changeText("bold", Important.changeText("pink", writeHeadText()))+ "\n" + scene;
     }
 }
