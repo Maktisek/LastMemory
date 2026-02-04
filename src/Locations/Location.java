@@ -10,6 +10,7 @@ import NPCS.FriendlyNPC;
 
 import javax.sound.sampled.Clip;
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class Location {
@@ -66,14 +67,14 @@ public class Location {
 
 
     public String openSafe() {
-            ArrayList<Item> temp = safe.dropItems();
-            items.addAll(temp);
-            ArrayList<String> names = new ArrayList<>();
-            for (Item item : temp) {
-                names.add(Important.changeText("underline", item.getName()));
-            }
-            return "V trezoru se nachází: " + Important.writeStringArrays(names);
+        ArrayList<Item> temp = safe.dropItems();
+        items.addAll(temp);
+        ArrayList<String> names = new ArrayList<>();
+        for (Item item : temp) {
+            names.add(Important.changeText("underline", item.getName()));
         }
+        return "V trezoru se nachází: " + Important.writeStringArrays(names);
+    }
 
     public boolean availableSafe() {
         return safe != null && safe.isLocked();
@@ -137,11 +138,18 @@ public class Location {
      * @return names of all locations
      */
     public String writeAllPossibleLocations() {
-        ArrayList<String> names = new ArrayList<>(25);
+        ArrayList<String> names = new ArrayList<>(20);
+        ArrayList<String> hallways = new ArrayList<>(5);
         for (Location location : possibleLocations) {
-            names.add(Important.changeText("underline", location.getName()));
+            if (location.getType() == Type.HALLWAY) {
+                hallways.add(Important.changeText("underline", location.getName()));
+            } else {
+                names.add(Important.changeText("underline", location.getName()));
+            }
         }
-        return String.join(",", names);
+        names.sort(Collections.reverseOrder());
+        hallways.addAll(names);
+        return String.join(",", hallways);
     }
 
 
@@ -190,7 +198,7 @@ public class Location {
     }
 
 
-    private String forToString(){
+    private String forToString() {
         return Important.changeText("bold", "Postava: ") + writeFriendlyNPCName() + "\n" +
                 Important.changeText("bold", "Předměty: ") + writeItemsNames() + "\n" +
                 Important.changeText("bold", "Safe: ") + writeSafe();
@@ -278,8 +286,8 @@ public class Location {
         return song;
     }
 
-    public Clip getSongClip(){
-        if(song != null){
+    public Clip getSongClip() {
+        if (song != null) {
             return song.getClip();
         }
         return null;
