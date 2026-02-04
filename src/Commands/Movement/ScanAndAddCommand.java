@@ -11,12 +11,10 @@ public class ScanAndAddCommand implements Command {
 
     private final Player player;
     private boolean waitInput;
-    private boolean waitTime;
 
     public ScanAndAddCommand(Player player) {
         this.player = player;
         this.waitInput = true;
-        this.waitTime = false;
     }
 
     @Override
@@ -28,7 +26,6 @@ public class ScanAndAddCommand implements Command {
             return result;
         }
         waitInput = false;
-        waitTime = true;
         return Important.changeText("red", "Žádné nové lokace nebyly nalezeny");
     }
 
@@ -44,7 +41,7 @@ public class ScanAndAddCommand implements Command {
 
     @Override
     public boolean timeWaitAble() {
-        return waitTime;
+        return true;
     }
 
     @Override

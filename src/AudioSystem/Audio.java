@@ -149,7 +149,9 @@ public class Audio {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                clip.start();
+                if(clip != null) {
+                    clip.start();
+                }
             });
             t.start();
         }

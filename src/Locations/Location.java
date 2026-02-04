@@ -159,6 +159,9 @@ public class Location implements Comparable<Location> {
         if(safe != null && safe.isLocked()){
             return false;
         }
+        if(friendlyNPC != null && friendlyNPC.getTask() != null){
+            return false;
+        }
         return true;
     }
 

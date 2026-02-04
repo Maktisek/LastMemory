@@ -20,7 +20,7 @@
       "position": "Učitel",
       "age": "50 let",
       "type" : "AKTIVNÍ",
-      "currentSpeech": "Hele, to víte, že se vám ve třídě rozbil dataprojektor? \nBudu ho muset opravit, ale potřebuji k tomu šroubovák a novou výbojku. \nMyslíš, že byste mi je mohla přinést?",
+      "currentSpeech": "Hele, to víte, že se vám ve třídě rozbil dataprojektor? \nBudu ho muset opravit, ale potřebuji k tomu šroubovák a novou výbojku. \nMyslíte, že byste mi je mohla přinést?",
       "anotherSpeech": "Díky moc, ty dataprojektory většinou vydrží dlouho, ale tenhle tu nebyl ani dva roky. \nJinak ředitel už schválil vaše samostudium na příští týden, \nříkám vám to, abyste tam už nemusela chodit. \nUžijte si to.",
       "task": {
         "name": "Nefunkční dataprojektor",
@@ -35,7 +35,7 @@
         ],
         "memoryPrice": {
           "name": "Samostudium na příští týden",
-          "description": "Pan Šváb tvrdí, že prý mám domluvené samostudium na příští týden. \nDokonce mi popřál ať si to něco užiji... \nCo to ale je? A je to vůbec podstatné?",
+          "description": "Pan Šváb tvrdí, že prý mám domluvené samostudium na příští týden. \nDokonce mi popřál, ať si to něco užiji... \nCo to ale je? A je to vůbec podstatné?",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_002"
@@ -96,7 +96,7 @@
         "description": "V učebně 17 přestal fungovat monitor. \nPan učitel Papula se domnívá, že je to způsobeno vadným HDMI kabelem či konektorem. \nMusím mu sehnat všechny potřebné předměty.",
         "namesOfNeededObjects": [
           "HDMI kabel",
-          "stlačený vzduch",
+          "Stlačený vzduch",
           "šroubovák"
         ],
         "codesOfNeededObjects": [
@@ -196,34 +196,16 @@
         "weight": 0.20
       },
       {
-        "name": "USB s kódem",
-        "description": "Malá fleška vystupující z figurky psa",
-        "code": "ESSENTIALS_007",
-        "weight": 0.50
-      },
-      {
         "name": "Banner o C#",
         "description": "Plakát popisující výhody programovacího jazyka C#",
         "code": "BANNERS_001",
         "weight": 3.50
       },
       {
-        "name": "Licenční klíč VariCAD",
-        "description": "Licenční klíč k programu VariCAD",
-        "code": "ESSENTIALS_023",
-        "weight": 0.10
-      },
-      {
-        "name": "Klávesnice",
-        "description": "Obyčejná černá kancelářská klávesnice",
-        "code": "ESSENTIALS_004",
-        "weight": 2.50
-      },
-      {
-        "name": "Bageta",
-        "description": "Neodolatelná bageta z Milošova bufetu",
-        "code": "ESSENTIALS_021",
-        "weight": 2.0
+        "name": "USB s kódem",
+        "description": "Malá fleška vystupující z figurky psa",
+        "code": "ESSENTIALS_007",
+        "weight": 0.50
       }
     ],
     "safe": null,
@@ -285,12 +267,6 @@
         "description": "Papírek obsahující: L50;R21;L1;R21",
         "code": "PAPERS_003",
         "weight": 0.20
-      },
-      {
-        "name": "USB s kódem",
-        "description": "Malá fleška vystupující z figurky psa",
-        "code": "ESSENTIALS_007",
-        "weight": 0.50
       },
       {
         "name": "Notebook paní Meitnerové",
@@ -618,6 +594,7 @@
       "question": "Kdy se Amy narodila",
       "possibleAnswers": [
         "21.01.2009",
+        "21.1.2009",
         "21. ledna 2009",
         "dvacátéhoprvního ledna 2009",
         "dvacátého prvního ledna dvatisíce devět"

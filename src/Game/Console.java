@@ -45,7 +45,7 @@ public class Console {
             if (player.canEnd()) {
                 exit = true;
                 player.setMode(new OutroMode());
-                player.getCurrentLocation().stopMusic();
+                player.getCurrentLocation().pauseMusic();
                 executeOutro();
                 continue;
             }
@@ -146,6 +146,7 @@ public class Console {
     }
 
     public void executeOutro() {
+        player.getCurrentLocation().stopMusic();
         boolean exitOutro = false;
         Important.playMusic("outro music");
         System.out.println(Important.writeSpace(50));

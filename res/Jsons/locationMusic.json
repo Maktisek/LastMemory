@@ -4,7 +4,7 @@
     "filePath" : "res\\Audio\\Music\\třetí patro.WAV",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -12.0
+    "initialVolume" : -8.0
   },
   {
     "title" : "toalety",
@@ -74,7 +74,7 @@
     "filePath" : "res\\Audio\\Music\\Kancelář.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -6.0
+    "initialVolume" : -4.0
   },
   {
     "title" : "Aula",
