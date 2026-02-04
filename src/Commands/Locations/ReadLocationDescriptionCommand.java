@@ -18,7 +18,9 @@ public class ReadLocationDescriptionCommand implements Command {
 
     @Override
     public String execute() {
-        return Important.writeSpace(40) +player.getCurrentLocation().getDescription();
+        String ascii = Important.readTxtFiles("res\\TextFiles\\asciiAbout.txt", 0);
+        String headText = Important.asciiHeadTextHelper(player.getCurrentLocation().getDescription(), ascii);
+        return Important.writeSpace(40) +Important.changeText("bold", Important.changeText("pink", headText) + "\n" + player.getCurrentLocation().getDescription());
     }
 
     @Override
