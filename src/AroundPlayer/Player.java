@@ -81,7 +81,7 @@ public class Player {
                 return task.getName() + "\n" + task.getDescription();
             }
         }
-        return "There is a mistake in the game";
+        return "";
     }
 
     public boolean addCurrentTask(Task task) {

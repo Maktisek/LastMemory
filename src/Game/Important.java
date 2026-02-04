@@ -170,7 +170,7 @@ public class Important {
     public static String asciiHeadTextHelper(String scene, String headText) {
         String[] splitScene = scene.split("\n");
         String[] splitHeadText = headText.split("\n");
-        int longest = findLongestLine(splitScene, 5);
+        int longest = findLongestLine(splitScene, countLines(scene));
         int headLength = findLongestLine(splitHeadText, splitHeadText.length);
         if(longest > headLength){
             int move = (longest - headLength) / 2;
@@ -190,6 +190,14 @@ public class Important {
             }
         }
         return sb.toString();
+    }
+
+    public static int countLines(String input){
+        String[] data = input.split("\n");
+        if(data.length < 5){
+            return data.length;
+        }
+        return 5;
     }
 }
 
