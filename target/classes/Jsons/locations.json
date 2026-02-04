@@ -53,7 +53,7 @@
         "name": "Stlačený vzduch",
         "description": "Klasický stlačený vzduch ve spreji",
         "code": "ESSENTIALS_001",
-        "weight": 4.9
+        "weight": 3.0
       },
       {
         "name": "Sešit teoretické informatiky",
