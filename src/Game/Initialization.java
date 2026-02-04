@@ -24,6 +24,9 @@ public class Initialization {
         this.locations = new ArrayList<>();
         this.tempLocations = new ArrayList<>();
         this.mapper = new ObjectMapper();
+    }
+
+    public void startInitialization() throws WrongInitializationException{
         loadSideLocations();
     }
 

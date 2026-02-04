@@ -23,6 +23,7 @@ public class Console {
     public Console() throws WrongInitializationException {
         this.exit = false;
         Initialization init = new Initialization();
+        init.startInitialization();
         this.player = init.getPlayer();
         this.gameLoader = new CommandLoader(player);
     }
