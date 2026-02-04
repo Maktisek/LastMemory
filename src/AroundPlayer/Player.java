@@ -158,14 +158,11 @@ public class Player {
      * Switches player's mode.
      *
      * @param mode The node to be changed
-     * @return true if the action was successful, false if not
      */
-    public boolean switchMode(Mode mode) {
+    public void switchMode(Mode mode) {
         if (mode != null) {
             this.mode = mode;
-            return true;
         }
-        return false;
     }
 
     /**
