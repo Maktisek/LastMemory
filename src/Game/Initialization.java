@@ -15,10 +15,10 @@ import java.util.Objects;
 public class Initialization {
 
 
-    ObjectMapper mapper;
-    ArrayList<Location> locations;
-    ArrayList<Location> tempLocations;
-    Player player;
+    private final ObjectMapper mapper;
+    private final ArrayList<Location> locations;
+    private final ArrayList<Location> tempLocations;
+    private Player player;
 
     public Initialization() throws WrongInitializationException {
         this.locations = new ArrayList<>();

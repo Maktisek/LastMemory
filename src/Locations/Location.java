@@ -139,8 +139,8 @@ public class Location implements Comparable<Location> {
      */
     public String writeAllPossibleLocations() {
         sortPossibleLocations();
-        ArrayList<String> names = new ArrayList<>(20);
-        ArrayList<String> hallways = new ArrayList<>(5);
+        ArrayList<String> names = new ArrayList<>(8);
+        ArrayList<String> hallways = new ArrayList<>(3);
         for (Location location : possibleLocations) {
             if (location.getType() == Type.HALLWAY) {
                 hallways.add(Important.changeText("underline", location.writeName()));
@@ -148,7 +148,6 @@ public class Location implements Comparable<Location> {
                 names.add(Important.changeText("underline", location.writeName()));
             }
         }
-        names.sort(Collections.reverseOrder());
         hallways.addAll(names);
         return String.join(",", hallways);
     }
@@ -167,7 +166,7 @@ public class Location implements Comparable<Location> {
         if(type == Type.HALLWAY){
             return Important.changeText("blue", name);
         }
-        if(!isEmpty() || friendlyNPC.getTask() != null){
+        if(!isEmpty() || (friendlyNPC != null && friendlyNPC.getTask() != null)){
             return Important.changeText("green", name);
         }
         return name;
