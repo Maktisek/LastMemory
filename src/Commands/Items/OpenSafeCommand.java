@@ -7,8 +7,8 @@ import Game.Important;
 
 public class OpenSafeCommand implements Command {
 
-   private final Player player;
-   private final String code;
+    private final Player player;
+    private final String code;
 
     public OpenSafeCommand(Player player, String code) {
         this.player = player;
@@ -17,18 +17,21 @@ public class OpenSafeCommand implements Command {
 
     @Override
     public String execute() {
-        if(player.getCurrentLocation().getSafe() == null || !player.getCurrentLocation().getSafe().isLocked()){
+        if (player.getCurrentLocation().getSafe() == null || !player.getCurrentLocation().getSafe().isLocked()) {
             Important.playSound("wrong sound");
             return Important.changeText("red", "Safe se v lokaci nenachází");
         }
         try {
-            player.getCurrentLocation().getSafe().openSafe(code);
-        }catch (WrongSafeCodeException e){
+            if (player.getCurrentLocation().getSafe().openSafe(code)) {
+                Important.playSound("safe open");
+                return player.getCurrentLocation().openSafe();
+            }
+        } catch (WrongSafeCodeException e) {
             Important.playSound("wrong sound");
-            return e.getMessage();
+            return Important.changeText("red", e.getMessage());
         }
-        Important.playSound("safe open");
-        return player.getCurrentLocation().openSafe();
+        Important.playSound("wrong sound");
+        return Important.changeText("red", "Jajchs! Tenhle kód nefunguje");
     }
 
     @Override

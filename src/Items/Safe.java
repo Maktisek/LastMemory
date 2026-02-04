@@ -54,7 +54,7 @@ public class Safe {
         this.code = code;
     }
 
-    public void openSafe(String code) throws WrongSafeCodeException {
+    public boolean openSafe(String code) throws WrongSafeCodeException {
         code = code.replaceAll(" ", "");
         String[] data = code.split(";");
         int password = 0;
@@ -79,11 +79,7 @@ public class Safe {
                 password++;
             }
         }
-        isDone(password);
-    }
-
-    public boolean isDone(int password) {
-        return password == Integer.parseInt(code);
+        return password == Integer.parseInt(this.code);
     }
 
     public ArrayList<Item> dropItems() {
