@@ -162,7 +162,7 @@ public class Location implements Comparable<Location> {
         return true;
     }
 
-    private String writeName(){
+    public String writeName(){
         if(type == Type.HALLWAY){
             return Important.changeText("blue", name);
         }

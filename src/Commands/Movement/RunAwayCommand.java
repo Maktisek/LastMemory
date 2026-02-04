@@ -18,14 +18,13 @@ public class RunAwayCommand implements Command {
 
     @Override
     public String execute() {
-        if(player.getPreviousLocation() == null){
-            Important.playSound("wrong sound");
-            return "Další útěk není možný";
+        if (player.runAway()) {
+            Important.stopMusic("question mode");
+            Important.playSound("run");
+            return Important.changeText("green", "Utíkáš zpět do: " + Important.changeText("underline",player.getCurrentLocation().writeName()));
         }
-        Important.stopMusic("question mode");
-        player.runAway();
-        return "Utíkáš zpět do: " + player.getCurrentLocation().getName();
-
+        Important.playSound("wrong sound");
+        return Important.changeText("red", "Další útěk není možný");
     }
 
     @Override

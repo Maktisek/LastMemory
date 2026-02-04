@@ -14,6 +14,13 @@
     "initialVolume" : -2.0
   },
   {
+    "title" : "run",
+    "filePath" : "res\\Audio\\Sounds\\run.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -2.0
+  },
+  {
     "title" : "keyboard click",
     "filePath" : "res\\Audio\\Sounds\\keyboard click.WAV",
     "infiniteLoop" : false,
