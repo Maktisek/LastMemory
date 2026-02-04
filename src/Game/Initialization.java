@@ -26,8 +26,15 @@ public class Initialization {
         this.mapper = new ObjectMapper();
     }
 
-    public void startInitialization() throws WrongInitializationException{
+    public void startInitialization() throws WrongInitializationException {
         loadSideLocations();
+        loadHallwayLocationsLocations();
+        loadMainLocations();
+        connectMainLocations();
+        setReadyPossibleLocationArrays();
+        loadBasicLocationConnection();
+        setAllMusic();
+        loadPlayer();
     }
 
     /**
@@ -40,7 +47,6 @@ public class Initialization {
         } catch (IOException e) {
             throw new WrongInitializationException(e.getMessage());
         }
-        loadHallwayLocationsLocations();
     }
 
     /**
@@ -53,7 +59,6 @@ public class Initialization {
         } catch (IOException e) {
             throw new WrongInitializationException("Wrong hallway locations load");
         }
-        loadMainLocations();
     }
 
     /**
@@ -66,7 +71,6 @@ public class Initialization {
         } catch (IOException e) {
             throw new WrongInitializationException("Wrong main locations load");
         }
-        connectMainLocations();
     }
 
     /**
@@ -79,7 +83,6 @@ public class Initialization {
             tempLocations.get(i - 1).getFriendlyNPC().getTask().getMemoryPrice().setLocationGift(tempLocations.get(i));
         }
         locations.addAll(tempLocations);
-        setReadyPossibleLocationArrays();
     }
 
     /**
@@ -89,7 +92,6 @@ public class Initialization {
         for (Location location : locations) {
             location.setPossibleLocations(new ArrayList<>());
         }
-        loadBasicLocationConnection();
     }
 
     /**
@@ -120,7 +122,6 @@ public class Initialization {
 //            System.out.println(b+". "+location);
 //            b++;
 //        }
-        setAllMusic();
     }
 
 
@@ -134,7 +135,6 @@ public class Initialization {
                 throw new WrongInitializationException("Wrong song name input");
             }
         }
-        loadPlayer();
     }
 
     /**
