@@ -22,6 +22,8 @@ public class RecallMemoryCommand implements Command {
         }
         player.getCurrentLocation().getSong().pause();
         Important.playMusic("memory song");
+
+
         return player.writeMemory(name);
     }
 

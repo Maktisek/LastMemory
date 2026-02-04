@@ -59,7 +59,9 @@ public class Player {
         for (Memory memory : collectedMemories) {
             if (memory.getName().equalsIgnoreCase(name)) {
                 memory.switchOpened();
-                return Important.writeSpace(40) + memory.getDescription();
+                String ascii = Important.readTxtFiles("res\\TextFiles\\asciiMemory.txt", 0);
+                String headText = Important.asciiHeadTextHelper(memory.getDescription(), ascii);
+                return Important.writeSpace(40) + Important.changeText("bold", Important.changeText("pink", headText) + "\n" + memory.getDescription());
             }
         }
         return Important.changeText("red", "Vzpomínka " + Important.changeText("underline", name) + " neexistuje");
@@ -177,7 +179,7 @@ public class Player {
             names.add(Important.changeText("underline", memory.writeName()));
         }
         if (names.isEmpty()) {
-            return "Doposud nebyly posbírané žádné vzpomínky";
+            return Important.changeText("red", "Doposud nebyly posbírané žádné vzpomínky");
         }
         return String.join(", ", names);
     }
@@ -193,7 +195,7 @@ public class Player {
             names.add(task.getName());
         }
         if (names.isEmpty()) {
-            return "Doposud nebyly splněny žádné úkoly";
+            return Important.changeText("red", "Doposud nebyly splněny žádné úkoly");
         }
         return String.join(", ", names);
     }
@@ -385,7 +387,7 @@ public class Player {
                 names.add(temp.size() + "x " + Important.changeText("underline", temp.get(0).getName()));
             }
             if (names.isEmpty()) {
-                return "Batoh je prázdný";
+                return Important.changeText("red", "Batoh je prázdný");
             }
             return String.join(", ", names);
         }
