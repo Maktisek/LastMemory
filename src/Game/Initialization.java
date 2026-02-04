@@ -78,7 +78,7 @@ public class Initialization {
      * The cycle goes from the last location to the first location always connecting the next location with the current location.
      * Then it adds all main locations into locations list.
      */
-    public void connectMainLocations() throws WrongInitializationException {
+    public void connectMainLocations() {
         for (int i = tempLocations.size() - 1; i > 0; i--) {
             tempLocations.get(i - 1).getFriendlyNPC().getTask().getMemoryPrice().setLocationGift(tempLocations.get(i));
         }
@@ -88,7 +88,7 @@ public class Initialization {
     /**
      * Initializes all locations possible locations array list.
      */
-    public void setReadyPossibleLocationArrays() throws WrongInitializationException {
+    public void setReadyPossibleLocationArrays(){
         for (Location location : locations) {
             location.setPossibleLocations(new ArrayList<>());
         }
