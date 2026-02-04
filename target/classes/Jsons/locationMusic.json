@@ -1,147 +1,147 @@
 [
   {
     "title" : "třetí patro",
-    "filePath" : "Audio\\Music\\třetí patro.WAV",
+    "filePath" : "res\\Audio\\Music\\třetí patro.WAV",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -12.0
   },
   {
     "title" : "toalety",
-    "filePath" : "Audio\\Music\\toalety.wav",
+    "filePath" : "res\\Audio\\Music\\toalety.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -8.0
   },
   {
     "title" : "Učebna 15",
-    "filePath" : "Audio\\Music\\Učebna 15.wav",
+    "filePath" : "res\\Audio\\Music\\Učebna 15.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -8.0
   },
   {
     "title" : "Učebna 8",
-    "filePath" : "Audio\\Music\\Učebna 8.wav",
+    "filePath" : "res\\Audio\\Music\\Učebna 8.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -2.0
   },
   {
     "title" : "Kumbál",
-    "filePath" : "Audio\\Music\\kumbál.wav",
+    "filePath" : "res\\Audio\\Music\\kumbál.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -2.0
   },
   {
     "title" : "Učebna 19",
-    "filePath" : "Audio\\Music\\Prokletí.wav",
+    "filePath" : "res\\Audio\\Music\\Prokletí.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -8.0
   },
   {
     "title" : "Kabinet K12",
-    "filePath" : "Audio\\Music\\Obstacles.wav",
+    "filePath" : "res\\Audio\\Music\\Obstacles.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -8.0
   },
   {
     "title" : "Učebna 8a",
-    "filePath" : "Audio\\Music\\Učebna 8a.wav",
+    "filePath" : "res\\Audio\\Music\\Učebna 8a.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -14.0
   },
   {
     "title" : "Učebna 29",
-    "filePath" : "Audio\\Music\\watching stars.wav",
+    "filePath" : "res\\Audio\\Music\\watching stars.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -10.0
   },
   {
     "title" : "Učebna 20",
-    "filePath" : "Audio\\Music\\Bosna.wav",
+    "filePath" : "res\\Audio\\Music\\Bosna.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -4.0
   },
   {
     "title" : "Kancelář",
-    "filePath" : "Audio\\Music\\Kancelář.wav",
+    "filePath" : "res\\Audio\\Music\\Kancelář.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -6.0
   },
   {
     "title" : "Aula",
-    "filePath" : "Audio\\Music\\Aula.wav",
+    "filePath" : "res\\Audio\\Music\\Aula.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -2.0
   },
   {
     "title" : "Sborovna",
-    "filePath" : "Audio\\Music\\Sborovna.wav",
+    "filePath" : "res\\Audio\\Music\\Sborovna.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -7.0
   },
   {
     "title" : "Dílna D2",
-    "filePath" : "Audio\\Music\\Dílna D2.wav",
+    "filePath" : "res\\Audio\\Music\\Dílna D2.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -12.0
   },
   {
     "title" : "Sekretariát",
-    "filePath" : "Audio\\Music\\Sekretariát.wav",
+    "filePath" : "res\\Audio\\Music\\Sekretariát.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
   },
   {
     "title" : "Učebna 17",
-    "filePath" : "Audio\\Music\\Učebna 17.wav",
+    "filePath" : "res\\Audio\\Music\\Učebna 17.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
   },
   {
     "title" : "Učebna 18",
-    "filePath" : "Audio\\Music\\Učebna 18.wav",
+    "filePath" : "res\\Audio\\Music\\Učebna 18.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
   },
   {
     "title" : "Učebna 13",
-    "filePath" : "Audio\\Music\\Učebna 13.wav",
+    "filePath" : "res\\Audio\\Music\\Učebna 13.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
   },
   {
     "title" : "Zástupci ředitele",
-    "filePath" : "Audio\\Music\\Zástupci ředitele.wav",
+    "filePath" : "res\\Audio\\Music\\Zástupci ředitele.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
   },
   {
     "title" : "Ředitelna",
-    "filePath" : "Audio\\Music\\Ředitelna.wav",
+    "filePath" : "res\\Audio\\Music\\Ředitelna.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
   },
   {
     "title" : "Vjezd",
-    "filePath" : "Audio\\Music\\Vjezd.wav",
+    "filePath" : "res\\Audio\\Music\\Vjezd.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
