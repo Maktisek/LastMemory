@@ -36,11 +36,11 @@
     "description": "Učebna sloužící převážně k přehrávání filmů. \nJe vybavena velkou televizí a pohodlným posezením. \nNa zemi je poležený koberec. \nTřída se nachází v podkroví, a tak strop lemují dřevěné trámy. \nPokud tu máme mít hodinu, vím, že to bude pohoda.",
     "enemyNPC": null,
     "friendlyNPC": {
-      "name": "DJ Decibel",
-      "position": "Boskánský DJ",
-      "age": "50 let",
+      "name": "Maktis",
+      "position": "Kamarád",
+      "age": "17 let",
       "type" : "PASIVNÍ",
-      "currentSpeech": "Posaď se, Amy, a poslouchej bosenskou muziku...",
+      "currentSpeech": "Jeee, Amy, ahoj! \nNechceš se tady posadit a poslechnout si mojí písničku Love Consciousness? \nDoufám, že mým mixem neurazím tvůj hudební sluch:)",
       "anotherSpeech": "None",
       "task": null
     },
@@ -285,6 +285,4 @@
     "safe": null,
     "type" : "FADE"
   }
-
-
 ]

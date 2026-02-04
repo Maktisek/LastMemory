@@ -20,7 +20,7 @@ public class Initialization {
     private final ArrayList<Location> tempLocations;
     private Player player;
 
-    public Initialization() throws WrongInitializationException {
+    public Initialization(){
         this.locations = new ArrayList<>();
         this.tempLocations = new ArrayList<>();
         this.mapper = new ObjectMapper();

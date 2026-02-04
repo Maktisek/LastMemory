@@ -64,7 +64,7 @@
   },
   {
     "title" : "Učebna 20",
-    "filePath" : "res\\Audio\\Music\\Bosna.wav",
+    "filePath" : "res\\Audio\\Music\\Učebna 20.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -4.0
