@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 
-public class Location {
+public class Location implements Comparable<Location> {
 
     //Basic information
     private String name;
@@ -138,13 +138,14 @@ public class Location {
      * @return names of all locations
      */
     public String writeAllPossibleLocations() {
+        sortPossibleLocations();
         ArrayList<String> names = new ArrayList<>(20);
         ArrayList<String> hallways = new ArrayList<>(5);
         for (Location location : possibleLocations) {
             if (location.getType() == Type.HALLWAY) {
-                hallways.add(Important.changeText("underline", location.getName()));
+                hallways.add(Important.changeText("underline", location.writeName()));
             } else {
-                names.add(Important.changeText("underline", location.getName()));
+                names.add(Important.changeText("underline", location.writeName()));
             }
         }
         names.sort(Collections.reverseOrder());
@@ -152,6 +153,29 @@ public class Location {
         return String.join(",", hallways);
     }
 
+    private boolean isEmpty(){
+        if(!items.isEmpty()){
+            return false;
+        }
+        if(safe != null && safe.isLocked()){
+            return false;
+        }
+        return true;
+    }
+
+    private String writeName(){
+        if(type == Type.HALLWAY){
+            return Important.changeText("blue", name);
+        }
+        if(!isEmpty() || friendlyNPC.getTask() != null){
+            return Important.changeText("green", name);
+        }
+        return name;
+    }
+
+    private void sortPossibleLocations(){
+        Collections.sort(possibleLocations);
+    }
 
     public String writeFriendlyNPCName() {
         if (friendlyNPC != null) {
@@ -167,6 +191,7 @@ public class Location {
         }
         return Important.changeText("red", "Nepřítomný");
     }
+
 
 
     public boolean isFree() {
@@ -295,5 +320,10 @@ public class Location {
 
     public void setSong(Audio song) {
         this.song = song;
+    }
+
+    @Override
+    public int compareTo(Location o) {
+        return Boolean.compare(this.isEmpty(), o.isEmpty());
     }
 }
