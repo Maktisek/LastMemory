@@ -255,6 +255,12 @@
           "description": "Seznam studentů s daty narození",
           "code": "ESSENTIALS_023",
           "weight": 2.0
+        },
+        {
+          "name": "Pracovní listy",
+          "description": "Typicky Haasovsky vypadající pracovní listy, nechtěla bych se s nimi dělat",
+          "code": "ESSENTIALS_024",
+          "weight": 1.0
         }
       ]
     },

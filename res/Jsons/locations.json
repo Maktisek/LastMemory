@@ -196,10 +196,10 @@
         "weight": 0.20
       },
       {
-        "name": "Banner o C#",
-        "description": "Plakát popisující výhody programovacího jazyka C#",
-        "code": "BANNERS_001",
-        "weight": 3.50
+        "name": "Kód sekretariát",
+        "description": "Papírek obsahující: L16;R28;L24;R4;L8",
+        "code": "PAPERS_005",
+        "weight": 0.20
       },
       {
         "name": "USB s kódem",
@@ -229,16 +229,18 @@
       "position": "Učitel",
       "age": "23 let",
       "type" : "AKTIVNÍ",
-      "currentSpeech": "Jee, dobrý den, Amy... \nEm, víte já už tady dobrých 10 minut hledám svojí ztracenou flešku. \nNeviděla jste ji? \nHodilo by se mi to stihnout, dokud nezačne hodina. \nMožná jestli bych vás mohla poprosit, zda mi nepomůžete?",
+      "currentSpeech": "Jee, dobrý den, Amy... \nEm, víte já už tady dobrých 10 minut hledám svojí ztracenou flešku a pracovní listy. \nNeviděla jste alespoň něco z toho? \nHodilo by se mi to stihnout, dokud nezačne hodina. \nMožná jestli bych vás mohla poprosit, zda mi nepomůžete?",
       "anotherSpeech": "Jo! To je ona! \nMoc vám děkuji, opravdu. \nJinak, Amy, co je to, že jste tak veselá, a dokonce vám to nadprůměrně sluší! \nJste celá rozzářená. Ale pamatujte, pozornost. \nDávejte na sebe pozor.",
       "task": {
         "name": "Ztracená fleška",
         "description": "Paní učitelka Haasová zmateně bloudí třídami a snaží se najít svojí miniaturní flešku. \nPrý nemá tušení, kde by se mohla nacházet. \nZkusím ji najít.",
         "namesOfNeededObjects": [
-          "USB paní Haasové"
+          "USB paní Haasové",
+          "Pracovní listy"
         ],
         "codesOfNeededObjects": [
-          "ESSENTIALS_006"
+          "ESSENTIALS_006",
+          "ESSENTIALS_024"
         ],
         "memoryPrice": {
           "name": "Já jsem šťastná",
@@ -452,10 +454,10 @@
         "weight": 1.0
       },
       {
-        "name": "Kód sekretariát",
-        "description": "Papírek obsahující: L16;R28;L24;R4;L8",
-        "code": "PAPERS_005",
-        "weight": 0.20
+        "name": "Banner o C#",
+        "description": "Plakát popisující výhody programovacího jazyka C#",
+        "code": "BANNERS_001",
+        "weight": 3.50
       }
     ],
     "safe": {
