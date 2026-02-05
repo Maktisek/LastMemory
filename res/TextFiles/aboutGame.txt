@@ -1,2 +1,114 @@
-##Prolog:
+==========================================================================================================================================================================================================================================
 
+
+============================================= ÚVOD ===================================================
+Pokud čteš tento text v herní konzoli, pak si hru dohrál/a! A já ti moc děkuji.
+Pokud chceš můžeš si přečíst, jak probíhal vývoj hry, a také si můžeš pustit veškeré OST ze hry.
+=================================================== INSPIRACE ===================================================
+Každý kdo hrál Life is Strange hned poznal odkud jsem čerpal atmosféru...
+Inspiroval jsem se spíš jenom v oblasti celkového feelu než v oblasti příběhů.
+Zbytek hry bych nazval jako takový "mišmaš" mojí představivosti, která zničeho nic chtěla vymyslet emotivní příběh
+s prvky ztracené romantiky a zodpovědnosti nad svými vlastními činy.
+
+A myslím, že příběh je skvělý, protože si na nic nehraje. Prostě se něco stalo a teď se to děje.
+Takhle funguje život, ne?
+=================================================== PROCES VÝROBY ===================================================
+- PRVOTNÍ NÁPADY:
+Mým cílem bylo udělat hru, co nejjednoduší na naprogramování. Chtěl jsem, aby každá část kódu byla stejně složitá.
+Nebyl jsem si totiž jistý, jak bude proces výroby probíhat.
+
+Když jsem hru začal vymýšlet, vůbec jsem nevěděl, co to vlastně bude.
+Úplně první nápad zněl:
+"Chůze, světy, dimense. Každá dimense má svého bose, kterého hráč musí porazit."
+To je naprosto něco jiného než se ve skutečnosti stalo. A upřímně, jsem rád...
+Strávil jsem vymýšlením nápadů pár hodin, než jsem přišel na Last Memory.
+
+- ABSTRAKTNÍ POTÍTKO
+Hlavou mi vrtalo mnoho nápadů, jak tohoto docílit, a tak jsem si sedl k počítači a začal psát.
+Detailně jsem si rozepsal každou třídu, vymyslel jsem ty nejdůležitější metody a doslova odchytl bugy ještěn než existovali.
+Touhle tvorbou jsem strávil zhruba 20 hodin čistého času. A i když mi ostatní říkali, že je to zbytečné,
+já jsem za to byl po celý proces programovaní rád. Hrozně mi to pomohlo a dalo mi to prostor domyslet další věci, jako je audio system.
+
+- GAME DESIGN
+Když jsem dostali za úkol napsat game design, byl jsem trochu zklamaný, že nemohu použít to, co jsem si tak pracně napsal.
+Paní Meitnerová řekla jasně, nic o kódu, ale pouze lore a mechaniky.
+Toho jsem se ale mohl chytit, když už vlastně je celá hra vymyšlená, můžu si ty mechaniky nastavit realisticky.
+Nemusel jsem se bát, že bych to třeba nebyl schopný naprogramovat, já už věděl, jak to bude.
+
+Začal jsem tedy psát. Tedy přímo v pátek 20.12.2025. Chtěl jsem to celé napsat do Vánoc.
+Denně jsem psal zhruba 5 - 7 hodin a už jsem toho měl plné zuby.
+Text se kupil, ale vůbec jsem nebyl spokojený...
+Měl jsem pocit, že ten příběh je naprostý odpad a bylo mi trapně, když jsem vymýšlel dialogy učitelů,
+kteří tyto slova snad ani nikdy neřekli.
+I tak jsem to nějak zvládl napsat a odevzdat ještě den před Vánoci.
+
+Ve škole jsem se dozvěděl, že jsem to napsal moc dlouhé a že to tak vůbec nemuselo být.
+A jasný, možná jsem mírně zaneprázdnil čtením paní učitelku, ale mě se to zase neskutečně hodilo.
+Už jsem nemusel vymýšlet nic, všechno existovalo - Lokace, NPC, předměty a i celá základní logika kódu.
+
+- PROCES PSANÍ ZÁKLADŮ HRY
+Tahle část pro mě bylo už vlastně hotová.
+Jediné, co jsem musel udělat bylo vložit metody do tříd a ty podle již vymyšlených postupů
+naprogramovat, tak aby fungovaly.
+Spoustu jsem se tím ale naučil, protože jsem měl tu šanci vylepšovat již existující logiku.
+Například jsem skvěle integroval design pattern strategy na herní módy.
+
+- INTERPRETACE AUDIA
+Tahle část byla pro mě vlastně tou nejsložitější, protože poté, co jsem do hry přidal
+velké množství hudby, která spouští smutné emoce, jsem začal strácet morálku během práce.
+Došlo to tak daleko, že jsem jednou během práce prostě začal "slzet", teda spíš prostě brečet.
+Byla to moje nejzajímavější programovací experience a podle mě ji nezažil každý, fakt ne...
+
+- FINÁLNÍ LADĚNÍ
+Když jsem měl všechnu logiku a základy hotové, přesunul jsem se na finální ladění.
+Snažil jsem se hlavně mířít na přehlednout textového UI a taky na příjemnost audio.
+Dokonce je ve hře jeden zvuk, který jsem si celý udělal sám:)
+
+- ZÁVĚR PROCESU VÝROBY
+Celá hra sama o sobě mi trvala vyvinout něco kolem 100 hodin.
+To bych řekl, že není úplně nejméně.
+A když se nad tím zamyslím, tak si říkám, jestli ten output, co jsem tady
+podal, odpovídá 100 hodinám práce.
+
+Někdo by mohl říct, že ne, ale musím brát v úvahu, že
+1. Progamuju teprve šestnáctým měsícem
+2. Vše co umím mě dokázal naučit jen jeden člověk - paní Meitnerová
+3. Neměl jsem na to 100% času - škola a jiné předměty
+
+Když to dáme dohromady, není to ani zas tak špatný výsledek.
+=================================================== POUŽITÉ SOUNDTRACKY ===================================================
+Musím říct, že vybírat hudbu byla nejzábavnější část.
+Miluji hudbu a jsem schopný poslouchat cokoli, ale práce na tomto projektu mi odemkla spoustu
+nových skladeb, které mě až překvapily.
+
+- VÝČET SKLADEB
+Lokace: Aula, Název skladby: Key, Umělec: C418, Odkaz: https://www.youtube.com/watch?v=-CKR-McWeYk&list=RD-CKR-McWeYk&start_radio=1
+Situace: Cutscene, Název skladby: Pause Menu (LiS), Umělec: Jonathan Morali, Odkaz: https://www.youtube.com/watch?v=Jws77MERHMw&list=RDJws77MERHMw&start_radio=1
+Lokace: Dílna D2, Název skladby: Broke My Mind, Umělec: Scapecore, Odkaz: https://www.youtube.com/watch?v=YB0bvsOT1kg&list=RDYB0bvsOT1kg&start_radio=1
+Situace: Intro hry, Název skladby: To All of You, Umělec: Syd Matters, Odkaz: https://www.youtube.com/watch?v=AoHFCLxTkE4&list=RDAoHFCLxTkE4&start_radio=1
+Lokace: Kancelář, Název skladby: Catchy Elevator Music?, Umělec: Neznámý, Odkaz: https://www.youtube.com/watch?v=anMcRZcxwAU
+Lokace: Kumbál, Název skladby: Cheeki Breeki, Umělec: Apartje, Odkaz: https://www.youtube.com/watch?v=UIoefetP7wQ&list=RDUIoefetP7wQ&start_radio=1
+Situace: Vzpomenout, Název skladby: Pause Menu 2 (LiS), Umělec: Jonathan Morali, Odkaz: https://www.youtube.com/watch?v=QJL-F7F0H3g&list=PLp3-KQ922REKYwUQcFwMU1Y6z3d_i7g8g&index=10
+Lokace: Kabinet K12, Název skladby: Obstacles, Umělec: Syd Matters, Odkaz: https://www.youtube.com/watch?v=jb1SkDjaXk8&list=RDjb1SkDjaXk8&start_radio=1
+Situace: Outro Hry, Název skladby: Wide View, Uměleci: Marco Beltrami, Buck Sanders, Odkaz: https://www.youtube.com/watch?v=qiIq25sexm8&list=RDqiIq25sexm8&start_radio=1
+Lokace: Učebna 19, Název skladby: Prokletí, Umělec: Propadleek, Odkaz: https://www.youtube.com/watch?v=klLLQ0D-wCI&list=RDklLLQ0D-wCI&start_radio=1
+Situace: Čas na zkoušeníčko:), Název skladby: Desert city, Umělec: Kevin MacLeod, Odkaz: https://www.youtube.com/watch?v=DuH0pN7Ws20&list=RDDuH0pN7Ws20&start_radio=1
+Lokace: Ředitelna, Název skladby: Henry Ford the Second, Uměleci: Marco Beltrami, Buck Sanders, Odkaz: https://www.youtube.com/watch?v=sDRH29m5EDQ&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=4
+Lokace: Sborovna, Název skladby: Thirty Minutes, Uměleci: Marco Beltrami, Buck Sanders, Odkaz: https://www.youtube.com/watch?v=xW8GWLR_yek&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=11
+Lokace: Sekretariát, Název skladby: this feeling, Umělec: øneheart, Odkaz: https://www.youtube.com/watch?v=J4RxO3lRsi0&list=RDJ4RxO3lRsi0&start_radio=1
+Lokace: Toalety, Název skladby: Dark Souls III, Umělec: Yuka Kitamura, Odkaz: https://www.youtube.com/watch?v=ch6I15iBliE&list=PLlHY6e7WCV6M7UV1EBjAFA349aTyutIU4
+Lokace: Třetí patro, Název skladby: Golden Hour, Umělec: Jonathan Morali, Odkaz: https://www.youtube.com/watch?v=7Ep_5rMWMKY&list=RD7Ep_5rMWMKY&start_radio=1
+Lokace: Učebna 8a, Název skladby: VIVID DREAM, Umělec: Mxktis, Odkaz: https://www.youtube.com/watch?v=iMnk3vkb-ow
+Lokace: Učebna 13, Název skladby: City Talks, Umělec: Syd Matters, Odkaz: https://www.youtube.com/watch?v=kMphQmj0iHA&list=RDkMphQmj0iHA&start_radio=1
+Lokace: Učebna 15, Název skladby: Cloud Country, Umělec: ConcernedApe, Odkaz: https://www.youtube.com/watch?v=Tk6tA6OVqvk&list=RDTk6tA6OVqvk&start_radio=1
+Lokace: Učebna 17, Název skladby: I Care, Umělec: Syd Matters, Odkaz: https://www.youtube.com/watch?v=GydqGpcudL4&list=RDGydqGpcudL4&start_radio=1
+Lokace: Učebna 18, Název skladby: Inside Out, Umělec: Duster, Odkaz: https://www.youtube.com/watch?v=8ElVb8YQbmI&list=RD8ElVb8YQbmI&start_radio=1
+Lokace: Učebna 20, Název skladby: Love Consciousness, Umělec: Mxktis, Odkaz: https://www.youtube.com/watch?v=XDuUp-XdgCc
+Lokace: Vjezd, Název skladby: Through the Window, Umělec: Jonathan Morali, Odkaz: https://www.youtube.com/watch?v=QAsVx_jgJDo&list=RDQAsVx_jgJDo&start_radio=1
+Lokace: Učebna 29, Název skladby: watching stars, Umělec: øneheart, Odkaz: https://www.youtube.com/watch?v=C42iSY6Y9g0&list=RDC42iSY6Y9g0&start_radio=1
+Lokace: Zástupci ředitele, Název skladby: Crescent Wrench, Uměleci: Marco Beltrami, Buck Sanders, Odkaz: https://www.youtube.com/watch?v=9p2bSDPPhHI&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=19
+
+Moc děkuji paním učitelkám za pomoc s výběrem některých skladeb:)
+
+
+====================================================================================================================================================================================================================================
