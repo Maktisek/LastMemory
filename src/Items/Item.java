@@ -1,5 +1,7 @@
 package Items;
 
+import java.util.Objects;
+
 public class Item {
 
 
@@ -10,6 +12,13 @@ public class Item {
 
 
     public Item() {
+    }
+
+    public Item(String name, double weight, String code, String description) {
+        this.name = name;
+        this.weight = weight;
+        this.code = code;
+        this.description = description;
     }
 
     @Override
@@ -53,5 +62,18 @@ public class Item {
     public void setDescription(String description) {
         this.description = description;
     }
-    //Zatím žádné metody nepotřebujeme. Item slouží pouze jako datový kontejner (POJO)
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Item item = (Item) o;
+        return Objects.equals(code, item.code);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(code);
+    }
 }

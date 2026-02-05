@@ -12,8 +12,8 @@ public class Safe {
     private int startPointer;
     private int currentPointer;
 
-    public Safe(String code, int startPointer) {
-        this.items = new ArrayList<>();
+    public Safe(String code, int startPointer, ArrayList<Item> items) {
+        this.items = items;
         this.code = code;
         this.startPointer = startPointer;
         this.currentPointer = startPointer;
