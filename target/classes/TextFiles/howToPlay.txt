@@ -7,32 +7,32 @@ protože ze začátku se hra může zdát být složitá.
 !POZOR: Veškeré herní příkazy nejsou tajemstvím, hra je vypíše, pokud hráč zadá příkaz „pomoc“.
 
 * HERNÍ CYKLUS
-Herní cyklus hry je velmi jednoduchý jak na pochopení, tak na provedení.
-Skládá se totiž z malých částí, které dohromady tvoří celý proces hry.
-Tyto jednotlivé části hráč splňuje jednu po druhé.
-To ale neznamená, že je jimi svázán, protože se může po mapě pohybovat libovolně, sbírat předměty libovolně a hru prozkoumávat.
+  Herní cyklus hry je velmi jednoduchý jak na pochopení, tak na provedení.
+  Skládá se totiž z malých částí, které dohromady tvoří celý proces hry.
+  Tyto jednotlivé části hráč splňuje jednu po druhé.
+  To ale neznamená, že je jimi svázán, protože se může po mapě pohybovat libovolně, sbírat předměty libovolně a hru prozkoumávat.
 
 Tento herní cyklus pak vypadá takto:
-Úkolem hráče je plnit úkoly jednotlivých učitelů.
-Každý učitel požaduje přinést předem určené předměty.
+Úkolem hráče je plnit úkoly jednotlivých NPC.
+Každé NPC požaduje přinést předem určené předměty.
 Tyto předměty se „válí“ napříč celou herní mapou.
-Hráč předměty sesbírá, odevzdá učiteli a tím si odemkne novou lokaci.
+Hráč předměty sesbírá, odevzdá NPC a tím si odemkne novou lokaci.
 V té zase přijme úkol a herní cyklus se takto opakuje,
 dokud hráč nedojde na konec a nesplní poslední úkol.
 
 * MÓDY
-Hra má celkově tři módy – LOKACE, INVENTÁŘ, ZKOUŠENÍ.
-Hráč si může přepnout mód libovolně, nebo mu ho může přepnout sama hra.
-Pokud hráč chce přepnout mód, využije příkaz „mod“.
-Každý mód se pak chová jinak, nelze v něm dělat některé věci a hra zobrazuje jiné informace.
-K módu ZKOUŠENÍ se nelze dostat skrze příkaz „mod“, ale hra hráče do něj přesměruje právě ve chvíli, kdy
-vejde do lokace, kde se nachází „protivník“.
+  Hra má celkově tři módy – LOKACE, INVENTÁŘ, ZKOUŠENÍ.
+  Hráč si může přepnout mód libovolně, nebo mu ho může přepnout sama hra.
+  Pokud hráč chce přepnout mód, využije příkaz „mod“.
+  Každý mód se pak chová jinak, nelze v něm dělat některé věci a hra zobrazuje jiné informace.
+  K módu ZKOUŠENÍ se nelze dostat skrze příkaz „mod“, ale hra hráče do něj přesměruje právě ve chvíli, kdy
+  vejde do lokace, kde se nachází „protivník“.
 
 Níže budou všechny módy rozepsány dopodrobna:
 
 * MÓD LOKACE
-Pokud je aktuální mód hráče LOKACE, hra zobrazuje informace o aktuální lokaci.
-Hráč pak může vidět:
+  Pokud je aktuální mód hráče LOKACE, hra zobrazuje informace o aktuální lokaci.
+  Hráč pak může vidět:
 
 1. Kdo se v aktuální lokaci nachází
 2. Jaké předměty se v lokaci nachází
@@ -56,8 +56,8 @@ V módu LOKACE může hráč podniknout:
 Tento mód je klíčový ke klasické orientaci hrou.
 
 * MÓD INVENTÁŘ
-Pokud je aktuální mód hráče INVENTÁŘ, hra zobrazuje stav inventáře hráče.
-Hráč pak může vidět:
+  Pokud je aktuální mód hráče INVENTÁŘ, hra zobrazuje stav inventáře hráče.
+  Hráč pak může vidět:
 
 1. Kolik má volného místa v inventáři
 2. Jaké předměty nyní u sebe nosí
@@ -72,23 +72,23 @@ V módu INVENTÁŘ může hráč podniknout:
 3. Prohlédnout si již hotový úkol – vypíše popis vybraného splněného úkolu
 
 * MÓD ZKOUŠENÍ
-Tento mód si hráč nevybere sám, ale pokud vstoupí do lokace, v níž se nachází „protivník“ v podobě učitele, hra mu ho přiřadí sama.
-V tomto módu pak hráč vidí pouze upozornění a otázku.
-Může si vybrat mezi:
+  Tento mód si hráč nevybere sám, ale pokud vstoupí do lokace, v níž se nachází „protivník“ v podobě učitele, hra mu ho přiřadí sama.
+  V tomto módu pak hráč vidí pouze upozornění a otázku.
+  Může si vybrat mezi:
 
 1. Utéct – vrátí se zpět do předešlé navštívené lokace
 2. Odpovědět – pokud je odpověď správná, lokace se otevře
 
 * MÓDY (ZÁVĚR)
-V každém herním módu se děje něco jiného a hráč může podnikat jiné akce.
-Pokud si neví rady, může zadat již zmíněný příkaz „pomoc“, který vypíše, jaké všechny
-příkazy lze v daném módu provést.
-Ačkoli lze hru dohrát bez nahlédnutí do inventáře, doporučuji si pouštět všechny sesbírané vzpomínky.
+  V každém herním módu se děje něco jiného a hráč může podnikat jiné akce.
+  Pokud si neví rady, může zadat již zmíněný příkaz „pomoc“, který vypíše, jaké všechny
+  příkazy lze v daném módu provést.
+  Ačkoli lze hru dohrát bez nahlédnutí do inventáře, doporučuji si pouštět všechny sesbírané vzpomínky.
 
 * INTERAKCE S NPC
-Nejklíčovější herní mechaniky jsou právě ty, které řeší interakce s NPC.
-NPC se totiž ve hře nenachází jen tak, ale slouží jako „distributoři“ herního obsahu a
-doprovází hráče skrze příběh.
+  Nejklíčovější herní mechaniky jsou právě ty, které řeší interakce s NPC.
+  NPC se totiž ve hře nenachází jen tak, ale slouží jako „distributoři“ herního obsahu a
+  doprovází hráče skrze příběh.
 
 Ve hře se nachází dva typy postav:
 
@@ -98,26 +98,26 @@ Ve hře se nachází dva typy postav:
 Hráče by měly ze všeho nejvíce zajímat postavy aktivní.
 
 * INTERAKCE S NPC (Dialog)
-Byť se tato kapitola nazývá dialog, hráč nikdy nevede s NPC přímo takový dialog, jaký bychom si představovali.
-Jedná se spíše o monolog, který pronáší postava směrem k hráči.
-Hráč tento dialog spustí jednoduchým příkazem „mluv“.
+  Byť se tato kapitola nazývá dialog, hráč nikdy nevede s NPC přímo takový dialog, jaký bychom si představovali.
+  Jedná se spíše o monolog, který pronáší postava směrem k hráči.
+  Hráč tento dialog spustí jednoduchým příkazem „mluv“.
 
 Mezitímco pasivní postavy mají jen jeden monolog, aktivní postavy mají monology dva.
 Aby hráč mezi těmito dvěma monology přepnul, musí splnit úkol.
 
 * INTERAKCE S NPC (Přijímání úkolů)
-Pokud chce hráč postupovat kupředu hrou, musí přijímat úkoly kantorů.
-Jednoduchý příkaz „přijmout úkol“ přijme úkol.
-Hráč ale může plnit pouze jeden úkol naráz, takže pokud již má úkol přijatý, nemůže přijmout další.
+  Pokud chce hráč postupovat kupředu hrou, musí přijímat úkoly od NPC.
+  Jednoduchý příkaz „přijmout úkol“ přijme úkol.
+  Hráč ale může plnit pouze jeden úkol naráz, takže pokud již má úkol přijatý, nemůže přijmout další.
 
 Pokud má hráč problémy se zapamatováním potřebných předmětů, může využít příkazu „zobrazit úkol“.
 
 * INTERAKCE S NPC (Odevzdávání úkolů)
-Když už hráč přijme úkol, musí ho splnit.
-Každý úkol (jak již bylo řečeno) spočívá v sesbírání zadaných předmětů.
-Hráč však nutně u sebe nemusí mít všechny předměty, aby je mohl odevzdat.
-Stačí tedy u sebe mít přinejmenším jeden předmět úkolu a zadat příkaz „odevzdat úkol“.
-Po zadání tohoto příkazu se předmět odevzdá, uvolní se místo v inventáři a hráč může pokračovat v plnění úkolu.
+  Když už hráč přijme úkol, musí ho splnit.
+  Každý úkol (jak již bylo řečeno) spočívá v sesbírání zadaných předmětů.
+  Hráč však nutně u sebe nemusí mít všechny předměty, aby je mohl odevzdat.
+  Stačí tedy u sebe mít přinejmenším jeden předmět úkolu a zadat příkaz „odevzdat úkol“.
+  Po zadání tohoto příkazu se předmět odevzdá, uvolní se místo v inventáři a hráč může pokračovat v plnění úkolu.
 
 Po splnění úkolu hráč obdrží vzpomínku.
 Tu si může v módu INVENTÁŘ přečíst.
@@ -127,36 +127,36 @@ Hráč nikdy neví, jakou lokaci dostal, a proto se musí vydat na cestu napří
 Pokud hráč vstoupí do lokace, na kterou nová lokace navazuje, hra dá hráči vědět o obdržení nové lokace.
 
 * INTERAKCE S NPC (Informace)
-Hráč si může přečíst bonusové informace ohledně NPC.
-Tohoto lze docílit pomocí příkazu „info postava“.
+  Hráč si může přečíst bonusové informace ohledně NPC.
+  Tohoto lze docílit pomocí příkazu „info postava“.
 
 * INTERAKCE S NPC (Závěr)
-NPC tvoří tu nejdůležitější část celého herního cyklu.
-A i když je možné vydat se cestou, na níž byste pouze plnili úkoly,
-doporučuji si vždy nezapomenout s NPC promluvit a přečíst si vzpomínku.
+  NPC tvoří tu nejdůležitější část celého herního cyklu.
+  A i když je možné vydat se cestou, na níž byste pouze plnili úkoly,
+  doporučuji si vždy nezapomenout s NPC promluvit a přečíst si vzpomínku.
 
 * CUTSCENE
-Tato část hry je velmi jednoduchá.
-Po splnění určitého počtu vzpomínek se může přehrát cutscéna.
-Při této cutscéně hráč nemusí dělat vůbec nic.
-Stačí si ji přečíst a pak napsat cokoli pro pokračování.
+  Tato část hry je velmi jednoduchá.
+  Po splnění určitého počtu vzpomínek se může přehrát cutscéna.
+  Při této cutscéně hráč nemusí dělat vůbec nic.
+  Stačí si ji přečíst a pak napsat cokoli pro pokračování.
 
 * TIPY A TRIKY
-Jakožto vývojář této hry jsem strávil poměrně dost času vychytáváním herních chyb.
-A sám jsem na této hře nahrál zhruba tak 8 hodin.
-Za tento čas jsem pochopil řadu věcí a rád bych se o ně podělil.
+  Jakožto vývojář této hry jsem strávil poměrně dost času vychytáváním herních chyb.
+  A sám jsem na této hře nahrál zhruba tak 8 hodin.
+  Za tento čas jsem pochopil řadu věcí a rád bych se o ně podělil.
 
 1. Nebuď zbrklý:
-Vzhledem k tomu, že hra konstantně načítá vaše vstupy, není úplně optimální rychle vepisovat instrukce.
-Hru to sice nerozbije, ale můžete omylem přeskočit nějaké důležité hlášení či dokonce samotnou cutscénu.
+   Vzhledem k tomu, že hra konstantně načítá vaše vstupy, není úplně optimální rychle vepisovat instrukce.
+   Hru to sice nerozbije, ale můžete omylem přeskočit nějaké důležité hlášení či dokonce samotnou cutscénu.
 
 2. Work smarter, not harder:
-Samozřejmě toto je dost subjektivní, ale já sám doporučuji využít strategii „hromadění předmětů“.
-Tato strategie spočívá v tom, že si hráč vždy nanosí předměty ze všech lokací na chodbu.
-Přijme úkol a pak si je jen v té chodbě sesbírá.
-A jo, tohle může odebrat prožitek z „prozkoumávání“, a proto to nechávám čistě na hráči, jak se rozhodne.
+   Samozřejmě toto je dost subjektivní, ale já sám doporučuji využít strategii „hromadění předmětů“.
+   Tato strategie spočívá v tom, že si hráč vždy nanosí předměty ze všech lokací na chodbu.
+   Přijme úkol a pak si je jen v té chodbě sesbírá.
+   A jo, tohle může odebrat prožitek z „prozkoumávání“, a proto to nechávám čistě na hráči, jak se rozhodne.
 
 3. Čti všechno:
-Hra je textová, a tak disponuje textem. Ten tady není pro srandu králíkům, a tak by bylo fajn si ho číst celý.
-Tzn. vzpomínky, cutscény, popisy lokací, popisy předmětů, popisy úkolů, popisy postav atd.
-Bez toho by to byla přece nuda…
+   Hra je textová, a tak disponuje textem. Ten tady není pro srandu králíkům, a tak by bylo fajn si ho číst celý.
+   Tzn. vzpomínky, cutscény, popisy lokací, popisy předmětů, popisy úkolů, popisy postav atd.
+   Bez toho by to byla přece nuda…

@@ -124,8 +124,8 @@ public class Console {
     public void executeIntro() {
         boolean exitIntro = false;
         Important.playMusic("intro music");
-        System.out.println(player);
         while (!exitIntro) {
+            System.out.println(player);
             System.out.println("\nNapiš příkaz");
             System.out.print(">> ");
             String command = Important.loadText();
