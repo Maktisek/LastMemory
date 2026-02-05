@@ -1,14 +1,14 @@
 ==========================================================================================================================================================================================================================================
 
-============================================= ÚVOD ===================================================
+===================================================== ÚVOD =====================================================
 Pokud čteš tento text v herní konzoli, pak sis hru dohrál/a! A já ti moc děkuji.
 Pokud chceš, můžeš si přečíst, jak probíhal vývoj hry, a také si můžeš pustit veškeré OST ze hry.
 
 =================================================== INSPIRACE ===================================================
 Každý, kdo hrál Life is Strange, hned pozná, odkud jsem čerpal atmosféru…
 Inspiroval jsem se spíš jen v oblasti celkového feelu než v oblasti příběhů.
-Zbytek hry bych nazval jako takový „mišmaš“ mojí představivosti, která z ničeho nic chtěla vymyslet emotivní příběh
-s prvky ztracené romantiky a zodpovědnosti nad svými vlastními činy.
+Zbytek hry bych nazval jako takový „mišmaš“ mojí představivosti, která z ničeho nic
+chtěla vymyslet emotivní příběh s prvky ztracené romantiky a zodpovědnosti nad svými vlastními činy.
 
 A myslím, že příběh je skvělý, protože si na nic nehraje. Prostě se něco stalo a teď se to děje.
 Takhle funguje život, ne?
@@ -26,7 +26,7 @@ To je naprosto něco jiného, než se ve skutečnosti stalo. A upřímně, jsem 
 Strávil jsem vymýšlením nápadů pár hodin, než jsem přišel na Last Memory.
 
 * ABSTRAKTNÍ POTÍTKO
-  Hlavou mi vrtalo mnoho nápadů, jak toho docílit, a tak jsem si sedl k počítači a začal psát.
+  Hlavou mi vrtalo mnoho nápadů, jak to celé naprogramovat, a tak jsem si sedl k počítači a začal psát.
   Detailně jsem si rozepsal každou třídu, vymyslel jsem ty nejdůležitější metody a doslova jsem odchytil bugy ještě dřív, než existovaly.
   Touto tvorbou jsem strávil zhruba 20 hodin čistého času. A i když mi ostatní říkali, že je to zbytečné,
   já jsem za to byl po celý proces programování rád. Hrozně mi to pomohlo a dalo mi to prostor domyslet další věci, jako je audio systém.
@@ -34,7 +34,7 @@ Strávil jsem vymýšlením nápadů pár hodin, než jsem přišel na Last Memo
 * GAME DESIGN
   Když jsme dostali za úkol napsat game design, byl jsem trochu zklamaný, že nemohu použít to, co jsem si tak pracně napsal.
   Paní Meitnerová řekla jasně: nic o kódu, ale pouze lore a mechaniky.
-  Toho jsem se ale mohl chytit – když už vlastně byla celá hra vymyšlená, mohl jsem si ty mechaniky nastavit realisticky.
+  Toho jsem se ale mohl chytit, když už vlastně byla celá hra vymyšlená, mohl jsem si ty mechaniky nastavit realisticky.
   Nemusel jsem se bát, že bych to třeba nebyl schopný naprogramovat, já už věděl, jak to bude.
 
 Začal jsem tedy psát. A to přímo v pátek 20. 12. 2025. Chtěl jsem to celé napsat do Vánoc.
@@ -49,7 +49,7 @@ A jasně, možná jsem mírně zaneprázdnil čtením paní učitelku, ale mně 
 Už jsem nemusel vymýšlet nic – všechno existovalo: lokace, NPC, předměty i celá základní logika kódu.
 
 * PROCES PSANÍ ZÁKLADŮ HRY
-  Tahle část pro mě byla už vlastně hotová.
+  Tahle část pro mě byla už vlastně hotová, když začala.
   Jediné, co jsem musel udělat, bylo vložit metody do tříd a ty podle již vymyšlených postupů
   naprogramovat tak, aby fungovaly.
   Spoustu jsem se tím ale naučil, protože jsem měl tu šanci vylepšovat již existující logiku.
@@ -58,7 +58,7 @@ Už jsem nemusel vymýšlet nic – všechno existovalo: lokace, NPC, předměty
 * INTERPRETACE AUDIA
   Tahle část byla pro mě vlastně tou nejsložitější, protože poté, co jsem do hry přidal
   velké množství hudby, která spouští smutné emoce, jsem začal ztrácet morálku během práce.
-  Došlo to tak daleko, že jsem jednou během práce prostě začal „slzet“ – teda spíš prostě brečet.
+  Došlo to tak daleko, že jsem jednou během práce prostě začal „slzet“, teda spíš prostě brečet.
   Byla to moje nejzajímavější programátorská experience a podle mě ji nezažil každý. Fakt ne…
 
 * FINÁLNÍ LADĚNÍ
@@ -75,8 +75,8 @@ Už jsem nemusel vymýšlet nic – všechno existovalo: lokace, NPC, předměty
 Někdo by mohl říct, že ne, ale musím brát v úvahu, že:
 
 1. Programuju teprve šestnáctým měsícem
-2. Vše, co umím, mě dokázal naučit jen jeden člověk – paní Meitnerová
-3. Neměl jsem na to 100 % času – škola a jiné předměty
+2. Vše, co umím, mě dokázal naučit jen jeden člověk – paní učitelka Meitnerová
+3. Neměl jsem na to 100 % času – škola a jiné aktivity
 
 Když to dáme dohromady, není to ani zas tak špatný výsledek.
 
@@ -85,7 +85,7 @@ Musím říct, že vybírat hudbu byla ta nejzábavnější část.
 Miluji hudbu a jsem schopný poslouchat cokoli, ale práce na tomto projektu mi odemkla spoustu
 nových skladeb, které mě až překvapily.
 
-* VÝČET SKLADEB
+* VÝČET SKLADEB:
 Lokace: Aula, Název skladby: Key, Umělec: C418, Odkaz: [https://www.youtube.com/watch?v=-CKR-McWeYk&list=RD-CKR-McWeYk&start_radio=1](https://www.youtube.com/watch?v=-CKR-McWeYk&list=RD-CKR-McWeYk&start_radio=1)
 Situace: Cutscene, Název skladby: Pause Menu (LiS), Umělec: Jonathan Morali, Odkaz: [https://www.youtube.com/watch?v=Jws77MERHMw&list=RDJws77MERHMw&start_radio=1](https://www.youtube.com/watch?v=Jws77MERHMw&list=RDJws77MERHMw&start_radio=1)
 Lokace: Dílna D2, Název skladby: Broke My Mind, Umělec: Scapecore, Odkaz: [https://www.youtube.com/watch?v=YB0bvsOT1kg&list=RDYB0bvsOT1kg&start_radio=1](https://www.youtube.com/watch?v=YB0bvsOT1kg&list=RDYB0bvsOT1kg&start_radio=1)
