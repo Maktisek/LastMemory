@@ -4,6 +4,7 @@ Co dělat, když se NPC tázá na otázku:
 
 Ostatní volně použitelné příkazy:
 "pomoc" = vypíše návod jak ovládat konzoli
+"jak hrát" = vypíše návod jak hrát hru
 "mod" -> "název módu" = přepne mód hry (inventář/lokace)
 "zobrazit úkol" = vypíše blížší informace ohledně nynějšího úkolu
 "opustit" = vypne hru

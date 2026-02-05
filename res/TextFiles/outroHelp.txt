@@ -1,3 +1,4 @@
 Návod na ovládání the end menu:
 "pomoc" = vypíše návod jak ovládat konzoli
+"jak hrát" = vypíše návod jak hrát hru
 "opustit" = vypne hru
