@@ -2,16 +2,28 @@ package AroundPlayer;
 
 import Game.Important;
 import Locations.Location;
-import Modes.BackpackMode;
 
+/**
+ * This class represents a memory, which works like a story giver.
+ * The player can read the description in order to understand the story.
+ * <p>
+ * {@link #opened} is false until the player decides to read the description. <p>
+ * {@link #code} stands for a code, which has to match with any of the locations in the game. <p>
+ * {@link #locationGift} represents the location which can be obtained through the memory.
+ * <p>
+ * The class implements Comparable in order to sort the memories via {@link #opened}
+ *  @author Matěj Popíšil
+ */
 public class Memory implements Comparable<Memory>{
-
 
     private String name;
     private String description;
-    private boolean opened;
-    private Location locationGift;
     private String code;
+
+    private boolean opened;
+
+    private Location locationGift;
+
 
 
     public Memory() {
