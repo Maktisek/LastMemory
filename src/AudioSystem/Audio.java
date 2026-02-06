@@ -4,10 +4,16 @@ import javax.sound.sampled.*;
 import java.io.File;
 
 /**
- * The concept of this whole class was taken from Matěj Chaloupka. But I made tons of changes during the time.
- * Used ChatGPT to help me understand whole Clip interface.
+ * This class stands for playing individual wav audio files. Those files have to be implemented into res\\Audio.
+ * It uses Clip interface, which is responsible for the whole audio system logic.
  * <p>
- * This class stands for playing individual .wav audio files. Those files have to be implemented into audios file.
+ * {@link #filePath} stands for path, from where the .wav file can be loaded. <p>
+ * {@link #initialVolume} stands for the volume of the whole audio clip. <p>
+ * {@link #paused} is true if the audio is currently paused and false if not. <p>
+ * <p>
+ * The concept of this whole class was taken from Matěj Chaloupka. But I made tons of changes during the time.
+ * Used ChatGPT to help me understand whole the Clip interface.
+ * @author Matěj Pospíšil, Matěj Chaloupka, ChatGPT
  */
 public class Audio {
 
@@ -25,12 +31,12 @@ public class Audio {
 
     /**
      * This method implements and audio. It creates a clip and loads it with .wav file from {@link #filePath}.
-     * <p>
      * Then it uses {@link #loop(boolean)} to start looping the audio.
      * <p>
      * This system was originally taken from Matěj Chaloupka, but implemented in a different way.
      *
-     * @param music true if the audio file is music. When true, then the audio will fade in via {@link #fadeIn(long)} method
+     * @param music True if the audio file is music. When true, then the audio will fade in via {@link #fadeIn(long)} method
+     * @param startPosition Represents the position from where will the audio start.
      */
     private void implementAudio(boolean music, long startPosition) {
         try {
@@ -54,20 +60,6 @@ public class Audio {
     }
 
     /**
-     * Created just for playing background music.
-     * <p>
-     * Uses {@link #implementAudio(boolean, long)} method to play music.
-     * <p>
-     * It will only proceed further if the clip is null. This prevents some in game bugs where music is playing while another is playing too.
-     */
-    public void implementMusic(long startingPosition) {
-        if (clip == null) {
-            implementAudio(true, startingPosition);
-        }
-    }
-
-
-    /**
      * Method which starts music via thread.
      * Uses {@link #implementMusic(long)} method to play the audio.
      */
@@ -77,10 +69,23 @@ public class Audio {
     }
 
     /**
-     * Method which starts sound via thread.
-     * The clip have not to be null to play the sound.
+     * Represents a way how to boot a background music.
+     * <p>
+     * Uses {@link #implementAudio(boolean, long)} method to play music, and it sets the boolean music to true by itself.
+     */
+    public void implementMusic(long startingPosition) {
+        if (clip == null) {
+            implementAudio(true, startingPosition);
+        }
+    }
+
+    /**
+     * Method which starts a sound via thread.
+     * The clip has not to be null to play the sound.
      * Created for basic one shot sounds.
      * Uses {@link #implementAudio(boolean, long)} method to play the audio.
+     * <p>
+     * It sets automatically boolean music to false and startPosition to 0.
      */
     public void startAudio() {
         final Thread playThread = new Thread(() -> implementAudio(false, 0));
@@ -89,6 +94,7 @@ public class Audio {
 
     /**
      * Method which stops the music.
+     * <p>
      * Normal one shot sound don't have to be stopped, so this method is made just for music.
      * It sets the clip to null, so the music can be replayed in the future.
      */
@@ -103,7 +109,7 @@ public class Audio {
     }
 
     /**
-     * Method which stops the sound by {@link #clip} method close()
+     * Method which stops the sound by {@link #clip}'s method close()
      */
     public void stopSound() {
         if (clip != null) {
@@ -113,7 +119,7 @@ public class Audio {
 
     /**
      * Method which pauses the audio.
-     * There is a value {@link #paused} which holds an information if the audio is paused.
+     * There is a boolean value {@link #paused} which holds an information if the audio is paused.
      * This value has to be false in order to proceed. Also, the clip has to be initialized. If it's null then it can't be stopped.
      * <p>
      * Sets {@link #pausePosition} to current microsecond position, so the audio can be resumed later.
@@ -131,10 +137,10 @@ public class Audio {
 
     /**
      * Method which resumes the audio
-     * There is a value {@link #paused} which holds an information if the audio is paused.
+     * There is a boolean value {@link #paused} which holds an information if the audio is paused.
      * This value has to be true in order to proceed. Also, the clip has to be initialized. If it's null then it can't be resumed.
      * <p>
-     * Uses {@link #pausePosition} to set current microsecond position, so the audio can be resumed, where it stopped.
+     * Uses {@link #pausePosition} to save current microsecond position, so the audio can be resumed later, where it stopped.
      * <p>
      * Uses {@link #fadeIn(long)}} method for cleaner transition.
      */
@@ -160,7 +166,7 @@ public class Audio {
     /**
      * Loops the audio if requested.
      * Uses {@link #clip} method addLineListener to attach new lineListener.
-     * listener reacts to STOP events by restarting the audio.
+     * The listener reacts to STOP events by restarting the audio.
      * <p>
      * If the event.getType() is LineEvent.Type.STOP then it checks if the STOP state was because of end of the audio file.
      * If yes, then it resets the audio via setting the microsecond position to 0.
@@ -196,9 +202,10 @@ public class Audio {
      * <p>
      * Uses FloatControl.TYPE.MASTER_GAIN to control volume gain.
      * The clip has to be initialized and the clip has to support the MASTER_GAIN FloatControl.
+     * <p>
      * Gets the clip’s MASTER_GAIN FloatControl and sets its value.
      *
-     * @param db requested volume in decibels (-80.0 to 0.0 accepted)
+     * @param db requested volume in decibels (-80.0 to cca 6.0 accepted)
      */
     public void setVolume(float db) {
         if (clip != null && clip.isControlSupported(FloatControl.Type.MASTER_GAIN)) {
@@ -208,11 +215,11 @@ public class Audio {
     }
 
     /**
-     * Fades in audio from {@link #initialVolume} - 15 to {@link #initialVolume} decibels.
+     * Fades in audio from {@link #initialVolume} - 15 to {@link #initialVolume}.
      * Uses {@link #setVolume(float)}} to set the current volume level.
      *
      * @param milliseconds the desired time that the thread will wait until updating the volume again.
-     *                     More millisecond the more time the fade will take.
+     *                     More millisecond the more time the fade will take, but the less will be cleaner.
      */
     public void fadeIn(long milliseconds) {
         Thread t = new Thread(() -> {
@@ -296,12 +303,5 @@ public class Audio {
 
     public void setInitialVolume(float initialVolume) {
         this.initialVolume = initialVolume;
-    }
-
-    @Override
-    public String toString() {
-        return "Audio{" +
-                "initialVolume=" + initialVolume +
-                '}';
     }
 }
