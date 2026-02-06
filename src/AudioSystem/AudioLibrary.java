@@ -8,17 +8,36 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This method represents an audio library, which stores unconnected audios.
+ * Those audios can be played, stopped, paused or even resumed.
+ * @author Matěj Pospíšil
+ */
 public class AudioLibrary {
 
-    private ArrayList<Audio> audios;
-    private ObjectMapper mapper;
+    private final ArrayList<Audio> audios;
+    private final ObjectMapper mapper;
 
     public AudioLibrary() {
         this.audios = new ArrayList<>();
         this.mapper = new ObjectMapper();
-        loadAudios();
     }
 
+    /**
+     * This method represents a {@link AudioLibrary} setup.
+     * @return The loaded instance of {@link AudioLibrary}
+     */
+    public static AudioLibrary loadAudioLibrary(){
+        AudioLibrary audioLibrary = new AudioLibrary();
+        audioLibrary.loadAudios();
+        return audioLibrary;
+    }
+
+    /**
+     * Loads all audio files from res\Jsons\audios.json file path.
+     * <p>
+     * Uses external library jackson to load Json files.
+     */
     private void loadAudios() {
         try (InputStream input = new FileInputStream("res\\Jsons\\audios.json")) {
             Audio[] sounds = mapper.readValue(input, Audio[].class);
@@ -27,6 +46,7 @@ public class AudioLibrary {
             throw new RuntimeException(e);
         }
     }
+
 
     public void playMusic(String name) {
         for (Audio audio : audios) {

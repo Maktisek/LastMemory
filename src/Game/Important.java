@@ -11,7 +11,7 @@ public class Important {
 
 
     private static final Scanner sc = new Scanner(System.in);
-    private static final AudioLibrary audioLibrary = new AudioLibrary();
+    private static final AudioLibrary audioLibrary = AudioLibrary.loadAudioLibrary();
 
 
     public static String changeText(String update, String text) {
