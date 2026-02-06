@@ -37,6 +37,9 @@ public class Player {
         this.cutscenes = CutsceneLoader.loadCutscenes();
     }
 
+    public Player() {
+    }
+
     public boolean addMemory(Memory memory) {
         return collectedMemories.add(memory);
     }
