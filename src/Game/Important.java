@@ -53,12 +53,15 @@ public class Important {
     }
 
     public static String writeStringArrays(ArrayList<String> input) {
-        StringBuilder line = new StringBuilder();
-        for (int i = 0; i < input.size() - 1; i++) {
-            line.append(Important.changeText("underline", input.get(i))).append(", ");
+        if (!input.isEmpty()) {
+            StringBuilder line = new StringBuilder();
+            for (int i = 0; i < input.size() - 1; i++) {
+                line.append(Important.changeText("underline", input.get(i))).append(", ");
+            }
+            line.append(Important.changeText("underline", input.get(input.size() - 1)));
+            return line.toString();
         }
-        line.append(Important.changeText("underline", input.get(input.size() - 1)));
-        return line.toString();
+        return null;
     }
 
     public static String readTxtFiles(String pathName, int space) {
