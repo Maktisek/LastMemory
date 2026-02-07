@@ -4,6 +4,12 @@ import AroundPlayer.Player;
 import Commands.Command;
 import Modes.LocationMode;
 
+/**
+ * Represents a command, which starts the game by switching the player’s mode to {@link LocationMode}.
+ * <p>
+ * The rest of the preparation is done in {@link Game.Console} and {@link Game.CommandLoader}.
+ * @author Matěj Pospíšil
+ */
 public class StartGameCommand implements Command {
 
     private final Player player;
