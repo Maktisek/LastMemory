@@ -3,7 +3,8 @@ package Commands.Game;
 import Commands.Command;
 
 /**
- * Command designed to turn of the game
+ * Represents a command, which exists the game.
+ * @author Matěj Pospíšil
  */
 public class ExitCommand implements Command {
     @Override
