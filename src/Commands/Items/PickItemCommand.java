@@ -5,6 +5,16 @@ import Commands.Command;
 import Game.Important;
 import Items.Item;
 
+/**
+ * Represents a command, which picks up a desired item from player’s current location.
+ * <p>
+ * {@link #name} represents the name of the item to be picked up.
+ * <p>
+ * If the location is empty, the item is not found or player’s inventory capacity is insufficient, then no action is performed.
+ * Only the information about the process is returned.
+ * Otherwise, the desired item is transferred to the player and removed from the current location
+ * @author Matěj Pospíšil
+ */
 public class PickItemCommand implements Command {
 
     private final Player player;
