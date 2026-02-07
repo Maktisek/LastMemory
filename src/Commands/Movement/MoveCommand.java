@@ -7,7 +7,23 @@ import Locations.Type;
 import Modes.QuestionMode;
 
 /**
- * Command designed to change the player's currentLocation.
+ * Represents a command, which changes the player’s current location.
+ * <p>
+ *     {@link #name} represents the name of the location, to which the player will be moved.
+ * </p>
+ * If the desired location does not exist, or it is not connected with player’s current location,
+ * then a message is returned indicating that the movement is not possible.
+ * Otherwise, the player’s current location changes.
+ * <p>
+ *     Player’s mode can change to {@link QuestionMode} after moving into a location featuring an enemy NPC.
+ * </p>
+ * If the player’s mode is {@link QuestionMode}, then a question mode’s music is played instead of location’s music.
+ * <p>
+ *     If the previous and new location are both having their type set to {@link Type#HALLWAY}, then the music is not switched.
+ * </p>
+ * If the previous and new location are both having their type set to {@link Type#FADE}, then the music of the new location is
+ * starting from where the previous location’s music ended.
+ * @author Matěj Pospíšil
  */
 public class MoveCommand implements Command {
 
