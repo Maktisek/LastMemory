@@ -8,7 +8,8 @@ import Game.Important;
  * Represents a command, which drops an item.
  *  <p>
  * {@link #name} stands for the name of the item to be dropped.
- * If the item is not found in player’s inventory, then no action is performed. Only the information about
+ * <p>
+ * If the item is not found in player’s inventory or the inventory is empty, then no action is performed. Only the information about
  * the process is returned.
  * Otherwise, the item is dropped.
  * @author Matěj Pospíšil

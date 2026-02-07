@@ -4,6 +4,15 @@ import AroundPlayer.Player;
 import Commands.Command;
 import Game.Important;
 
+/**
+ * Represents a command, which writes the description of desired item.
+ * <p>
+ * {@link #name} represents the name of the desired item.
+ * <p>
+ * If the item is not found in player’s inventory or the inventory is empty, then no action is performed.
+ * Otherwise, the description is shown.
+ * @author Matěj Pospíšil
+ */
 public class InspectItemCommand implements Command {
 
     private final Player player;
