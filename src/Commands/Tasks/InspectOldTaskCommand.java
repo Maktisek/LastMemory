@@ -4,7 +4,18 @@ import AroundPlayer.Player;
 import Commands.Command;
 import Game.Important;
 
-
+/**
+ * Represents a command, which displays information about desired done task.
+ * <p>
+ *     {@link #name} represents the name of the desired completed task.
+ * </p>
+ * If no task with the same name as {@link #name} was found, then a message is returned
+ * indicating that no task named {@link #name} exists.
+ * <p>
+ *     Otherwise, the desired task is shown to the player.
+ * </p>
+ * @author Matěj Pospíšil
+ */
 public class InspectOldTaskCommand implements Command {
 
     private final Player player;
