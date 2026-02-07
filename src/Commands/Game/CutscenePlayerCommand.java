@@ -27,17 +27,17 @@ public class CutscenePlayerCommand implements Command {
     }
 
     @Override
-    public boolean waitAble() {
+    public boolean isWaitAble() {
         return true;
     }
 
     @Override
-    public boolean timeWaitAble() {
+    public boolean IsTimeWaitAble() {
         return false;
     }
 
     @Override
-    public boolean continuing() {
+    public boolean isContinuing() {
         return true;
     }
 

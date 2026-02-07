@@ -38,17 +38,17 @@ public class ScanAndAddCommand implements Command {
     }
 
     @Override
-    public boolean waitAble() {
+    public boolean isWaitAble() {
         return waitInput;
     }
 
     @Override
-    public boolean timeWaitAble() {
+    public boolean IsTimeWaitAble() {
         return waitTime;
     }
 
     @Override
-    public boolean continuing() {
+    public boolean isContinuing() {
         return true;
     }
 

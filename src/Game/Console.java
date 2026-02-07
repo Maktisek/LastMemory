@@ -74,7 +74,7 @@ public class Console {
             this.exit = currentCommand.exit();
             waitUntilInput(currentCommand);
             waitUntilTime(currentCommand);
-            if (!currentCommand.continuing()) {
+            if (!currentCommand.isContinuing()) {
                 break;
             }
         }
@@ -105,7 +105,7 @@ public class Console {
 
 
     public void waitUntilInput(Command command) {
-        if (command.waitAble()) {
+        if (command.isWaitAble()) {
             System.out.print("Napiš cokoli pro pokračování:");
             Important.loadText();
             command.endAudio();
@@ -116,7 +116,7 @@ public class Console {
     }
 
     public void waitUntilTime(Command command) {
-        if (command.timeWaitAble()) {
+        if (command.IsTimeWaitAble()) {
             Important.waitConsole(0.5);
         }
     }

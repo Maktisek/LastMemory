@@ -53,17 +53,17 @@ public class HandInCommand implements Command {
     }
 
     @Override
-    public boolean waitAble() {
+    public boolean isWaitAble() {
         return true;
     }
 
     @Override
-    public boolean timeWaitAble() {
+    public boolean IsTimeWaitAble() {
         return true;
     }
 
     @Override
-    public boolean continuing() {
+    public boolean isContinuing() {
         return continues;
     }
 

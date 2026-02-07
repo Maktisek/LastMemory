@@ -24,17 +24,17 @@ public class StartGameCommand implements Command {
     }
 
     @Override
-    public boolean waitAble() {
+    public boolean isWaitAble() {
         return false;
     }
 
     @Override
-    public boolean timeWaitAble() {
+    public boolean IsTimeWaitAble() {
         return true;
     }
 
     @Override
-    public boolean continuing() {
+    public boolean isContinuing() {
         return false;
     }
 

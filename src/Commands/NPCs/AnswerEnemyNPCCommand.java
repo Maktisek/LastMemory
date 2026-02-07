@@ -40,17 +40,17 @@ public class AnswerEnemyNPCCommand implements Command {
     }
 
     @Override
-    public boolean waitAble() {
+    public boolean isWaitAble() {
         return inputWait;
     }
 
     @Override
-    public boolean timeWaitAble() {
+    public boolean IsTimeWaitAble() {
         return timeWait;
     }
 
     @Override
-    public boolean continuing() {
+    public boolean isContinuing() {
         return true;
     }
 

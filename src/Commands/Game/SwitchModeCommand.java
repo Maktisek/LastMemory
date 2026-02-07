@@ -62,12 +62,12 @@ public class SwitchModeCommand implements Command {
     }
 
     @Override
-    public boolean waitAble() {
+    public boolean isWaitAble() {
         return false;
     }
 
     @Override
-    public boolean timeWaitAble() {
+    public boolean IsTimeWaitAble() {
         return false;
     }
 
@@ -94,7 +94,7 @@ public class SwitchModeCommand implements Command {
     }
 
     @Override
-    public boolean continuing() {
+    public boolean isContinuing() {
         return true;
     }
 
