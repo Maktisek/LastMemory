@@ -6,6 +6,7 @@ import Game.Important;
 
 /**
  * Represents a command, which plays a cutscene.
+ * @author Matěj Pospíšil
  */
 public class CutscenePlayerCommand implements Command {
 
