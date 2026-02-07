@@ -5,7 +5,9 @@ import Commands.Command;
 import Game.Important;
 
 /**
- * Command designed to write player's current location description
+ * Represents a command, which shows player’s current location’s description.
+ * The description is shown with an ascii art too. This ascii art is displayed via {@link Important#asciiHeadTextHelper(String, String)}.
+ * @author Matěj Pospíšil
  */
 public class ReadLocationDescriptionCommand implements Command {
 
