@@ -107,8 +107,8 @@ public class CommandLoader {
         });
         commands.put("info postava", () -> List.of(new ReadFriendlyNPCDescriptionCommand(player)));
         commands.put("spustit hru", () -> List.of(new StartGameCommand(player)));
-        commands.put("informace", () -> List.of(new GameEndInformationCommand()));
-        commands.put("jak hrát", () -> List.of(new GameInformationCommand()));
+        commands.put("informace", () -> List.of(new WriteTxtFileCommand("res\\TextFiles\\aboutGame.txt")));
+        commands.put("jak hrát", () -> List.of(new WriteTxtFileCommand("res\\TextFiles\\howToPlay.txt")));
     }
 
 

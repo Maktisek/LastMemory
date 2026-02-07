@@ -3,10 +3,18 @@ package Commands.Game;
 import Commands.Command;
 import Game.Important;
 
-public class GameEndInformationCommand implements Command {
+public class WriteTxtFileCommand implements Command {
+
+
+    private final String filePath;
+
+    public WriteTxtFileCommand(String filePath) {
+        this.filePath = filePath;
+    }
+
     @Override
     public String execute() {
-        return Important.readTxtFiles("res\\TextFiles\\aboutGame.txt", 0);
+        return Important.readTxtFiles(filePath, 0);
     }
 
     @Override
@@ -26,7 +34,7 @@ public class GameEndInformationCommand implements Command {
 
     @Override
     public boolean isContinuing() {
-        return false;
+        return true;
     }
 
     @Override
