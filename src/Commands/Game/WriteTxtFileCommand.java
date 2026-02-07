@@ -3,6 +3,11 @@ package Commands.Game;
 import Commands.Command;
 import Game.Important;
 
+/**
+ * Represents a command, which writes a chosen txt file. <p>
+ * {@link #filePath} stands for the file path where the text file is located.
+ * @author Matěj Pospíšil
+ */
 public class WriteTxtFileCommand implements Command {
 
 
