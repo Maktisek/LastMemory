@@ -10,6 +10,7 @@ import Game.Important;
  * {@link #name} represents the name of the desired item.
  * <p>
  * If the item is not found in player’s inventory or the inventory is empty, then no action is performed.
+ * Only the information about the process is returned.
  * Otherwise, the description is shown.
  * @author Matěj Pospíšil
  */

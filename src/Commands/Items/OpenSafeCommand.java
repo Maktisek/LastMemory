@@ -5,6 +5,16 @@ import Commands.Command;
 import Exceptions.WrongSafeCodeException;
 import Game.Important;
 
+/**
+ * Represents a command, which opens a safe.
+ * <p>
+ * {@link #code} represents a code of the safe to be opened.
+ * <p>
+ * If the code is not written by its own regex or the code is invalid, then no action is performed. Only the information about
+ * the process is returned.
+ * Otherwise, the safe is opened and the contents are added to the player’s current location.
+ * @author Matěj Pospíšil
+ */
 public class OpenSafeCommand implements Command {
 
     private final Player player;
