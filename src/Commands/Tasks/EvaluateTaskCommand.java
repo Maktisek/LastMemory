@@ -3,8 +3,21 @@ package Commands.Tasks;
 import AroundPlayer.Memory;
 import AroundPlayer.Player;
 import Commands.Command;
+import Commands.Movement.MoveCommand;
 import Game.Important;
 
+/**
+ * Represents a command, which evaluates a task.
+ * <p>
+ *     This command always runs after {@link HandInCommand} is successfully done.
+ * </p>
+ * If the task is not done, then a message is returned indicating which items remain.
+ * <p>
+ *     Otherwise, the memory associated with the player’s current task is given to the player
+ *     and a message is returned indicating that the evaluation was successful.
+ * </p>
+ * @author Matěj Pospíšil
+ */
 public class EvaluateTaskCommand implements Command {
 
     private final Player player;
