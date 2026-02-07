@@ -4,6 +4,15 @@ import AroundPlayer.Player;
 import Commands.Command;
 import Game.Important;
 
+/**
+ * Represents a command, which displays information about ongoing player’s task.
+ * <p>
+ *     If the player has no currently ongoing task, then no action is performed and a message is returned
+ *     indicating that there is no accepted task at the moment.
+ * </p>
+ * Otherwise, the current task is displayed to the player.
+ * @author Matěj Pospíšil
+ */
 public class ShowCurrentTaskCommand implements Command {
 
     private final Player player;
