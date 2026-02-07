@@ -5,7 +5,12 @@ import Commands.Command;
 import Game.Important;
 
 /**
- * Command designed to exit locations with friendlyNPC.
+ * Represents a command, which changes the player’s current location to the player’s previous location.
+ * <p>
+ *     If {@link Player#runAway()} action is not successful, then a message is returned indicating that the action failed.
+ * </p>
+ * Otherwise, the {@link Modes.QuestionMode} music is turned off and a message is returned indicating that the action was successful.
+ * @author Matěj Pospíšil
  */
 public class RunAwayCommand implements Command {
 
