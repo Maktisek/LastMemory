@@ -2,6 +2,18 @@ package Cutscenes;
 
 import Game.Important;
 
+/**
+ * Represents a cutscene in the game.
+ * <p>
+ * This is a simple POJO class.
+ * <ul>
+ *     <li>{@link #scene} contains the content of the cutscene as a String.</li>
+ *     <li>{@link #requiredMemories} specifies the number of memories
+ *         the player must have to play this cutscene.</li>
+ * </ul>
+ * </p>
+ * @author Matěj Pospíšil
+ */
 public class Cutscene {
 
     private String scene;
