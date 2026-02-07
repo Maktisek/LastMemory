@@ -5,6 +5,16 @@ import Commands.Command;
 import Game.Important;
 import Modes.LocationMode;
 
+/**
+ * Represents a command, which answers {@link NPCS.EnemyNPC} question.
+ * <p>
+ *     {@link #answer} represents the answer.
+ * </p>
+ * If the answer is wrong, then the {@link #inputWait} is set to false, {@link #timeWait} is set to true
+ * and a message is returned indicating that the answer was incorrect.
+ * Otherwise, the player’s mode is set to {@link LocationMode} and a message is returned indicating that the answer was correct.
+ * @author Matěj Pospíšil
+ */
 public class AnswerEnemyNPCCommand implements Command {
 
     private final Player player;
@@ -24,7 +34,6 @@ public class AnswerEnemyNPCCommand implements Command {
         if(player.getCurrentLocation().answerNPC(answer)){
             player.switchMode(new LocationMode());
             Important.stopMusic("question mode");
-            Important.stopMusic(player.getCurrentLocation().getName());
             Important.playSound("right answer");
             return "Odpověď " + Important.changeText("underline", answer) + Important.changeText("green", " je správně!") +"\nLokace " + Important.changeText("underline", player.getCurrentLocation().getName()) + " je nyní otevřená";
         }

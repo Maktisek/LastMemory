@@ -10,7 +10,7 @@ import Game.Important;
  *     This command always runs after {@link MoveCommand} is successfully done.
  * </p>
  * If no new locations are added, then a message is returned indicating this result.
- * Otherwise, a message is returned indicating, which locations has been added.
+ * Otherwise, a message is returned indicating which locations have been added.
  * @author Matěj Pospíšil
  */
 public class ScanAndAddCommand implements Command {
