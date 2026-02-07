@@ -4,6 +4,15 @@ import AroundPlayer.Player;
 import Commands.Command;
 import Game.Important;
 
+/**
+ * Represents a command, which displays a desired memory.
+ * <p>
+ * {@link #name} represents the name of the memory to be shown.
+ * <p>
+ * If the memory is not found, then a message is returned indicating that the memory was not found.
+ * Otherwise, the specified memory is displayed to the player
+ * @author Matěj Pospíšil
+ */
 public class RecallMemoryCommand implements Command {
 
     private final Player player;
