@@ -4,7 +4,8 @@ import AroundPlayer.Player;
 import Commands.Command;
 
 /**
- * Command designed to write all possible commands based on players mode.
+ * Represents a command, which writes all possible commands based on players mode.
+ * @author Matěj Pospíšil
  */
 public class HelpCommand implements Command {
 
