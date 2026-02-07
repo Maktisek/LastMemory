@@ -141,7 +141,7 @@ public class Initialization {
      * It initializes player and sets his current location to the start location, which is location on the index 11 in locations list.
      */
 
-    public void loadPlayer() {
+    public void loadPlayer() throws WrongInitializationException{
         //11 je startovní lokace
         this.player = new Player(locations.get(11));
     }

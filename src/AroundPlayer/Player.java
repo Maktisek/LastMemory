@@ -1,6 +1,7 @@
 package AroundPlayer;
 
 import Cutscenes.CutsceneLoader;
+import Exceptions.WrongInitializationException;
 import Game.Important;
 import Items.Item;
 import Items.Task;
@@ -37,7 +38,7 @@ public class Player {
      * Special constructor, which prepares the player for the start of the game.
      * @param startLocation the location, in which the player will start.
      */
-    public Player(Location startLocation) {
+    public Player(Location startLocation) throws WrongInitializationException {
         this.inventory = new Inventory();
         this.collectedMemories = new ArrayList<>();
         this.doneTasks = new ArrayList<>();
