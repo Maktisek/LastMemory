@@ -45,7 +45,7 @@ public class OpenSafeCommand implements Command {
     }
 
     @Override
-    public boolean IsTimeWaitAble() {
+    public boolean isTimeWaitAble() {
         return false;
     }
 

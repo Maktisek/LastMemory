@@ -116,7 +116,7 @@ public class Console {
     }
 
     public void waitUntilTime(Command command) {
-        if (command.IsTimeWaitAble()) {
+        if (command.isTimeWaitAble()) {
             Important.waitConsole(0.5);
         }
     }

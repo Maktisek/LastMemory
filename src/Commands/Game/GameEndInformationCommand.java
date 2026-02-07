@@ -20,7 +20,7 @@ public class GameEndInformationCommand implements Command {
     }
 
     @Override
-    public boolean IsTimeWaitAble() {
+    public boolean isTimeWaitAble() {
         return false;
     }
 

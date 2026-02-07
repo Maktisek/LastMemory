@@ -22,7 +22,7 @@ public class ExitCommand implements Command {
     }
 
     @Override
-    public boolean IsTimeWaitAble() {
+    public boolean isTimeWaitAble() {
         return false;
     }
 

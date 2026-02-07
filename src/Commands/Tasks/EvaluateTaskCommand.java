@@ -39,7 +39,7 @@ public class EvaluateTaskCommand implements Command {
     }
 
     @Override
-    public boolean IsTimeWaitAble() {
+    public boolean isTimeWaitAble() {
         return false;
     }
 

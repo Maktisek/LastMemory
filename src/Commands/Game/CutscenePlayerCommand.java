@@ -4,6 +4,9 @@ import AroundPlayer.Player;
 import Commands.Command;
 import Game.Important;
 
+/**
+ * Represents a command, which plays a cutscene.
+ */
 public class CutscenePlayerCommand implements Command {
 
 
@@ -32,7 +35,7 @@ public class CutscenePlayerCommand implements Command {
     }
 
     @Override
-    public boolean IsTimeWaitAble() {
+    public boolean isTimeWaitAble() {
         return false;
     }
 

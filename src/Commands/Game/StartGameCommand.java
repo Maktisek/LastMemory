@@ -29,7 +29,7 @@ public class StartGameCommand implements Command {
     }
 
     @Override
-    public boolean IsTimeWaitAble() {
+    public boolean isTimeWaitAble() {
         return true;
     }
 

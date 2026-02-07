@@ -31,7 +31,7 @@ public interface Command {
      * This system helps the console to be a lot cleaner.
      * @return true if the system should wait, false otherwise.
      */
-    boolean IsTimeWaitAble();
+    boolean isTimeWaitAble();
 
     /**
      * Returns if the process of processing all commands should continue or stop.
