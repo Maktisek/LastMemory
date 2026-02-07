@@ -21,6 +21,7 @@ public interface Command {
      * Returns if the game should wait for player's input after the command is done.
      * <p>
      * This system helps the player to read some longer texts without any interference.
+     * </p>
      * @return true if the console should wait for the player`s input, false otherwise.
      */
     boolean isWaitAble();

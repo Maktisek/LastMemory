@@ -5,7 +5,13 @@ import Commands.Command;
 import Game.Important;
 
 /**
- * Command designed to scan and add all possible locations into current location.
+ * Represents a command, which uses {@link Player#scanAndAddPossibleLocations()} to add new locations into player’s current location.
+ * <p>
+ *     This command always runs after {@link MoveCommand} is successfully done.
+ * </p>
+ * If no new locations are added, then a message is returned indicating this result.
+ * Otherwise, a message is returned indicating, which locations has been added.
+ * @author Matěj Pospíšil
  */
 public class ScanAndAddCommand implements Command {
 

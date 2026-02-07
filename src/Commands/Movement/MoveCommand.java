@@ -12,7 +12,7 @@ import Modes.QuestionMode;
  *     {@link #name} represents the name of the location, to which the player will be moved.
  * </p>
  * If the desired location does not exist, or it is not connected with player’s current location,
- * then a message is returned indicating that the movement is not possible.
+ * then a message is returned indicating that the movement is not possible and {@link #continues} is set to false.
  * Otherwise, the player’s current location changes.
  * <p>
  *     Player’s mode can change to {@link QuestionMode} after moving into a location featuring an enemy NPC.
