@@ -12,28 +12,26 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * More complex command designed to change player's mode
+ * Represents a command that switches the player's mode based on the provided input.
+ * If the requested mode is not available or the location is not free, alternative actions may be triggered.
+ * <p>
+ * The mode is chosen through {@link #mode}.
+ * @author Matěj Pospíšil
  */
 public class SwitchModeCommand implements Command {
 
     private final HashMap<String, Mode> map;
-    private Player player;
+    private final Player player;
     private String mode;
 
-    public SwitchModeCommand(String mode, Player player) {
-        this.map = new HashMap<>();
-        this.mode = mode;
+    public SwitchModeCommand(Player player) {
         this.player = player;
-        fillMap();
-    }
-
-    public SwitchModeCommand() {
         this.map = new HashMap<>();
         fillMap();
     }
 
     /**
-     * Loads the map with inputs as a keys and values as a modes
+     * Loads the map with inputs as a keys and values as a modes.
      */
     public void fillMap() {
         map.put("lokace", new LocationMode());
@@ -71,11 +69,13 @@ public class SwitchModeCommand implements Command {
         return false;
     }
 
-    public void setMode(String mode) {
-        this.mode = mode;
-    }
 
-    private String keys(){
+    /**
+     * Writes all modes, which can be chosen by the player.
+     *
+     * @return all the commands to be chosen.
+     */
+    private String writeKeys(){
         ArrayList<String> keys = new ArrayList<>();
         for (String key : map.keySet()){
             keys.add(Important.changeText("underline", key));
@@ -83,14 +83,12 @@ public class SwitchModeCommand implements Command {
         return String.join(", ", keys);
     }
 
-
-    /**
-     * Writes all map keys
-     *
-     * @return map keys
-     */
     public String writeNamesOfModes() {
-        return "Dostupné módy: " + keys();
+        return "Dostupné módy: " + writeKeys();
+    }
+
+    public void setMode(String mode) {
+        this.mode = mode;
     }
 
     @Override

@@ -48,10 +48,11 @@ public class CommandLoader {
         commands.put("opustit", () -> new ArrayList<>(List.of(new ExitCommand())));
         commands.put("popis lokace", () -> new ArrayList<>(List.of(new ReadLocationDescriptionCommand(player))));
         commands.put("mod", () -> {
-            SwitchModeCommand command = new SwitchModeCommand();
+            SwitchModeCommand command = new SwitchModeCommand(player);
             System.out.println(command.writeNamesOfModes());
             System.out.print("Napiš jméno módu: ");
-            return new ArrayList<>(List.of(new SwitchModeCommand(Important.loadText(), player)));
+            command.setMode(Important.loadText());
+            return new ArrayList<>(List.of(command));
         });
         commands.put("sebrat", () -> {
             if (!player.getCurrentLocation().getItems().isEmpty()) {
