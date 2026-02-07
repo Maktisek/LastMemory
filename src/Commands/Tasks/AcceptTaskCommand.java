@@ -6,7 +6,17 @@ import Game.Important;
 import NPCS.FriendlyNPC;
 
 /**
- * Command designed to accept task from current location friendlyNPC
+ * Represents a command, which accepts a task from {@link FriendlyNPC}.
+ * <p>
+ *     If there is no friendly NPC in player’s current location or the friendly NPC has no available task,
+ *     then no action is performed, and a message is returned indicating that no task can be accepted at the moment.
+ * </p>
+ * If the player currently has an ongoing task, then no action is performed and a message is returned
+ * indicating that there is currently an ongoing task.
+ * <p>
+ *     Otherwise, the task is accepted and a message is returned indicating that the task was successfully accepted.
+ * </p>
+ * @author Matěj Pospíšil
  */
 public class AcceptTaskCommand implements Command {
 
