@@ -2,6 +2,14 @@ package Items;
 
 import java.util.Objects;
 
+/**
+ * Represents an individual item in the game.
+ * <p>
+ * This is a simple POJO class.
+ * </p>
+ *
+ * @author Matěj Pospíšil
+ */
 public class Item {
 
 
@@ -14,22 +22,6 @@ public class Item {
     public Item() {
     }
 
-    public Item(String name, double weight, String code, String description) {
-        this.name = name;
-        this.weight = weight;
-        this.code = code;
-        this.description = description;
-    }
-
-    @Override
-    public String toString() {
-        return "Item{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", code='" + code + '\'' +
-                ", weight=" + weight +
-                '}';
-    }
 
     public String getName() {
         return name;
