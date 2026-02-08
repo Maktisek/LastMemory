@@ -3,6 +3,10 @@ package Modes;
 import AroundPlayer.Player;
 import Game.Important;
 
+/**
+ * A mode focused on game introduction.
+ * @author Matěj Pospíšil
+ */
 public class IntroMode implements Mode{
     @Override
     public String executeInfo(Player player) {

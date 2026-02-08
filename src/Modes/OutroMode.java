@@ -2,7 +2,11 @@ package Modes;
 
 import AroundPlayer.Player;
 import Game.Important;
-
+/**
+ * A mode responsible for the game outro.
+ *
+ * @author Matěj Pospíšil
+ */
 public class OutroMode implements Mode{
 
     @Override
