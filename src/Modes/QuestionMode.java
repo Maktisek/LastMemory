@@ -4,7 +4,9 @@ import AroundPlayer.Player;
 import Game.Important;
 
 /**
- * Specific mode which is used only if the player stands in location where is friendlyNPC.
+ * A mode responsible for handling an {@link NPCS.EnemyNPC} encounter.
+ *
+ * @author Matěj Pospíšil
  */
 public class QuestionMode implements Mode{
 
