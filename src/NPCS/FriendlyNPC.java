@@ -3,28 +3,40 @@ package NPCS;
 import Game.Important;
 import Items.Task;
 
-public class FriendlyNPC extends NPC{
+/**
+ * This class represents a friendly NPC.
+ * <p>
+ * {@link Task} stands for a task, which player can accept.
+ * </p>
+ * It extends {@link NPC}.
+ *
+ * @author Matěj Pospíšil
+ */
+public class FriendlyNPC extends NPC {
 
     private String currentSpeech;
     private String anotherSpeech;
     private Task task;
     private TypeNPC type;
 
-    public FriendlyNPC(String name, String position, String age) {
-        super(name, position, age);
-    }
 
     public FriendlyNPC() {
     }
 
-    public void switchSpeeches(){
+    public void switchSpeeches() {
         this.currentSpeech = anotherSpeech;
         this.anotherSpeech = null;
     }
 
-
-    public String writeName(){
+    public String writeName() {
         return name + writeType();
+    }
+
+    private String writeType() {
+        if (type == TypeNPC.AKTIVNÍ) {
+            return Important.changeText("green", " (" + type.name() + ")");
+        }
+        return Important.changeText("yellow", " (" + type.name() + ")");
     }
 
     public String getCurrentSpeech() {
@@ -53,13 +65,6 @@ public class FriendlyNPC extends NPC{
 
     public TypeNPC getType() {
         return type;
-    }
-
-    private String writeType(){
-        if(type == TypeNPC.AKTIVNÍ){
-            return Important.changeText("green", " ("+type.name()+")");
-        }
-        return Important.changeText("yellow", " ("+type.name()+")");
     }
 
     public void setType(TypeNPC type) {
