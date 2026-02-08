@@ -1,5 +1,17 @@
 package NPCS;
 
+/**
+ * An abstract base class for NPCs, extended by:
+ * <ul>
+ *     <li>{@link FriendlyNPC}</li>
+ *     <li>{@link EnemyNPC}</li>
+ * </ul>
+ * <p>
+ * This class is a POJO.
+ * </p>
+ *
+ * @author Matěj Pospíšil
+ */
 public abstract class NPC {
 
 
@@ -7,11 +19,6 @@ public abstract class NPC {
     protected String position;
     protected String age;
 
-    public NPC(String name, String position, String age) {
-        this.name = name;
-        this.position = position;
-        this.age = age;
-    }
 
     public NPC() {
     }
