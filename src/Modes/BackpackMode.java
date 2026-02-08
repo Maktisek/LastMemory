@@ -31,7 +31,7 @@ public class BackpackMode implements Mode {
     }
 
     @Override
-    public boolean special() {
+    public boolean isSpecial() {
         return false;
     }
 

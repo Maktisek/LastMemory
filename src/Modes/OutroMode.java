@@ -28,7 +28,7 @@ public class OutroMode implements Mode{
     }
 
     @Override
-    public boolean special() {
+    public boolean isSpecial() {
         return true;
     }
 }

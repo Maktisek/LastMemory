@@ -3,7 +3,6 @@ package AroundPlayer;
 import Cutscenes.CutsceneLoader;
 import Exceptions.WrongInitializationException;
 import Game.Important;
-import Items.Item;
 import Items.Task;
 import Locations.Location;
 import Modes.IntroMode;
@@ -13,7 +12,6 @@ import Modes.QuestionMode;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 
 /**
  * This class represents a player, who is the most essential part of the whole game.
@@ -237,7 +235,7 @@ public class Player {
     }
 
     public Mode specialGetMode() {
-        if (!mode.special()) {
+        if (!mode.isSpecial()) {
             return mode;
         }
         return new LocationMode();
