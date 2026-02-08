@@ -1,6 +1,8 @@
 package Commands.Items;
 
 import AroundPlayer.Player;
+import Exceptions.WrongInitializationException;
+import Game.Important;
 import Items.Item;
 import Locations.Location;
 import org.junit.Before;
@@ -29,18 +31,26 @@ public class DropItemCommandTest {
 
         Item item = new Item();
         item.setCode("A");
-        item.setName("a");
+        item.setName(name);
         item.setWeight(4);
 
-        player = new Player(location);
-        player.getInventory().addItem(item);
+
+        try {
+            this.player = new Player(location);
+        }catch (WrongInitializationException e){
+            fail();
+        }
+        this.player.getInventory().checkAddCapacity(item);
+        this.player.getInventory().addItem(item);
+
+
 
         dropItemCommand = new DropItemCommand(player, name);
 
-        dropItemCommand.execute();
 
-        assertEquals(1, location.getItems().size());
+        assertEquals("Položil si " + Important.changeText("underline", name) + " do " + player.getCurrentLocation().getName(),dropItemCommand.execute());
+
         assertEquals(0, player.getInventory().getItems().size());
-        assertNull(player.getInventory().getItems().get("A").get(0));
+        assertEquals(1, location.getItems().size());
     }
 }

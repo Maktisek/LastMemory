@@ -1,6 +1,7 @@
 package Commands.Tasks;
 
 import AroundPlayer.Player;
+import Exceptions.WrongInitializationException;
 import Items.Item;
 import Items.Task;
 import Locations.Location;
@@ -29,7 +30,12 @@ public class HandInCommandTest {
 
         currentLoc.setFriendlyNPC(friendlyNPC);
 
-        player = new Player(currentLoc);
+        try {
+            player = new Player(currentLoc);
+        } catch (WrongInitializationException e) {
+            fail();
+        }
+
 
         Item item = new Item();
         item.setCode("A");

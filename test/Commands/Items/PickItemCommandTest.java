@@ -1,6 +1,7 @@
 package Commands.Items;
 
 import AroundPlayer.Player;
+import Exceptions.WrongInitializationException;
 import Items.Item;
 import Locations.Location;
 import org.junit.Before;
@@ -33,7 +34,11 @@ public class PickItemCommandTest {
 
         currentLoc.setItems(new ArrayList<>(List.of(item)));
 
-        player = new Player(currentLoc);
+        try {
+            player = new Player(currentLoc);
+        }catch (WrongInitializationException e){
+            fail();
+        }
 
         pickItemCommand = new PickItemCommand(player, name);
 

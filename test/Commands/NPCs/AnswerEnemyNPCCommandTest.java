@@ -1,6 +1,7 @@
 package Commands.NPCs;
 
 import AroundPlayer.Player;
+import Exceptions.WrongInitializationException;
 import Locations.Location;
 import Modes.LocationMode;
 import Modes.QuestionMode;
@@ -36,7 +37,12 @@ public class AnswerEnemyNPCCommandTest {
 
         loc.setEnemyNPC(enemyNPC);
 
-        player = new Player(loc);
+
+        try {
+            player = new Player(loc);
+        }catch (WrongInitializationException e){
+            fail();
+        }
 
         player.setMode(new QuestionMode());
 

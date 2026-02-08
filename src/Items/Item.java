@@ -22,6 +22,15 @@ public class Item {
     public Item() {
     }
 
+    @Override
+    public String toString() {
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", code='" + code + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
 
     public String getName() {
         return name;

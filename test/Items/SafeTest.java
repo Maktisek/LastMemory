@@ -15,7 +15,12 @@ public class SafeTest {
 
     @Before
     public void setUp() throws Exception {
-        safe1 = new Safe("2",99,new ArrayList<>(List.of(new Item("Item1", 20, "Items1", "aaaa"))));
+        Item item = new Item();
+        item.setName("Item1");
+        item.setCode("Item1");
+        item.setWeight(20);
+        item.setDescription("aaaa");
+        safe1 = new Safe("2",99,new ArrayList<>(List.of(item)));
     }
 
     @Test
@@ -29,7 +34,12 @@ public class SafeTest {
 
     @Test
     public void dropItems() {
-        ArrayList<Item> tempList = new ArrayList<>(List.of(new Item("Item1", 20, "Items1", "aaaa")));
+        Item item = new Item();
+        item.setName("Item1");
+        item.setCode("Item1");
+        item.setWeight(20);
+        item.setDescription("aaaa");
+        ArrayList<Item> tempList = new ArrayList<>(List.of(item));
         assertEquals(tempList, safe1.dropItems());
     }
 
