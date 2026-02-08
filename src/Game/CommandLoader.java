@@ -18,11 +18,20 @@ import Commands.NPCs.ReadFriendlyNPCDescriptionCommand;
 import Commands.Tasks.*;
 import Modes.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.function.Supplier;
 
+/**
+ * Loads and prepares all available commands.
+ * <p>
+ * Used by {@link Console} to keep the command initialization
+ * separate from the main game loop.
+ * </p>
+ * The {@link #player} reference must point to the original instance created in {@link Console}.
+ *
+ * @author Matěj Pospíšil
+ */
 public class CommandLoader {
 
     private final HashMap<String, Supplier<List<Command>>> commands;
@@ -37,47 +46,56 @@ public class CommandLoader {
         loadPossibleCommands();
     }
 
+    /**
+     * Loads and registers all available player commands.
+     * <p>
+     * Each command keyword is mapped to a {@link Supplier} that creates
+     * one or more {@link Command} instances when invoked.
+     * Some commands may require additional user input before the
+     * command objects are created.
+     * </p>
+     */
     public void loadCommands() {
         commands.put("jdi", () -> {
             System.out.println("Další možné lokace: " + player.getCurrentLocation().writeAllPossibleLocations());
             System.out.print("Vlož vstup: ");
-            return new ArrayList<>(List.of(new MoveCommand(this.player, Important.loadText()), new ScanAndAddCommand(player)));
+            return List.of(new MoveCommand(this.player, Important.loadText()), new ScanAndAddCommand(player));
         });
-        commands.put("utéct", () -> new ArrayList<>(List.of(new RunAwayCommand(player))));
-        commands.put("pomoc", () -> new ArrayList<>(List.of(new HelpCommand(player))));
-        commands.put("opustit", () -> new ArrayList<>(List.of(new ExitCommand())));
-        commands.put("popis lokace", () -> new ArrayList<>(List.of(new ReadLocationDescriptionCommand(player))));
+        commands.put("utéct", () -> List.of(new RunAwayCommand(player)));
+        commands.put("pomoc", () -> List.of(new HelpCommand(player)));
+        commands.put("opustit", () -> List.of(new ExitCommand()));
+        commands.put("popis lokace", () -> List.of(new ReadLocationDescriptionCommand(player)));
         commands.put("mod", () -> {
             SwitchModeCommand command = new SwitchModeCommand(player);
             System.out.println(command.writeNamesOfModes());
             System.out.print("Napiš jméno módu: ");
             command.setMode(Important.loadText());
-            return new ArrayList<>(List.of(command));
+            return List.of(command);
         });
         commands.put("sebrat", () -> {
             if (!player.getCurrentLocation().getItems().isEmpty()) {
                 System.out.println("Napiš předmět, který chceš sebrat");
                 System.out.print(">>");
-                return new ArrayList<>(List.of(new PickItemCommand(player, Important.loadText())));
+                return List.of(new PickItemCommand(player, Important.loadText()));
             }
-            return new ArrayList<>(List.of(new PickItemCommand(player, null)));
+            return List.of(new PickItemCommand(player, null));
         });
         commands.put("položit", () -> {
             if (player.getInventory().getWeight() != 0) {
                 System.out.println("Napiš předmět, který chceš položit");
                 System.out.println("Tvé předměty: " + player.getInventory().writeItems());
                 System.out.print(">>");
-                return new ArrayList<>(List.of(new DropItemCommand(player, Important.loadText())));
+                return List.of(new DropItemCommand(player, Important.loadText()));
             }
-            return new ArrayList<>(List.of(new DropItemCommand(player, null)));
+            return List.of(new DropItemCommand(player, null));
         });
         commands.put("prohlédnout", () -> {
             if (player.getInventory().getWeight() != 0) {
                 System.out.println("Napiš předmět, který si chceš prohlédnout");
                 System.out.print(">>");
-                return new ArrayList<>(List.of(new InspectItemCommand(player, Important.loadText())));
+                return List.of(new InspectItemCommand(player, Important.loadText()));
             }
-            return new ArrayList<>(List.of(new InspectItemCommand(player, null)));
+            return List.of(new InspectItemCommand(player, null));
         });
         commands.put("odpovědět", () -> {
             System.out.println("Napiš odpověď");
@@ -112,7 +130,24 @@ public class CommandLoader {
         commands.put("jak hrát", () -> List.of(new WriteTxtFileCommand("res\\TextFiles\\howToPlay.txt")));
     }
 
-
+    /**
+     * Represents loading system of instances of {@link Mode}, which are put into {@link #possibleCommands} with their own
+     * command keyword.
+     * <p>
+     * This specific system is designed in order to block some of the commands for the player in specific game
+     * situation.
+     * </p>
+     * For example:
+     * <p>
+     * If the player’s current mode is set to {@link BackpackMode} and he wants to call "jdi" command, then
+     * the game will check if the player’s mode matches with the "jdi" command’s mode.
+     * In this instance will not, so the player will not be able to proceed "jdi" command.
+     * </p>
+     * <p>
+     * The keyword must also exist in {@link #commands}, otherwise
+     * the validation system will not work correctly.
+     * </p>
+     */
     public void loadPossibleCommands() {
         possibleCommands.put("jdi", LocationMode::new);
         possibleCommands.put("utéct", QuestionMode::new);

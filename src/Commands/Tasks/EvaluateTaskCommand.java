@@ -9,13 +9,14 @@ import Game.Important;
 /**
  * Represents a command, which evaluates a task.
  * <p>
- *     This command always runs after {@link HandInCommand} is successfully done.
+ * This command always runs after {@link HandInCommand} is successfully done.
  * </p>
  * If the task is not done, then a message is returned indicating which items remain.
  * <p>
- *     Otherwise, the memory associated with the player’s current task is given to the player
- *     and a message is returned indicating that the evaluation was successful.
+ * Otherwise, the memory associated with the player’s current task is given to the player
+ * and a message is returned indicating that the evaluation was successful.
  * </p>
+ *
  * @author Matěj Pospíšil
  */
 public class EvaluateTaskCommand implements Command {
@@ -28,7 +29,7 @@ public class EvaluateTaskCommand implements Command {
 
     @Override
     public String execute() {
-        if(!player.getCurrentTask().isDone()){
+        if (!player.getCurrentTask().isDone()) {
             return Important.changeText("bold", "Další předměty k odevzdání: ") + player.getCurrentLocation().getFriendlyNPC().getTask().writeAllNeededItems();
         }
         Memory memory = player.getCurrentTask().giveMemory();
@@ -38,7 +39,7 @@ public class EvaluateTaskCommand implements Command {
         player.getCurrentLocation().getFriendlyNPC().switchSpeeches();
         player.getCurrentLocation().pauseMusic();
         Important.playSound("new memory");
-        return Important.writeSpace(40)+"Ou, myslím, že si na něco vzpomínám...";
+        return Important.writeSpace(40) + "Ou, myslím, že si na něco vzpomínám...";
     }
 
     @Override
