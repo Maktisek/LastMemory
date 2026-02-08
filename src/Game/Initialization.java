@@ -12,6 +12,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * This class is responsible for loading the entire game.
+ * <p>
+ * It uses the Jackson library to load data from JSON files.
+ * </p>
+ * <p>
+ * At the end, a player is set up for the {@link Console}.
+ * </p>
+ *
+ * @author Matěj Pospíšil
+ */
 public class Initialization {
 
 
@@ -20,25 +31,35 @@ public class Initialization {
     private final ArrayList<Location> tempLocations;
     private Player player;
 
-    public Initialization(){
+    public Initialization() {
         this.locations = new ArrayList<>();
         this.tempLocations = new ArrayList<>();
         this.mapper = new ObjectMapper();
     }
 
+    /**
+     * This method creates a chain of methods for loading the game.
+     * <p>
+     * The order cannot be changed, because this may cause some unexpected problems.
+     * </p>
+     *
+     * @throws WrongInitializationException when there is problem with the initialization
+     */
     public void startInitialization() throws WrongInitializationException {
         loadSideLocations();
         loadHallwayLocationsLocations();
         loadMainLocations();
         connectMainLocations();
         setReadyPossibleLocationArrays();
-        loadBasicLocationConnection();
+        loadLocationsConnection();
         setAllMusic();
         loadPlayer();
     }
 
     /**
-     * Loads all side locations from res\Jsons\sideLocations.json file and adds them into locations list
+     * Loads all side locations from the file {@code res\Jsons\sideLocations.json} and adds them into {@link #locations}.
+     *
+     * @throws WrongInitializationException if an I/O error occurs during the loading process
      */
     public void loadSideLocations() throws WrongInitializationException {
         try (InputStream input = new FileInputStream("res\\Jsons\\sideLocations.json");) {
@@ -50,7 +71,9 @@ public class Initialization {
     }
 
     /**
-     * Loads all hallway locations from res\Jsons\hallwayLocations.json file and adds them into locations list.
+     * Loads all hallway from the file {@code res\Jsons\hallwayLocations.json} and adds them into {@link #locations}.
+     *
+     * @throws WrongInitializationException if an I/O error occurs during the loading process
      */
     public void loadHallwayLocationsLocations() throws WrongInitializationException {
         try (InputStream input = new FileInputStream("res\\Jsons\\hallwayLocations.json");) {
@@ -62,7 +85,9 @@ public class Initialization {
     }
 
     /**
-     * Loads all main locations from res\Jsons\locations.json file and adds them into temporary locations list.
+     * Loads all main locations from the file {@code res\Jsons\locations.json} and adds them into {@link #tempLocations}.
+     *
+     * @throws WrongInitializationException if an I/O error occurs during the loading process
      */
     public void loadMainLocations() throws WrongInitializationException {
         try (InputStream input = new FileInputStream("res\\Jsons\\locations.json");) {
@@ -74,9 +99,15 @@ public class Initialization {
     }
 
     /**
-     * Connects all main location together throughout their friendlyNPC's tasks memory prices.
-     * The cycle goes from the last location to the first location always connecting the next location with the current location.
-     * Then it adds all main locations into locations list.
+     * Connects all main locations by linking each location's friendly NPC task's memory price
+     * to the next location in the sequence.
+     * <p>
+     * The linking starts from the last location and goes to the first, always connecting
+     * the current location to the next.
+     * </p>
+     * <p>
+     * After linking, all locations from {@link #tempLocations} are added to {@link #locations}.
+     * </p>
      */
     public void connectMainLocations() {
         for (int i = tempLocations.size() - 1; i > 0; i--) {
@@ -86,23 +117,32 @@ public class Initialization {
     }
 
     /**
-     * Initializes all locations possible locations array list.
+     * Initializes the possible locations list for all locations,
+     * so that it can be filled later.
      */
-    public void setReadyPossibleLocationArrays(){
+    public void setReadyPossibleLocationArrays() {
         for (Location location : locations) {
             location.setPossibleLocations(new ArrayList<>());
         }
     }
 
     /**
-     * Connects location via special .csv file: res\Jsons\basicLocationConnections.csv
+     * Connects all locations according to a CSV file.
+     * <p>
+     * The connections are read from the CSV file {@code res\Jsons\basicLocationConnections.csv}.
+     * </p>
+     * <p>
+     * Each location has its own index in {@link #locations}, and each line in the CSV file
+     * represents an individual location. The line contains the indexes of neighboring locations,
+     * and each location is connected to them accordingly.
+     * </p>
+     * <p>
+     * The indexes in the CSV file should be written in the format: X>Y>Z
+     * </p>
+     *
+     * @throws WrongInitializationException if an I/O error occurs while reading the CSV file
      */
-    public void loadBasicLocationConnection() throws WrongInitializationException {
-//        int a = 0;
-//        for (Location location: locations){
-//            System.out.println(a+". "+location);
-//            a++;
-//        }
+    public void loadLocationsConnection() throws WrongInitializationException {
         try (BufferedReader br = new BufferedReader(new FileReader("res\\CsvFiles\\basicLocationConnections.csv"))) {
             br.readLine();
             String line;
@@ -115,16 +155,35 @@ public class Initialization {
                 index++;
             }
         } catch (IOException e) {
-            throw new WrongInitializationException("There is a problem with BufferedReader");
+            throw new WrongInitializationException("An error occurred while connecting locations");
         }
-//        int b = 0;
-//        for (Location location: locations){
-//            System.out.println(b+". "+location);
-//            b++;
-//        }
     }
 
+    /**
+     * Loads all {@link Audio} instances from the JSON file {@code res\Jsons\locationMusic.json}.
+     *
+     * @return an array of {@link Audio} instances loaded from the file
+     * @throws WrongInitializationException if an I/O error occurs while reading the JSON file
+     */
+    public Audio[] loadAllSongs() throws WrongInitializationException {
+        try (InputStream input = new FileInputStream("res\\Jsons\\locationMusic.json")) {
+            return mapper.readValue(input, Audio[].class);
+        } catch (IOException e) {
+            throw new WrongInitializationException("Audios were not loaded properly");
+        }
+    }
 
+    /**
+     * Assigns an {@link Audio} instance to each corresponding location.
+     * <p>
+     * Uses {@link #loadAllSongs()} for audio initialization.
+     * </p>
+     * <p>
+     * Locations without a matching audio will remain without music.
+     * </p>
+     *
+     * @throws WrongInitializationException if an audio title does not match any location
+     */
     public void setAllMusic() throws WrongInitializationException {
         Audio[] audios = loadAllSongs();
         for (Audio audio : audios) {
@@ -138,21 +197,15 @@ public class Initialization {
     }
 
     /**
-     * It initializes player and sets his current location to the start location, which is location on the index 11 in locations list.
+     * Initializes {@link #player} and sets the player's current location
+     * to the location at index 11 in {@link #locations}.
+     *
+     * @throws WrongInitializationException if there is a problem initializing the player
      */
-
-    public void loadPlayer() throws WrongInitializationException{
-        //11 je startovní lokace
+    public void loadPlayer() throws WrongInitializationException {
         this.player = new Player(locations.get(11));
     }
 
-    public Audio[] loadAllSongs() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\Jsons\\locationMusic.json")) {
-            return mapper.readValue(input, Audio[].class);
-        } catch (IOException e) {
-            throw new WrongInitializationException("Audios were not loaded properly");
-        }
-    }
 
     private Location findLocation(String name) {
         for (Location location : locations) {
@@ -162,7 +215,6 @@ public class Initialization {
         }
         return null;
     }
-
 
     public Player getPlayer() {
         return player;
