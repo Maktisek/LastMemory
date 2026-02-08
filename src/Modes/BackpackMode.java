@@ -4,7 +4,8 @@ import AroundPlayer.Player;
 import Game.Important;
 
 /**
- * Mode designed to operate in the area of inventory
+ * A mode focused on inventory management and player possessions.
+ * @author Matěj Pospíšil
  */
 public class BackpackMode implements Mode {
 
@@ -34,6 +35,4 @@ public class BackpackMode implements Mode {
     public boolean isSpecial() {
         return false;
     }
-
-
 }

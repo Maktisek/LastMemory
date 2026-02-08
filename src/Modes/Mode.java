@@ -42,9 +42,4 @@ public interface Mode {
      */
 
     boolean isSpecial();
-
-
-
-
-
 }
