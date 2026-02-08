@@ -117,7 +117,7 @@ public class CommandLoader {
             return List.of(new InspectOldTaskCommand(player, Important.loadText()));
         });
         commands.put("otevřít safe", () -> {
-            if (player.getCurrentLocation().availableSafe()) {
+            if (player.getCurrentLocation().isSafeAvailable()) {
                 System.out.println("Napiš kód");
                 System.out.print(">>");
                 return List.of(new OpenSafeCommand(player, Important.loadText()));

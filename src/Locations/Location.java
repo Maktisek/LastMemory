@@ -12,38 +12,44 @@ import javax.sound.sampled.Clip;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
+/**
+ * Represents a location in the game.
+ * <p>
+ * The location may optionally include a {@link #friendlyNPC}, {@link #enemyNPC},
+ * a {@link #safe}, and a {@link #song}.
+ * </p>
+ * <p>
+ * Each location has a {@link Type} and must be connected to other locations
+ * through {@link #possibleLocations}.
+ * </p>
+ * <p>
+ * This class implements {@link Comparable} to allow sorting based on
+ * {@link #isEmpty()}.
+ * </p>
+ *
+ * @author Matěj Pospíšil
+ */
 public class Location implements Comparable<Location> {
 
-    //Basic information
+
     private String name;
     private String code;
     private String description;
     private Type type;
 
-    //NPCs
     private EnemyNPC enemyNPC;
     private FriendlyNPC friendlyNPC;
 
-    //Items
     private ArrayList<Item> items;
     private Safe safe;
 
-    //Locations
     private ArrayList<Location> possibleLocations;
 
-    //Audio
     private Audio song;
 
     public Location() {
     }
 
-    /**
-     * Adds item into items list
-     *
-     * @param item the item to be added
-     * @return true if the action was successful, false if not
-     */
     public boolean addItem(Item item) {
         if (item != null) {
             return items.add(item);
@@ -65,7 +71,13 @@ public class Location implements Comparable<Location> {
         return null;
     }
 
-
+    /**
+     * This method transfers all items from {@link #safe} to {@link #items}.
+     * <p>
+     *     It is called only after the safe is opened in {@link Commands.Items.OpenSafeCommand}
+     * </p>
+     * @return a formatted string listing the items found in the safe
+     */
     public String openSafe() {
         ArrayList<Item> temp = safe.dropItems();
         items.addAll(temp);
@@ -76,7 +88,7 @@ public class Location implements Comparable<Location> {
         return "V trezoru se nachází: " + Important.writeStringArrays(names);
     }
 
-    public boolean availableSafe() {
+    public boolean isSafeAvailable() {
         return safe != null && safe.isLocked();
     }
 
@@ -85,12 +97,6 @@ public class Location implements Comparable<Location> {
         possibleLocations.add(location);
     }
 
-    /**
-     * Iterates through possible location list. Searches the right location.
-     *
-     * @param name the name of the location to be found
-     * @return null if the location was not found and the instance of Location if the location was found.
-     */
     public Location findLocation(String name) {
         for (Location location : possibleLocations) {
             if (location.getName().equalsIgnoreCase(name)) {
@@ -100,11 +106,12 @@ public class Location implements Comparable<Location> {
         return null;
     }
 
+
     /**
-     * Evaluates and enemyNPC's question. It
+     * Evaluates the player's answer for the enemy NPC's question.
      *
-     * @param answer the answer to be evaluated
-     * @return true if the answer was correct and false if not
+     * @param answer the player's answer
+     * @return true if the answer was correct and the enemy NPC is removed, false otherwise
      */
     public boolean answerNPC(String answer) {
         if (enemyNPC.evaluateQuestion(answer)) {
@@ -114,12 +121,7 @@ public class Location implements Comparable<Location> {
         return false;
     }
 
-    /**
-     * Writes all names of items in items
-     *
-     * @return names of all items if there are any.
-     * If there are no items, then it returns information about that.
-     */
+
     public String writeItemsNames() {
         ArrayList<String> names = new ArrayList<>();
         for (Item item : items) {
@@ -133,22 +135,32 @@ public class Location implements Comparable<Location> {
     }
 
     /**
-     * Writes all names of locations in possibleLocations
+     * Returns a formatted string of all possible location names.
+     * <p>
+     * Locations are divided into:
+     * <ul>
+     *     <li>normal locations (stored in {@code normals})</li>
+     *     <li>hallway locations (stored in {@code hallways})</li>
+     * </ul>
+     * </p>
+     * All normal locations are then appended to {@code hallways} to follow the
+     * set format where hallway locations are listed first, followed by the others.
+     * </p>
      *
-     * @return names of all locations
+     * @return a formatted string listing the names of all possible locations
      */
     public String writeAllPossibleLocations() {
         sortPossibleLocations();
-        ArrayList<String> names = new ArrayList<>(8);
+        ArrayList<String> normals = new ArrayList<>(8);
         ArrayList<String> hallways = new ArrayList<>(3);
         for (Location location : possibleLocations) {
             if (location.getType() == Type.HALLWAY) {
                 hallways.add(Important.changeText("underline", location.writeName()));
             } else {
-                names.add(Important.changeText("underline", location.writeName()));
+                normals.add(Important.changeText("underline", location.writeName()));
             }
         }
-        hallways.addAll(names);
+        hallways.addAll(normals);
         return String.join(",", hallways);
     }
 
@@ -165,6 +177,16 @@ public class Location implements Comparable<Location> {
         return true;
     }
 
+    /**
+     * Returns the location name, optionally colored depending on its type.
+     * <ul>
+     *     <li>Blue if the location is a hallway</li>
+     *     <li>Green if the location is not empty or has an active friendly NPC task</li>
+     *     <li>Default color otherwise</li>
+     * </ul>
+     *
+     * @return the formatted location name
+     */
     public String writeName(){
         if(type == Type.HALLWAY){
             return Important.changeText("blue", name);
@@ -194,8 +216,6 @@ public class Location implements Comparable<Location> {
         return Important.changeText("red", "Nepřítomný");
     }
 
-
-
     public boolean isFree() {
         return enemyNPC == null;
     }
@@ -224,7 +244,10 @@ public class Location implements Comparable<Location> {
         }
     }
 
-
+    /**
+     * Prepares the task to be written through {@link Important#dashToString(String, String)}
+     * @return the toString to be written through {@link Important#dashToString(String, String)}
+     */
     private String forToString() {
         return Important.changeText("bold", "Postava: ") + writeFriendlyNPCName() + "\n" +
                 Important.changeText("bold", "Předměty: ") + writeItemsNames() + "\n" +
