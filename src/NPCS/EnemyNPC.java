@@ -4,18 +4,22 @@ import Game.Important;
 
 import java.util.ArrayList;
 
+/**
+ * This class represents an enemy NPC.
+ * <p>
+ *     This class is a POJO.
+ * </p>
+ * It extends {@link NPC}.
+ *
+ * @author Matěj Pospíšil
+ */
 public class EnemyNPC extends NPC{
 
     private String question;
     private ArrayList<String> possibleAnswers;
 
-    public EnemyNPC(String name, String position, String age) {
-        super(name, position, age);
-    }
-
     public EnemyNPC() {
     }
-
 
     public boolean evaluateQuestion(String answer){
         return possibleAnswers.contains(answer.toLowerCase());
