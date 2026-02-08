@@ -48,7 +48,4 @@ public class StartGameCommand implements Command {
     public void endAudio() {
     }
 
-    public boolean endIntro(){
-        return true;
-    }
 }
