@@ -4,7 +4,9 @@ import AroundPlayer.Player;
 import Game.Important;
 
 /**
- * Mode designed to operate in the area of location
+ * A mode responsible for handling locations.
+ *
+ * @author Matěj Pospíšil
  */
 public class LocationMode implements Mode {
 
