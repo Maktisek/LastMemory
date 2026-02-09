@@ -187,7 +187,7 @@ public class Console {
      */
     private void waitUntilInput(Command command) {
         if (command.isWaitAble()) {
-            System.out.print("Napiš cokoli pro pokračování:");
+            System.out.print(Important.changeText("blue", "Napiš cokoli pro pokračování:"));
             Important.loadText();
             command.endAudio();
             if (!player.canPlayCutscene()) {
