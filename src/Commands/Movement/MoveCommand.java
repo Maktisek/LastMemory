@@ -3,7 +3,7 @@ package Commands.Movement;
 import AroundPlayer.Player;
 import Commands.Command;
 import Game.Important;
-import Locations.Type;
+import Locations.LocationType;
 import Modes.ModeType;
 import Modes.QuestionMode;
 
@@ -20,9 +20,9 @@ import Modes.QuestionMode;
  * </p>
  * If the player’s mode is {@link QuestionMode}, then a question mode’s music is played instead of location’s music.
  * <p>
- *     If the previous and new location are both having their type set to {@link Type#HALLWAY}, then the music is not switched.
+ *     If the previous and new location are both having their type set to {@link LocationType#HALLWAY}, then the music is not switched.
  * </p>
- * If the previous and new location are both having their type set to {@link Type#FADE}, then the music of the new location is
+ * If the previous and new location are both having their type set to {@link LocationType#FADE}, then the music of the new location is
  * starting from where the previous location’s music ended.
  * @author Matěj Pospíšil
  */
@@ -53,13 +53,13 @@ public class MoveCommand implements Command {
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
 
-        if (player.getCurrentLocation().getType() == Type.HALLWAY && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
+        if (player.getCurrentLocation().getType() == LocationType.HALLWAY && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
             Important.playSound("walk");
             player.getCurrentLocation().setSong(player.getPreviousLocation().getSong());
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
 
-        if (player.getCurrentLocation().getType() == Type.FADE && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
+        if (player.getCurrentLocation().getType() == LocationType.FADE && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
             player.getPreviousLocation().stopMusic();
             Important.playSound("walk");
             player.getCurrentLocation().playMusic(player.getPreviousLocation().getSong().getClip().getMicrosecondPosition());

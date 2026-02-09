@@ -4,7 +4,7 @@ package Locations;
  * Represents the type of location.
  * @author Matěj Pospíšil
  */
-public enum Type {
+public enum LocationType {
     /**
      * Represents a normal location.
      */
@@ -15,7 +15,7 @@ public enum Type {
     HALLWAY,
 
     /**
-     * Represents a special location, which has to have a neighboring location with {@link Type#FADE} too in order to work properly.
+     * Represents a special location, which has to have a neighboring location with {@link LocationType#FADE} too in order to work properly.
      */
     FADE
 }

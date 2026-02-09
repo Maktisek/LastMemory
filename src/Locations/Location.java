@@ -19,7 +19,7 @@ import java.util.Collections;
  * a {@link #safe}, and a {@link #song}.
  * </p>
  * <p>
- * Each location has a {@link Type} and must be connected to other locations
+ * Each location has a {@link LocationType} and must be connected to other locations
  * through {@link #possibleLocations}.
  * </p>
  * <p>
@@ -35,7 +35,7 @@ public class Location implements Comparable<Location> {
     private String name;
     private String code;
     private String description;
-    private Type type;
+    private LocationType locationType;
 
     private EnemyNPC enemyNPC;
     private FriendlyNPC friendlyNPC;
@@ -154,7 +154,7 @@ public class Location implements Comparable<Location> {
         ArrayList<String> normals = new ArrayList<>(8);
         ArrayList<String> hallways = new ArrayList<>(3);
         for (Location location : possibleLocations) {
-            if (location.getType() == Type.HALLWAY) {
+            if (location.getType() == LocationType.HALLWAY) {
                 hallways.add(Important.changeText("underline", location.writeName()));
             } else {
                 normals.add(Important.changeText("underline", location.writeName()));
@@ -188,7 +188,7 @@ public class Location implements Comparable<Location> {
      * @return the formatted location name
      */
     public String writeName(){
-        if(type == Type.HALLWAY){
+        if(locationType == LocationType.HALLWAY){
             return Important.changeText("blue", name);
         }
         if(!isEmpty() || (friendlyNPC != null && friendlyNPC.getTask() != null)){
@@ -324,12 +324,12 @@ public class Location implements Comparable<Location> {
         this.code = code;
     }
 
-    public Type getType() {
-        return type;
+    public LocationType getType() {
+        return locationType;
     }
 
-    public void setType(Type type) {
-        this.type = type;
+    public void setType(LocationType locationType) {
+        this.locationType = locationType;
     }
 
     public Audio getSong() {
