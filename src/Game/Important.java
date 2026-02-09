@@ -160,7 +160,7 @@ public class Important {
     public static String loadText() {
         String result;
         try {
-            result = sc.nextLine();
+            result = sc.nextLine().toLowerCase();
         } catch (NoSuchElementException | IllegalStateException e) {
             return "Invalid input";
         }

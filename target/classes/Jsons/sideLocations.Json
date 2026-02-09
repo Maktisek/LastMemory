@@ -215,7 +215,7 @@
     "type" : "LOCATION"
   },
   {
-    "name": "Dílna D2",
+    "name": "Dílna D1",
     "code": "SIDEWORKROOM_001 ",
     "description": "Nejvybavenější učebna školy určená k výuce robotiky. \nRobotická ramena v takovém zvláštním akváriu, jsou osazena uprostřed třídy a ke každému z nich je píchnut i počítač. \nMístnost působí profesionálně, ale mně je naprosto k ničemu. \nAjťák se sem totiž nikdy nepodívá.",
     "enemyNPC": null,
