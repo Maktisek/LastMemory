@@ -67,7 +67,16 @@ public class Player {
         return false;
     }
 
-
+    /**
+     * Displays a memory content with an ASCII art on top. The ASCII art has to be loaded from
+     * {@code res\\TextFiles\\asciiMemory.txt}.
+     * <p>
+     *     If the memory is found, then the memory {@link Memory#switchOpened()} is done.
+     * </p>
+     *
+     * @param name the name of the memory to be shown
+     * @return the memory’s content; when not found, then a message indicating that
+     */
     public String writeMemory(String name) {
         for (Memory memory : collectedMemories) {
             if (memory.getName().equalsIgnoreCase(name)) {
@@ -215,7 +224,6 @@ public class Player {
         }
         return this.collectedMemories.size() == cutscenes.peekCutscene().getRequiredMemories();
     }
-
 
     @Override
     public String toString() {
