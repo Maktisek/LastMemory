@@ -234,6 +234,16 @@ public class Player {
         return mode;
     }
 
+    /**
+     * Helps {@link Game.CommandLoader} with deciding which mode player should have.
+     * <p>
+     *     When {@link #mode} is special, then {@link LocationMode} is returned in order to stop
+     *     the command from executing.
+     * </p>
+     * Some commands can be done in more than one mode, but at the same time not in every mode.
+     * So if the {@link #mode} is special, then those commands cannot be executed.
+     * @return {@link #mode} if it is not special, {@link LocationMode} otherwise
+     */
     public Mode specialGetMode() {
         if (!mode.isSpecial()) {
             return mode;
