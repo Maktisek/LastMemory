@@ -21,7 +21,7 @@ public class StartGameCommand implements Command {
     @Override
     public String execute() {
         player.setMode(new LocationMode());
-        return "Hra začíná...";
+        return "Užij si hru!";
     }
 
     @Override
