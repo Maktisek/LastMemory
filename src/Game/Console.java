@@ -7,6 +7,7 @@ import Commands.Game.ExitCommand;
 import Commands.Game.StartGameCommand;
 import Exceptions.WrongInitializationException;
 import Modes.Mode;
+import Modes.ModeType;
 import Modes.OutroMode;
 import Modes.QuestionMode;
 
@@ -87,7 +88,7 @@ public class Console {
                 continue;
             }
 
-            if (!player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
+            if (player.getMode().getInfo() != ModeType.question) {
                 if (player.getCurrentLocation().getSongClip() != null) {
                     player.getCurrentLocation().getSong().resume();
                 } else {
@@ -151,7 +152,7 @@ public class Console {
             return false;
         }
         Mode foundMode = gameLoader.getPossibleCommands().get(command).get();
-        if (foundMode != null && !player.getMode().getInfo().equalsIgnoreCase(foundMode.getInfo())) {
+        if (foundMode != null && player.getMode().getInfo() != foundMode.getInfo()) {
             Important.playSound("wrong sound");
             System.out.println(Important.changeText("red", "Akci " + Important.changeText("underline", command) + Important.changeText("red", " nelze nyní provést")));
             return false;

@@ -4,6 +4,7 @@ import AroundPlayer.Player;
 import Commands.Command;
 import Game.Important;
 import Locations.Type;
+import Modes.ModeType;
 import Modes.QuestionMode;
 
 /**
@@ -46,7 +47,7 @@ public class MoveCommand implements Command {
             return Important.changeText("red", "Lokace: " + this.name + " neexistuje");
         }
 
-        if (player.getMode().getInfo().equalsIgnoreCase(new QuestionMode().getInfo())) {
+        if (player.getMode().getInfo() == ModeType.question) {
             player.getPreviousLocation().pauseMusic();
             Important.playMusic("question mode");
             return Important.changeText("green", "Přesouváš se do: " + name);

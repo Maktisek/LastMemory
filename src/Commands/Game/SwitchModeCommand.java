@@ -3,10 +3,7 @@ package Commands.Game;
 import AroundPlayer.Player;
 import Commands.Command;
 import Game.Important;
-import Modes.BackpackMode;
-import Modes.LocationMode;
-import Modes.Mode;
-import Modes.QuestionMode;
+import Modes.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,12 +41,6 @@ public class SwitchModeCommand implements Command {
             Important.playSound("wrong sound");
             return Important.changeText("red", "Mód: " + mode + " neexistuje");
         }
-
-        if (map.get(mode).getInfo().equalsIgnoreCase(new LocationMode().getInfo()) && !player.getCurrentLocation().isFree()) {
-            player.switchMode(new QuestionMode());
-            return Important.changeText("green", "Mód změněn na: " + mode);
-        }
-
         player.switchMode(map.get(mode));
         return Important.changeText("green", "Mód změněn na: " + mode);
     }

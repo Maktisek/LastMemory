@@ -29,7 +29,7 @@ public interface Mode {
      * Works such as "identifier", which is used to match modes together.
      * @return the name of the mode
      */
-    String getInfo();
+    ModeType getInfo();
 
     /**
      * Works as an identifier of whether the mode is special.

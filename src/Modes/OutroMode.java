@@ -27,8 +27,8 @@ public class OutroMode implements Mode{
     }
 
     @Override
-    public String getInfo() {
-        return "outro";
+    public ModeType getInfo() {
+        return ModeType.outro;
     }
 
     @Override

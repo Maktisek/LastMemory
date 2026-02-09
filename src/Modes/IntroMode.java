@@ -23,8 +23,8 @@ public class IntroMode implements Mode{
     }
 
     @Override
-    public String getInfo() {
-        return "intro";
+    public ModeType getInfo() {
+        return ModeType.intro;
     }
 
     @Override

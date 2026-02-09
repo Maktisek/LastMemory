@@ -21,13 +21,13 @@ public class QuestionMode implements Mode{
     }
 
     @Override
-    public String getInfo() {
-        return "question";
+    public ModeType getInfo() {
+        return ModeType.question;
     }
 
     @Override
     public boolean isSpecial() {
-        return false;
+        return true;
     }
 
 }

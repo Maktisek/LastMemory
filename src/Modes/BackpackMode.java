@@ -27,8 +27,8 @@ public class BackpackMode implements Mode {
     }
 
     @Override
-    public String getInfo() {
-        return "backpack";
+    public ModeType getInfo() {
+        return ModeType.backpack;
     }
 
     @Override

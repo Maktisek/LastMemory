@@ -21,8 +21,8 @@ public class LocationMode implements Mode {
     }
 
     @Override
-    public String getInfo() {
-        return "location";
+    public ModeType getInfo() {
+        return ModeType.location;
     }
 
     @Override
