@@ -222,6 +222,8 @@ public class Initialization {
 
 
     private void checkInput(InputStream input, String path) throws WrongInitializationException {
+        System.out.println("hey");
+        System.out.println(input);
         if (input == null) {
             throw new WrongInitializationException(Important.changeText("red", "The file"+ path +" is missing from the resources folder."));
         }
