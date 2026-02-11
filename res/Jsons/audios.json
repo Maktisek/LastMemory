@@ -1,133 +1,133 @@
 [
   {
     "title" : "Samostudium na příští týden",
-    "filePath" : "res\\Audio\\Sounds\\kumbál.wav",
+    "filePath" : "/Audio/Sounds/kumbál.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -10.0
   },
   {
     "title" : "walk",
-    "filePath" : "res\\Audio\\Sounds\\walk.WAV",
+    "filePath" : "/Audio/Sounds/walk.WAV",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -2.0
   },
   {
     "title" : "run",
-    "filePath" : "res\\Audio\\Sounds\\run.wav",
+    "filePath" : "/Audio/Sounds/run.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -2.0
   },
   {
     "title" : "keyboard click",
-    "filePath" : "res\\Audio\\Sounds\\keyboard click.WAV",
+    "filePath" : "/Audio/Sounds/keyboard click.WAV",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -15.0
   },
   {
     "title" : "new memory",
-    "filePath" : "res\\Audio\\Sounds\\new memory.wav",
+    "filePath" : "/Audio/Sounds/new memory.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -12.0
   },
   {
     "title" : "question mode",
-    "filePath" : "res\\Audio\\Music\\question mode.wav",
+    "filePath" : "/Audio/Music/question mode.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -10.0
   },
   {
     "title" : "intro music",
-    "filePath" : "res\\Audio\\Music\\introMusic.wav",
+    "filePath" : "/Audio/Music/introMusic.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
   },
   {
     "title" : "outro music",
-    "filePath" : "res\\Audio\\Music\\outroMusic.wav",
+    "filePath" : "/Audio/Music/outroMusic.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
   },
   {
     "title" : "picking sound",
-    "filePath" : "res\\Audio\\Sounds\\picking sound.wav",
+    "filePath" : "/Audio/Sounds/picking sound.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -8.0
   },
   {
     "title" : "dropping sound",
-    "filePath" : "res\\Audio\\Sounds\\dropping sound.wav",
+    "filePath" : "/Audio/Sounds/dropping sound.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -4.0
   },
   {
     "title" : "memory song",
-    "filePath" : "res\\Audio\\Music\\memory song.wav",
+    "filePath" : "/Audio/Music/memory song.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
   },
   {
     "title" : "cutscene",
-    "filePath" : "res\\Audio\\Music\\cutscene.wav",
+    "filePath" : "/Audio/Music/cutscene.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : 0
   },
   {
     "title" : "safe open",
-    "filePath" : "res\\Audio\\Sounds\\safe open.wav",
+    "filePath" : "/Audio/Sounds/safe open.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -4.0
   },
   {
     "title" : "right answer",
-    "filePath" : "res\\Audio\\Sounds\\right answer.wav",
+    "filePath" : "/Audio/Sounds/right answer.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -4.0
   },
   {
     "title" : "wrong sound",
-    "filePath" : "res\\Audio\\Sounds\\wrong sound.wav",
+    "filePath" : "/Audio/Sounds/wrong sound.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -10.0
   },
   {
     "title" : "new task",
-    "filePath" : "res\\Audio\\Sounds\\new task.wav",
+    "filePath" : "/Audio/Sounds/new task.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -2.0
   },
   {
     "title" : "new location",
-    "filePath" : "res\\Audio\\Sounds\\new location.wav",
+    "filePath" : "/Audio/Sounds/new location.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -12.0
   },
   {
     "title" : "hand in",
-    "filePath" : "res\\Audio\\Sounds\\hand in.wav",
+    "filePath" : "/Audio/Sounds/hand in.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -4.0
   },
   {
     "title" : "fade cutscene",
-    "filePath" : "res\\Audio\\Sounds\\fade cutscene.wav",
+    "filePath" : "/Audio/Sounds/fade cutscene.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -16.0

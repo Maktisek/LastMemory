@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact name="Last Memory 8:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Last_Memory_8_jar</output-path>
+    <root id="root">
+      <element id="archive" name="jackson-demo.jar">
+        <element id="module-output" name="jackson-demo" />
+      </element>
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.17.1" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.17.1" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.17.1" />
+    </root>
+  </artifact>
+</component>
