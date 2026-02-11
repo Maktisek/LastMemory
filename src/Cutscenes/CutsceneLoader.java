@@ -1,9 +1,9 @@
 package Cutscenes;
 
 import Exceptions.WrongInitializationException;
+import Game.Important;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Queue;
@@ -31,10 +31,14 @@ public class CutsceneLoader {
      */
     public static CutsceneLoader loadCutscenes() throws WrongInitializationException {
         ObjectMapper mapper = new ObjectMapper();
-        try (InputStream input = new FileInputStream("res\\Jsons\\cutscenes.json")){
+        InputStream input = CutsceneLoader.class.getResourceAsStream("/Jsons/cutscenes.json");
+        if(input == null){
+            throw new WrongInitializationException(Important.changeText("red", "The file is missing from the resources folder."));
+        }
+        try (input){
             return mapper.readValue(input, CutsceneLoader.class);
         } catch (IOException e) {
-            throw new WrongInitializationException("Failed to load cutscenes! Make sure 'res\\Jsons\\cutscenes.json' exists and is valid.");
+            throw new WrongInitializationException(Important.changeText("red", "There is a problem with the Json file"));
         }
     }
 

@@ -1,8 +1,8 @@
 package AudioSystem;
 
+import Game.Important;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -39,11 +39,15 @@ public class AudioLibrary {
      * Uses external library jackson to load Json files.
      */
     private void loadAudios() {
-        try (InputStream input = new FileInputStream("res\\Jsons\\audios.json")) {
+        InputStream input = AudioLibrary.class.getResourceAsStream("/Jsons/audios.json");
+        if(input == null){
+            throw new IllegalStateException(Important.changeText("red", "The /Jsons/audios.json was not found."));
+        }
+        try (input) {
             Audio[] sounds = mapper.readValue(input, Audio[].class);
             audios.addAll(List.of(sounds));
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(Important.changeText("red", "There is a problem with the Json file"));
         }
     }
 

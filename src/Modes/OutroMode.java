@@ -11,8 +11,8 @@ public class OutroMode implements Mode{
 
     @Override
     public String executeInfo(Player player) {
-        String ascii = "\n"+Important.changeText("bold", Important.changeText("pink", Important.readTxtFiles("res\\TextFiles\\outroText.txt", 0))) + "\n";
-        ascii += "Za dohrání hry dostáváš citát: "+Important.changeText("bold", Important.randomLineReader("res\\TextFiles\\endQuotes.txt"));
+        String ascii = "\n"+Important.changeText("bold", Important.changeText("pink", Important.readTxtFiles("/TextFiles/outroText.txt", 0))) + "\n";
+        ascii += "Za dohrání hry dostáváš citát: "+Important.changeText("bold", Important.randomLineReader("/TextFiles/endQuotes.txt"));
         ascii += "\nDej mi vědět jaký citát si dostal/a a taky (pokud chceš) mi dej vědět, co si o hře myslíš.";
         ascii += "\nNapsat mi to můžeš sem: https://secretnote.me/msg/5FHW?utm_source=native";
         ascii += "\nZpráva je anonymní, nemusíš se bát.";
@@ -23,7 +23,7 @@ public class OutroMode implements Mode{
 
     @Override
     public String executeHelp() {
-        return Important.readTxtFiles("res\\TextFiles\\outroHelp.txt", 0);
+        return Important.readTxtFiles("/TextFiles/outroHelp.txt", 0);
     }
 
     @Override

@@ -81,7 +81,7 @@ public class Player {
         for (Memory memory : collectedMemories) {
             if (memory.getName().equalsIgnoreCase(name)) {
                 memory.switchOpened();
-                String ascii = Important.readTxtFiles("res\\TextFiles\\asciiMemory.txt", 0);
+                String ascii = Important.readTxtFiles("/TextFiles/asciiMemory.txt", 0);
                 String headText = Important.asciiHeadTextHelper(memory.getDescription(), ascii);
                 return Important.writeSpace(40) + Important.changeText("bold", Important.changeText("pink", headText) + "\n" + memory.getDescription());
             }

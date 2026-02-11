@@ -2,20 +2,20 @@ package Game;
 
 import AroundPlayer.Player;
 import Commands.*;
-import Commands.Game.*;
-import Commands.Items.DropItemCommand;
-import Commands.Items.InspectItemCommand;
-import Commands.Items.OpenSafeCommand;
-import Commands.Items.PickItemCommand;
-import Commands.Locations.ReadLocationDescriptionCommand;
-import Commands.Memories.RecallMemoryCommand;
-import Commands.Movement.MoveCommand;
-import Commands.Movement.RunAwayCommand;
-import Commands.Movement.ScanAndAddCommand;
-import Commands.NPCs.AnswerEnemyNPCCommand;
-import Commands.NPCs.DialogCommand;
-import Commands.NPCs.ReadFriendlyNPCDescriptionCommand;
-import Commands.Tasks.*;
+import Commands.GameCommands.*;
+import Commands.ItemsCommands.DropItemCommand;
+import Commands.ItemsCommands.InspectItemCommand;
+import Commands.ItemsCommands.OpenSafeCommand;
+import Commands.ItemsCommands.PickItemCommand;
+import Commands.LocationsCommands.ReadLocationDescriptionCommand;
+import Commands.MemoriesCommands.RecallMemoryCommand;
+import Commands.MovementCommands.MoveCommand;
+import Commands.MovementCommands.RunAwayCommand;
+import Commands.MovementCommands.ScanAndAddCommand;
+import Commands.NPCsCommands.AnswerEnemyNPCCommand;
+import Commands.NPCsCommands.DialogCommand;
+import Commands.NPCsCommands.ReadFriendlyNPCDescriptionCommand;
+import Commands.TasksCommands.*;
 import Modes.*;
 
 import java.util.HashMap;
@@ -126,8 +126,8 @@ public class CommandLoader {
         });
         commands.put("info postava", () -> List.of(new ReadFriendlyNPCDescriptionCommand(player)));
         commands.put("spustit hru", () -> List.of(new StartGameCommand(player)));
-        commands.put("informace", () -> List.of(new WriteTxtFileCommand("res\\TextFiles\\aboutGame.txt")));
-        commands.put("jak hrát", () -> List.of(new WriteTxtFileCommand("res\\TextFiles\\howToPlay.txt")));
+        commands.put("informace", () -> List.of(new WriteTxtFileCommand("/TextFiles/aboutGame.txt")));
+        commands.put("jak hrát", () -> List.of(new WriteTxtFileCommand("/TextFiles/howToPlay.txt")));
     }
 
     /**

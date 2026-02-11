@@ -2,9 +2,7 @@ package Game;
 
 import AudioSystem.AudioLibrary;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 /**
@@ -52,7 +50,7 @@ public class Important {
     }
 
     /**
-     * Reads the CSV file "res\CsvFiles\textUpdate.csv" and builds a map of text styles to their ANSI escape codes.
+     * Reads the CSV file "/CsvFiles/textUpdate.csv" and builds a map of text styles to their ANSI escape codes.
      * <p>
      * Each line in the CSV should have the format "style>code", where "style" is the name of the text style
      * and "code" is its corresponding ANSI escape sequence.
@@ -61,7 +59,11 @@ public class Important {
      * @return a HashMap where keys are style names and values are their corresponding ANSI escape codes
      */
     private static HashMap<String, String> loadTextUpdater() {
-        try (BufferedReader br = new BufferedReader(new FileReader("res\\CsvFiles\\textUpdate.csv"))) {
+        InputStream input = Important.class.getResourceAsStream("/CsvFiles/textUpdate.csv");
+        if(input == null){
+            throw new RuntimeException(Important.changeText("red", "The file"+ "/CsvFiles/textUpdate.csv" + "does not exist."));
+        }
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
             HashMap<String, String> temp = new HashMap<>();
             String line;
             while ((line = br.readLine()) != null) {
@@ -69,8 +71,8 @@ public class Important {
                 temp.put(data[0], data[1]);
             }
             return temp;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(Important.changeText("red", "There is a problem with the"+ "/CsvFiles/textUpdate.csv" + " file"));
         }
     }
 
@@ -104,7 +106,11 @@ public class Important {
      * @return the content of the file as a String, indented by {@code space} spaces; if the file is missing, returns an error message
      */
     public static String readTxtFiles(String pathName, int space) {
-        try (BufferedReader br = new BufferedReader(new FileReader(pathName))) {
+        InputStream input = Important.class.getResourceAsStream(pathName);
+        if(input == null){
+            throw new RuntimeException(Important.changeText("red", "The "+ pathName +" file does not exist."));
+        }
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
             StringBuilder sb = new StringBuilder();
             ArrayList<String> lines = new ArrayList<>();
             String line;
@@ -119,8 +125,8 @@ public class Important {
                 }
             }
             return sb.toString();
-        } catch (IOException e) {
-            return "soubor " + pathName + " ve hře chybí, zkus zkontrolovat herní soubory.";
+        } catch (Exception e) {
+            return Important.changeText("red", "There is a problem with "+ pathName +"file");
         }
     }
 
@@ -200,7 +206,11 @@ public class Important {
      * a message indicating the problem is returned
      */
     public static String randomLineReader(String pathName) {
-        try (BufferedReader br = new BufferedReader(new FileReader(pathName))) {
+        InputStream input = Important.class.getResourceAsStream(pathName);
+        if(input == null){
+            throw new RuntimeException(Important.changeText("red", "The"+ pathName +"file does not exist."));
+        }
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
             ArrayList<String> lines = new ArrayList<>();
             String line;
             while ((line = br.readLine()) != null) {
@@ -210,8 +220,8 @@ public class Important {
                 Important.changeText("red", "Soubor " + pathName + " je prázdný.");
             }
             return lines.get(new Random().nextInt(0, lines.size()));
-        } catch (IOException e) {
-            return Important.changeText("red", "soubor " + pathName + " ve hře chybí, zkus zkontrolovat herní soubory.");
+        } catch (Exception e) {
+            return Important.changeText("red", "There is a problem with "+ pathName +"file");
         }
     }
 

@@ -74,7 +74,7 @@ public class Location implements Comparable<Location> {
     /**
      * This method transfers all items from {@link #safe} to {@link #items}.
      * <p>
-     *     It is called only after the safe is opened in {@link Commands.Items.OpenSafeCommand}
+     *     It is called only after the safe is opened in {@link Commands.ItemsCommands.OpenSafeCommand}
      * </p>
      * @return a formatted string listing the items found in the safe
      */

@@ -57,44 +57,52 @@ public class Initialization {
     }
 
     /**
-     * Loads all side locations from the file {@code res\Jsons\sideLocations.json} and adds them into {@link #locations}.
+     * Loads all side locations from the file {@code /Jsons/sideLocations.json} and adds them into {@link #locations}.
      *
-     * @throws WrongInitializationException if an I/O error occurs during the loading process
+     * @throws WrongInitializationException if the file cannot be found during the loading process or the Json file is
+     *                                      not loaded correctly.
      */
     public void loadSideLocations() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\Jsons\\sideLocations.json");) {
+        InputStream input = Initialization.class.getResourceAsStream("/Jsons/sideLocations.json");
+        checkInput(input, "/Jsons/sideLocations.json");
+        try (input) {
             Location[] sideLocations = mapper.readValue(input, Location[].class);
             locations.addAll(List.of(sideLocations));
-        } catch (IOException e) {
-            throw new WrongInitializationException(e.getMessage());
+        } catch (Exception e) {
+            throw new WrongInitializationException(Important.changeText("red", "There is a problem with the Json file"));
         }
     }
 
     /**
-     * Loads all hallway from the file {@code res\Jsons\hallwayLocations.json} and adds them into {@link #locations}.
+     * Loads all hallway from the file {@code /Jsons/hallwayLocations.json} and adds them into {@link #locations}.
      *
-     * @throws WrongInitializationException if an I/O error occurs during the loading process
+     * @throws WrongInitializationException if the file cannot be found during the loading process or the Json file is
+     *                                      not loaded correctly.
      */
     public void loadHallwayLocationsLocations() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\Jsons\\hallwayLocations.json");) {
+        InputStream input = Initialization.class.getResourceAsStream("/Jsons/hallwayLocations.json");
+        checkInput(input, "/Jsons/hallwayLocations.json");
+        try (input) {
             Location[] hallwayLocations = mapper.readValue(input, Location[].class);
             locations.addAll(List.of(hallwayLocations));
-        } catch (IOException e) {
-            throw new WrongInitializationException("Wrong hallway locations load");
+        } catch (Exception e) {
+            throw new WrongInitializationException(Important.changeText("red", "There is a problem with the Json file"));
         }
     }
 
     /**
-     * Loads all main locations from the file {@code res\Jsons\locations.json} and adds them into {@link #tempLocations}.
+     * Loads all main locations from the file {@code /Jsons/locations.json} and adds them into {@link #tempLocations}.
      *
      * @throws WrongInitializationException if an I/O error occurs during the loading process
      */
     public void loadMainLocations() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\Jsons\\locations.json");) {
+        InputStream input = Initialization.class.getResourceAsStream("/Jsons/locations.json");
+        checkInput(input, "/Jsons/locations.json");
+        try (input) {
             Location[] mainLocations = mapper.readValue(input, Location[].class);
             tempLocations.addAll(List.of(mainLocations));
-        } catch (IOException e) {
-            throw new WrongInitializationException("Wrong main locations load");
+        } catch (Exception e) {
+            throw new WrongInitializationException(Important.changeText("red", "There is a problem with the Json file"));
         }
     }
 
@@ -129,7 +137,7 @@ public class Initialization {
     /**
      * Connects all locations according to a CSV file.
      * <p>
-     * The connections are read from the CSV file {@code res\Jsons\basicLocationConnections.csv}.
+     * The connections are read from the CSV file {@code /Jsons/basicLocationConnections.csv}.
      * </p>
      * <p>
      * Each location has its own index in {@link #locations}, and each line in the CSV file
@@ -140,10 +148,13 @@ public class Initialization {
      * The indexes in the CSV file should be written in the format: X>Y>Z
      * </p>
      *
-     * @throws WrongInitializationException if an I/O error occurs while reading the CSV file
+     * @throws WrongInitializationException if the file cannot be found during the loading process or the CSV file is
+     *                                      not loaded correctly.
      */
     public void loadLocationsConnection() throws WrongInitializationException {
-        try (BufferedReader br = new BufferedReader(new FileReader("res\\CsvFiles\\basicLocationConnections.csv"))) {
+        InputStream input = Initialization.class.getResourceAsStream("/CsvFiles/basicLocationConnections.csv");
+        checkInput(input, "/CsvFiles/basicLocationConnections.csv");
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
             br.readLine();
             String line;
             int index = 0;
@@ -154,22 +165,25 @@ public class Initialization {
                 }
                 index++;
             }
-        } catch (IOException e) {
-            throw new WrongInitializationException("An error occurred while connecting locations");
+        } catch (Exception e) {
+            throw new WrongInitializationException(Important.changeText("red", "There is a problem with the CSV file"));
         }
     }
 
     /**
-     * Loads all {@link Audio} instances from the JSON file {@code res\Jsons\locationMusic.json}.
+     * Loads all {@link Audio} instances from the JSON file {@code /Jsons/locationMusic.json}.
      *
      * @return an array of {@link Audio} instances loaded from the file
-     * @throws WrongInitializationException if an I/O error occurs while reading the JSON file
+     * @throws WrongInitializationException if the file cannot be found during the loading process or the CSV file is
+     *                                      not loaded correctly.
      */
     public Audio[] loadAllSongs() throws WrongInitializationException {
-        try (InputStream input = new FileInputStream("res\\Jsons\\locationMusic.json")) {
+        InputStream input = Initialization.class.getResourceAsStream("/Jsons/locationMusic.json");
+        checkInput(input, "/Jsons/locationMusic.json");
+        try (input) {
             return mapper.readValue(input, Audio[].class);
-        } catch (IOException e) {
-            throw new WrongInitializationException("Audios were not loaded properly");
+        } catch (Exception e) {
+            throw new WrongInitializationException(Important.changeText("red", "There is a problem with the Json file"));
         }
     }
 
@@ -191,7 +205,7 @@ public class Initialization {
             if (location != null) {
                 Objects.requireNonNull(findLocation(location.getName())).setSong(audio);
             } else {
-                throw new WrongInitializationException("Wrong song name input");
+                throw new WrongInitializationException(Important.changeText("red", "Wrong song name input"));
             }
         }
     }
@@ -204,6 +218,13 @@ public class Initialization {
      */
     public void loadPlayer() throws WrongInitializationException {
         this.player = new Player(locations.get(11));
+    }
+
+
+    private void checkInput(InputStream input, String path) throws WrongInitializationException {
+        if (input == null) {
+            throw new WrongInitializationException(Important.changeText("red", "The file"+ path +" is missing from the resources folder."));
+        }
     }
 
 

@@ -2,14 +2,13 @@ package Game;
 
 import AroundPlayer.Player;
 import Commands.*;
-import Commands.Game.CutscenePlayerCommand;
-import Commands.Game.ExitCommand;
-import Commands.Game.StartGameCommand;
+import Commands.GameCommands.CutscenePlayerCommand;
+import Commands.GameCommands.ExitCommand;
+import Commands.GameCommands.StartGameCommand;
 import Exceptions.WrongInitializationException;
 import Modes.Mode;
 import Modes.ModeType;
 import Modes.OutroMode;
-import Modes.QuestionMode;
 
 import java.util.*;
 

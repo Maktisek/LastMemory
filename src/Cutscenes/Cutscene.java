@@ -23,7 +23,7 @@ public class Cutscene {
     }
 
     private String writeHeadText(){
-        String result = Important.readTxtFiles("res\\TextFiles\\cutsceneAscii.txt", 0);
+        String result = Important.readTxtFiles("/TextFiles/cutsceneAscii.txt", 0);
         return Important.asciiHeadTextHelper(scene, Important.changeText("bold", result));
     }
 

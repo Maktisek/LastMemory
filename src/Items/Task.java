@@ -5,8 +5,6 @@ import AroundPlayer.Player;
 import Game.Important;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 /**
  * Represents a task in the game.
