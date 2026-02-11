@@ -1,7 +1,9 @@
 package AudioSystem;
 
 import javax.sound.sampled.*;
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.InputStream;
 
 /**
  * This class stands for playing individual wav audio files. Those files have to be implemented into res\\Audio.
@@ -40,7 +42,11 @@ public class Audio {
      */
     private void implementAudio(boolean music, long startPosition) {
         try {
-            final AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(this.filePath));
+            InputStream input = Audio.class.getResourceAsStream(this.filePath);
+            if (input == null) {
+                throw new RuntimeException("Audio file " + title + " not found!");
+            }
+            final AudioInputStream audioStream = AudioSystem.getAudioInputStream(new BufferedInputStream(input));
             this.clip = AudioSystem.getClip();
             clip.open(audioStream);
             setVolume(this.initialVolume - 15);
