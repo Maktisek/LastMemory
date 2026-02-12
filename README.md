@@ -70,7 +70,7 @@ Vzhledem k tomu, že příkazový řádek stále neví odkud budeme spouštět, 
 
 Prvně si budeme muset hru najít v průzkumníku souborů. Zkontrolujeme si, na jakém disku se soubor nachází.
 
-Příkazový řádek říká, kde hledá. Pokud disk nesedí napište název disku a dvojtečku.
+Příkazový řádek říká, kde hledá. Pokud disk nesedí, napište název disku a dvojtečku.
 
 Například chceme přepnout na disk D, pak napíšeme:
 ```cmd
@@ -89,7 +89,7 @@ Nyní příkazový řádek hledá v požadované složce, která obsahuje JAR so
 ### ▶️ Spuštění hry
 Nyní poslední krok - spustit hru⚡
 
-Do příkazové řádky napište:
+Do příkazové řádky napíšeme:
 ```cmd
 java -Dfile.encoding=UTF-8 -jar LastMemory.jar
 ```
@@ -110,7 +110,7 @@ Pokud napíšete příkaz pomoc, hra automaticky vypíše, co lze v daný moment
 Systém je to snadný:
 "název příkazu" -> "upřesnění" = co provede. Vždy před druhým vstupem hra vypíše informaci o možnostech.
 
-S touto radou se nestratíte🌟
+S touto radou se neztratíte🌟
 
 ## 💻 Jak hru hrát
 Po celou dobu gameplaye máte možnost zavolat příkaz "jak hrát". Ten detailně
