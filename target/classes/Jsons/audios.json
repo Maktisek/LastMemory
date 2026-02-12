@@ -8,7 +8,7 @@
   },
   {
     "title" : "walk",
-    "filePath" : "/Audio/Sounds/walk.WAV",
+    "filePath" : "/Audio/Sounds/walk.wav",
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -2.0

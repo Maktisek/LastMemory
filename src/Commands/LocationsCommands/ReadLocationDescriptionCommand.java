@@ -22,7 +22,7 @@ public class ReadLocationDescriptionCommand implements Command {
     public String execute() {
         String ascii = Important.readTxtFiles("/TextFiles/asciiAbout.txt", 0);
         String headText = Important.asciiHeadTextHelper(player.getCurrentLocation().getDescription(), ascii);
-        return Important.writeSpace(40) +Important.changeText("bold", Important.changeText("pink", headText) + "\n" + player.getCurrentLocation().getDescription());
+        return Important.writeSpace(60) +Important.changeText("bold", Important.changeText("pink", headText) + "\n" + player.getCurrentLocation().getDescription());
     }
 
     @Override

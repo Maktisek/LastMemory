@@ -83,7 +83,7 @@ public class Player {
                 memory.switchOpened();
                 String ascii = Important.readTxtFiles("/TextFiles/asciiMemory.txt", 0);
                 String headText = Important.asciiHeadTextHelper(memory.getDescription(), ascii);
-                return Important.writeSpace(40) + Important.changeText("bold", Important.changeText("pink", headText) + "\n" + memory.getDescription());
+                return Important.writeSpace(60) + Important.changeText("bold", Important.changeText("pink", headText) + "\n" + memory.getDescription());
             }
         }
         return Important.changeText("red", "Vzpomínka " + Important.changeText("underline", name) + " neexistuje");

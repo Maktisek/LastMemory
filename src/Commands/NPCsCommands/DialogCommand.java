@@ -29,7 +29,7 @@ public class DialogCommand implements Command {
         if (player.getCurrentLocation().getFriendlyNPC() != null) {
             String ascii = Important.readTxtFiles("/TextFiles/asciiDialog.txt", 0);
             String headText = Important.asciiHeadTextHelper(player.getCurrentLocation().getFriendlyNPC().getCurrentSpeech(), ascii);
-            return Important.writeSpace(40) + Important.changeText("bold", Important.changeText("pink", headText) + "\n" + player.getCurrentLocation().getFriendlyNPC().getCurrentSpeech());
+            return Important.writeSpace(60) + Important.changeText("bold", Important.changeText("pink", headText) + "\n" + player.getCurrentLocation().getFriendlyNPC().getCurrentSpeech());
         } else {
             this.inputWait = false;
             Important.playSound("wrong sound");

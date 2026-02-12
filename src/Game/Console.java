@@ -70,7 +70,7 @@ public class Console {
      * If cutscene cannot be played and game cannot be ended yet, the player chooses the command he wants to execute.
      */
     private void preExecute() {
-        System.out.println(Important.writeSpace(50));
+        System.out.println(Important.writeSpace(60));
         while (!exit) {
             String command;
 
@@ -171,7 +171,7 @@ public class Console {
         Command command = new CutscenePlayerCommand(player);
         System.out.println(command.execute());
         waitUntilInput(command);
-        System.out.println(Important.writeSpace(40));
+        System.out.println(Important.writeSpace(60));
     }
 
     /**
@@ -251,7 +251,7 @@ public class Console {
         player.getCurrentLocation().stopMusic();
         boolean exitOutro = false;
         Important.playMusic("outro music");
-        System.out.println(Important.writeSpace(50));
+        System.out.println(Important.writeSpace(60));
         System.out.println(player);
         while (!exitOutro) {
             System.out.println("\nNapiš příkaz");
