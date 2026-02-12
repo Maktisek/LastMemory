@@ -3,6 +3,7 @@ package Game;
 import AudioSystem.AudioLibrary;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 /**
@@ -17,7 +18,7 @@ import java.util.*;
 public class Important {
 
 
-    private static final Scanner sc = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in, StandardCharsets.UTF_8);
     private static final AudioLibrary audioLibrary = AudioLibrary.loadAudioLibrary();
 
     /**
