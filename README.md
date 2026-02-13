@@ -82,8 +82,9 @@ Pokud disk sedí, není potřeba dělat nic❗
 Nyní už jen nastavit cestu. Dejme tomu, že herní JAR soubor se nachází na: D:\Test.
 Pak do příkazového řádku napíšeme:
 ```cmd
-cd D:\Test
+cd \Test
 ```
+
 Nyní příkazový řádek hledá v požadované složce, která obsahuje JAR soubor✅
 
 ### ▶️ Spuštění hry
