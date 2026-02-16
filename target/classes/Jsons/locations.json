@@ -69,7 +69,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_002"]
   },
   {
     "name": "Učebna 17",
@@ -134,7 +135,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_002"]
   },
   {
     "name": "Učebna 18",
@@ -209,7 +211,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_002"]
   },
   {
     "name": "Učebna 19",
@@ -284,7 +287,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_002"]
   },
   {
     "name": "Učebna 8a",
@@ -339,7 +343,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_003"]
   },
   {
     "name": "Učebna 13",
@@ -400,7 +405,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_003"]
   },
   {
     "name": "Kabinet K12",
@@ -473,7 +479,8 @@
         }
       ]
     },
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_003"]
   },
   {
     "name": "Zástupci ředitele",
@@ -532,7 +539,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_004"]
   },
   {
     "name": "Ředitelna",
@@ -583,7 +591,8 @@
     "items": [
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_004"]
   },
   {
     "name": "Vjezd",
@@ -636,6 +645,7 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_005"]
   }
 ]

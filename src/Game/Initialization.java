@@ -51,7 +51,7 @@ public class Initialization {
         loadMainLocations();
         connectMainLocations();
         setReadyPossibleLocationArrays();
-        loadLocationsConnection();
+        connectAllLocations();
         setAllMusic();
         loadPlayer();
     }
@@ -170,10 +170,16 @@ public class Initialization {
         }
     }
 
-    private void connectAllLocations(){
-
-
-
+    private void connectAllLocations() throws WrongInitializationException{
+        for (Location location : locations){
+            for (int i = 0; i < location.getConnections().length; i++) {
+                Location temp = findLocationByCode(location.getConnections()[i]);
+                if(temp == null){
+                    throw new WrongInitializationException(Important.changeText("red", location.getName() + " has a connection with " + location.getConnections()[i] + ", but location with that code does not exist."));
+                }
+                location.addPossibleLocation(temp);
+            }
+        }
     }
 
     /**
@@ -207,9 +213,9 @@ public class Initialization {
     public void setAllMusic() throws WrongInitializationException {
         Audio[] audios = loadAllSongs();
         for (Audio audio : audios) {
-            Location location = findLocation(audio.getTitle());
+            Location location = findLocationByName(audio.getTitle());
             if (location != null) {
-                Objects.requireNonNull(findLocation(location.getName())).setSong(audio);
+                Objects.requireNonNull(findLocationByName(location.getName())).setSong(audio);
             } else {
                 throw new WrongInitializationException(Important.changeText("red", "Wrong song name input"));
             }
@@ -234,9 +240,18 @@ public class Initialization {
     }
 
 
-    private Location findLocation(String name) {
+    private Location findLocationByName(String name) {
         for (Location location : locations) {
             if (location.getName().equalsIgnoreCase(name)) {
+                return location;
+            }
+        }
+        return null;
+    }
+
+    private Location findLocationByCode(String code) {
+        for (Location location : locations) {
+            if (location.getCode().equalsIgnoreCase(code)) {
                 return location;
             }
         }

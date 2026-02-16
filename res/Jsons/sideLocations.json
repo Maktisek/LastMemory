@@ -179,7 +179,7 @@
   },
   {
     "name": "Aula",
-    "code": "SPECIALS_002 ",
+    "code": "SPECIALS_002",
     "description": "Dříve to byl kostel, nyní je to jídelna. \nObrovský prostor, v nímž se ozvěna ozývá i po třech sekundách. \nNa zdech jsou křesťanské malby, které dnes připomínají starý účel této místnosti. \nÚplně vepředu se nachází stupínek se schůdky. \nNa stupínku je piano a nad pianem se nachází dataprojektor. \nJe to tu, jak bych řekla, masivní. \nNejstylovější jídelna na Praze 2, nebudu lhát.",
     "enemyNPC": null,
     "friendlyNPC": {
@@ -205,7 +205,7 @@
   },
   {
     "name": "Sborovna",
-    "code": "SIDECABINET_001 ",
+    "code": "SIDECABINET_001",
     "description": "Velká místnost sloužící jako sborovna, ale zároveň i kabinet. \nŽáci a učitelé sem nosí třídnice. \nPo místnosti jsou rozsázeny stolní počítače a vzadu místnosti se nachází malý whiteboard. \nJá třídnici nenosím, tak jsem tu tolikrát nebyla.",
     "enemyNPC": null,
     "friendlyNPC": null,
@@ -223,7 +223,7 @@
   },
   {
     "name": "Dílna D1",
-    "code": "SIDEWORKROOM_001 ",
+    "code": "SIDEWORKROOM_001",
     "description": "Nejvybavenější učebna školy určená k výuce robotiky. \nRobotická ramena v takovém zvláštním akváriu, jsou osazena uprostřed třídy a ke každému z nich je píchnut i počítač. \nMístnost působí profesionálně, ale mně je naprosto k ničemu. \nAjťák se sem totiž nikdy nepodívá.",
     "enemyNPC": null,
     "friendlyNPC": null,
@@ -241,7 +241,7 @@
   },
   {
     "name": "Sekretariát",
-    "code": "SPECIALS_003 ",
+    "code": "SPECIALS_003",
     "description": "Malá útulná místnost určená pro sekretářky školy. \nNa zemi je koberec. \nMístnost působí zabydleně, hlavně kvůli svému přehlednému nepořádku. \nJedna se sekretářek si sem vodí i svého psa. \nCelkem cute místnost.",
     "enemyNPC": null,
     "friendlyNPC": null,
@@ -277,7 +277,7 @@
   },
   {
     "name": "Kumbál",
-    "code": "SPECIALS_004 ",
+    "code": "SPECIALS_004",
     "description": "Zvláštní malá místnost obsahující pomůcky k výuce fyziky. \nNachází se v ní poměrně velký nepořádek. \nVždycky jsem to tu chtěla celé projít, ale moje hlava si nevymyslí, jak to tu doopravdy vypadá. \nNo, možná proto tu je Sergei, nic jinýho si tady představit nedokážu.",
     "enemyNPC": null,
     "friendlyNPC": {
