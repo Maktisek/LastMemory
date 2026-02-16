@@ -5,6 +5,7 @@ import AroundPlayer.Player;
 import AudioSystem.Audio;
 import Exceptions.WrongInitializationException;
 import Locations.Location;
+import Locations.LocationType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
@@ -181,7 +182,7 @@ public class Initialization {
      * <p>
      * Locations without a matching audio will remain without music.
      * </p>
-     *
+     * After the process, method {@link #setHallwaysMusic()} is executed.
      * @throws WrongInitializationException if an audio title does not match any location
      */
     public void setAllMusic() throws WrongInitializationException {
@@ -192,6 +193,19 @@ public class Initialization {
                 Objects.requireNonNull(findLocationByName(location.getName())).setSong(audio);
             } else {
                 throw new WrongInitializationException(Important.changeText("red", "Wrong song name input"));
+            }
+        }
+        setHallwaysMusic();
+    }
+
+    /**
+     * Sets the same audio instance for all hallways.
+     * The instance can be found in location with code {@code HALLWAY_002}
+     */
+    private void setHallwaysMusic(){
+        for (Location location : locations){
+            if(location.getType() == LocationType.HALLWAY){
+                location.setSong(Objects.requireNonNull(findLocationByCode("HALLWAY_002")).getSong());
             }
         }
     }

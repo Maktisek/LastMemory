@@ -55,7 +55,6 @@ public class MoveCommand implements Command {
 
         if (player.getCurrentLocation().getType() == LocationType.HALLWAY && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
             Important.playSound("walk");
-            player.getCurrentLocation().setSong(player.getPreviousLocation().getSong());
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
 
@@ -65,8 +64,20 @@ public class MoveCommand implements Command {
             player.getCurrentLocation().playMusic(player.getPreviousLocation().getSong().getClip().getMicrosecondPosition());
             return Important.changeText("green", "Přesouváš se do: " + name);
         }
+
+        if(player.getCurrentLocation().getType() == LocationType.HALLWAY && player.getPreviousLocation().getType() == LocationType.ELEVATOR){
+            player.getPreviousLocation().pauseMusic();
+            Important.playSound("elevator walk");
+            return Important.changeText("green", "Přesouváš se do: " + name);
+        }
+
         player.getPreviousLocation().pauseMusic();
-        Important.playSound("walk");
+        if(player.getCurrentLocation().getType() == LocationType.ELEVATOR){
+            Important.playSound("elevator walk");
+        }else {
+            Important.playSound("walk");
+        }
+
         return Important.changeText("green", "Přesouváš se do: " + name);
     }
 

@@ -1,7 +1,7 @@
 [
   {
     "title" : "třetí patro",
-    "filePath" : "/Audio/Music/třetí patro.wav",
+    "filePath" : "/Audio/Music/patra.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -8.0
@@ -142,6 +142,13 @@
   {
     "title" : "Vjezd",
     "filePath" : "/Audio/Music/Vjezd.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -9.0
+  },
+  {
+    "title" : "Výtah",
+    "filePath" : "/Audio/Music/Výtah.wav",
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
