@@ -134,42 +134,16 @@ public class Initialization {
         }
     }
 
+
     /**
-     * Connects all locations according to a CSV file.
+     * Connects all locations according to their {@code connections}.
      * <p>
-     * The connections are read from the CSV file {@code /Jsons/basicLocationConnections.csv}.
-     * </p>
-     * <p>
-     * Each location has its own index in {@link #locations}, and each line in the CSV file
-     * represents an individual location. The line contains the indexes of neighboring locations,
-     * and each location is connected to them accordingly.
-     * </p>
-     * <p>
-     * The indexes in the CSV file should be written in the format: X>Y>Z
+     *     Every location has their own array filled by codes of their neighboring locations.
+     *     This array is used in order to connect them via {@link #findLocationByCode(String)} and {@link Location#addPossibleLocation(Location)}
      * </p>
      *
-     * @throws WrongInitializationException if the file cannot be found during the loading process or the CSV file is
-     *                                      not loaded correctly.
+     * @throws WrongInitializationException if there is non-existing code in {@link Location#getConnections()}
      */
-    public void loadLocationsConnection() throws WrongInitializationException {
-        InputStream input = Initialization.class.getResourceAsStream("/CsvFiles/basicLocationConnections.csv");
-        checkInput(input, "/CsvFiles/basicLocationConnections.csv");
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(input))) {
-            br.readLine();
-            String line;
-            int index = 0;
-            while ((line = br.readLine()) != null) {
-                String[] data = line.split(">");
-                for (int i = 0; i < data.length; i++) {
-                    locations.get(index).addPossibleLocation(locations.get(Integer.parseInt(data[i])));
-                }
-                index++;
-            }
-        } catch (Exception e) {
-            throw new WrongInitializationException(Important.changeText("red", "There is a problem with the CSV file"));
-        }
-    }
-
     private void connectAllLocations() throws WrongInitializationException{
         for (Location location : locations){
             for (int i = 0; i < location.getConnections().length; i++) {
