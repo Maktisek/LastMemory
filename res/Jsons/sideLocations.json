@@ -28,7 +28,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_001"]
   },
   {
     "name": "Učebna 20",
@@ -59,7 +60,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_001"]
   },
   {
     "name": "Toalety",
@@ -94,7 +96,8 @@
         }
       ]
     },
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_002"]
   },
   {
     "name": "Kancelář",
@@ -135,7 +138,8 @@
         }
       ]
     },
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_003"]
   },
   {
     "name": "Učebna 8",
@@ -170,7 +174,8 @@
       }
     ],
     "safe": null,
-    "type" : "FADE"
+    "type" : "FADE",
+    "connections": ["HALLWAY_003", "SPECIALS_004"]
   },
   {
     "name": "Aula",
@@ -195,7 +200,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_004"]
   },
   {
     "name": "Sborovna",
@@ -212,7 +218,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_004"]
   },
   {
     "name": "Dílna D1",
@@ -229,7 +236,8 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_005"]
   },
   {
     "name": "Sekretariát",
@@ -264,7 +272,8 @@
         }
       ]
     },
-    "type" : "LOCATION"
+    "type" : "LOCATION",
+    "connections": ["HALLWAY_005"]
   },
   {
     "name": "Kumbál",
@@ -289,6 +298,7 @@
       }
     ],
     "safe": null,
-    "type" : "FADE"
+    "type" : "FADE",
+    "connections": ["SIDECLASS_003"]
   }
 ]
