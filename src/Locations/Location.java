@@ -20,7 +20,8 @@ import java.util.Collections;
  * </p>
  * <p>
  * Each location has a {@link LocationType} and must be connected to other locations
- * through {@link #possibleLocations}.
+ * through {@link #possibleLocations}. The connections are firstly set via codes of the
+ * connecting locations. Then they are connected in {@link Game.Initialization}.
  * </p>
  * <p>
  * This class implements {@link Comparable} to allow sorting based on
@@ -155,13 +156,17 @@ public class Location implements Comparable<Location> {
         sortPossibleLocations();
         ArrayList<String> normals = new ArrayList<>(8);
         ArrayList<String> hallways = new ArrayList<>(3);
+        ArrayList<String> elevators = new ArrayList<>(1);
         for (Location location : possibleLocations) {
             if (location.getType() == LocationType.HALLWAY) {
                 hallways.add(Important.changeText("underline", location.writeName()));
+            } else if (location.getType() == LocationType.ELEVATOR) {
+                elevators.add(Important.changeText("underline", location.writeName()));
             } else {
                 normals.add(Important.changeText("underline", location.writeName()));
             }
         }
+        hallways.addAll(elevators);
         hallways.addAll(normals);
         return String.join(",", hallways);
     }
@@ -190,7 +195,7 @@ public class Location implements Comparable<Location> {
      * @return the formatted location name
      */
     public String writeName(){
-        if(locationType == LocationType.HALLWAY){
+        if(locationType == LocationType.HALLWAY || locationType == LocationType.ELEVATOR){
             return Important.changeText("blue", name);
         }
         if(!isEmpty() || (friendlyNPC != null && friendlyNPC.getTask() != null)){

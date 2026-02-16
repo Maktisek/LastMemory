@@ -145,5 +145,12 @@
     "infiniteLoop" : true,
     "paused" : false,
     "initialVolume" : -9.0
+  },
+  {
+    "title" : "Výtah",
+    "filePath" : "/Audio/Music/Výtah.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -9.0
   }
 ]

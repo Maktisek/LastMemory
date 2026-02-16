@@ -203,7 +203,7 @@ public class Initialization {
      * @throws WrongInitializationException if there is a problem initializing the player
      */
     public void loadPlayer() throws WrongInitializationException {
-        this.player = new Player(locations.get(11));
+        this.player = new Player(findLocationByCode("HALLWAY_002"));
     }
 
 

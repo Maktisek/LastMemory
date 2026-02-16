@@ -8,7 +8,7 @@
       "name": "Ing. Bc. Šárka Páltiková",
       "position": "Učitelka",
       "age": "42 let",
-      "type" : "PASIVNÍ",
+      "type": "PASIVNÍ",
       "currentSpeech": "I completely lost my train of thought, but don’t forget Amy. Keep it simple.",
       "anotherSpeech": "None",
       "task": null
@@ -28,8 +28,10 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION",
-    "connections": ["HALLWAY_001"]
+    "type": "LOCATION",
+    "connections": [
+      "HALLWAY_001"
+    ]
   },
   {
     "name": "Učebna 20",
@@ -40,7 +42,7 @@
       "name": "Maktis",
       "position": "Kamarád",
       "age": "17 let",
-      "type" : "PASIVNÍ",
+      "type": "PASIVNÍ",
       "currentSpeech": "Jeee, Amy, ahoj! \nNechceš se tady posadit a poslechnout si mojí písničku Love Consciousness? \nDoufám, že mým mixem neurazím tvůj hudební sluch:)",
       "anotherSpeech": "None",
       "task": null
@@ -60,8 +62,10 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION",
-    "connections": ["HALLWAY_001"]
+    "type": "LOCATION",
+    "connections": [
+      "HALLWAY_001"
+    ]
   },
   {
     "name": "Toalety",
@@ -78,10 +82,10 @@
       }
     ],
     "safe": {
-      "code" : 2,
-      "startPointer" : 99,
-      "currentPointer" : 99,
-      "items" : [
+      "code": 2,
+      "startPointer": 99,
+      "currentPointer": 99,
+      "items": [
         {
           "name": "Šroubovák",
           "description": "Klasický křížový šroubovák",
@@ -96,8 +100,10 @@
         }
       ]
     },
-    "type" : "LOCATION",
-    "connections": ["HALLWAY_002"]
+    "type": "LOCATION",
+    "connections": [
+      "HALLWAY_002"
+    ]
   },
   {
     "name": "Kancelář",
@@ -120,10 +126,10 @@
       }
     ],
     "safe": {
-      "code" : 1,
-      "startPointer" : 9,
-      "currentPointer" : 9,
-      "items" : [
+      "code": 1,
+      "startPointer": 9,
+      "currentPointer": 9,
+      "items": [
         {
           "name": "ABS filament",
           "description": "Tondův ABS filament do jeho milované 3D tiskárny",
@@ -138,8 +144,10 @@
         }
       ]
     },
-    "type" : "LOCATION",
-    "connections": ["HALLWAY_003"]
+    "type": "LOCATION",
+    "connections": [
+      "HALLWAY_003"
+    ]
   },
   {
     "name": "Učebna 8",
@@ -174,8 +182,11 @@
       }
     ],
     "safe": null,
-    "type" : "FADE",
-    "connections": ["HALLWAY_003", "SPECIALS_004"]
+    "type": "FADE",
+    "connections": [
+      "HALLWAY_003",
+      "SPECIALS_004"
+    ]
   },
   {
     "name": "Aula",
@@ -186,7 +197,7 @@
       "name": "Bc. Martin Váňa",
       "position": "Učitel",
       "age": "25 let",
-      "type" : "PASIVNÍ",
+      "type": "PASIVNÍ",
       "currentSpeech": "Ještě vám tady zahraju, než odejdu.",
       "anotherSpeech": "None",
       "task": null
@@ -200,8 +211,10 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION",
-    "connections": ["HALLWAY_004"]
+    "type": "LOCATION",
+    "connections": [
+      "HALLWAY_004"
+    ]
   },
   {
     "name": "Sborovna",
@@ -218,8 +231,10 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION",
-    "connections": ["HALLWAY_004"]
+    "type": "LOCATION",
+    "connections": [
+      "HALLWAY_004"
+    ]
   },
   {
     "name": "Dílna D1",
@@ -236,8 +251,10 @@
       }
     ],
     "safe": null,
-    "type" : "LOCATION",
-    "connections": ["HALLWAY_005"]
+    "type": "LOCATION",
+    "connections": [
+      "HALLWAY_005"
+    ]
   },
   {
     "name": "Sekretariát",
@@ -254,10 +271,10 @@
       }
     ],
     "safe": {
-      "code" : 2,
-      "startPointer" : 16,
-      "currentPointer" : 16,
-      "items" : [
+      "code": 2,
+      "startPointer": 16,
+      "currentPointer": 16,
+      "items": [
         {
           "name": "Výkaz o studentech",
           "description": "Seznam studentů s daty narození",
@@ -272,8 +289,10 @@
         }
       ]
     },
-    "type" : "LOCATION",
-    "connections": ["HALLWAY_005"]
+    "type": "LOCATION",
+    "connections": [
+      "HALLWAY_005"
+    ]
   },
   {
     "name": "Kumbál",
@@ -284,7 +303,7 @@
       "name": "Sergei",
       "position": "Náhodný loner",
       "age": "20 let",
-      "type" : "PASIVNÍ",
+      "type": "PASIVNÍ",
       "currentSpeech": "Ah nu cheeki breeki iv damke, Amy! \nPoslouchej, jedna lahev vodky a hardbass jam spraví tvůj smutek... \nA na Toma už nemysli, toho stejně sežere zóna, haha.",
       "anotherSpeech": "None",
       "task": null
@@ -298,7 +317,27 @@
       }
     ],
     "safe": null,
-    "type" : "FADE",
-    "connections": ["SIDECLASS_003"]
+    "type": "FADE",
+    "connections": [
+      "SIDECLASS_003"
+    ]
+  },
+  {
+    "name": "Výtah",
+    "code": "SPECIALS_005",
+    "description": "Normálně sem studenti nesmí, ale co už... Jsem přece ve své hlavě, můžu si přece jezdit výtahem, ne?",
+    "enemyNPC": null,
+    "friendlyNPC": null,
+    "items": [
+    ],
+    "safe": null,
+    "type": "ELEVATOR",
+    "connections": [
+      "HALLWAY_001",
+      "HALLWAY_002",
+      "HALLWAY_003",
+      "HALLWAY_004",
+      "HALLWAY_005"
+    ]
   }
 ]
