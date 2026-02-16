@@ -18,14 +18,14 @@
     "filePath" : "/Audio/Sounds/elevator walk.wav",
     "infiniteLoop" : false,
     "paused" : false,
-    "initialVolume" : -2.0
+    "initialVolume" : -4.0
   },
   {
     "title" : "enemy walk",
     "filePath" : "/Audio/Sounds/enemy walk.wav",
     "infiniteLoop" : false,
     "paused" : false,
-    "initialVolume" : -2.0
+    "initialVolume" : -4.0
   },
   {
     "title" : "run",
@@ -53,21 +53,21 @@
     "filePath" : "/Audio/Music/question mode.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -10.0
+    "initialVolume" : -8.0
   },
   {
     "title" : "intro music",
     "filePath" : "/Audio/Music/introMusic.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : 0
+    "initialVolume" : 1
   },
   {
     "title" : "outro music",
     "filePath" : "/Audio/Music/outroMusic.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : 0
+    "initialVolume" : 1
   },
   {
     "title" : "picking sound",
@@ -88,14 +88,14 @@
     "filePath" : "/Audio/Music/memory song.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : 0
+    "initialVolume" : 1
   },
   {
     "title" : "cutscene",
     "filePath" : "/Audio/Music/cutscene.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : 0
+    "initialVolume" : 1
   },
   {
     "title" : "safe open",
