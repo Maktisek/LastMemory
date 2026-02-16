@@ -35,7 +35,7 @@ public class AnswerEnemyNPCCommand implements Command {
             player.switchMode(new LocationMode());
             Important.stopMusic("question mode");
             Important.playSound("right answer");
-            return "Odpověď " + Important.changeText("underline", answer) + Important.changeText("green", " je správně!") +"\nLokace " + Important.changeText("underline", player.getCurrentLocation().getName()) + " je nyní otevřená";
+            return "Odpověď " + Important.changeText("underline", answer) + Important.changeText("green", " je správně!") +"\nLokace " + Important.changeText("underline", player.getCurrentLocation().getName()) + " je nyní otevřená.";
         }
         this.inputWait = false;
         this.timeWait = true;

@@ -49,6 +49,7 @@ public class MoveCommand implements Command {
 
         if (player.getMode().getInfo() == ModeType.question) {
             player.getPreviousLocation().pauseMusic();
+            Important.playSound("enemy walk");
             Important.playMusic("question mode");
             return Important.changeText("green", "Přesouváš se do: " + name);
         }

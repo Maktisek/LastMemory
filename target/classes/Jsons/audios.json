@@ -14,6 +14,20 @@
     "initialVolume" : -2.0
   },
   {
+    "title" : "elevator walk",
+    "filePath" : "/Audio/Sounds/elevator walk.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -2.0
+  },
+  {
+    "title" : "enemy walk",
+    "filePath" : "/Audio/Sounds/enemy walk.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -2.0
+  },
+  {
     "title" : "run",
     "filePath" : "/Audio/Sounds/run.wav",
     "infiniteLoop" : false,
