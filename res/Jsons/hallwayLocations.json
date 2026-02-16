@@ -8,7 +8,8 @@
     "items": [
     ],
     "safe": null,
-    "type" : "HALLWAY"
+    "type" : "HALLWAY",
+    "connections": ["HALLWAY_002", "SIDECLASS_002", "SIDECLASS_001"]
   },
   {
     "name": "Třetí patro",
@@ -19,7 +20,8 @@
     "items": [
     ],
     "safe": null,
-    "type" : "HALLWAY"
+    "type" : "HALLWAY",
+    "connections": ["HALLWAY_001", "HALLWAY_003", "TOILET_001", "CLASS_001"]
   },
   {
     "name": "Druhé patro",
@@ -30,7 +32,8 @@
     "items": [
     ],
     "safe": null,
-    "type" : "HALLWAY"
+    "type" : "HALLWAY",
+    "connections": ["HALLWAY_002", "HALLWAY_004", "SPECIALS_001", "SIDECLASS_003"]
   },
   {
     "name": "První patro",
@@ -41,7 +44,8 @@
     "items": [
     ],
     "safe": null,
-    "type" : "HALLWAY"
+    "type" : "HALLWAY",
+    "connections": ["HALLWAY_003", "HALLWAY_005", "SPECIALS_002", "SIDECABINET_001"]
   },
   {
     "name": "Přízemí",
@@ -52,6 +56,7 @@
     "items": [
     ],
     "safe": null,
-    "type" : "HALLWAY"
+    "type" : "HALLWAY",
+    "connections": ["HALLWAY_004", "SIDEWORKROOM_001", "SPECIALS_003"]
   }
 ]
