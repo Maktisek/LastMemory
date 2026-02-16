@@ -47,6 +47,8 @@ public class Location implements Comparable<Location> {
 
     private Audio song;
 
+    private String[] connections;
+
     public Location() {
     }
 
@@ -345,6 +347,22 @@ public class Location implements Comparable<Location> {
 
     public void setSong(Audio song) {
         this.song = song;
+    }
+
+    public LocationType getLocationType() {
+        return locationType;
+    }
+
+    public void setLocationType(LocationType locationType) {
+        this.locationType = locationType;
+    }
+
+    public String[] getConnections() {
+        return connections;
+    }
+
+    public void setConnections(String[] connections) {
+        this.connections = connections;
     }
 
     @Override

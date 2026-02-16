@@ -170,6 +170,12 @@ public class Initialization {
         }
     }
 
+    private void connectAllLocations(){
+
+
+
+    }
+
     /**
      * Loads all {@link Audio} instances from the JSON file {@code /Jsons/locationMusic.json}.
      *
