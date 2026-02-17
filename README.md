@@ -125,7 +125,7 @@ Prosím, nezadávejte během hraní hry do konzole tyto vstupy:
 - **Ctrl + Z** (Windows) / **Ctrl + D** (Linux/macOS) – ukončí vstup, Scanner přestane fungovat
 - **Ctrl + C** – okamžitě ukončí hru (pro normální ukončení použijte příkaz "opustit")
 
-
+Pokud jeden z těchto vstupů zadáte, hra se automaticky vypne❌
 
 ## 🔎 Závěr
 Na hru *Last Memory* jsem velmi pyšný a sám bych nečekal, že uvidím tolik zlepšení.

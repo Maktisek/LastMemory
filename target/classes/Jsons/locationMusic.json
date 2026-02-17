@@ -46,14 +46,14 @@
     "filePath" : "/Audio/Music/Obstacles.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -6.0
+    "initialVolume" : -7.0
   },
   {
     "title" : "Učebna 8a",
     "filePath" : "/Audio/Music/Učebna 8a.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -13.0
+    "initialVolume" : -14.0
   },
   {
     "title" : "Učebna 29",

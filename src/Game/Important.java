@@ -18,7 +18,7 @@ import java.util.*;
 public class Important {
 
 
-    private static final Scanner sc = new Scanner(System.in, StandardCharsets.UTF_8);
+    private static Scanner sc = new Scanner(System.in, StandardCharsets.UTF_8);
     private static final AudioLibrary audioLibrary = AudioLibrary.loadAudioLibrary();
 
     /**
@@ -169,7 +169,7 @@ public class Important {
         try {
             result = sc.nextLine().toLowerCase();
         } catch (NoSuchElementException | IllegalStateException e) {
-            return "Invalid input";
+            return "opustit";
         }
         audioLibrary.playAudio("keyboard click");
         return result;

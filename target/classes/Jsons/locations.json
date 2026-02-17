@@ -247,7 +247,7 @@
         ],
         "memoryPrice": {
           "name": "Já jsem šťastná",
-          "description": "Podle paní učitelky Haasové mi to dneska prý sluší. \nČasto mi to nikdo jen tak neříká, něco na tom bude. \nAsi fakt jdu někam s Tomem... Ale na týden? \nNavíc jsem dneska i šťastná, prý to jde na mně poznat. \nJeště Haasová na konci mluvila o tom, ať si na sebe dávám pozor. \nCo s tím všichni mají?",
+          "description": "Podle paní učitelky Haasové mi to dneska prý sluší. \nČasto mi to nikdo jen tak neříká, něco na tom bude. \nAsi fakt jdu někam s Tomem... Ale na týden? \nJeště k tomu jsem mámě říkala jenom na víkend... \nNavíc jsem dneska i šťastná, prý to jde na mně poznat. \nJeště Haasová na konci mluvila o tom, ať si na sebe dávám pozor. \nCo s tím všichni mají?",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_003"
@@ -312,7 +312,7 @@
       "anotherSpeech": "Ou, wow, díky moc. \nTeď už bude jenom muset někde vyplavat i Mari, nebo víš co? Já si jí vytisknu, haha. \nHeleď, Amy, ještě jsem ti chtěl říct, že docela důležité je brát v potaz, \nže někdy musíme být velice opatrní a pozorní na to, co děláme, víš? \nChybějící pozornost je často příčinou selhání. \nAnyway jinými slovy, nechceš hledat všude po škole svoje filamenty...",
       "task": {
         "name": "Chybějící filament",
-        "description": "Tonda hledá po škole jeho chybějící filament. \nPrý ho někde položil a zapomněl na něj. \nUpřímně nevím, jak se mu to povedlo, když to jsou čtyři cívky filamentu, ale dobrý... \nZkusím je najít.",
+        "description": "Tonda hledá po škole jeho chybějící filamenty. \nPrý je někde položil a zapomněl na ně. \nUpřímně nevím, jak se mu to povedlo, když to jsou čtyři cívky filamentu, ale dobrý... \nZkusím je najít.",
         "namesOfNeededObjects": [
           "PLA filament",
           "PETG filament",
