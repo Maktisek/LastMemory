@@ -120,6 +120,13 @@ popíše:
 - co je cílem🎯
 - nejlepší strategie🧠
 
+### ❗Upozornění
+Prosím, nezadávejte během hraní hry do konzole tyto vstupy:
+- **Ctrl + Z** (Windows) / **Ctrl + D** (Linux/macOS) – ukončí vstup, Scanner přestane fungovat
+- **Ctrl + C** – okamžitě ukončí hru (pro normální ukončení použijte příkaz "opustit")
+
+
+
 ## 🔎 Závěr
 Na hru *Last Memory* jsem velmi pyšný a sám bych nečekal, že uvidím tolik zlepšení.
 Budu si vážit tvého času, který strávíš hraním mé hry.
