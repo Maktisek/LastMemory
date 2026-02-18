@@ -38,7 +38,7 @@ public class InspectItemCommand implements Command {
             return Important.writeSpace(60)+Important.changeText("red", "Item " + name + " se v inventáři nenachází.");
         }
 
-        return result;
+        return Important.writeSpace(60)+result;
     }
 
     @Override
