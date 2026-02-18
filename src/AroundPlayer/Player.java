@@ -182,7 +182,7 @@ public class Player {
     }
 
     public boolean canEnd() {
-        return collectedMemories.size() == 1;
+        return collectedMemories.size() == 10;
     }
 
     public void switchMode(Mode mode) {
