@@ -162,7 +162,7 @@ public class Important {
      * or no more input is available, "Invalid input" is returned.
      * </p>
      *
-     * @return the input String from the player, or "Invalid input" if reading fails
+     * @return the input String from the player, or "opustit" if reading fails - this will turn off the game.
      */
     public static String loadText() {
         String result;
