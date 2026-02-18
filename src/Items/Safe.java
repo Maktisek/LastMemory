@@ -64,6 +64,7 @@ public class Safe {
      * @throws WrongSafeCodeException if the code format does not match L/RX;L/RY;L/RZ...
      */
     public boolean openSafe(String code) throws WrongSafeCodeException {
+        this.currentPointer = startPointer;
         code = code.replaceAll(" ", "");
         String[] data = code.split(";");
         int password = 0;
