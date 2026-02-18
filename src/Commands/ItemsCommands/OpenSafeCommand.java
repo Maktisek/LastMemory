@@ -29,19 +29,19 @@ public class OpenSafeCommand implements Command {
     public String execute() {
         if (player.getCurrentLocation().getSafe() == null || !player.getCurrentLocation().getSafe().isLocked()) {
             Important.playSound("wrong sound");
-            return Important.changeText("red", "Safe se v lokaci nenachází");
+            return Important.writeSpace(40)+Important.changeText("red", "Safe se v lokaci nenachází");
         }
         try {
             if (player.getCurrentLocation().getSafe().openSafe(code)) {
                 Important.playSound("safe open");
-                return player.getCurrentLocation().openSafe();
+                return Important.writeSpace(40)+player.getCurrentLocation().openSafe();
             }
         } catch (WrongSafeCodeException e) {
             Important.playSound("wrong sound");
-            return Important.changeText("red", e.getMessage());
+            return Important.writeSpace(40)+Important.changeText("red", e.getMessage());
         }
         Important.playSound("wrong sound");
-        return Important.changeText("red", "Jajchs! Tenhle kód nefunguje");
+        return Important.writeSpace(40)+Important.changeText("red", "Jajchs! Tenhle kód nefunguje");
     }
 
     @Override

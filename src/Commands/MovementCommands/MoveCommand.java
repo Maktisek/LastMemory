@@ -44,32 +44,32 @@ public class MoveCommand implements Command {
         if (!action) {
             this.continues = false;
             Important.playSound("wrong sound");
-            return Important.changeText("red", "Lokace: " + this.name + " neexistuje");
+            return Important.writeSpace(40)+Important.changeText("red", "Lokace: " + this.name + " neexistuje");
         }
 
         if (player.getMode().getInfo() == ModeType.question) {
             player.getPreviousLocation().pauseMusic();
             Important.playSound("enemy walk");
             Important.playMusic("question mode");
-            return Important.changeText("green", "Přesouváš se do: " + name);
+            return Important.writeSpace(40)+Important.changeText("green", "Přesouváš se do: " + name);
         }
 
         if (player.getCurrentLocation().getType() == LocationType.HALLWAY && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
             Important.playSound("walk");
-            return Important.changeText("green", "Přesouváš se do: " + name);
+            return Important.writeSpace(40)+Important.changeText("green", "Přesouváš se do: " + name);
         }
 
         if (player.getCurrentLocation().getType() == LocationType.FADE && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
             player.getPreviousLocation().stopMusic();
             Important.playSound("walk");
             player.getCurrentLocation().playMusic(player.getPreviousLocation().getSong().getClip().getMicrosecondPosition());
-            return Important.changeText("green", "Přesouváš se do: " + name);
+            return Important.writeSpace(40)+Important.changeText("green", "Přesouváš se do: " + name);
         }
 
         if(player.getCurrentLocation().getType() == LocationType.HALLWAY && player.getPreviousLocation().getType() == LocationType.ELEVATOR){
             player.getPreviousLocation().pauseMusic();
             Important.playSound("elevator walk");
-            return Important.changeText("green", "Přesouváš se do: " + name);
+            return Important.writeSpace(40)+Important.changeText("green", "Přesouváš se do: " + name);
         }
 
         player.getPreviousLocation().pauseMusic();
@@ -79,7 +79,7 @@ public class MoveCommand implements Command {
             Important.playSound("walk");
         }
 
-        return Important.changeText("green", "Přesouváš se do: " + name);
+        return Important.writeSpace(40)+Important.changeText("green", "Přesouváš se do: " + name);
     }
 
     @Override

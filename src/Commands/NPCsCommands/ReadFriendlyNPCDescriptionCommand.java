@@ -25,9 +25,9 @@ public class ReadFriendlyNPCDescriptionCommand implements Command {
     public String execute() {
         if(player.getCurrentLocation().getFriendlyNPC() == null){
             Important.playSound("wrong sound");
-            return Important.changeText("red", "V lokaci se nikdo nenachází");
+            return Important.writeSpace(40)+Important.changeText("red", "V lokaci se nikdo nenachází");
         }
-        return player.getCurrentLocation().getFriendlyNPC().writeDescription();
+        return Important.writeSpace(40)+player.getCurrentLocation().getFriendlyNPC().writeDescription();
     }
 
     @Override

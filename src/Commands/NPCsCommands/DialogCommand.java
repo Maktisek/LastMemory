@@ -33,7 +33,7 @@ public class DialogCommand implements Command {
         } else {
             this.inputWait = false;
             Important.playSound("wrong sound");
-            return Important.changeText("red", "V lokaci se nidko nenachází");
+            return Important.writeSpace(40)+Important.changeText("red", "V lokaci se nidko nenachází");
         }
     }
 

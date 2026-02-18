@@ -35,32 +35,32 @@ public class HandInCommand implements Command {
         if(player.getCurrentTask() == null){
             Important.playSound("wrong sound");
             continues = false;
-            return Important.changeText("red", "Momentálně nemáš žádný aktivní úkol");
+            return Important.writeSpace(40)+Important.changeText("red", "Momentálně nemáš žádný aktivní úkol");
         }
         if(player.getCurrentLocation().getFriendlyNPC() == null){
             Important.playSound("wrong sound");
             continues = false;
-            return Important.changeText("red", "Tady není komu odevzdávat předměty");
+            return Important.writeSpace(40)+Important.changeText("red", "Tady není komu odevzdávat předměty");
         }
         if(player.getCurrentLocation().getFriendlyNPC().getTask() == null){
             Important.playSound("wrong sound");
             continues = false;
-            return Important.changeText("red", "U "+player.getCurrentLocation().getFriendlyNPC().getName() + " nemáš žádný aktivní úkol.");
+            return Important.writeSpace(40)+Important.changeText("red", "U "+player.getCurrentLocation().getFriendlyNPC().getName() + " nemáš žádný aktivní úkol.");
         }
         if(!player.getCurrentTask().getName().equalsIgnoreCase(player.getCurrentLocation().getFriendlyNPC().getTask().getName())){
             Important.playSound("wrong sound");
             continues = false;
-            return Important.changeText("red", player.getCurrentLocation().getFriendlyNPC().getName() + " ti nezadal " + player.getCurrentTask().getName());
+            return Important.writeSpace(40)+Important.changeText("red", player.getCurrentLocation().getFriendlyNPC().getName() + " ti nezadal " + player.getCurrentTask().getName());
         }
         if(!player.getCurrentTask().canSolve(player)){
             Important.playSound("wrong sound");
             continues = false;
-            return Important.changeText("red", "Nelze odevzdat žádný předmět");
+            return Important.writeSpace(40)+Important.changeText("red", "Nelze odevzdat žádný předmět");
         }
         String result = player.getCurrentTask().scanAndSolveTask(player);
         player.getCurrentLocation().getFriendlyNPC().setTask(player.getCurrentTask());
         Important.playSound("hand in");
-        return result;
+        return Important.writeSpace(40)+result;
     }
 
     @Override

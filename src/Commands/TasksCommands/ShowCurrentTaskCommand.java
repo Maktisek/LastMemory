@@ -24,10 +24,10 @@ public class ShowCurrentTaskCommand implements Command {
     @Override
     public String execute() {
         if(player.getCurrentTask() != null){
-            return player.getCurrentTask().toString();
+            return Important.writeSpace(40)+player.getCurrentTask().toString();
         }
         Important.playSound("wrong sound");
-        return Important.changeText("red", "Momentálně nemáš přijmutý žádný úkol");
+        return Important.writeSpace(40)+Important.changeText("red", "Momentálně nemáš přijmutý žádný úkol");
     }
 
     @Override

@@ -29,10 +29,10 @@ public class InspectOldTaskCommand implements Command {
     @Override
     public String execute() {
         if(player.hasOldTask(name)){
-            return player.writeOldTask(name);
+            return Important.writeSpace(40)+player.writeOldTask(name);
         }
         Important.playSound("wrong sound");
-        return Important.changeText("red", "Úkol " + name + " neexistuje");
+        return Important.writeSpace(40)+Important.changeText("red", "Úkol " + name + " neexistuje");
     }
 
     @Override
