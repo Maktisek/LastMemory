@@ -35,7 +35,7 @@ public class InspectItemCommand implements Command {
 
         if(result == null){
             Important.playSound("wrong sound");
-            return Important.writeSpace(60)+Important.changeText("red", "Item " + name + " se v inventáři nenachází.");
+            return Important.writeSpace(60)+Important.changeText("red", "Item " + name + " se v inventáři nenachází");
         }
 
         return Important.writeSpace(60)+result;

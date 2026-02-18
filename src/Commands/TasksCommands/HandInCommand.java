@@ -45,7 +45,7 @@ public class HandInCommand implements Command {
         if(player.getCurrentLocation().getFriendlyNPC().getTask() == null){
             Important.playSound("wrong sound");
             continues = false;
-            return Important.writeSpace(60)+Important.changeText("red", "U "+player.getCurrentLocation().getFriendlyNPC().getName() + " nemáš žádný aktivní úkol.");
+            return Important.writeSpace(60)+Important.changeText("red", "U "+player.getCurrentLocation().getFriendlyNPC().getName() + " nemáš žádný aktivní úkol");
         }
         if(!player.getCurrentTask().getName().equalsIgnoreCase(player.getCurrentLocation().getFriendlyNPC().getTask().getName())){
             Important.playSound("wrong sound");
