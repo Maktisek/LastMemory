@@ -1,4 +1,4 @@
-==========================================================================================================================================================================================================================================
+=================================================================================================================================================================================================================
 
 ===================================================== ÚVOD =====================================================
 Pokud čteš tento text v herní konzoli, pak sis hru dohrál/a! A já ti moc děkuji.
@@ -86,56 +86,56 @@ Miluji hudbu a jsem schopný poslouchat cokoli, ale práce na tomto projektu mi 
 nových skladeb, které mě až překvapily.
 
 * VÝČET SKLADEB:
-Lokace: Aula, Název skladby: Key, Umělec: C418, Odkaz: [https://www.youtube.com/watch?v=-CKR-McWeYk&list=RD-CKR-McWeYk&start_radio=1](https://www.youtube.com/watch?v=-CKR-McWeYk&list=RD-CKR-McWeYk&start_radio=1)
+Lokace: Aula, Název skladby: Key, Umělec: C418, Odkaz: [https://www.youtube.com/watch?v=-CKR-McWeYk&list=RD-CKR-McWeYk&start_radio=1]
 
-Situace: Cutscene, Název skladby: Pause Menu (LiS), Umělec: Jonathan Morali, Odkaz: [https://www.youtube.com/watch?v=Jws77MERHMw&list=RDJws77MERHMw&start_radio=1](https://www.youtube.com/watch?v=Jws77MERHMw&list=RDJws77MERHMw&start_radio=1)
+Situace: Cutscene, Název skladby: Pause Menu (LiS), Umělec: Jonathan Morali, Odkaz: [https://www.youtube.com/watch?v=Jws77MERHMw&list=RDJws77MERHMw&start_radio=1]
 
-Lokace: Dílna D2, Název skladby: Broke My Mind, Umělec: Scapecore, Odkaz: [https://www.youtube.com/watch?v=YB0bvsOT1kg&list=RDYB0bvsOT1kg&start_radio=1](https://www.youtube.com/watch?v=YB0bvsOT1kg&list=RDYB0bvsOT1kg&start_radio=1)
+Lokace: Dílna D2, Název skladby: Broke My Mind, Umělec: Scapecore, Odkaz: [https://www.youtube.com/watch?v=YB0bvsOT1kg&list=RDYB0bvsOT1kg&start_radio=1]
 
-Situace: Intro hry, Název skladby: To All of You, Umělec: Syd Matters, Odkaz: [https://www.youtube.com/watch?v=AoHFCLxTkE4&list=RDAoHFCLxTkE4&start_radio=1](https://www.youtube.com/watch?v=AoHFCLxTkE4&list=RDAoHFCLxTkE4&start_radio=1)
+Situace: Intro hry, Název skladby: To All of You, Umělec: Syd Matters, Odkaz: [https://www.youtube.com/watch?v=AoHFCLxTkE4&list=RDAoHFCLxTkE4&start_radio=1]
 
-Lokace: Kancelář, Název skladby: Catchy Elevator Music?, Umělec: Neznámý, Odkaz: [https://www.youtube.com/watch?v=anMcRZcxwAU](https://www.youtube.com/watch?v=anMcRZcxwAU)
+Lokace: Kancelář, Název skladby: Catchy Elevator Music?, Umělec: Neznámý, Odkaz: [https://www.youtube.com/watch?v=anMcRZcxwAU]
 
-Lokace: Kumbál, Název skladby: Cheeki Breeki, Umělec: Apartje, Odkaz: [https://www.youtube.com/watch?v=UIoefetP7wQ&list=RDUIoefetP7wQ&start_radio=1](https://www.youtube.com/watch?v=UIoefetP7wQ&list=RDUIoefetP7wQ&start_radio=1)
+Lokace: Kumbál, Název skladby: Cheeki Breeki, Umělec: Apartje, Odkaz: [https://www.youtube.com/watch?v=UIoefetP7wQ&list=RDUIoefetP7wQ&start_radio=1]
 
-Situace: Vzpomenout, Název skladby: Pause Menu 2 (LiS), Umělec: Jonathan Morali, Odkaz: [https://www.youtube.com/watch?v=QJL-F7F0H3g&list=PLp3-KQ922REKYwUQcFwMU1Y6z3d_i7g8g&index=10](https://www.youtube.com/watch?v=QJL-F7F0H3g&list=PLp3-KQ922REKYwUQcFwMU1Y6z3d_i7g8g&index=10)
+Situace: Vzpomenout, Název skladby: Pause Menu 2 (LiS), Umělec: Jonathan Morali, Odkaz: [https://www.youtube.com/watch?v=QJL-F7F0H3g&list=PLp3-KQ922REKYwUQcFwMU1Y6z3d_i7g8g&index=10]
 
-Lokace: Kabinet K12, Název skladby: Obstacles, Umělec: Syd Matters, Odkaz: [https://www.youtube.com/watch?v=jb1SkDjaXk8&list=RDjb1SkDjaXk8&start_radio=1](https://www.youtube.com/watch?v=jb1SkDjaXk8&list=RDjb1SkDjaXk8&start_radio=1)
+Lokace: Kabinet K12, Název skladby: Obstacles, Umělec: Syd Matters, Odkaz: [https://www.youtube.com/watch?v=jb1SkDjaXk8&list=RDjb1SkDjaXk8&start_radio=1]
 
-Situace: Outro hry, Název skladby: Wide View, Umělci: Marco Beltrami, Buck Sanders, Odkaz: [https://www.youtube.com/watch?v=qiIq25sexm8&list=RDqiIq25sexm8&start_radio=1](https://www.youtube.com/watch?v=qiIq25sexm8&list=RDqiIq25sexm8&start_radio=1)
+Situace: Outro hry, Název skladby: Wide View, Umělci: Marco Beltrami, Buck Sanders, Odkaz: [https://www.youtube.com/watch?v=qiIq25sexm8&list=RDqiIq25sexm8&start_radio=1]
 
-Lokace: Učebna 19, Název skladby: Prokletí, Umělec: Propadleek, Odkaz: [https://www.youtube.com/watch?v=klLLQ0D-wCI&list=RDklLLQ0D-wCI&start_radio=1](https://www.youtube.com/watch?v=klLLQ0D-wCI&list=RDklLLQ0D-wCI&start_radio=1)
+Lokace: Učebna 19, Název skladby: Prokletí, Umělec: Propadleek, Odkaz: [https://www.youtube.com/watch?v=klLLQ0D-wCI&list=RDklLLQ0D-wCI&start_radio=1]
 
-Situace: Čas na zkoušeníčko :), Název skladby: Desert City, Umělec: Kevin MacLeod, Odkaz: [https://www.youtube.com/watch?v=DuH0pN7Ws20&list=RDDuH0pN7Ws20&start_radio=1](https://www.youtube.com/watch?v=DuH0pN7Ws20&list=RDDuH0pN7Ws20&start_radio=1)
+Situace: Čas na zkoušeníčko :), Název skladby: Desert City, Umělec: Kevin MacLeod, Odkaz: [https://www.youtube.com/watch?v=DuH0pN7Ws20&list=RDDuH0pN7Ws20&start_radio=1]
 
-Lokace: Ředitelna, Název skladby: Henry Ford the Second, Umělci: Marco Beltrami, Buck Sanders, Odkaz: [https://www.youtube.com/watch?v=sDRH29m5EDQ&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=4](https://www.youtube.com/watch?v=sDRH29m5EDQ&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=4)
+Lokace: Ředitelna, Název skladby: Henry Ford the Second, Umělci: Marco Beltrami, Buck Sanders, Odkaz: [https://www.youtube.com/watch?v=sDRH29m5EDQ&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=4]
 
-Lokace: Sborovna, Název skladby: Thirty Minutes, Umělci: Marco Beltrami, Buck Sanders, Odkaz: [https://www.youtube.com/watch?v=xW8GWLR_yek&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=11](https://www.youtube.com/watch?v=xW8GWLR_yek&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=11)
+Lokace: Sborovna, Název skladby: Thirty Minutes, Umělci: Marco Beltrami, Buck Sanders, Odkaz: [https://www.youtube.com/watch?v=xW8GWLR_yek&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=11]
 
-Lokace: Sekretariát, Název skladby: This Feeling, Umělec: øneheart, Odkaz: [https://www.youtube.com/watch?v=J4RxO3lRsi0&list=RDJ4RxO3lRsi0&start_radio=1](https://www.youtube.com/watch?v=J4RxO3lRsi0&list=RDJ4RxO3lRsi0&start_radio=1)
+Lokace: Sekretariát, Název skladby: This Feeling, Umělec: øneheart, Odkaz: [https://www.youtube.com/watch?v=J4RxO3lRsi0&list=RDJ4RxO3lRsi0&start_radio=1]
 
-Lokace: Toalety, Název skladby: Dark Souls III, Umělec: Yuka Kitamura, Odkaz: [https://www.youtube.com/watch?v=ch6I15iBliE&list=PLlHY6e7WCV6M7UV1EBjAFA349aTyutIU4](https://www.youtube.com/watch?v=ch6I15iBliE&list=PLlHY6e7WCV6M7UV1EBjAFA349aTyutIU4)
+Lokace: Toalety, Název skladby: Dark Souls III, Umělec: Yuka Kitamura, Odkaz: [https://www.youtube.com/watch?v=ch6I15iBliE&list=PLlHY6e7WCV6M7UV1EBjAFA349aTyutIU4]
 
-Lokace: Třetí patro, Název skladby: Golden Hour, Umělec: Jonathan Morali, Odkaz: [https://www.youtube.com/watch?v=7Ep_5rMWMKY&list=RD7Ep_5rMWMKY&start_radio=1](https://www.youtube.com/watch?v=7Ep_5rMWMKY&list=RD7Ep_5rMWMKY&start_radio=1)
+Lokace: Třetí patro, Název skladby: Golden Hour, Umělec: Jonathan Morali, Odkaz: [https://www.youtube.com/watch?v=7Ep_5rMWMKY&list=RD7Ep_5rMWMKY&start_radio=1]
 
-Lokace: Učebna 8a, Název skladby: VIVID DREAM, Umělec: Mxktis, Odkaz: [https://www.youtube.com/watch?v=iMnk3vkb-ow](https://www.youtube.com/watch?v=iMnk3vkb-ow)
+Lokace: Učebna 8a, Název skladby: VIVID DREAM, Umělec: Mxktis, Odkaz: [https://www.youtube.com/watch?v=iMnk3vkb-ow]
 
-Lokace: Učebna 13, Název skladby: City Talks, Umělec: Syd Matters, Odkaz: [https://www.youtube.com/watch?v=kMphQmj0iHA&list=RDkMphQmj0iHA&start_radio=1](https://www.youtube.com/watch?v=kMphQmj0iHA&list=RDkMphQmj0iHA&start_radio=1)
+Lokace: Učebna 13, Název skladby: City Talks, Umělec: Syd Matters, Odkaz: [https://www.youtube.com/watch?v=kMphQmj0iHA&list=RDkMphQmj0iHA&start_radio=1]
 
-Lokace: Učebna 15, Název skladby: Cloud Country, Umělec: ConcernedApe, Odkaz: [https://www.youtube.com/watch?v=Tk6tA6OVqvk&list=RDTk6tA6OVqvk&start_radio=1](https://www.youtube.com/watch?v=Tk6tA6OVqvk&list=RDTk6tA6OVqvk&start_radio=1)
+Lokace: Učebna 15, Název skladby: Cloud Country, Umělec: ConcernedApe, Odkaz: [https://www.youtube.com/watch?v=Tk6tA6OVqvk&list=RDTk6tA6OVqvk&start_radio=1]
 
-Lokace: Učebna 17, Název skladby: I Care, Umělec: Syd Matters, Odkaz: [https://www.youtube.com/watch?v=GydqGpcudL4&list=RDGydqGpcudL4&start_radio=1](https://www.youtube.com/watch?v=GydqGpcudL4&list=RDGydqGpcudL4&start_radio=1)
+Lokace: Učebna 17, Název skladby: I Care, Umělec: Syd Matters, Odkaz: [https://www.youtube.com/watch?v=GydqGpcudL4&list=RDGydqGpcudL4&start_radio=1]
 
-Lokace: Učebna 18, Název skladby: Inside Out, Umělec: Duster, Odkaz: [https://www.youtube.com/watch?v=8ElVb8YQbmI&list=RD8ElVb8YQbmI&start_radio=1](https://www.youtube.com/watch?v=8ElVb8YQbmI&list=RD8ElVb8YQbmI&start_radio=1)
+Lokace: Učebna 18, Název skladby: Inside Out, Umělec: Duster, Odkaz: [https://www.youtube.com/watch?v=8ElVb8YQbmI&list=RD8ElVb8YQbmI&start_radio=1]
 
-Lokace: Učebna 20, Název skladby: Love Consciousness, Umělec: Mxktis, Odkaz: [https://www.youtube.com/watch?v=XDuUp-XdgCc](https://www.youtube.com/watch?v=XDuUp-XdgCc)
+Lokace: Učebna 20, Název skladby: Love Consciousness, Umělec: Mxktis, Odkaz: [https://www.youtube.com/watch?v=XDuUp-XdgCc]
 
-Lokace: Vjezd, Název skladby: Through the Window, Umělec: Jonathan Morali, Odkaz: [https://www.youtube.com/watch?v=QAsVx_jgJDo&list=RDQAsVx_jgJDo&start_radio=1](https://www.youtube.com/watch?v=QAsVx_jgJDo&list=RDQAsVx_jgJDo&start_radio=1)
+Lokace: Vjezd, Název skladby: Through the Window, Umělec: Jonathan Morali, Odkaz: [https://www.youtube.com/watch?v=QAsVx_jgJDo&list=RDQAsVx_jgJDo&start_radio=1]
 
-Lokace: Učebna 29, Název skladby: Watching Stars, Umělec: øneheart, Odkaz: [https://www.youtube.com/watch?v=C42iSY6Y9g0&list=RDC42iSY6Y9g0&start_radio=1](https://www.youtube.com/watch?v=C42iSY6Y9g0&list=RDC42iSY6Y9g0&start_radio=1)
+Lokace: Učebna 29, Název skladby: Watching Stars, Umělec: øneheart, Odkaz: [https://www.youtube.com/watch?v=C42iSY6Y9g0&list=RDC42iSY6Y9g0&start_radio=1]
 
-Lokace: Zástupci ředitele, Název skladby: Crescent Wrench, Umělci: Marco Beltrami, Buck Sanders, Odkaz: [https://www.youtube.com/watch?v=9p2bSDPPhHI&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=19](https://www.youtube.com/watch?v=9p2bSDPPhHI&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=19)
+Lokace: Zástupci ředitele, Název skladby: Crescent Wrench, Umělci: Marco Beltrami, Buck Sanders, Odkaz: [https://www.youtube.com/watch?v=9p2bSDPPhHI&list=PLDisKgcnAC4QwX8CtDK-w1WfHFSkwYGjL&index=19]
 
 Moc děkuji paním učitelkám za pomoc s výběrem některých skladeb :)
 
-====================================================================================================================================================================================================================================
+=================================================================================================================================================================================================================
