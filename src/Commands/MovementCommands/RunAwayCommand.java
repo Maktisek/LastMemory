@@ -26,10 +26,10 @@ public class RunAwayCommand implements Command {
         if (player.runAway()) {
             Important.stopMusic("question mode");
             Important.playSound("run");
-            return Important.writeSpace(40)+Important.changeText("green", "Utíkáš zpět do: " + Important.changeText("underline",player.getCurrentLocation().writeName()));
+            return Important.writeSpace(60)+Important.changeText("green", "Utíkáš zpět do: " + Important.changeText("underline",player.getCurrentLocation().writeName()));
         }
         Important.playSound("wrong sound");
-        return Important.writeSpace(40)+Important.changeText("red", "Další útěk není možný");
+        return Important.writeSpace(60)+Important.changeText("red", "Další útěk není možný");
     }
 
     @Override

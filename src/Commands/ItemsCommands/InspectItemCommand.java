@@ -28,14 +28,14 @@ public class InspectItemCommand implements Command {
     public String execute() {
         if(player.getInventory().isEmpty()){
             Important.playSound("wrong sound");
-            return Important.writeSpace(40)+Important.changeText("red", "Inventář je prázdný, žádný předmět nelze prohlédnout");
+            return Important.writeSpace(60)+Important.changeText("red", "Inventář je prázdný, žádný předmět nelze prohlédnout");
         }
 
         String result = player.getInventory().descriptionItem(name);
 
         if(result == null){
             Important.playSound("wrong sound");
-            return Important.writeSpace(40)+Important.changeText("red", "Item " + name + " se v inventáři nenachází.");
+            return Important.writeSpace(60)+Important.changeText("red", "Item " + name + " se v inventáři nenachází.");
         }
 
         return result;

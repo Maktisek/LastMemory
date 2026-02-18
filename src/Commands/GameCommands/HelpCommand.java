@@ -2,6 +2,7 @@ package Commands.GameCommands;
 
 import AroundPlayer.Player;
 import Commands.Command;
+import Game.Important;
 
 /**
  * Represents a command, which writes all possible commands based on players mode.
@@ -17,7 +18,7 @@ public class HelpCommand implements Command {
 
     @Override
     public String execute() {
-        return player.getMode().executeHelp();
+        return Important.writeSpace(60) +player.getMode().executeHelp();
     }
 
     @Override

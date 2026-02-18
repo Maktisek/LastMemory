@@ -27,7 +27,7 @@ public class RecallMemoryCommand implements Command {
     public String execute() {
         if (!player.hasCollectedMemory(name)){
             Important.playSound("wrong sound");
-            return Important.writeSpace(40)+"Vzpomínka " + name + " neexistuje";
+            return Important.writeSpace(60)+"Vzpomínka " + name + " neexistuje";
         }
         player.getCurrentLocation().getSong().pause();
         Important.playMusic("memory song");

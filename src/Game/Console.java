@@ -147,13 +147,13 @@ public class Console {
     private boolean checkCommand(String command) {
         if (!gameLoader.getCommands().containsKey(command.toLowerCase())) {
             Important.playSound("wrong sound");
-            System.out.println(Important.writeSpace(40)+Important.changeText("red", "Akce " + Important.changeText("underline", command) + Important.changeText("red", " neexistuje")));
+            System.out.println(Important.writeSpace(60)+Important.changeText("red", "Akce " + Important.changeText("underline", command) + Important.changeText("red", " neexistuje")));
             return false;
         }
         Mode foundMode = gameLoader.getPossibleCommands().get(command).get();
         if (foundMode != null && player.getMode().getInfo() != foundMode.getInfo()) {
             Important.playSound("wrong sound");
-            System.out.println(Important.writeSpace(40)+Important.changeText("red", "Akci " + Important.changeText("underline", command) + Important.changeText("red", " nelze nyní provést")));
+            System.out.println(Important.writeSpace(60)+Important.changeText("red", "Akci " + Important.changeText("underline", command) + Important.changeText("red", " nelze nyní provést")));
             return false;
         }
         return true;
@@ -192,7 +192,7 @@ public class Console {
             if (!player.canPlayCutscene()) {
                 player.getCurrentLocation().resumeMusic();
             }
-            System.out.println(Important.writeSpace(40));
+            System.out.println(Important.writeSpace(60));
         }
     }
 
@@ -253,8 +253,8 @@ public class Console {
         boolean exitOutro = false;
         Important.playMusic("outro music");
         System.out.println(Important.writeSpace(60));
-        System.out.println(player);
         while (!exitOutro) {
+            System.out.println(player);
             System.out.println("\nNapiš příkaz");
             System.out.print(">> ");
             String command = Important.loadText();

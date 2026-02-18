@@ -19,7 +19,7 @@ public class WriteTxtFileCommand implements Command {
 
     @Override
     public String execute() {
-        return Important.readTxtFiles(filePath, 0);
+        return Important.writeSpace(60)+Important.readTxtFiles(filePath, 0);
     }
 
     @Override

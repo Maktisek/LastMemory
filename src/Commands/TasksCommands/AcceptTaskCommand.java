@@ -31,18 +31,18 @@ public class AcceptTaskCommand implements Command {
         FriendlyNPC friendlyNPC = player.getCurrentLocation().getFriendlyNPC();
         if(friendlyNPC == null){
             Important.playSound("wrong sound");
-            return Important.writeSpace(40)+Important.changeText("red", "V lokaci se nyní nikdo nenachází");
+            return Important.writeSpace(60)+Important.changeText("red", "V lokaci se nyní nikdo nenachází");
         }
         if(friendlyNPC.getTask() == null){
             Important.playSound("wrong sound");
-            return Important.writeSpace(40)+Important.changeText("red", friendlyNPC.getName() + " žádný úkol nenabízí");
+            return Important.writeSpace(60)+Important.changeText("red", friendlyNPC.getName() + " žádný úkol nenabízí");
         }
         if (player.addCurrentTask(friendlyNPC.getTask())){
             Important.playSound("new task");
-            return Important.writeSpace(40)+Important.changeText("green", "Nový úkol " + friendlyNPC.getTask().getName() + " byl přijat");
+            return Important.writeSpace(60)+Important.changeText("green", "Nový úkol " + friendlyNPC.getTask().getName() + " byl přijat");
         }
         Important.playSound("wrong sound");
-        return Important.writeSpace(40)+Important.changeText("red", "Nyní nemůžeš přijmat žádné úkoly");
+        return Important.writeSpace(60)+Important.changeText("red", "Nyní nemůžeš přijmat žádné úkoly");
     }
 
     @Override
