@@ -236,7 +236,7 @@
       "anotherSpeech": "Jo! To je ona! \nMoc vám děkuji, opravdu. \nJinak, Amy, co je to, že jste tak veselá, a dokonce vám to nadprůměrně sluší! \nJste celá rozzářená. Ale pamatujte, pozornost. \nDávejte na sebe pozor.",
       "task": {
         "name": "Ztracená fleška",
-        "description": "Paní učitelka Haasová zmateně bloudí třídami a snaží se najít svojí miniaturní flešku. \nPrý nemá tušení, kde by se mohla nacházet. \nZkusím ji najít.",
+        "description": "Paní učitelka Haasová zmateně bloudí třídami a snaží se najít svojí miniaturní flešku a pracovní listy. \nPrý nemá tušení, kde by se mohla nacházet. \nZkusím ji najít.",
         "namesOfNeededObjects": [
           "USB paní Haasové",
           "Pracovní listy"
