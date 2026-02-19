@@ -4,14 +4,14 @@
     "filePath" : "/Audio/Music/patra.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -6.0
+    "initialVolume" : -4.0
   },
   {
     "title" : "toalety",
     "filePath" : "/Audio/Music/toalety.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -6.0
+    "initialVolume" : -5.0
   },
   {
     "title" : "Učebna 15",
@@ -39,7 +39,7 @@
     "filePath" : "/Audio/Music/Prokletí.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -6.0
+    "initialVolume" : -5.0
   },
   {
     "title" : "Kabinet K12",
@@ -60,7 +60,7 @@
     "filePath" : "/Audio/Music/watching stars.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -8.0
+    "initialVolume" : -7.0
   },
   {
     "title" : "Učebna 20",
@@ -95,7 +95,7 @@
     "filePath" : "/Audio/Music/Dílna D1.wav",
     "infiniteLoop" : true,
     "paused" : false,
-    "initialVolume" : -10.0
+    "initialVolume" : -8.0
   },
   {
     "title" : "Sekretariát",

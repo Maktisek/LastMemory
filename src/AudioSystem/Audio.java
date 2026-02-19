@@ -134,12 +134,9 @@ public class Audio {
      */
     public void pause() {
         if (clip != null && !paused) {
-            Thread t = new Thread(() -> {
                 pausePosition = clip.getMicrosecondPosition();
                 paused = true;
                 clip.stop();
-            });
-            t.start();
         }
     }
 
