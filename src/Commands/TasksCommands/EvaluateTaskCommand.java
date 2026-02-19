@@ -38,7 +38,7 @@ public class EvaluateTaskCommand implements Command {
         player.getCurrentLocation().getFriendlyNPC().switchSpeeches();
         player.getCurrentLocation().pauseMusic();
         Important.playSound("new memory");
-        if(player.canEnd()){
+        if (player.canEnd()) {
             return "Ou, já už to chápu...";
         }
         return "Ou, myslím, že si na něco vzpomínám...";

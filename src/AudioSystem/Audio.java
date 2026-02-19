@@ -15,6 +15,7 @@ import java.io.InputStream;
  * <p>
  * The concept of this whole class was taken from Matěj Chaloupka. But I made tons of changes during the time.
  * Used ChatGPT to help me understand whole the Clip interface.
+ *
  * @author Matěj Pospíšil, Matěj Chaloupka, ChatGPT
  */
 public class Audio {
@@ -37,7 +38,7 @@ public class Audio {
      * <p>
      * This system was originally taken from Matěj Chaloupka, but implemented in a different way.
      *
-     * @param music True if the audio file is music. When true, then the audio will fade in via {@link #fadeIn(long)} method
+     * @param music         True if the audio file is music. When true, then the audio will fade in via {@link #fadeIn(long)} method
      * @param startPosition Represents the position from where will the audio start.
      */
     private void implementAudio(boolean music, long startPosition) {
@@ -51,10 +52,11 @@ public class Audio {
             clip.open(audioStream);
             setVolume(this.initialVolume - 15);
             if (music) {
-                if (startPosition == 0) {
-                    fadeIn(20);
-                } else {
+                if (startPosition != 0) {
                     clip.setMicrosecondPosition(startPosition);
+                    setVolume(this.initialVolume);
+                }else {
+                    fadeIn(20);
                 }
             } else {
                 setVolume(this.initialVolume);
@@ -161,7 +163,7 @@ public class Audio {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                if(clip != null) {
+                if (clip != null) {
                     clip.start();
                 }
             });
@@ -198,7 +200,7 @@ public class Audio {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        if(clip != null) {
+        if (clip != null) {
             clip.start();
         }
     }
