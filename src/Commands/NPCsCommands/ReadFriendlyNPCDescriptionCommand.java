@@ -27,9 +27,7 @@ public class ReadFriendlyNPCDescriptionCommand implements Command {
             Important.playSound("wrong sound");
             return Important.writeSpace(60)+Important.changeText("red", "V lokaci se nikdo nenachází");
         }
-        String ascii = Important.readTxtFiles("/TextFiles/asciiAbout.txt", 0);
-        String headText = Important.asciiHeadTextHelper(player.getCurrentLocation().getFriendlyNPC().writeDescription(), ascii);
-        return Important.writeSpace(60) +Important.changeText("bold", Important.changeText("pink", headText) + "\n" + player.getCurrentLocation().getFriendlyNPC().writeDescription());
+        return Important.writeSpace(60)+player.getCurrentLocation().getFriendlyNPC().writeDescription();
     }
 
     @Override
