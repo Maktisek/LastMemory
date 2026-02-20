@@ -102,7 +102,7 @@ public class Player {
     public String writeOldTask(String name) {
         for (Task task : doneTasks) {
             if (task.getName().equalsIgnoreCase(name)) {
-                return task.getName() + "\n" + task.getDescription();
+                return "Jméno: "+task.getName() + "\n Popis: " + task.getDescription();
             }
         }
         return "";
