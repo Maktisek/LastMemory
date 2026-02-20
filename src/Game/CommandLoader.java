@@ -82,8 +82,7 @@ public class CommandLoader {
         });
         commands.put("položit", () -> {
             if (player.getInventory().getWeight() != 0) {
-                System.out.println("Napiš předmět, který chceš položit");
-                System.out.println("Tvé předměty: " + player.getInventory().writeItems());
+                System.out.println("Napiš jméno předmětu, který chceš položit");
                 System.out.print(">>");
                 return List.of(new DropItemCommand(player, Important.loadText()));
             }
@@ -156,7 +155,7 @@ public class CommandLoader {
         possibleCommands.put("popis lokace", LocationMode::new);
         possibleCommands.put("mod", player::specialGetMode);
         possibleCommands.put("sebrat", LocationMode::new);
-        possibleCommands.put("položit", LocationMode::new);
+        possibleCommands.put("položit", BackpackMode::new);
         possibleCommands.put("prohlédnout", BackpackMode::new);
         possibleCommands.put("odpovědět", QuestionMode::new);
         possibleCommands.put("mluv", LocationMode::new);

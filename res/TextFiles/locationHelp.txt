@@ -2,7 +2,6 @@ Návod na orientaci v lokaci:
 "jdi" -> "název lokace" = přesune se do požadované lokace
 "popis lokace" = vypíše blížší inforamce ohledně nynější lokace
 "sebrat" -> "název předmětu" = sebere požadovaný předmět z nynější lokace
-"položit" -> "název předmětu" = položí požadovaný předmět do nynější lokace
 "mluv" -> vypíše, co říká přátelské NPC v lokaci
 "přijmout úkol" = přijme úkol od přátelské postavy
 "odevzdat úkol" = odevzdá co největší počet předmětů přátelské postavě

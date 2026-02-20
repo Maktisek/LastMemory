@@ -236,7 +236,7 @@
       "anotherSpeech": "Jo! To je vše! \nMoc vám děkuji, opravdu. \nJinak, Amy, co je to, že jste tak veselá, a dokonce vám to nadprůměrně sluší! \nJste celá rozzářená. Ale pamatujte, pozornost. \nDávejte na sebe pozor.",
       "task": {
         "name": "Ztracená fleška",
-        "description": "Paní učitelka Haasová zmateně bloudí třídami a snaží se najít svojí miniaturní flešku a pracovní listy. \nPrý nemá tušení, kde by se mohla nacházet. \nZkusím ji najít.",
+        "description": "Paní učitelka Haasová zmateně bloudí třídami a snaží se najít svojí miniaturní flešku a pracovní listy. \nPrý nemá tušení, kde by se mohly nacházet. \nZkusím je najít.",
         "namesOfNeededObjects": [
           "USB paní Haasové",
           "Pracovní listy"
@@ -309,7 +309,7 @@
       "age": "16 let",
       "type" : "AKTIVNÍ",
       "currentSpeech": "Ahoj, Amy, neviděla si Mari? \nJá jsem s Mari chtěl něco tisknout, ale není tu ani Mari ani moje filamenty... \nProstě jsem je někde musel položit a jsou fuč. \nCo bych taky dělal v 8a, že jo? \nProsím pomůžeš mi je najít, já jsem dneska nějakej slepej.",
-      "anotherSpeech": "Ou, wow, díky moc. \nTeď už bude jenom muset někde vyplavat i Mari, nebo víš co? Já si jí vytisknu, haha. \nHeleď, Amy, ještě jsem ti chtěl říct, že docela důležité je brát v potaz, \nže někdy musíme být velice opatrní a pozorní na to, co děláme, víš? \nChybějící pozornost je často příčinou selhání. \nAnyway jinými slovy, nechceš hledat všude po škole svoje filamenty...",
+      "anotherSpeech": "Ou, wow, díky moc. \nTeď už bude jenom muset někde vyplavat i Mari, nebo víš co? Já si jí vytisknu, haha. \nHeleď, Amy, ještě jsem ti chtěl říct, že docela důležité je brát v potaz, \nže někdy musíme být velice opatrní a pozorní na to, co děláme, víš? \nChybějící pozornost je často příčinou selhání. \nAnyway, jinými slovy, nechceš hledat všude po škole svoje filamenty...",
       "task": {
         "name": "Chybějící filament",
         "description": "Tonda hledá po škole jeho chybějící filamenty. \nPrý je někde položil a zapomněl na ně. \nUpřímně nevím, jak se mu to povedlo, když to jsou čtyři cívky filamentu, ale dobrý... \nZkusím je najít.",
@@ -419,8 +419,8 @@
       "question": "Jakou třídu použijete v Javě, pokud chcete přečíst obsah souboru řádek po řádku?",
       "possibleAnswers": [
         "bufferedreader",
-        "buffered něco",
-        "něco reader"
+        "bufferedněco",
+        "něcoreader"
       ]
     },
     "friendlyNPC": {
@@ -505,10 +505,10 @@
       "age": "65 let",
       "type" : "AKTIVNÍ",
       "currentSpeech": "Dobrý den, pilná studentko, já moc nestíhám, \njenom jestli bych vás takhle nemohl rychle poprosit, zda byste mi nesehnala svazky učebnic. \nTedy přímo matematiky, strojnických tabulek, chemie a fyziky. \nVy jste taková pracovitá, rozhodně to pro vás nebude problém.",
-      "anotherSpeech": "Děkuji moc, mám teď toho hodně. \nMusím ještě vyplnit spoustu papírů pro pojišťovnu poté, co studentku Vránovou srazila tramvaj. \nJe mi jí moc líto. \nVíte, pustili její třídu dříve ze školy, a tak se celý incident stal ještě v době výuky. \nJe to pak naše chyba, že jsme dali na tento incident dopustit.",
+      "anotherSpeech": "Děkuji moc, mám teď toho hodně. \nMusím ještě vyplnit spoustu papírů pro pojišťovnu poté, co studentku Amy Vránovou srazila tramvaj. \nJe mi jí moc líto. \nVíte, pustili její třídu dříve ze školy, a tak se celý incident stal ještě v době výuky. \nJe to pak naše chyba, že jsme dali na tento incident dopustit.",
       "task": {
         "name": "Chybějící svazky učebnic",
-        "description": "Pan učitel Rašek má prý spoustu práce a nestihl posbírat svazky učebnic po třídách. \nPověřil mě tedy, abych mu je všechny přinesla. \nSnad je unesu.",
+        "description": "Pan učitel Rašek má prý spoustu práce a nestihl posbírat svazky učebnic. \nPověřil mě tedy, abych mu je všechny přinesla. \nSnad je unesu.",
         "namesOfNeededObjects": [
           "Svazek učebnic chemie",
           "Svazek učebnic fyziky",
@@ -639,7 +639,7 @@
     "items": [
       {
         "name": "Papíry pro pojišťovnu",
-        "description": "Oficiální dokumenty o pojistné události",
+        "description": "Pojištěná osoba: Amy Vránová\nTyp události: Smrtelná pojistná událost\nPříčina smrti: Následky zranění utrpěných při srážce tramvají\nStručný popis události:\nNa základě dostupných podkladů a šetření bylo zjištěno, že pojištěná osoba utrpěla závažná poranění při mimořádné dopravní události, srážce tramvají. Tato poranění byla bezprostřední příčinou úmrtí.\nDatum vyhotovení: 12.12.2025\nČíslo pojistné události: 092837\nVyhotovil: Tony Frank",
         "code": "PAPERS_006",
         "weight": 1.0
       }

@@ -44,7 +44,7 @@ public class PickItemCommand implements Command {
             player.getCurrentLocation().removeItem(temp);
         }
         Important.playSound("picking sound");
-        return Important.writeSpace(60)+Important.changeText("green", "Sebral si " + name);
+        return Important.writeSpace(60)+Important.changeText("green", "Sebral si " + temp.getName());
     }
 
     @Override

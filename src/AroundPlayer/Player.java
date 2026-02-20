@@ -206,7 +206,7 @@ public class Player {
     public String writeDoneTasks() {
         ArrayList<String> names = new ArrayList<>();
         for (Task task : doneTasks) {
-            names.add(task.getName());
+            names.add(Important.changeText("underline", task.getName()));
         }
         if (names.isEmpty()) {
             return Important.changeText("red", "Doposud nebyly splněny žádné úkoly");

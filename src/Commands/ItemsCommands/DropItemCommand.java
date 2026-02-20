@@ -3,6 +3,7 @@ package Commands.ItemsCommands;
 import AroundPlayer.Player;
 import Commands.Command;
 import Game.Important;
+import Items.Item;
 
 /**
  * Represents a command, which drops an item.
@@ -30,12 +31,13 @@ public class DropItemCommand implements Command {
             Important.playSound("wrong sound");
             return Important.writeSpace(60)+Important.changeText("red", "Momentálně u sebe nemáš ani jeden předmět");
         }
-        if (!player.getCurrentLocation().addItem(player.getInventory().dropItem(name))){
+        Item temp = player.getInventory().dropItem(name);
+        if (!player.getCurrentLocation().addItem(temp)){
             Important.playSound("wrong sound");
             return Important.writeSpace(60)+Important.changeText("red", "Momentálně u sebe nemáš " + name);
         }
         Important.playSound("dropping sound");
-        return Important.writeSpace(60)+"Položil si " + Important.changeText("underline", name) + " do " + player.getCurrentLocation().getName();
+        return Important.writeSpace(60)+"Položil si " + Important.changeText("underline", temp.getName()) + " do lokace: " + player.getCurrentLocation().getName();
     }
 
     @Override
