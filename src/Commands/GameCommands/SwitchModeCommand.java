@@ -39,11 +39,11 @@ public class SwitchModeCommand implements Command {
     public String execute() {
         if (!map.containsKey(mode)) {
             Important.playSound("wrong sound");
-            return Important.writeSpace(60)+Important.changeText("red", "Mód: " + mode + " neexistuje");
+            return Important.writeSpace(60)+Important.changeText("red", "Mód " + mode + " neexistuje");
         }
         if(player.getMode().getInfo() == map.get(mode).getInfo()){
             Important.playSound("wrong sound");
-            return Important.writeSpace(60)+Important.changeText("red", "Mód: " + mode + " je nyní aktivní");
+            return Important.writeSpace(60)+Important.changeText("red", "Mód " + mode + " je nyní aktivní");
         }
         player.switchMode(map.get(mode));
         Important.playSound("change mode");
