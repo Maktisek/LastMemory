@@ -42,6 +42,7 @@ public class SwitchModeCommand implements Command {
             return Important.writeSpace(60)+Important.changeText("red", "Mód: " + mode + " neexistuje");
         }
         player.switchMode(map.get(mode));
+        Important.playSound("change mode");
         return Important.writeSpace(60)+Important.changeText("green", "Mód změněn na: " + mode);
     }
 

@@ -145,5 +145,12 @@
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -16.0
+  },
+  {
+    "title" : "change mode",
+    "filePath" : "/Audio/Sounds/change mode.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -4.0
   }
 ]
