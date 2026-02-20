@@ -29,7 +29,9 @@ public class InspectOldTaskCommand implements Command {
     @Override
     public String execute() {
         if(player.hasOldTask(name)){
-            return Important.writeSpace(60)+player.writeOldTask(name);
+            String ascii = Important.readTxtFiles("/TextFiles/asciiAbout.txt", 0);
+            String headText = Important.asciiHeadTextHelper(player.writeOldTask(name), ascii);
+            return Important.writeSpace(60) +Important.changeText("bold", Important.changeText("pink", headText) + "\n" + player.writeOldTask(name));
         }
         Important.playSound("wrong sound");
         return Important.writeSpace(60)+Important.changeText("red", "Úkol " + name + " neexistuje");
