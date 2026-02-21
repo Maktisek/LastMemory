@@ -111,7 +111,7 @@ public class Inventory {
     public String descriptionItem(String name) {
         for (String key : items.keySet()) {
             if (!items.get(key).isEmpty() && items.get(key).get(0).getName().equalsIgnoreCase(name)) {
-                return items.get(key).get(0).getDescription();
+                return Important.changeText("underline","Informace o předmětu "+ items.get(key).get(0).getName()+":")+"\nVáha: "+items.get(key).get(0).getWeight()+"\nPopis: "+items.get(key).get(0).getDescription();
             }
         }
         return null;
