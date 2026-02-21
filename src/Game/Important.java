@@ -167,7 +167,7 @@ public class Important {
     public static String loadText() {
         String result;
         try {
-            result = sc.nextLine().toLowerCase();
+            result = sc.nextLine().toLowerCase().trim();
         } catch (NoSuchElementException | IllegalStateException e) {
             return "opustit";
         }
