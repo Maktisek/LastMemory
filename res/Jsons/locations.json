@@ -606,8 +606,10 @@
       "question": "Kdy se Amy narodila",
       "possibleAnswers": [
         "21.01.2009",
+        "21.01.09",
         "21.1.2009",
         "21. ledna 2009",
+        "21.ledna 2009",
         "dvacátéhoprvního ledna 2009",
         "dvacátého prvního ledna dvatisíce devět"
       ]
