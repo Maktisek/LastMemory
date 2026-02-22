@@ -366,7 +366,7 @@
       "position": "Učitel",
       "age": "27 let",
       "type" : "AKTIVNÍ",
-      "currentSpeech": "Dobrý den, Amy, jsem rád, že jste se ukázala. \nZrovna tady potřebuji vyřešit něco školního, ale nevzal jsem si s sebou nic. \nRád bych si totiž uložil všechny studenty a jejich známky. \nNemohla byste mi prosím sehnat můj notebook, výkaz o studentech ,myš a flešku, na které mám takový Excelový soubor? Děkuji.",
+      "currentSpeech": "Dobrý den, Amy, jsem rád, že jste se ukázala. \nZrovna tady potřebuji vyřešit něco školního, ale nevzal jsem si s sebou nic. \nRád bych si totiž uložil všechny studenty a jejich známky. \nNemohla byste mi prosím sehnat můj notebook, myš a flešku, na které mám takový Excelový soubor? Děkuji.",
       "anotherSpeech": "Jak pěkné, to je přesně on. Děkuji moc. \nJinak všimla jste si toho, co se děje před školou? \nTeď tam přijela záchranka a policie. \nSjel se tam snad celý sbor.\nSnad se nestalo nic vážného. Buďte opatrná.",
       "task": {
         "name": "Uložení studentů",
@@ -374,14 +374,12 @@
         "namesOfNeededObjects": [
           "Notebook pana Adámka",
           "USB s Excelem",
-          "Myš",
-          "Výkaz o studentech"
+          "Myš"
         ],
         "codesOfNeededObjects": [
           "ESSENTIALS_009",
           "ESSENTIALS_014",
-          "ESSENTIALS_015",
-          "ESSENTIALS_023"
+          "ESSENTIALS_015"
         ],
         "memoryPrice": {
           "name": "Záchranka před školou",
