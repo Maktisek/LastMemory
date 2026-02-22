@@ -582,7 +582,7 @@
         ],
         "memoryPrice": {
           "name": "Za chvíli tu nebudu",
-          "description": "Teď mi bylo řečeno, že prý žiji. \nDoktoři ale říkají, že mám malou šanci na přežití. \nNechci ani vidět, jak vypadám, vždyť už mě tady ani nepoznávají. \nNěkde tam v tom reálném světě jsou moji rodiče, \nkteří se musí dívat na tuhle hrůzu a já se s nimi nemohu ani rozloučit. \nMěla jsem být pozornější... Už to chápu. Je pozdě.",
+          "description": "Teď mi bylo řečeno, že prý žiji. \nDoktoři ale říkají, že mám malou šanci na přežití. \nNechci ani vidět, jak vypadám, vždyť už mě tady ani nepoznávají. \n\nNěkde tam v tom reálném světě jsou moji rodiče, \nkteří se musí dívat na tuhle hrůzu a já se s nimi nemohu ani rozloučit. \nMěla jsem být pozornější... Už to chápu. Je pozdě.",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_005"
