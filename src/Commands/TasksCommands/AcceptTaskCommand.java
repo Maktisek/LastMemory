@@ -21,9 +21,11 @@ import NPCS.FriendlyNPC;
 public class AcceptTaskCommand implements Command {
 
     private final Player player;
+    private boolean isWaitAble;
 
     public AcceptTaskCommand(Player player) {
         this.player = player;
+        this.isWaitAble = true;
     }
 
     @Override
@@ -31,10 +33,12 @@ public class AcceptTaskCommand implements Command {
         FriendlyNPC friendlyNPC = player.getCurrentLocation().getFriendlyNPC();
         if(friendlyNPC == null){
             Important.playSound("wrong sound");
+            this.isWaitAble = false;
             return Important.writeSpace(60)+Important.changeText("red", "V lokaci se nyní nikdo nenachází");
         }
         if(friendlyNPC.getTask() == null){
             Important.playSound("wrong sound");
+            this.isWaitAble = false;
             return Important.writeSpace(60)+Important.changeText("red", friendlyNPC.getName() + " žádný úkol nenabízí");
         }
         if (player.addCurrentTask(friendlyNPC.getTask())){
@@ -42,6 +46,7 @@ public class AcceptTaskCommand implements Command {
             return Important.writeSpace(60)+Important.changeText("green", "Nový úkol " + friendlyNPC.getTask().getName() + " byl přijat");
         }
         Important.playSound("wrong sound");
+        this.isWaitAble = false;
         return Important.writeSpace(60)+Important.changeText("red", "Nyní nemůžeš přijmat žádné úkoly");
     }
 
@@ -52,7 +57,7 @@ public class AcceptTaskCommand implements Command {
 
     @Override
     public boolean isWaitAble() {
-        return true;
+        return isWaitAble;
     }
 
     @Override
