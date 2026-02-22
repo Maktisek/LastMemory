@@ -16,15 +16,18 @@ import Game.Important;
 public class ReadFriendlyNPCDescriptionCommand implements Command {
 
     private final Player player;
+    private boolean isWaitAble;
 
     public ReadFriendlyNPCDescriptionCommand(Player player) {
         this.player = player;
+        this.isWaitAble = true;
     }
 
     @Override
     public String execute() {
         if(player.getCurrentLocation().getFriendlyNPC() == null){
             Important.playSound("wrong sound");
+            this.isWaitAble = false;
             return Important.writeSpace(60)+Important.changeText("red", "V lokaci se nikdo nenachází");
         }
         return Important.writeSpace(60)+player.getCurrentLocation().getFriendlyNPC().writeDescription();
@@ -37,7 +40,7 @@ public class ReadFriendlyNPCDescriptionCommand implements Command {
 
     @Override
     public boolean isWaitAble() {
-        return true;
+        return isWaitAble;
     }
 
     @Override
