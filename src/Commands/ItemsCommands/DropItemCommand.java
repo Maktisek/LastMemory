@@ -37,7 +37,7 @@ public class DropItemCommand implements Command {
             return Important.writeSpace(60)+Important.changeText("red", "Momentálně u sebe nemáš " + name);
         }
         Important.playSound("dropping sound");
-        return Important.writeSpace(60)+"Položil si " + Important.changeText("underline", temp.getName()) + " do lokace: " + player.getCurrentLocation().getName();
+        return Important.writeSpace(60)+"Položil si " + Important.changeText("underline", temp.getName()) + " do lokace: " + player.getCurrentLocation().writeName();
     }
 
     @Override
