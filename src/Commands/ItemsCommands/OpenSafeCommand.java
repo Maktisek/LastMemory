@@ -13,35 +13,41 @@ import Game.Important;
  * If the code is not written by its own regex or the code is invalid, then no action is performed. Only the information about
  * the process is returned.
  * Otherwise, the safe is opened and the contents are added to the player’s current location.
+ *
  * @author Matěj Pospíšil
  */
 public class OpenSafeCommand implements Command {
 
     private final Player player;
     private final String code;
+    private boolean isWaitAble;
 
     public OpenSafeCommand(Player player, String code) {
         this.player = player;
         this.code = code;
+        this.isWaitAble = true;
     }
 
     @Override
     public String execute() {
         if (player.getCurrentLocation().getSafe() == null || !player.getCurrentLocation().getSafe().isLocked()) {
             Important.playSound("wrong sound");
-            return Important.writeSpace(60)+Important.changeText("red", "Safe se v lokaci nenachází");
+            this.isWaitAble = false;
+            return Important.writeSpace(60) + Important.changeText("red", "Safe se v lokaci nenachází");
         }
         try {
             if (player.getCurrentLocation().getSafe().openSafe(code)) {
                 Important.playSound("safe open");
-                return Important.writeSpace(60)+player.getCurrentLocation().openSafe();
+                return Important.writeSpace(60) + player.getCurrentLocation().openSafe();
             }
         } catch (WrongSafeCodeException e) {
             Important.playSound("wrong sound");
-            return Important.writeSpace(60)+Important.changeText("red", e.getMessage());
+            this.isWaitAble = false;
+            return Important.writeSpace(60) + Important.changeText("red", e.getMessage());
         }
         Important.playSound("wrong sound");
-        return Important.writeSpace(60)+Important.changeText("red", "Jajchs! Tenhle kód nefunguje");
+        this.isWaitAble = false;
+        return Important.writeSpace(60) + Important.changeText("red", "Jajchs! Tenhle kód nefunguje");
     }
 
     @Override
@@ -51,7 +57,7 @@ public class OpenSafeCommand implements Command {
 
     @Override
     public boolean isWaitAble() {
-        return true;
+        return isWaitAble;
     }
 
     @Override
