@@ -56,7 +56,7 @@ public class CommandLoader {
      * </p>
      */
     public void loadCommands() {
-        commands.put("jdi", () -> {
+        commands.put("jít", () -> {
             System.out.println("Další možné lokace: " + player.getCurrentLocation().writeAllPossibleLocations());
             System.out.print("Vlož vstup: ");
             return List.of(new MoveCommand(this.player, Important.loadText()), new ScanAndAddCommand(player));
@@ -101,7 +101,7 @@ public class CommandLoader {
             System.out.print(">>");
             return List.of(new AnswerEnemyNPCCommand(player, Important.loadText()));
         });
-        commands.put("mluv", () -> List.of(new DialogCommand(player)));
+        commands.put("mluvit", () -> List.of(new DialogCommand(player)));
         commands.put("přijmout úkol", () -> List.of(new AcceptTaskCommand(player)));
         commands.put("zobrazit úkol", () -> List.of(new ShowCurrentTaskCommand(player)));
         commands.put("odevzdat úkol", () -> List.of(new HandInCommand(player), new EvaluateTaskCommand(player)));
@@ -148,7 +148,7 @@ public class CommandLoader {
      * </p>
      */
     public void loadPossibleCommands() {
-        possibleCommands.put("jdi", LocationMode::new);
+        possibleCommands.put("jít", LocationMode::new);
         possibleCommands.put("utéct", QuestionMode::new);
         possibleCommands.put("pomoc", player::getMode);
         possibleCommands.put("opustit", player::getMode);
@@ -158,7 +158,7 @@ public class CommandLoader {
         possibleCommands.put("položit", BackpackMode::new);
         possibleCommands.put("prohlédnout", BackpackMode::new);
         possibleCommands.put("odpovědět", QuestionMode::new);
-        possibleCommands.put("mluv", LocationMode::new);
+        possibleCommands.put("mluvit", LocationMode::new);
         possibleCommands.put("přijmout úkol", LocationMode::new);
         possibleCommands.put("zobrazit úkol", player::specialGetMode);
         possibleCommands.put("odevzdat úkol", LocationMode::new);
