@@ -550,9 +550,10 @@
       "name": "Ing. Ondřej Mandík",
       "position": "Ředitel",
       "age": "38 let",
-      "question": "Rok, kdy byla založena SPŠE Ječná?",
+      "question": "Ve kterém roce byla založena SPŠE Ječná?",
       "possibleAnswers": [
-        "1949"
+        "1949",
+        "1945+4"
       ]
     },
     "friendlyNPC": {
