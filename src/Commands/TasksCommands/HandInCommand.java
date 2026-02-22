@@ -89,7 +89,7 @@ public class HandInCommand implements Command {
 
     @Override
     public boolean isTimeWaitAble() {
-        return true;
+        return isTimeWaitAble;
     }
 
     @Override
