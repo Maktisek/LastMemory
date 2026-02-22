@@ -31,11 +31,13 @@ public class MoveCommand implements Command {
     private final Player player;
     private final String name;
     private boolean continues;
+    private boolean isTimeWaitAble;
 
     public MoveCommand(Player player, String name) {
         this.player = player;
         this.name = name;
         this.continues = true;
+        this.isTimeWaitAble = true;
     }
 
     @Override
@@ -43,6 +45,7 @@ public class MoveCommand implements Command {
         boolean action = player.switchLocation(player.getCurrentLocation().findLocation(this.name));
         if (!action) {
             this.continues = false;
+            this.isTimeWaitAble = false;
             Important.playSound("wrong sound");
             return Important.writeSpace(60)+Important.changeText("red", "Lokace: " + this.name + " neexistuje");
         }
@@ -94,7 +97,7 @@ public class MoveCommand implements Command {
 
     @Override
     public boolean isTimeWaitAble() {
-        return true;
+        return isTimeWaitAble;
     }
 
     @Override
