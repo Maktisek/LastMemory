@@ -12,7 +12,8 @@ public class IntroMode implements Mode{
     public String executeInfo(Player player) {
         String ascii = Important.changeText("bold", Important.changeText("pink", Important.readTxtFiles("/TextFiles/introText.txt", 0)));
         ascii += "Made by Maktis";
-        ascii += "\nPokud hraješ poprvé, bude se ti hodit příkaz \"pomoc\".";
+        ascii += "\nPokud hraješ poprvé, bude se ti hodit příkaz \"jak hrát\".";
+        ascii += "\nPokud neznáš příkazy napiš \"pomoc\".";
         ascii += "\nAby sis hru zahrál napiš to konzole příkaz \"spustit hru\".";
         return ascii;
     }
