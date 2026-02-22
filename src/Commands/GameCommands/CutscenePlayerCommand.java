@@ -22,6 +22,9 @@ public class CutscenePlayerCommand implements Command {
         player.getCurrentLocation().pauseMusic();
         Important.playSound("fade cutscene");
         Important.playMusic("cutscene");
+        if(player.canEnd()){
+            Important.playSound("heart beat");
+        }
         return player.getCutscenes().pollCutscene().toString();
     }
 
@@ -48,5 +51,9 @@ public class CutscenePlayerCommand implements Command {
     @Override
     public void endAudio() {
         Important.stopMusic("cutscene");
+        if(player.canEnd()){
+            Important.stopSound("heart beat");
+            Important.playSound("end sound");
+        }
     }
 }

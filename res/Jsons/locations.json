@@ -619,7 +619,7 @@
       "position": "Amy sama",
       "age": "17 let",
       "type" : "AKTIVNÍ",
-      "currentSpeech": "Kam si myslíš, že jako jdeš, Amy! Je to jenom tvoje chyba! \nKdyby ses netáhla za tím Tomášem a dávala třeba větší pozor, nemusely jsme tady takhle obě stát! \nAni nevíš, jak moc se zlobím. \nCelý život tě lidi učí dávat si na sebe pozor a ty se prostě nerozhlédneš? \nTo nemyslíš snad vážně... \nPoslední, co chci, abys udělala je mě vysvobodit. \nPotřebuji k tomu jedno kvítí narcisu. \nNarcis totiž symbolizuje nový začátek, jako když se krajina začne probouzet z věčné zimy. \nPokud mi ten narcis přineseš, bude mi líp.",
+      "currentSpeech": "Kam si myslíš, že jako jdeš, Amy! Je to jenom tvoje chyba! \nKdyby ses netáhla za tím Tomášem a dávala třeba větší pozor, nemusely jsme tady takhle obě stát! \nAni nevíš, jak moc se zlobím. \nCelý život tě lidi učí dávat si na sebe pozor a ty se prostě nerozhlédneš? \nTo nemyslíš snad vážně... \n\nPoslední, co chci, abys udělala je mě vysvobodit. \nPotřebuji k tomu jedno kvítí narcisu. \nNarcis totiž symbolizuje nový začátek, jako když se krajina začne probouzet z věčné zimy. \nPokud mi ten narcis přineseš, bude mi líp.",
       "anotherSpeech": "Not achievable",
       "task": {
         "name": "Narcis pro duši",
@@ -642,7 +642,7 @@
     "items": [
       {
         "name": "Papíry pro pojišťovnu",
-        "description": "Pojištěná osoba: Amy Vránová\nTyp události: Smrtelná pojistná událost\nPříčina smrti: Následky zranění utrpěných při srážce tramvají\nStručný popis události:\nNa základě dostupných podkladů a šetření bylo zjištěno, že pojištěná osoba utrpěla závažná poranění při mimořádné dopravní události, srážce tramvají. Tato poranění byla bezprostřední příčinou úmrtí.\nDatum vyhotovení: 12.12.2025\nČíslo pojistné události: 092837\nVyhotovil: Tony Frank",
+        "description": "\nPojištěná osoba: Amy Vránová\nTyp události: Smrtelná pojistná událost\nPříčina smrti: Následky zranění utrpěných při srážce tramvají\n\nStručný popis události:\nNa základě dostupných podkladů a šetření bylo zjištěno, že pojištěná osoba utrpěla závažná poranění při mimořádné dopravní události, srážce tramvají. Tato poranění byla bezprostřední příčinou úmrtí.\n\nDatum vyhotovení: 15.12.2025\nČíslo pojistné události: 092837\nVyhotovil: Tony Frank",
         "code": "PAPERS_006",
         "weight": 1.0
       }

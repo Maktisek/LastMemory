@@ -247,7 +247,7 @@
         ],
         "memoryPrice": {
           "name": "Já jsem šťastná",
-          "description": "Podle paní učitelky Haasové mi to dneska prý sluší. \nČasto mi to nikdo jen tak neříká, něco na tom bude. \nAsi fakt jdu někam s Tomem... Ale na týden? \nJeště k tomu jsem mámě říkala jenom na víkend... \nNavíc jsem dneska i šťastná, prý to jde na mně poznat. \nJeště Haasová na konci mluvila o tom, ať si na sebe dávám pozor. \nCo s tím všichni mají?",
+          "description": "Podle paní učitelky Haasové mi to dneska prý sluší. \nČasto mi to nikdo jen tak neříká, něco na tom bude. \nAsi fakt jdu někam s Tomem... Ale na týden? \nJeště k tomu jsem mámě říkala jenom na víkend... \n\nNavíc jsem dneska i šťastná, prý to jde na mně poznat. \nJeště Haasová na konci mluvila o tom, ať si na sebe dávám pozor. \nCo s tím všichni mají?",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_003"
@@ -309,7 +309,7 @@
       "age": "16 let",
       "type" : "AKTIVNÍ",
       "currentSpeech": "Ahoj, Amy, neviděla si Mari? \nJá jsem s Mari chtěl něco tisknout, ale není tu ani Mari ani moje filamenty... \nProstě jsem je někde musel položit a jsou fuč. \nCo bych taky dělal v 8a, že jo? \nProsím pomůžeš mi je najít, já jsem dneska nějakej slepej.",
-      "anotherSpeech": "Ou, wow, díky moc. \nTeď už bude jenom muset někde vyplavat i Mari, nebo víš co? Já si jí vytisknu, haha. \nHeleď, Amy, ještě jsem ti chtěl říct, že docela důležité je brát v potaz, \nže někdy musíme být velice opatrní a pozorní na to, co děláme, víš? \nChybějící pozornost je často příčinou selhání. \nAnyway, jinými slovy, nechceš hledat všude po škole svoje filamenty...",
+      "anotherSpeech": "Ou, wow, díky moc. \nTeď už jenom bude muset někde vyplavat i Mari, nebo víš co? Já si jí vytisknu, haha. \nHeleď, Amy, ještě jsem ti chtěl říct, že docela důležité je brát v potaz, \nže někdy musíme být velice opatrní a pozorní na to, co děláme, víš? \nChybějící pozornost je často příčinou selhání. \nAnyway, jinými slovy, nechceš hledat všude po škole svoje filamenty...",
       "task": {
         "name": "Chybějící filament",
         "description": "Tonda hledá po škole jeho chybějící filamenty. \nPrý je někde položil a zapomněl na ně. \nUpřímně nevím, jak se mu to povedlo, když to jsou čtyři cívky filamentu, ale dobrý... \nZkusím je najít.",
@@ -327,7 +327,7 @@
         ],
         "memoryPrice": {
           "name": "Tonda a filament",
-          "description": "Hehe, Tonda je vtipnej, ale docela mě vystrašil s tím svým hlubokým proslovem o chybějící pozornosti jako příčinou selhání. \nJá si myslím, že jsem pozorná dost... \nNavíc už zase, zase mi někdo připomíná pozornost? \nProto jsem tady? Kvůli nepozornosti?",
+          "description": "Hehe, Tonda je vtipnej, ale docela mě vystrašil s tím svým hlubokým proslovem o chybějící pozornosti jako příčinou selhání. \nJá si myslím, že jsem pozorná dost... \nNavíc už zase, zase mi někdo připomíná pozornost! \nProto jsem tady? Kvůli nepozornosti?",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_003"
@@ -445,7 +445,7 @@
         ],
         "memoryPrice": {
           "name": "Někdo byl sražen",
-          "description": "Ou, před školou byl někdo sražen. \nAutem nebo tramvají, na tom nesejde. \nDostala jsem obrovský strach, že jsem to já. \nCo když jo? Co když jsem to byla já? \nTy řeči o tom, že mám být opatrná by pak dávaly smysl. Bojím se. \nPaní učitelka ale žádné bližší informace zatím nezná. \nNavíc ta věta s tím, že jestli se ještě stihnu ještě ukázat, fuj, jde mi z toho úplný mráz po zádech.",
+          "description": "Ou, před školou byl někdo sražen. \nAutem nebo tramvají, na tom nesejde. \nDostala jsem obrovský strach, že jsem to já. \nCo když jo? Co když jsem to byla já? \nTy řeči o tom, že mám být opatrná by pak dávaly smysl. Bojím se. \nPaní učitelka ale žádné bližší informace zatím nezná. \nNavíc ta věta s tím, že jestli se ještě stihnu ukázat, fuj, jde mi z toho úplný mráz po zádech.",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_004"
@@ -550,9 +550,10 @@
       "name": "Ing. Ondřej Mandík",
       "position": "Ředitel",
       "age": "38 let",
-      "question": "Rok, kdy byla založena SPŠE Ječná?",
+      "question": "Ve kterém roce byla založena SPŠE Ječná?",
       "possibleAnswers": [
-        "1949"
+        "1949",
+        "1945+4"
       ]
     },
     "friendlyNPC": {
@@ -581,7 +582,7 @@
         ],
         "memoryPrice": {
           "name": "Za chvíli tu nebudu",
-          "description": "Teď mi bylo řečeno, že prý žiji. \nDoktoři ale říkají, že mám malou šanci na přežití. \nNechci ani vidět, jak vypadám, vždyť už mě tady ani nepoznávají. \nNěkde tam v tom reálném světě jsou moji rodiče, \nkteří se musí dívat na tuhle hrůzu a já se s nimi nemohu ani rozloučit. \nMěla jsem být pozornější... Už to chápu. Je pozdě.",
+          "description": "Teď mi bylo řečeno, že prý žiji. \nDoktoři ale říkají, že mám malou šanci na přežití. \nNechci ani vidět, jak vypadám, vždyť už mě tady ani nepoznávají. \n\nNěkde tam v tom reálném světě jsou moji rodiče, \nkteří se musí dívat na tuhle hrůzu a já se s nimi nemohu ani rozloučit. \nMěla jsem být pozornější... Už to chápu. Je pozdě.",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_005"
@@ -605,8 +606,10 @@
       "question": "Kdy se Amy narodila",
       "possibleAnswers": [
         "21.01.2009",
+        "21.01.09",
         "21.1.2009",
         "21. ledna 2009",
+        "21.ledna 2009",
         "dvacátéhoprvního ledna 2009",
         "dvacátého prvního ledna dvatisíce devět"
       ]
@@ -616,7 +619,7 @@
       "position": "Amy sama",
       "age": "17 let",
       "type" : "AKTIVNÍ",
-      "currentSpeech": "Kam si myslíš, že jako jdeš, Amy! Je to jenom tvoje chyba! \nKdyby ses netáhla za tím Tomášem a dávala třeba větší pozor, nemusely jsme tady takhle obě stát! \nAni nevíš, jak moc se zlobím. \nCelý život tě lidi učí dávat si na sebe pozor a ty se prostě nerozhlédneš? \nTo nemyslíš snad vážně... \nPoslední, co chci, abys udělala je mě vysvobodit. \nPotřebuji k tomu jedno kvítí narcisu. \nNarcis totiž symbolizuje nový začátek, jako když se krajina začne probouzet z věčné zimy. \nPokud mi ten narcis přineseš, bude mi líp.",
+      "currentSpeech": "Kam si myslíš, že jako jdeš, Amy! Je to jenom tvoje chyba! \nKdyby ses netáhla za tím Tomášem a dávala třeba větší pozor, nemusely jsme tady takhle obě stát! \nAni nevíš, jak moc se zlobím. \nCelý život tě lidi učí dávat si na sebe pozor a ty se prostě nerozhlédneš? \nTo nemyslíš snad vážně... \n\nPoslední, co chci, abys udělala je mě vysvobodit. \nPotřebuji k tomu jedno kvítí narcisu. \nNarcis totiž symbolizuje nový začátek, jako když se krajina začne probouzet z věčné zimy. \nPokud mi ten narcis přineseš, bude mi líp.",
       "anotherSpeech": "Not achievable",
       "task": {
         "name": "Narcis pro duši",
@@ -639,7 +642,7 @@
     "items": [
       {
         "name": "Papíry pro pojišťovnu",
-        "description": "Pojištěná osoba: Amy Vránová\nTyp události: Smrtelná pojistná událost\nPříčina smrti: Následky zranění utrpěných při srážce tramvají\nStručný popis události:\nNa základě dostupných podkladů a šetření bylo zjištěno, že pojištěná osoba utrpěla závažná poranění při mimořádné dopravní události, srážce tramvají. Tato poranění byla bezprostřední příčinou úmrtí.\nDatum vyhotovení: 12.12.2025\nČíslo pojistné události: 092837\nVyhotovil: Tony Frank",
+        "description": "\nPojištěná osoba: Amy Vránová\nTyp události: Smrtelná pojistná událost\nPříčina smrti: Následky zranění utrpěných při srážce tramvají\n\nStručný popis události:\nNa základě dostupných podkladů a šetření bylo zjištěno, že pojištěná osoba utrpěla závažná poranění při mimořádné dopravní události, srážce tramvají. Tato poranění byla bezprostřední příčinou úmrtí.\n\nDatum vyhotovení: 15.12.2025\nČíslo pojistné události: 092837\nVyhotovil: Tony Frank",
         "code": "PAPERS_006",
         "weight": 1.0
       }

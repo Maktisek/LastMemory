@@ -166,5 +166,19 @@
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -6.0
+  },
+  {
+    "title" : "end sound",
+    "filePath" : "/Audio/Sounds/end sound.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -6.0
+  },
+  {
+    "title" : "heart beat",
+    "filePath" : "/Audio/Sounds/heart beat.wav",
+    "infiniteLoop" : true,
+    "paused" : false,
+    "initialVolume" : -6.0
   }
 ]
