@@ -47,11 +47,10 @@ Bílá – oznamuje hráči, že lokace je prázdná
 V módu LOKACE může hráč podniknout:
 
 1. Sbírat předměty – sebere předmět a uloží ho do inventáře
-2. Pokládat předměty – položí předmět do aktuální lokace a odebere ho z inventáře
-3. Otevřít safe – pokud je kód správný, obsah safu se „vysype“ do lokace
-4. Interagovat s NPC – hráč může interagovat s NPC mnoha cestami (tyto cesty budou rozepsány níže)
-5. Přečíst si popis lokace – vypíše popis lokace do konzole
-6. Cestovat do dalších lokací – přesune hráče do jiné lokace
+2. Otevřít safe – pokud je kód správný, obsah safu se „vysype“ do lokace
+3. Interagovat s NPC – hráč může interagovat s NPC mnoha cestami (tyto cesty budou rozepsány níže)
+4. Přečíst si popis lokace – vypíše popis lokace do konzole
+5. Cestovat do dalších lokací – přesune hráče do jiné lokace
 
 Tento mód je klíčový ke klasické orientaci hrou.
 
@@ -68,8 +67,9 @@ Jako v každém módu může hráč podniknout mnoho věcí.
 V módu INVENTÁŘ může hráč podniknout:
 
 1. Prohlédnout předmět – vypíše popis vybraného předmětu
-2. Vzpomenout si na vzpomínku – vypíše popis vybrané vzpomínky
-3. Prohlédnout si již hotový úkol – vypíše popis vybraného splněného úkolu
+2. Polořit předmět – položí předmět do aktuální lokace a odebere ho z inventáře
+3. Vzpomenout si na vzpomínku – vypíše popis vybrané vzpomínky
+4. Prohlédnout si již hotový úkol – vypíše popis vybraného splněného úkolu
 
 * MÓD ZKOUŠENÍ
   Tento mód si hráč nevybere sám, ale pokud vstoupí do lokace, v níž se nachází „protivník“ v podobě učitele, hra mu ho přiřadí sama.
@@ -143,20 +143,30 @@ Pokud hráč vstoupí do lokace, na kterou nová lokace navazuje, hra dá hráč
 
 * TIPY A TRIKY
   Jakožto vývojář této hry jsem strávil poměrně dost času vychytáváním herních chyb.
-  A sám jsem na této hře nahrál zhruba tak 8 hodin.
+  A sám jsem na této hře nahrál zhruba tak 12 hodin.
   Za tento čas jsem pochopil řadu věcí a rád bych se o ně podělil.
 
-1. Nebuď zbrklý:
+1. Správně odhaluj příběh
+   Ačkoli se to může zdát zvláštní, tak je potřeba i správně odhalovat příběh.
+   Mé doporučení:
+   1. Mluvit s postavou
+   2. Splnit úkol
+   3. Znovu mluvit s postavou
+   4. Přečíst si vzpomínku
+
+   Tento postup zajistí, že se hráč bude seznamovat s příběhem ve správném pořadí.
+
+2. Nebuď zbrklý:
    Vzhledem k tomu, že hra konstantně načítá vaše vstupy, není úplně optimální rychle vepisovat instrukce.
    Hru to sice nerozbije, ale můžete omylem přeskočit nějaké důležité hlášení či dokonce samotnou cutscénu.
 
-2. Work smarter, not harder:
+3. Work smarter, not harder:
    Samozřejmě toto je dost subjektivní, ale já sám doporučuji využít strategii „hromadění předmětů“.
    Tato strategie spočívá v tom, že si hráč vždy nanosí předměty ze všech lokací na chodbu.
    Přijme úkol a pak si je jen v té chodbě sesbírá.
    A jo, tohle může odebrat prožitek z „prozkoumávání“, a proto to nechávám čistě na hráči, jak se rozhodne.
 
-3. Čti všechno:
+4. Čti všechno:
    Hra je textová, a tak disponuje textem. Ten tady není pro srandu králíkům, a tak by bylo fajn si ho číst celý.
    Tzn. vzpomínky, cutscény, popisy lokací, popisy předmětů, popisy úkolů, popisy postav atd.
    Bez toho by to byla přece nuda…

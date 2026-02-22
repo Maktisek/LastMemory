@@ -28,6 +28,13 @@
     "initialVolume" : -4.0
   },
   {
+    "title" : "hallway walk",
+    "filePath" : "/Audio/Sounds/hallway walk.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -2.0
+  },
+  {
     "title" : "run",
     "filePath" : "/Audio/Sounds/run.wav",
     "infiniteLoop" : false,
@@ -152,5 +159,12 @@
     "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -4.0
+  },
+  {
+    "title" : "opustit",
+    "filePath" : "/Audio/Sounds/opustit.wav",
+    "infiniteLoop" : false,
+    "paused" : false,
+    "initialVolume" : -6.0
   }
 ]

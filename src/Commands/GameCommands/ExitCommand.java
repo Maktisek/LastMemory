@@ -1,14 +1,17 @@
 package Commands.GameCommands;
 
 import Commands.Command;
+import Game.Important;
 
 /**
  * Represents a command, which exists the game.
  * @author Matěj Pospíšil
  */
 public class ExitCommand implements Command {
+
     @Override
     public String execute() {
+        Important.playSound("opustit");
         return "Hra se vypíná";
     }
 
@@ -24,7 +27,7 @@ public class ExitCommand implements Command {
 
     @Override
     public boolean isTimeWaitAble() {
-        return false;
+        return true;
     }
 
     @Override

@@ -55,7 +55,7 @@ public class MoveCommand implements Command {
         }
 
         if (player.getCurrentLocation().getType() == LocationType.HALLWAY && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
-            Important.playSound("walk");
+            Important.playSound("hallway walk");
             return Important.writeSpace(60)+Important.changeText("green", "Přesouváš se do: " + player.getCurrentLocation().getName());
         }
 
