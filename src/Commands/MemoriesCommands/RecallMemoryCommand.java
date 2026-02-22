@@ -17,17 +17,25 @@ public class RecallMemoryCommand implements Command {
 
     private final Player player;
     private final String name;
+    private boolean isWaitAble;
 
     public RecallMemoryCommand(Player player, String name) {
         this.player = player;
         this.name = name;
+        this.isWaitAble = true;
     }
 
     @Override
     public String execute() {
+        if(player.getCollectedMemories().isEmpty()){
+            Important.playSound("wrong sound");
+            this.isWaitAble = false;
+            return Important.changeText("red", "Momentálně nemáš žádnou vzpomínku");
+        }
         if (!player.hasCollectedMemory(name)){
             Important.playSound("wrong sound");
-            return Important.writeSpace(60)+"Vzpomínka " + name + " neexistuje";
+            this.isWaitAble = false;
+            return Important.writeSpace(60)+Important.changeText("red", "Vzpomínka " + Important.changeText("underline", name) + Important.changeText("red", " neexistuje"));
         }
         player.getCurrentLocation().getSong().pause();
         Important.playMusic("memory song");
@@ -41,7 +49,7 @@ public class RecallMemoryCommand implements Command {
 
     @Override
     public boolean isWaitAble() {
-        return true;
+        return isWaitAble;
     }
 
     @Override
