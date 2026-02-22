@@ -10,7 +10,8 @@ import Game.Important;
 public class BackpackMode implements Mode {
 
     private String forToString(Player player) {
-        return Important.changeText("bold", "Kapacita: ") + player.getInventory().writeWeight() + "/" + player.getInventory().getCapacity() + "\n" +
+        return Important.changeText("bold", "Aktivní úkol: ") + player.writeCurrentTask() + "\n" +
+                Important.changeText("bold", "Kapacita: ") + player.getInventory().writeWeight() + "/" + player.getInventory().getCapacity() + "\n" +
                 Important.changeText("bold", "Sesbírané předměty: ") + player.getInventory().writeItems() + "\n" +
                 Important.changeText("bold", "Sesbírané vzpomínky: ") + player.writeMemories() + "\n" +
                 Important.changeText("bold", "Hotové úkoly: ") + player.writeDoneTasks();

@@ -108,6 +108,13 @@ public class Player {
         return "";
     }
 
+    public String writeCurrentTask(){
+        if(currentTask != null){
+            return Important.changeText("underline", currentTask.getName());
+        }
+        return Important.changeText("red", "Žádný");
+    }
+
     public boolean addCurrentTask(Task task) {
         if (currentTask == null) {
             this.currentTask = task;
