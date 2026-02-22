@@ -4,7 +4,7 @@ Návod na orientaci v lokaci:
 "sebrat" -> "název předmětu" = sebere požadovaný předmět z nynější lokace
 "mluvit" -> vypíše, co říká přátelské NPC v lokaci
 "přijmout úkol" = přijme úkol od přátelské postavy
-"odevzdat úkol" = odevzdá co největší počet předmětů přátelské postavě
+"odevzdat úkol" = odevzdá co největší počet předmětů přátelské postavě (není třeba mít všechny předměty hned u sebe)
 "otevřít safe" -> "kód ve formátu L/RX;L/RX......." = otevře trezor v lokaci
 "info postava" = vypíše bližší informace o přátelské postavě v lokaci
 
