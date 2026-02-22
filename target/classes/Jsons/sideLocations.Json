@@ -9,7 +9,7 @@
       "position": "Učitelka",
       "age": "42 let",
       "type": "PASIVNÍ",
-      "currentSpeech": "I completely lost my train of thought, but don’t forget Amy. Keep it simple.",
+      "currentSpeech": "I completely lost my train of thought, but don’t forget Amy - keep it simple.",
       "anotherSpeech": "None",
       "task": null
     },
@@ -277,13 +277,13 @@
       "items": [
         {
           "name": "Výkaz o studentech",
-          "description": "Seznam studentů s daty narození",
+          "description": "Seznam studentů s daty narození\nMichal Vrána: 28.01.2010 \nAmy Vránová: 21.01.2009",
           "code": "ESSENTIALS_023",
-          "weight": 2.0
+          "weight": 1.0
         },
         {
           "name": "Pracovní listy",
-          "description": "Typicky Haasovsky vypadající pracovní listy, nechtěla bych se s nimi dělat",
+          "description": "Typicky Haasovsky vypadající pracovní listy, nechtěla bych se s nimi dělat...",
           "code": "ESSENTIALS_024",
           "weight": 1.0
         }
