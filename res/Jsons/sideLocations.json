@@ -277,7 +277,7 @@
       "items": [
         {
           "name": "Výkaz o studentech",
-          "description": "Seznam studentů s daty narození\nMichal Vrána: 28.01.2010 \nAmy Vránová: 21.01.#$%^",
+          "description": "Seznam studentů s daty narození\nMichal Vrána: 28.01.2010 \nAmy Vránová: 21.01.2009",
           "code": "ESSENTIALS_023",
           "weight": 1.0
         },
