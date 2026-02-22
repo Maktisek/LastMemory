@@ -247,7 +247,7 @@
         ],
         "memoryPrice": {
           "name": "Já jsem šťastná",
-          "description": "Podle paní učitelky Haasové mi to dneska prý sluší. \nČasto mi to nikdo jen tak neříká, něco na tom bude. \nAsi fakt jdu někam s Tomem... Ale na týden? \nJeště k tomu jsem mámě říkala jenom na víkend... \nNavíc jsem dneska i šťastná, prý to jde na mně poznat. \nJeště Haasová na konci mluvila o tom, ať si na sebe dávám pozor. \nCo s tím všichni mají?",
+          "description": "Podle paní učitelky Haasové mi to dneska prý sluší. \nČasto mi to nikdo jen tak neříká, něco na tom bude. \nAsi fakt jdu někam s Tomem... Ale na týden? \nJeště k tomu jsem mámě říkala jenom na víkend... \n\nNavíc jsem dneska i šťastná, prý to jde na mně poznat. \nJeště Haasová na konci mluvila o tom, ať si na sebe dávám pozor. \nCo s tím všichni mají?",
           "opened": false,
           "locationGift": null,
           "code": "HALLWAY_003"
