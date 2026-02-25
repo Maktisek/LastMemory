@@ -21,9 +21,9 @@ public class SaveGameCommand implements Command {
         try {
             init.writeToFile(save);
         } catch (WrongInitializationException e) {
-            return Important.changeText("red", "Save " + save + " neexistuje");
+            return Important.writeSpace(60)+Important.changeText("red", "Save " + save + " neexistuje");
         }
-        return Important.changeText("green" ,"Hra byla úspěšně uložena do " + save);
+        return Important.writeSpace(60)+Important.changeText("green" ,"Hra byla úspěšně uložena do " + save);
     }
 
     @Override
@@ -33,12 +33,12 @@ public class SaveGameCommand implements Command {
 
     @Override
     public boolean isWaitAble() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isTimeWaitAble() {
-        return true;
+        return false;
     }
 
     @Override

@@ -3,6 +3,7 @@ package Commands.SavesCommands;
 import AroundPlayer.Player;
 import Commands.Command;
 import Exceptions.WrongInitializationException;
+import Game.Important;
 import Game.Initialization;
 import Modes.LocationMode;
 
@@ -26,9 +27,9 @@ public class LoadGameCommand implements Command {
             this.player.load(loadedPlayer);
             this.player.setMode(new LocationMode());
         }catch (WrongInitializationException e){
-            return e.getMessage();
+            return Important.changeText("red", e.getMessage());
         }
-        return "Hra se načetla úspěšně!";
+        return Important.changeText("green", "Hra se načetla úspěšně!");
     }
 
     @Override

@@ -243,7 +243,7 @@ public class Initialization implements Serializable{
     public static Initialization readFromFile(String fileName) throws WrongInitializationException {
         Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", fileName.toLowerCase() + ".dat");
         if(!Files.exists(path)){
-            throw new WrongInitializationException("File " + fileName + " could not be found");
+            throw new WrongInitializationException("Save s názvem " + fileName + " neexistuje");
         }
         try (ObjectInputStream stream = new ObjectInputStream(Files.newInputStream(path))) {
             return (Initialization) stream.readObject();
