@@ -4,6 +4,7 @@ import javax.sound.sampled.*;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.InputStream;
+import java.io.Serializable;
 
 /**
  * This class stands for playing individual wav audio files. Those files have to be implemented into res\\Audio.
@@ -18,7 +19,7 @@ import java.io.InputStream;
  *
  * @author Matěj Pospíšil, Matěj Chaloupka, ChatGPT
  */
-public class Audio {
+public class Audio implements Serializable {
 
     private String filePath;
     private String title;

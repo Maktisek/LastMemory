@@ -28,7 +28,7 @@ import java.util.Objects;
  *
  * @author Matěj Pospíšil
  */
-public class Initialization {
+public class Initialization implements Serializable{
 
 
     private final ObjectMapper mapper;

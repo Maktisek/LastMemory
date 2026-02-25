@@ -3,6 +3,8 @@ package NPCS;
 import Game.Important;
 import Items.Task;
 
+import java.io.Serializable;
+
 /**
  * This class represents a friendly NPC.
  * <p>
@@ -12,7 +14,7 @@ import Items.Task;
  *
  * @author Matěj Pospíšil
  */
-public class FriendlyNPC extends NPC {
+public class FriendlyNPC extends NPC implements Serializable {
 
     private String currentSpeech;
     private String anotherSpeech;

@@ -2,6 +2,7 @@ package Items;
 
 import Exceptions.WrongSafeCodeException;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -20,7 +21,7 @@ import java.util.ArrayList;
  *
  * @author Matěj Pospíšil
  */
-public class Safe {
+public class Safe implements Serializable {
 
 
     private ArrayList<Item> items;

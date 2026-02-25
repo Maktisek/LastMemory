@@ -1,5 +1,6 @@
 package Items;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Objects;
  *
  * @author Matěj Pospíšil
  */
-public class Item {
+public class Item implements Serializable {
 
 
     private String name;
@@ -22,15 +23,6 @@ public class Item {
     public Item() {
     }
 
-    @Override
-    public String toString() {
-        return "Item{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", code='" + code + '\'' +
-                ", weight=" + weight +
-                '}';
-    }
 
     public String getName() {
         return name;

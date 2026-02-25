@@ -2,6 +2,7 @@ package NPCS;
 
 import Game.Important;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -13,7 +14,7 @@ import java.util.ArrayList;
  *
  * @author Matěj Pospíšil
  */
-public class EnemyNPC extends NPC{
+public class EnemyNPC extends NPC implements Serializable {
 
     private String question;
     private ArrayList<String> possibleAnswers;

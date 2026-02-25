@@ -9,6 +9,7 @@ import NPCS.EnemyNPC;
 import NPCS.FriendlyNPC;
 
 import javax.sound.sampled.Clip;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -30,7 +31,7 @@ import java.util.Collections;
  *
  * @author Matěj Pospíšil
  */
-public class Location implements Comparable<Location> {
+public class Location implements Comparable<Location>, Serializable {
 
 
     private String name;
@@ -48,7 +49,7 @@ public class Location implements Comparable<Location> {
 
     private Audio song;
 
-    private String[] connections;
+    private transient String[] connections;
 
     public Location() {
     }
