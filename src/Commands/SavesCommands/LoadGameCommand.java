@@ -27,9 +27,9 @@ public class LoadGameCommand implements Command {
             this.player.load(loadedPlayer);
             this.player.setMode(new LocationMode());
         }catch (WrongInitializationException e){
-            return Important.changeText("red", e.getMessage());
+            return Important.writeSpace(60)+Important.changeText("red", e.getMessage());
         }
-        return Important.changeText("green", "Hra se načetla úspěšně!");
+        return Important.writeSpace(60)+Important.changeText("green", "Hra se načetla úspěšně!");
     }
 
     @Override
@@ -39,12 +39,12 @@ public class LoadGameCommand implements Command {
 
     @Override
     public boolean isWaitAble() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isTimeWaitAble() {
-        return true;
+        return false;
     }
 
     @Override
