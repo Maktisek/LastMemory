@@ -24,7 +24,7 @@ public class Audio implements Serializable {
     private String filePath;
     private String title;
 
-    private Clip clip;
+    private transient Clip clip;
     private boolean infiniteLoop;
     private long pausePosition;
     boolean paused;

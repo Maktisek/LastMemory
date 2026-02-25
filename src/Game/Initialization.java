@@ -230,7 +230,7 @@ public class Initialization implements Serializable{
         try {
             Files.createDirectories(path.getParent());
         }catch (IOException e){
-            throw new WrongInitializationException(e.getMessage());
+            throw new WrongInitializationException("There is a problem with creating the saves folder.");
         }
 
         try (ObjectOutputStream out = new ObjectOutputStream(Files.newOutputStream(path))) {

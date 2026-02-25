@@ -3,6 +3,7 @@ package AroundPlayer;
 import Game.Important;
 import Items.Item;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -10,7 +11,7 @@ import java.util.HashMap;
  * This class represents an inventory system.
  * @author Matěj Pospíšil
  */
-public class Inventory {
+public class Inventory implements Serializable {
     private final double capacity;
     private double weight;
     private final HashMap<String, ArrayList<Item>> items;

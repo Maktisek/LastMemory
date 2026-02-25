@@ -37,6 +37,7 @@ public class Console {
 
     private final Player player;
     private final CommandLoader gameLoader;
+    private final Initialization init;
     private boolean exit;
 
     /**
@@ -46,8 +47,8 @@ public class Console {
      */
     public Console() throws WrongInitializationException {
         this.exit = false;
-        Initialization init = new Initialization();
-        init.startInitialization();
+        this.init = new Initialization();
+        this.init.startInitialization();
         this.player = init.getPlayer();
         this.gameLoader = new CommandLoader(player);
     }
@@ -77,6 +78,14 @@ public class Console {
             if (player.canPlayCutscene()) {
                 cutscenePlayer();
                 continue;
+            }
+
+            if(player.getCollectedMemories().size() == 0){
+                try {
+                    init.writeToFile("save1");
+                }catch (WrongInitializationException e){
+                    System.out.println(e.getMessage());
+                }
             }
 
             if (player.canEnd()) {
