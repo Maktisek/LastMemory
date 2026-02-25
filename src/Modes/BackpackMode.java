@@ -3,11 +3,13 @@ package Modes;
 import AroundPlayer.Player;
 import Game.Important;
 
+import java.io.Serializable;
+
 /**
  * A mode focused on inventory management and player possessions.
  * @author Matěj Pospíšil
  */
-public class BackpackMode implements Mode {
+public class BackpackMode implements Mode, Serializable {
 
     private String forToString(Player player) {
         return Important.changeText("bold", "Aktivní úkol: ") + player.writeCurrentTask() + "\n" +

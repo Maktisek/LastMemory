@@ -10,6 +10,7 @@ import Modes.LocationMode;
 import Modes.Mode;
 import Modes.QuestionMode;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -21,7 +22,7 @@ import java.util.Collections;
  * {@link #mode} stands for currently selected mode.
  * @author Matěj Pospíšil
  */
-public class Player {
+public class Player implements Serializable {
 
     private Inventory inventory;
     private ArrayList<Memory> collectedMemories;

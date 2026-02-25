@@ -1,10 +1,12 @@
 package Locations;
 
+import java.io.Serializable;
+
 /**
  * Represents the type of location.
  * @author Matěj Pospíšil
  */
-public enum LocationType {
+public enum LocationType implements Serializable {
     /**
      * Represents a normal location.
      */

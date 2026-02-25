@@ -1,10 +1,12 @@
 package NPCS;
 
+import java.io.Serializable;
+
 /**
  * Represents the type of {@link FriendlyNPC}.
  * @author Matěj Pospíšil
  */
-public enum TypeNPC {
+public enum TypeNPC implements Serializable {
     /**
      * Represents a {@link FriendlyNPC} who has a task and can give a memory to the player.
       */

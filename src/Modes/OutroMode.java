@@ -2,12 +2,15 @@ package Modes;
 
 import AroundPlayer.Player;
 import Game.Important;
+
+import java.io.Serializable;
+
 /**
  * A mode responsible for the game outro.
  *
  * @author Matěj Pospíšil
  */
-public class OutroMode implements Mode{
+public class OutroMode implements Mode, Serializable {
 
     private final String quote;
 

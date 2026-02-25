@@ -2,6 +2,8 @@ package Cutscenes;
 
 import Game.Important;
 
+import java.io.Serializable;
+
 /**
  * Represents a cutscene in the game.
  * <p>
@@ -14,7 +16,7 @@ import Game.Important;
  * </p>
  * @author Matěj Pospíšil
  */
-public class Cutscene {
+public class Cutscene implements Serializable {
 
     private String scene;
     private int requiredMemories;

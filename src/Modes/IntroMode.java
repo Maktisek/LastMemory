@@ -3,11 +3,13 @@ package Modes;
 import AroundPlayer.Player;
 import Game.Important;
 
+import java.io.Serializable;
+
 /**
  * A mode focused on game introduction.
  * @author Matěj Pospíšil
  */
-public class IntroMode implements Mode{
+public class IntroMode implements Mode, Serializable {
     @Override
     public String executeInfo(Player player) {
         String ascii = Important.changeText("bold", Important.changeText("pink", Important.readTxtFiles("/TextFiles/introText.txt", 0)));

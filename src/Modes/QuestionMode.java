@@ -3,12 +3,14 @@ package Modes;
 import AroundPlayer.Player;
 import Game.Important;
 
+import java.io.Serializable;
+
 /**
  * A mode responsible for handling an {@link NPCS.EnemyNPC} encounter.
  *
  * @author Matěj Pospíšil
  */
-public class QuestionMode implements Mode{
+public class QuestionMode implements Mode, Serializable {
 
     @Override
     public String executeInfo(Player player) {

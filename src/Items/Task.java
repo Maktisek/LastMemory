@@ -4,6 +4,7 @@ import AroundPlayer.Memory;
 import AroundPlayer.Player;
 import Game.Important;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -19,7 +20,7 @@ import java.util.ArrayList;
  *
  * @author Matěj Pospíšil
  */
-public class Task {
+public class Task implements Serializable {
 
     private String name;
     private String description;

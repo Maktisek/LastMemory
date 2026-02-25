@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.Queue;
 
 /**
@@ -16,7 +17,7 @@ import java.util.Queue;
  * </p>
  * @author Matěj Pospíšil
  */
-public class CutsceneLoader {
+public class CutsceneLoader implements Serializable {
 
     private Queue<Cutscene> cutscenes;
 

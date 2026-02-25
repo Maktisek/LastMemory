@@ -1,9 +1,12 @@
 package Modes;
+
+import java.io.Serializable;
+
 /**
  * Represents the type of mode.
  * @author Matěj Pospíšil
  */
-public enum ModeType {
+public enum ModeType implements Serializable {
     /**
      * Represents {@link BackpackMode}.
      * Some commands cannot be done in that mode.

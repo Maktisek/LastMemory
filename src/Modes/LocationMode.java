@@ -3,12 +3,14 @@ package Modes;
 import AroundPlayer.Player;
 import Game.Important;
 
+import java.io.Serializable;
+
 /**
  * A mode responsible for handling locations.
  *
  * @author Matěj Pospíšil
  */
-public class LocationMode implements Mode {
+public class LocationMode implements Mode, Serializable {
 
     @Override
     public String executeInfo(Player player) {

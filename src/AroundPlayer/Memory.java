@@ -3,6 +3,8 @@ package AroundPlayer;
 import Game.Important;
 import Locations.Location;
 
+import java.io.Serializable;
+
 /**
  * This class represents a memory, which works like a story giver.
  * The player can read the description in order to understand the story.
@@ -14,7 +16,7 @@ import Locations.Location;
  * The class implements Comparable in order to sort the memories via {@link #opened}
  *  @author Matěj Popíšil
  */
-public class Memory implements Comparable<Memory>{
+public class Memory implements Comparable<Memory>, Serializable {
 
     private String name;
     private String description;
