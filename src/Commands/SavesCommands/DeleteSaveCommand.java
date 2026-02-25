@@ -22,13 +22,16 @@ public class DeleteSaveCommand implements Command {
     public String execute() {
         Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", save+".dat");
         if(!Files.exists(path)){
+            Important.playSound("wrong sound");
             return Important.writeSpace(60)+Important.changeText("red", "Save s názvem " + save + " neexistuje");
         }
         try {
             Files.delete(path);
         } catch (IOException e) {
+            Important.playSound("wrong sound");
             return Important.writeSpace(60)+Important.changeText("red", "Save " + save + " se nepodařilo vymazat");
         }
+        Important.playSound("system");
         return Important.writeSpace(60)+Important.changeText("green", "Save " + save + " se podařilo vymazat");
     }
 

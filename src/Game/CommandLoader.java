@@ -132,12 +132,12 @@ public class CommandLoader {
         commands.put("spustit hru", () -> List.of(new StartGameCommand(player)));
         commands.put("informace", () -> List.of(new WriteTxtFileCommand("/TextFiles/aboutGame.txt")));
         commands.put("jak hrát", () -> List.of(new WriteTxtFileCommand("/TextFiles/howToPlay.txt")));
-        commands.put("načíst save", () -> {
+        commands.put("načíst hru", () -> {
             System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
             System.out.println("Napiš jaký save si přeješ využít:");
             return List.of(new LoadGameCommand(this.player, Important.loadText()));
         });
-        commands.put("uložit save", () -> {
+        commands.put("uložit hru", () -> {
             System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
             System.out.println("Pro vytvoření nového savu stačí využít neexistující jméno.");
             System.out.println("Napiš jméno savu:");
@@ -191,8 +191,8 @@ public class CommandLoader {
         possibleCommands.put("spustit hru", IntroMode::new);
         possibleCommands.put("informace", OutroMode::new);
         possibleCommands.put("jak hrát", player::getMode);
-        possibleCommands.put("načíst save", player::getMode);
-        possibleCommands.put("uložit save", player::getMode);
+        possibleCommands.put("načíst hru", player::getMode);
+        possibleCommands.put("uložit hru", player::getMode);
         possibleCommands.put("vymazat save", player::getMode);
     }
 

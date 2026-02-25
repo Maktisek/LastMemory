@@ -21,8 +21,10 @@ public class SaveGameCommand implements Command {
         try {
             init.writeToFile(save);
         } catch (WrongInitializationException e) {
+            Important.playSound("wrong sound");
             return Important.writeSpace(60)+Important.changeText("red", "Save " + save + " neexistuje");
         }
+        Important.playSound("system");
         return Important.writeSpace(60)+Important.changeText("green" ,"Hra byla úspěšně uložena do " + save);
     }
 

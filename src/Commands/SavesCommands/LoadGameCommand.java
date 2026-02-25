@@ -27,8 +27,10 @@ public class LoadGameCommand implements Command {
             this.player.load(loadedPlayer);
             this.player.setMode(new LocationMode());
         }catch (WrongInitializationException e){
+            Important.playSound("wrong sound");
             return Important.writeSpace(60)+Important.changeText("red", e.getMessage());
         }
+        Important.playSound("system");
         return Important.writeSpace(60)+Important.changeText("green", "Hra se načetla úspěšně!");
     }
 
