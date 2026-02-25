@@ -81,14 +81,6 @@ public class Console {
                 continue;
             }
 
-            if(player.getCollectedMemories().size() == 0){
-                try {
-                    init.writeToFile("save1");
-                    System.out.println("saving");
-                }catch (WrongInitializationException e){
-                    System.out.println(e.getMessage());
-                }
-            }
 
             if (player.canEnd()) {
                 exit = true;

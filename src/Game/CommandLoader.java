@@ -15,7 +15,9 @@ import Commands.MovementCommands.ScanAndAddCommand;
 import Commands.NPCsCommands.AnswerEnemyNPCCommand;
 import Commands.NPCsCommands.DialogCommand;
 import Commands.NPCsCommands.ReadFriendlyNPCDescriptionCommand;
+import Commands.SavesCommands.DeleteSaveCommand;
 import Commands.SavesCommands.LoadGameCommand;
+import Commands.SavesCommands.SaveGameCommand;
 import Commands.TasksCommands.*;
 import Modes.*;
 
@@ -130,11 +132,23 @@ public class CommandLoader {
         commands.put("spustit hru", () -> List.of(new StartGameCommand(player)));
         commands.put("informace", () -> List.of(new WriteTxtFileCommand("/TextFiles/aboutGame.txt")));
         commands.put("jak hrát", () -> List.of(new WriteTxtFileCommand("/TextFiles/howToPlay.txt")));
-        commands.put("načíst", () -> {
+        commands.put("načíst save", () -> {
             System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
-            System.out.println("Napiš jaký chceš využít, nebo zadej neexistující název pro vytvoření nového:");
+            System.out.println("Napiš jaký save si přeješ využít:");
             return List.of(new LoadGameCommand(this.player, Important.loadText()));
         });
+        commands.put("uložit save", () -> {
+            System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
+            System.out.println("Pro vytvoření nového savu stačí využít neexistující jméno.");
+            System.out.println("Napiš jméno savu:");
+            return List.of(new SaveGameCommand(init, Important.loadText()));
+        });
+        commands.put("vymazat save", () -> {
+            System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
+            System.out.println("Napiš jméno savu, kteý si přeješ vymazat:");
+            return List.of(new DeleteSaveCommand(Important.loadText()));
+        });
+
     }
 
     /**
@@ -177,7 +191,9 @@ public class CommandLoader {
         possibleCommands.put("spustit hru", IntroMode::new);
         possibleCommands.put("informace", OutroMode::new);
         possibleCommands.put("jak hrát", player::getMode);
-        possibleCommands.put("načíst", player::getMode);
+        possibleCommands.put("načíst save", player::getMode);
+        possibleCommands.put("uložit save", player::getMode);
+        possibleCommands.put("vymazat save", player::getMode);
     }
 
     public HashMap<String, Supplier<List<Command>>> getCommands() {
