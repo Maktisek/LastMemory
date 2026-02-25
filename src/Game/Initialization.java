@@ -228,8 +228,8 @@ public class Initialization implements Serializable{
         this.player = new Player(findLocationByCode("HALLWAY_002"));
     }
 
-    public Player setAndGivePlayer(){
-        this.player.setCurrentLocation(findLocationByCode("HALLWAY_002"));
+    public Player setAndGivePlayer(String code){
+        this.player.setCurrentLocation(findLocationByCode(code));
         return player;
     }
 
