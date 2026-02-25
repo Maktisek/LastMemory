@@ -15,6 +15,7 @@ import Commands.MovementCommands.ScanAndAddCommand;
 import Commands.NPCsCommands.AnswerEnemyNPCCommand;
 import Commands.NPCsCommands.DialogCommand;
 import Commands.NPCsCommands.ReadFriendlyNPCDescriptionCommand;
+import Commands.SavesCommands.LoadGameCommand;
 import Commands.TasksCommands.*;
 import Modes.*;
 
@@ -37,11 +38,13 @@ public class CommandLoader {
     private final HashMap<String, Supplier<List<Command>>> commands;
     private final HashMap<String, Supplier<Mode>> possibleCommands;
     private final Player player;
+    private final Initialization init;
 
-    public CommandLoader(Player player) {
+    public CommandLoader(Player player, Initialization init) {
         this.commands = new HashMap<>();
         this.possibleCommands = new HashMap<>();
         this.player = player;
+        this.init = init;
         loadCommands();
         loadPossibleCommands();
     }
@@ -127,6 +130,11 @@ public class CommandLoader {
         commands.put("spustit hru", () -> List.of(new StartGameCommand(player)));
         commands.put("informace", () -> List.of(new WriteTxtFileCommand("/TextFiles/aboutGame.txt")));
         commands.put("jak hrát", () -> List.of(new WriteTxtFileCommand("/TextFiles/howToPlay.txt")));
+        commands.put("načíst", () -> {
+            System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
+            System.out.println("Napiš jaký chceš využít, nebo zadej neexistující název pro vytvoření nového:");
+            return List.of(new LoadGameCommand(this.player, Important.loadText()));
+        });
     }
 
     /**
@@ -169,6 +177,7 @@ public class CommandLoader {
         possibleCommands.put("spustit hru", IntroMode::new);
         possibleCommands.put("informace", OutroMode::new);
         possibleCommands.put("jak hrát", player::getMode);
+        possibleCommands.put("načíst", player::getMode);
     }
 
     public HashMap<String, Supplier<List<Command>>> getCommands() {

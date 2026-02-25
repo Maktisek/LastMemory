@@ -31,9 +31,9 @@ import java.util.Objects;
 public class Initialization implements Serializable{
 
 
-    private final ObjectMapper mapper;
-    private final ArrayList<Location> locations;
-    private final ArrayList<Location> tempLocations;
+    private transient final ObjectMapper mapper;
+    private  ArrayList<Location> locations;
+    private transient ArrayList<Location> tempLocations;
     private Player player;
 
     public Initialization() {
@@ -226,7 +226,7 @@ public class Initialization implements Serializable{
     }
 
     public void writeToFile(String fileName) throws WrongInitializationException{
-        Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", fileName + ".dat");
+        Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", fileName.toLowerCase() + ".dat");
         try {
             Files.createDirectories(path.getParent());
         }catch (IOException e){
@@ -236,12 +236,12 @@ public class Initialization implements Serializable{
         try (ObjectOutputStream out = new ObjectOutputStream(Files.newOutputStream(path))) {
             out.writeObject(this);
         }catch (IOException e){
-            throw new WrongInitializationException(e.getMessage());
+            throw new WrongInitializationException(e.getMessage() + " cannot be serialized.");
         }
     }
 
     public static Initialization readFromFile(String fileName) throws WrongInitializationException {
-        Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", fileName + ".dat");
+        Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", fileName.toLowerCase() + ".dat");
         if(!Files.exists(path)){
             throw new WrongInitializationException("File " + fileName + " could not be found");
         }
@@ -259,7 +259,7 @@ public class Initialization implements Serializable{
     }
 
 
-    private Location findLocationByName(String name) {
+    public Location findLocationByName(String name) {
         for (Location location : locations) {
             if (location.getName().equalsIgnoreCase(name)) {
                 return location;

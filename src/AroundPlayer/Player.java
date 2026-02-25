@@ -30,7 +30,7 @@ public class Player implements Serializable {
     private Task currentTask;
     private Location currentLocation;
     private Location previousLocation;
-    private Mode mode;
+    private transient Mode mode;
     private CutsceneLoader cutscenes;
 
     /**
@@ -46,6 +46,17 @@ public class Player implements Serializable {
         this.previousLocation = null;
         this.mode = new IntroMode();
         this.cutscenes = CutsceneLoader.loadCutscenes();
+    }
+
+    public void load(Player source){
+        this.inventory = source.getInventory();
+        this.collectedMemories = source.getCollectedMemories();
+        this.doneTasks = source.getDoneTasks();
+        this.currentTask = source.getCurrentTask();
+        this.currentLocation = source.getCurrentLocation();
+        this.previousLocation = source.getPreviousLocation();
+        this.mode = new LocationMode();
+        this.cutscenes = source.getCutscenes();
     }
 
     public Player() {

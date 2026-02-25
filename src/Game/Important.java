@@ -329,5 +329,14 @@ public class Important {
         String[] data = input.split("\n");
         return Math.min(data.length, 5);
     }
+
+    public static String writeNamesOfSavedSaves(){
+        File folder = new File(System.getProperty("user.home") + "/LastMemorySaves");
+        String[] fileNames = folder.list();
+        if(fileNames != null){
+            return String.join(", ", fileNames);
+        }
+        return changeText("red", "Žádné savy nebyly doposud vytvořeny");
+    }
 }
 

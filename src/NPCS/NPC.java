@@ -1,5 +1,7 @@
 package NPCS;
 
+import java.io.Serializable;
+
 /**
  * An abstract base class for NPCs, extended by:
  * <ul>
@@ -12,7 +14,7 @@ package NPCS;
  *
  * @author Matěj Pospíšil
  */
-public abstract class NPC {
+public abstract class NPC implements Serializable {
 
 
     protected String name;

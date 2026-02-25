@@ -5,6 +5,7 @@ import Commands.*;
 import Commands.GameCommands.CutscenePlayerCommand;
 import Commands.GameCommands.ExitCommand;
 import Commands.GameCommands.StartGameCommand;
+import Commands.SavesCommands.LoadGameCommand;
 import Exceptions.WrongInitializationException;
 import Modes.Mode;
 import Modes.ModeType;
@@ -35,7 +36,7 @@ import java.util.*;
  */
 public class Console {
 
-    private final Player player;
+    private Player player;
     private final CommandLoader gameLoader;
     private final Initialization init;
     private boolean exit;
@@ -50,7 +51,7 @@ public class Console {
         this.init = new Initialization();
         this.init.startInitialization();
         this.player = init.getPlayer();
-        this.gameLoader = new CommandLoader(player);
+        this.gameLoader = new CommandLoader(this.player, init);
     }
 
     public void start() {
@@ -83,6 +84,7 @@ public class Console {
             if(player.getCollectedMemories().size() == 0){
                 try {
                     init.writeToFile("save1");
+                    System.out.println("saving");
                 }catch (WrongInitializationException e){
                     System.out.println(e.getMessage());
                 }
@@ -233,8 +235,9 @@ public class Console {
             System.out.print(">> ");
             String command = Important.loadText();
             if (checkCommand(command)) {
-                execute(gameLoader.getCommands().get(command).get());
-                if (gameLoader.getCommands().get(command).get().get(0) instanceof StartGameCommand || gameLoader.getCommands().get(command).get().get(0) instanceof ExitCommand) {
+                List<Command> com = gameLoader.getCommands().get(command).get();
+                execute(com);
+                if (com.get(0) instanceof StartGameCommand || com.get(0) instanceof ExitCommand || com.get(0) instanceof LoadGameCommand) {
                     exitIntro = true;
                 }
             }
@@ -276,4 +279,7 @@ public class Console {
         }
     }
 
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
 }
