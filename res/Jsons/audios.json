@@ -184,7 +184,7 @@
   {
     "title" : "system",
     "filePath" : "/Audio/Sounds/system.wav",
-    "infiniteLoop" : true,
+    "infiniteLoop" : false,
     "paused" : false,
     "initialVolume" : -6.0
   }

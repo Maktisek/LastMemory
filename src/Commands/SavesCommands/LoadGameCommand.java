@@ -23,7 +23,9 @@ public class LoadGameCommand implements Command {
     public String execute() {
         try {
             Initialization init = Initialization.readFromFile(save);
-            Player loadedPlayer = init.getPlayer();
+            player.getCurrentLocation().stopMusic();
+            init.setAllMusic();
+            Player loadedPlayer = init.setAndGivePlayer();
             this.player.load(loadedPlayer);
             this.player.setMode(new LocationMode());
         }catch (WrongInitializationException e){
@@ -56,6 +58,5 @@ public class LoadGameCommand implements Command {
 
     @Override
     public void endAudio() {
-
     }
 }

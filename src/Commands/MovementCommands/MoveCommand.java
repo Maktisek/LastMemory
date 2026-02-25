@@ -81,7 +81,6 @@ public class MoveCommand implements Command {
         }else {
             Important.playSound("walk");
         }
-
         return Important.writeSpace(60)+Important.changeText("green", "Přesouváš se do: " + player.getCurrentLocation().getName());
     }
 

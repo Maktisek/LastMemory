@@ -31,8 +31,8 @@ import java.util.Objects;
 public class Initialization implements Serializable{
 
 
-    private transient final ObjectMapper mapper;
-    private  ArrayList<Location> locations;
+    private transient ObjectMapper mapper;
+    private ArrayList<Location> locations;
     private transient ArrayList<Location> tempLocations;
     private Player player;
 
@@ -169,6 +169,9 @@ public class Initialization implements Serializable{
      *                                      not loaded correctly.
      */
     public Audio[] loadAllSongs() throws WrongInitializationException {
+        if(mapper == null){
+            this.mapper = new ObjectMapper();
+        }
         InputStream input = Initialization.class.getResourceAsStream("/Jsons/locationMusic.json");
         checkInput(input, "/Jsons/locationMusic.json");
         try (input) {
@@ -223,6 +226,11 @@ public class Initialization implements Serializable{
      */
     public void loadPlayer() throws WrongInitializationException {
         this.player = new Player(findLocationByCode("HALLWAY_002"));
+    }
+
+    public Player setAndGivePlayer(){
+        this.player.setCurrentLocation(findLocationByCode("HALLWAY_002"));
+        return player;
     }
 
     public void writeToFile(String fileName) throws WrongInitializationException{
@@ -283,5 +291,11 @@ public class Initialization implements Serializable{
 
     public ArrayList<Location> getLocations() {
         return locations;
+    }
+
+    public void turnOffAllMusic(){
+        for (Location location : this.locations){
+            location.stopMusic();
+        }
     }
 }

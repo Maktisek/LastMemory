@@ -7,6 +7,8 @@ import Commands.GameCommands.ExitCommand;
 import Commands.GameCommands.StartGameCommand;
 import Commands.SavesCommands.LoadGameCommand;
 import Exceptions.WrongInitializationException;
+import Locations.LocationType;
+import Modes.LocationMode;
 import Modes.Mode;
 import Modes.ModeType;
 import Modes.OutroMode;
@@ -221,7 +223,7 @@ public class Console {
     private void executeIntro() {
         boolean exitIntro = false;
         Important.playMusic("intro music");
-        while (!exitIntro) {
+        while (!exitIntro && !this.exit) {
             System.out.println(player);
             System.out.println("\nNapiš příkaz");
             System.out.print(">> ");
@@ -229,7 +231,7 @@ public class Console {
             if (checkCommand(command)) {
                 List<Command> com = gameLoader.getCommands().get(command).get();
                 execute(com);
-                if (com.get(0) instanceof StartGameCommand || com.get(0) instanceof ExitCommand || com.get(0) instanceof LoadGameCommand) {
+                if (this.exit || ((com.get(0) instanceof StartGameCommand || com.get(0) instanceof LoadGameCommand) && (player.getMode().getInfo() == ModeType.location))) {
                     exitIntro = true;
                 }
             }
