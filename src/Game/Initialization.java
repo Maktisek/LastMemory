@@ -9,6 +9,10 @@ import Locations.LocationType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -139,17 +143,17 @@ public class Initialization {
     /**
      * Connects all locations according to their {@code connections}.
      * <p>
-     *     Every location has their own array filled by codes of their neighboring locations.
-     *     This array is used in order to connect them via {@link #findLocationByCode(String)} and {@link Location#addPossibleLocation(Location)}
+     * Every location has their own array filled by codes of their neighboring locations.
+     * This array is used in order to connect them via {@link #findLocationByCode(String)} and {@link Location#addPossibleLocation(Location)}
      * </p>
      *
      * @throws WrongInitializationException if there is non-existing code in {@link Location#getConnections()}
      */
-    private void connectAllLocations() throws WrongInitializationException{
-        for (Location location : locations){
+    private void connectAllLocations() throws WrongInitializationException {
+        for (Location location : locations) {
             for (int i = 0; i < location.getConnections().length; i++) {
                 Location temp = findLocationByCode(location.getConnections()[i]);
-                if(temp == null){
+                if (temp == null) {
                     throw new WrongInitializationException(Important.changeText("red", location.getName() + " has a connection with " + location.getConnections()[i] + ", but location with that code does not exist."));
                 }
                 location.addPossibleLocation(temp);
@@ -183,6 +187,7 @@ public class Initialization {
      * Locations without a matching audio will remain without music.
      * </p>
      * After the process, method {@link #setHallwaysMusic()} is executed.
+     *
      * @throws WrongInitializationException if an audio title does not match any location
      */
     public void setAllMusic() throws WrongInitializationException {
@@ -202,9 +207,9 @@ public class Initialization {
      * Sets the same audio instance for all hallways.
      * The instance can be found in location with code {@code HALLWAY_002}
      */
-    private void setHallwaysMusic(){
-        for (Location location : locations){
-            if(location.getType() == LocationType.HALLWAY){
+    private void setHallwaysMusic() {
+        for (Location location : locations) {
+            if (location.getType() == LocationType.HALLWAY) {
                 location.setSong(Objects.requireNonNull(findLocationByCode("HALLWAY_002")).getSong());
             }
         }
@@ -220,10 +225,36 @@ public class Initialization {
         this.player = new Player(findLocationByCode("HALLWAY_002"));
     }
 
+    public void writeToFile(String fileName) throws WrongInitializationException{
+        Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", fileName + ".dat");
+        try {
+            Files.createDirectories(path.getParent());
+        }catch (IOException e){
+            throw new WrongInitializationException(e.getMessage());
+        }
+
+        try (ObjectOutputStream out = new ObjectOutputStream(Files.newOutputStream(path))) {
+            out.writeObject(this);
+        }catch (IOException e){
+            throw new WrongInitializationException(e.getMessage());
+        }
+    }
+
+    public static Initialization readFromFile(String fileName) throws WrongInitializationException {
+        Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", fileName + ".dat");
+        if(!Files.exists(path)){
+            throw new WrongInitializationException("File " + fileName + " could not be found");
+        }
+        try (ObjectInputStream stream = new ObjectInputStream(Files.newInputStream(path))) {
+            return (Initialization) stream.readObject();
+        }catch (IOException | ClassNotFoundException e){
+            throw new WrongInitializationException(e.getMessage());
+        }
+    }
 
     private void checkInput(InputStream input, String path) throws WrongInitializationException {
         if (input == null) {
-            throw new WrongInitializationException(Important.changeText("red", "The file"+ path +" is missing from the resources folder."));
+            throw new WrongInitializationException(Important.changeText("red", "The file" + path + " is missing from the resources folder."));
         }
     }
 
