@@ -334,6 +334,9 @@ public class Important {
         File folder = new File(System.getProperty("user.home") + "/LastMemorySaves");
         String[] fileNames = folder.list();
         if(fileNames != null){
+            for (int i = 0; i < fileNames.length; i++) {
+                fileNames[i] = fileNames[i].replaceAll("\\.dat", "");
+            }
             return String.join(", ", fileNames);
         }
         return changeText("red", "Žádné savy nebyly doposud vytvořeny");
