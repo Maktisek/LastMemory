@@ -34,6 +34,7 @@ public enum ModeType implements Serializable {
      * Most of the commands cannot be done in that mode, since that mode
      * is a special mode.
      */
-    question
+    question,
+    options
 
 }

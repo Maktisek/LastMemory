@@ -2,4 +2,5 @@ Návod na ovládání the end menu:
 "pomoc" = vypíše návod jak ovládat konzoli
 "informace" = vypíše bonusové informace o výrobě hry
 "jak hrát" = vypíše návod jak hrát hru
+"vymazat save" -> "název savu" = vymaže již uložený save
 "opustit" = vypne hru

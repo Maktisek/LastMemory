@@ -1,5 +1,6 @@
 package Commands.SavesCommands;
 
+import AroundPlayer.Player;
 import Commands.Command;
 import Exceptions.WrongInitializationException;
 import Game.Important;
@@ -8,18 +9,21 @@ import Game.Initialization;
 public class SaveGameCommand implements Command {
 
 
-    private Initialization init;
-    private String save;
+    private final Initialization init;
+    private final String save;
+    private final Player player;
 
-    public SaveGameCommand(Initialization init, String save) {
+    public SaveGameCommand(Initialization init, String save, Player player) {
         this.init = init;
         this.save = save;
+        this.player = player;
     }
 
     @Override
     public String execute() {
         try {
             init.writeToFile(save);
+            this.player.setSave(save);
         } catch (WrongInitializationException e) {
             Important.playSound("wrong sound");
             return Important.writeSpace(60)+Important.changeText("red", "Save " + save + " neexistuje");

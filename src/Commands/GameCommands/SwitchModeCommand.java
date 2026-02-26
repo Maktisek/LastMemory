@@ -33,6 +33,7 @@ public class SwitchModeCommand implements Command {
     public void fillMap() {
         map.put("lokace", new LocationMode());
         map.put("inventář", new BackpackMode());
+        map.put("nastavení", new OptionsMode());
     }
 
     @Override

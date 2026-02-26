@@ -141,7 +141,7 @@ public class CommandLoader {
             System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
             System.out.println("Pro vytvoření nového savu stačí využít neexistující jméno.");
             System.out.print("Napiš jméno savu:");
-            return List.of(new SaveGameCommand(init, Important.loadText()));
+            return List.of(new SaveGameCommand(init, Important.loadText(), player));
         });
         commands.put("vymazat save", () -> {
             System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());

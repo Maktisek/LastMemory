@@ -32,6 +32,7 @@ public class Player implements Serializable {
     private Location previousLocation;
     private transient Mode mode;
     private CutsceneLoader cutscenes;
+    private String save;
 
     /**
      * Special constructor, which prepares the player for the start of the game.
@@ -328,5 +329,16 @@ public class Player implements Serializable {
 
     public void setCutscenes(CutsceneLoader cutscenes) {
         this.cutscenes = cutscenes;
+    }
+
+    public String getSave() {
+        if(save == null){
+            return Important.changeText("red", "Tento herní postup ještě nebyl uložen");
+        }
+        return Important.changeText("underline", save);
+    }
+
+    public void setSave(String save) {
+        this.save = save;
     }
 }
