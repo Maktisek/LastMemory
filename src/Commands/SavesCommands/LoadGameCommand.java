@@ -25,7 +25,7 @@ public class LoadGameCommand implements Command {
             Initialization init = Initialization.readFromFile(save);
             player.getCurrentLocation().stopMusic();
             init.setAllMusic();
-            Player loadedPlayer = init.setAndGivePlayer(player.getCurrentLocation().getCode());
+            Player loadedPlayer = init.getPlayer();
             this.player.load(loadedPlayer);
             this.player.setMode(new LocationMode());
         }catch (WrongInitializationException e){

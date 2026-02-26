@@ -28,8 +28,8 @@ public class Player implements Serializable {
     private ArrayList<Memory> collectedMemories;
     private ArrayList<Task> doneTasks;
     private Task currentTask;
-    private transient Location currentLocation;
-    private transient Location previousLocation;
+    private Location currentLocation;
+    private Location previousLocation;
     private transient Mode mode;
     private CutsceneLoader cutscenes;
 
