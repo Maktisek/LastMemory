@@ -133,13 +133,14 @@ public class CommandLoader {
         commands.put("informace", () -> List.of(new WriteTxtFileCommand("/TextFiles/aboutGame.txt")));
         commands.put("jak hrát", () -> List.of(new WriteTxtFileCommand("/TextFiles/howToPlay.txt")));
         commands.put("načíst hru", () -> {
-            System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
+            if(player.getMode().getInfo() != ModeType.options){
+                System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
+            }
             System.out.print("Napiš jaký save si přeješ využít:");
             return List.of(new LoadGameCommand(this.player, Important.loadText()));
         });
-        commands.put("uložit hru", () -> {
-            System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
-            System.out.println("Pro vytvoření nového savu stačí využít neexistující jméno.");
+        commands.put("uložit", () -> {
+            System.out.println("(Pro vytvoření nového savu stačí využít neexistující jméno)");
             System.out.print("Napiš jméno savu:");
             return List.of(new SaveGameCommand(init, Important.loadText(), player));
         });
@@ -191,9 +192,9 @@ public class CommandLoader {
         possibleCommands.put("spustit hru", () -> List.of(new IntroMode()));
         possibleCommands.put("informace", () -> List.of(new OutroMode()));
         possibleCommands.put("jak hrát", () -> List.of(player.getMode()));
-        possibleCommands.put("načíst save", () -> List.of(new IntroMode(), new OptionsMode()));
+        possibleCommands.put("načíst hru", () -> List.of(new IntroMode(), new OptionsMode()));
         possibleCommands.put("uložit", () -> List.of(new OptionsMode()));
-        possibleCommands.put("vymazat save", () -> List.of(new OptionsMode()));
+        possibleCommands.put("vymazat hru", () -> List.of(new OptionsMode()));
     }
 
     public HashMap<String, Supplier<List<Command>>> getCommands() {
