@@ -13,4 +13,5 @@ Ostatní volně použitelné příkazy:
 "jak hrát" = vypíše návod jak hrát hru
 "mod" -> "název módu" = přepne mód hry (inventář/lokace)
 "zobrazit úkol" = vypíše blížší informace ohledně nynějšího úkolu
+"vymazat save" -> "název savu" = vymaže již uložený save
 "opustit" = vypne hru
