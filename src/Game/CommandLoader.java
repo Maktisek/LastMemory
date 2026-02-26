@@ -134,18 +134,18 @@ public class CommandLoader {
         commands.put("jak hrát", () -> List.of(new WriteTxtFileCommand("/TextFiles/howToPlay.txt")));
         commands.put("načíst hru", () -> {
             System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
-            System.out.println("Napiš jaký save si přeješ využít:");
+            System.out.print("Napiš jaký save si přeješ využít:");
             return List.of(new LoadGameCommand(this.player, Important.loadText()));
         });
         commands.put("uložit hru", () -> {
             System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
             System.out.println("Pro vytvoření nového savu stačí využít neexistující jméno.");
-            System.out.println("Napiš jméno savu:");
+            System.out.print("Napiš jméno savu:");
             return List.of(new SaveGameCommand(init, Important.loadText()));
         });
         commands.put("vymazat save", () -> {
             System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
-            System.out.println("Napiš jméno savu, kteý si přeješ vymazat:");
+            System.out.print("Napiš jméno savu, kteý si přeješ vymazat:");
             return List.of(new DeleteSaveCommand(Important.loadText()));
         });
 

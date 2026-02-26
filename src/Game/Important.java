@@ -335,7 +335,7 @@ public class Important {
         String[] fileNames = folder.list();
         if(fileNames != null){
             for (int i = 0; i < fileNames.length; i++) {
-                fileNames[i] = fileNames[i].replaceAll("\\.dat", "");
+                fileNames[i] = Important.changeText("underline", fileNames[i].replaceAll("\\.dat", ""));
             }
             return String.join(", ", fileNames);
         }
