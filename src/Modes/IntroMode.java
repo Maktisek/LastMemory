@@ -33,8 +33,4 @@ public class IntroMode implements Mode, Serializable {
         return ModeType.intro;
     }
 
-    @Override
-    public boolean isSpecial() {
-        return true;
-    }
 }

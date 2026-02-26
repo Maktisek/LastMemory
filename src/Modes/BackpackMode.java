@@ -34,8 +34,4 @@ public class BackpackMode implements Mode, Serializable {
         return ModeType.backpack;
     }
 
-    @Override
-    public boolean isSpecial() {
-        return false;
-    }
 }

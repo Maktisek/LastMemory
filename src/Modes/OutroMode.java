@@ -40,8 +40,4 @@ public class OutroMode implements Mode, Serializable {
         return ModeType.outro;
     }
 
-    @Override
-    public boolean isSpecial() {
-        return true;
-    }
 }

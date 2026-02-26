@@ -41,5 +41,4 @@ public interface Mode {
      * @return true if the mode is special, false otherwise
      */
 
-    boolean isSpecial();
 }

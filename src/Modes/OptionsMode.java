@@ -21,8 +21,4 @@ public class OptionsMode implements Mode{
         return ModeType.options;
     }
 
-    @Override
-    public boolean isSpecial() {
-        return false;
-    }
 }

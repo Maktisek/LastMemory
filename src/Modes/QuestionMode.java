@@ -27,9 +27,5 @@ public class QuestionMode implements Mode, Serializable {
         return ModeType.question;
     }
 
-    @Override
-    public boolean isSpecial() {
-        return true;
-    }
 
 }

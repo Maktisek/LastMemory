@@ -27,9 +27,6 @@ public class LocationMode implements Mode, Serializable {
         return ModeType.location;
     }
 
-    @Override
-    public boolean isSpecial() {
-        return false;
-    }
+
 
 }
