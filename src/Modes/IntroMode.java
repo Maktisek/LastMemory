@@ -14,9 +14,12 @@ public class IntroMode implements Mode, Serializable {
     public String executeInfo(Player player) {
         String ascii = Important.changeText("bold", Important.changeText("pink", Important.readTxtFiles("/TextFiles/introText.txt", 0)));
         ascii += "Made by Maktis";
-        ascii += "\nPokud hraješ poprvé, bude se ti hodit příkaz \"jak hrát\".";
-        ascii += "\nPokud neznáš příkazy napiš \"pomoc\".";
-        ascii += "\nAby sis hru zahrál napiš to konzole příkaz \"spustit hru\".";
+        ascii += "\nPokud nevíš jak se hra hraje, bude se ti hodit příkaz \"" + Important.changeText("underline", "jak hrát")+"\"";
+        ascii += "\nPokud neznáš příkazy napiš \""+ Important.changeText("underline", "pomoc")+"\"";
+        ascii += "\nPro novou hru použij příkaz \""+ Important.changeText("underline", "spustit hru")+"\"";
+        if(Important.hasSave()){
+            ascii += "\nPro pokračování ve hře použij příkaz \""+ Important.changeText("underline", "načíst hru")+"\"";
+        }
         return ascii;
     }
 

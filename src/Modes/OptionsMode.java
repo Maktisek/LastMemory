@@ -7,7 +7,7 @@ public class OptionsMode implements Mode{
 
     @Override
     public String executeInfo(Player player) {
-        return "Aktuální save: " + player.getSave() + "\n" +
+        return "Aktuální save: " + player.writeSave() + "\n" +
                 "Dostupné savy: " + Important.writeNamesOfSavedSaves();
     }
 

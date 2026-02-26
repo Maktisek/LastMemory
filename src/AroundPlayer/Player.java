@@ -315,11 +315,15 @@ public class Player implements Serializable {
         this.cutscenes = cutscenes;
     }
 
-    public String getSave() {
+    public String writeSave() {
         if(save == null){
             return Important.changeText("red", "Tento herní postup ještě nebyl uložen");
         }
         return Important.changeText("underline", save);
+    }
+
+    public String getSave() {
+        return save;
     }
 
     public void setSave(String save) {

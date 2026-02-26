@@ -1,5 +1,6 @@
 package Commands.SavesCommands;
 
+import AroundPlayer.Player;
 import Commands.Command;
 import Game.Important;
 
@@ -13,9 +14,11 @@ public class DeleteSaveCommand implements Command {
 
 
     private final String save;
+    private final Player player;
 
-    public DeleteSaveCommand(String save) {
+    public DeleteSaveCommand(String save, Player player) {
         this.save = save;
+        this.player = player;
     }
 
     @Override
@@ -37,6 +40,9 @@ public class DeleteSaveCommand implements Command {
             return Important.writeSpace(60)+Important.changeText("red", "Save " + save + " se nepodařilo vymazat");
         }
         Important.playSound("system");
+        if(save.equalsIgnoreCase(player.getSave())){
+            player.setSave(null);
+        }
         return Important.writeSpace(60)+Important.changeText("green", "Save " + save + " se podařilo vymazat");
     }
 

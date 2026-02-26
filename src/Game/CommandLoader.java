@@ -149,10 +149,10 @@ public class CommandLoader {
         });
         commands.put("vymazat save", () -> {
             if(!Important.hasSave()){
-                return List.of(new DeleteSaveCommand(null));
+                return List.of(new DeleteSaveCommand(null, player));
             }
             System.out.print("Napiš jméno savu, který si přeješ vymazat:");
-            return List.of(new DeleteSaveCommand(Important.loadText()));
+            return List.of(new DeleteSaveCommand(Important.loadText(), player));
         });
 
     }
