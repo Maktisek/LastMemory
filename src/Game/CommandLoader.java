@@ -38,7 +38,7 @@ import java.util.function.Supplier;
 public class CommandLoader {
 
     private final HashMap<String, Supplier<List<Command>>> commands;
-    private final HashMap<String, Supplier<Mode>> possibleCommands;
+    private final HashMap<String, Supplier<List<Mode>>> possibleCommands;
     private final Player player;
     private final Initialization init;
 
@@ -170,37 +170,37 @@ public class CommandLoader {
      * </p>
      */
     public void loadPossibleCommands() {
-        possibleCommands.put("jít", LocationMode::new);
-        possibleCommands.put("utéct", QuestionMode::new);
-        possibleCommands.put("pomoc", player::getMode);
-        possibleCommands.put("opustit", player::getMode);
-        possibleCommands.put("popis lokace", LocationMode::new);
-        possibleCommands.put("mod", player::specialGetMode);
-        possibleCommands.put("sebrat", LocationMode::new);
-        possibleCommands.put("položit", BackpackMode::new);
-        possibleCommands.put("prohlédnout", BackpackMode::new);
-        possibleCommands.put("odpovědět", QuestionMode::new);
-        possibleCommands.put("mluvit", LocationMode::new);
-        possibleCommands.put("přijmout úkol", LocationMode::new);
-        possibleCommands.put("zobrazit úkol", player::specialGetMode);
-        possibleCommands.put("odevzdat úkol", LocationMode::new);
-        possibleCommands.put("vzpomenout", BackpackMode::new);
-        possibleCommands.put("prohlédnout úkol", BackpackMode::new);
-        possibleCommands.put("otevřít safe", LocationMode::new);
-        possibleCommands.put("info postava", LocationMode::new);
-        possibleCommands.put("spustit hru", IntroMode::new);
-        possibleCommands.put("informace", OutroMode::new);
-        possibleCommands.put("jak hrát", player::getMode);
-        possibleCommands.put("načíst hru", player::getMode);
-        possibleCommands.put("uložit hru", player::getMode);
-        possibleCommands.put("vymazat save", player::getMode);
+        possibleCommands.put("jít", () -> List.of(new LocationMode()));
+        possibleCommands.put("utéct", () -> List.of(new QuestionMode()));
+        possibleCommands.put("pomoc", () -> List.of(player.getMode()));
+        possibleCommands.put("opustit", () -> List.of(player.getMode()));
+        possibleCommands.put("popis lokace", () -> List.of(new LocationMode()));
+        possibleCommands.put("mod", () -> List.of(new LocationMode(), new OptionsMode(), new BackpackMode()));
+        possibleCommands.put("sebrat", () -> List.of(new LocationMode()));
+        possibleCommands.put("položit", () -> List.of(new BackpackMode()));
+        possibleCommands.put("prohlédnout", () -> List.of(new BackpackMode()));
+        possibleCommands.put("odpovědět", () -> List.of(new QuestionMode()));
+        possibleCommands.put("mluvit", () -> List.of(new LocationMode()));
+        possibleCommands.put("přijmout úkol", () -> List.of(new LocationMode()));
+        possibleCommands.put("zobrazit úkol", () -> List.of(new LocationMode(), new BackpackMode()));
+        possibleCommands.put("odevzdat úkol", () -> List.of(new LocationMode()));
+        possibleCommands.put("vzpomenout", () -> List.of(new BackpackMode()));
+        possibleCommands.put("prohlédnout úkol", () -> List.of(new BackpackMode()));
+        possibleCommands.put("otevřít safe", () -> List.of(new LocationMode()));
+        possibleCommands.put("info postava", () -> List.of(new LocationMode()));
+        possibleCommands.put("spustit hru", () -> List.of(new IntroMode()));
+        possibleCommands.put("informace", () -> List.of(new OutroMode()));
+        possibleCommands.put("jak hrát", () -> List.of(player.getMode()));
+        possibleCommands.put("načíst save", () -> List.of(new IntroMode(), new OptionsMode()));
+        possibleCommands.put("uložit", () -> List.of(new OptionsMode()));
+        possibleCommands.put("vymazat save", () -> List.of(new OptionsMode()));
     }
 
     public HashMap<String, Supplier<List<Command>>> getCommands() {
         return commands;
     }
 
-    public HashMap<String, Supplier<Mode>> getPossibleCommands() {
+    public HashMap<String, Supplier<List<Mode>>> getPossibleCommands() {
         return possibleCommands;
     }
 }

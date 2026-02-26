@@ -152,16 +152,22 @@ public class Console {
     private boolean checkCommand(String command) {
         if (!gameLoader.getCommands().containsKey(command.toLowerCase())) {
             Important.playSound("wrong sound");
-            System.out.println(Important.writeSpace(60)+Important.changeText("red", "Akce " + Important.changeText("underline", command) + Important.changeText("red", " neexistuje")));
+            System.out.println(Important.writeSpace(60) + Important.changeText("red", "Akce " + Important.changeText("underline", command) + Important.changeText("red", " neexistuje")));
             return false;
         }
-        Mode foundMode = gameLoader.getPossibleCommands().get(command).get();
-        if (foundMode != null && player.getMode().getInfo() != foundMode.getInfo()) {
+        List<Mode> foundModes = gameLoader.getPossibleCommands().get(command).get();
+        boolean found = false;
+        for (Mode foundMode : foundModes) {
+            if (player.getMode().getInfo() == foundMode.getInfo()) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
             Important.playSound("wrong sound");
-            System.out.println(Important.writeSpace(60)+Important.changeText("red", "Akci " + Important.changeText("underline", command) + Important.changeText("red", " nelze nyní provést")));
-            return false;
+            System.out.println(Important.writeSpace(60) + Important.changeText("red", "Akci " + Important.changeText("underline", command) + Important.changeText("red", " nelze nyní provést")));
         }
-        return true;
+        return found;
     }
 
     /**
