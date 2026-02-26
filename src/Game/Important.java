@@ -333,7 +333,7 @@ public class Important {
     public static String writeNamesOfSavedSaves(){
         File folder = new File(System.getProperty("user.home") + "/LastMemorySaves");
         String[] fileNames = folder.list();
-        if(fileNames != null){
+        if(fileNames != null && fileNames.length > 0){
             for (int i = 0; i < fileNames.length; i++) {
                 fileNames[i] = Important.changeText("underline", fileNames[i].replaceAll("\\.dat", ""));
             }

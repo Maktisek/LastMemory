@@ -194,7 +194,7 @@ public class CommandLoader {
         possibleCommands.put("jak hrát", () -> List.of(player.getMode()));
         possibleCommands.put("načíst hru", () -> List.of(new IntroMode(), new OptionsMode()));
         possibleCommands.put("uložit", () -> List.of(new OptionsMode()));
-        possibleCommands.put("vymazat hru", () -> List.of(new OptionsMode()));
+        possibleCommands.put("vymazat save", () -> List.of(new OptionsMode()));
     }
 
     public HashMap<String, Supplier<List<Command>>> getCommands() {
