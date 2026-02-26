@@ -21,6 +21,11 @@ public class LoadGameCommand implements Command {
 
     @Override
     public String execute() {
+        if(save == null){
+            Important.playSound("wrong sound");
+            return Important.writeSpace(60)+Important.changeText("red", "Nyní není k dispozici žádný save");
+        }
+
         try {
             Initialization init = Initialization.readFromFile(save);
             player.getCurrentLocation().stopMusic();

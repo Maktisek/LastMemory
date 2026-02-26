@@ -341,5 +341,11 @@ public class Important {
         }
         return changeText("red", "Žádné savy nebyly doposud vytvořeny");
     }
+
+    public static boolean hasSave(){
+        File folder = new File(System.getProperty("user.home") + "/LastMemorySaves");
+        String[] fileNames = folder.list();
+        return fileNames != null && fileNames.length > 0;
+    }
 }
 

@@ -3,7 +3,7 @@ package Commands.SavesCommands;
 import Commands.Command;
 import Game.Important;
 
-import java.io.File;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -20,6 +20,11 @@ public class DeleteSaveCommand implements Command {
 
     @Override
     public String execute() {
+        if(save == null){
+            Important.playSound("wrong sound");
+            return Important.writeSpace(60)+Important.changeText("red", "Nyní není k dispozici žádný save");
+        }
+
         Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", save+".dat");
         if(!Files.exists(path)){
             Important.playSound("wrong sound");
@@ -42,7 +47,7 @@ public class DeleteSaveCommand implements Command {
 
     @Override
     public boolean isWaitAble() {
-        return false;
+        return true;
     }
 
     @Override

@@ -133,6 +133,9 @@ public class CommandLoader {
         commands.put("informace", () -> List.of(new WriteTxtFileCommand("/TextFiles/aboutGame.txt")));
         commands.put("jak hrát", () -> List.of(new WriteTxtFileCommand("/TextFiles/howToPlay.txt")));
         commands.put("načíst hru", () -> {
+            if(!Important.hasSave()){
+                return List.of(new LoadGameCommand(this.player, null));
+            }
             if(player.getMode().getInfo() != ModeType.options){
                 System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
             }
@@ -145,8 +148,10 @@ public class CommandLoader {
             return List.of(new SaveGameCommand(init, Important.loadText(), player));
         });
         commands.put("vymazat save", () -> {
-            System.out.println("Dostupné savy: " + Important.writeNamesOfSavedSaves());
-            System.out.print("Napiš jméno savu, kteý si přeješ vymazat:");
+            if(!Important.hasSave()){
+                return List.of(new DeleteSaveCommand(null));
+            }
+            System.out.print("Napiš jméno savu, který si přeješ vymazat:");
             return List.of(new DeleteSaveCommand(Important.loadText()));
         });
 
