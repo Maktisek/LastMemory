@@ -6,24 +6,33 @@ import Exceptions.WrongInitializationException;
 import Game.Important;
 import Game.Initialization;
 import Modes.LocationMode;
+import Modes.ModeType;
 
 public class LoadGameCommand implements Command {
 
 
     private final Player player;
     private final String save;
+    private boolean isWaitAble;
 
 
     public LoadGameCommand(Player player, String save) {
         this.player = player;
         this.save = save;
+        this.isWaitAble = true;
     }
 
     @Override
     public String execute() {
-        if(save == null){
+
+        if (player.getMode().getInfo() == ModeType.intro && save == null) {
             Important.playSound("wrong sound");
-            return Important.writeSpace(60)+Important.changeText("red", "Nyní není k dispozici žádný save");
+            this.isWaitAble = false;
+            return Important.writeSpace(60) + Important.changeText("red", "Akci " + Important.changeText("underline", "načíst hru") + Important.changeText("red", " nelze nyní provést"));
+        }
+        if (save == null) {
+            Important.playSound("wrong sound");
+            return Important.writeSpace(60) + Important.changeText("red", "Nyní není k dispozici žádný save");
         }
 
         try {
@@ -34,12 +43,12 @@ public class LoadGameCommand implements Command {
             this.player.load(loadedPlayer);
             this.player.setMode(new LocationMode());
             this.player.setSave(save);
-        }catch (WrongInitializationException e){
+        } catch (WrongInitializationException e) {
             Important.playSound("wrong sound");
-            return Important.writeSpace(60)+Important.changeText("red", e.getMessage());
+            return Important.writeSpace(60) + Important.changeText("red", e.getMessage());
         }
         Important.playSound("system");
-        return Important.writeSpace(60)+Important.changeText("green", "Hra se načetla úspěšně!");
+        return Important.writeSpace(60) + Important.changeText("green", "Hra se načetla úspěšně!");
     }
 
     @Override
@@ -49,7 +58,7 @@ public class LoadGameCommand implements Command {
 
     @Override
     public boolean isWaitAble() {
-        return true;
+        return isWaitAble;
     }
 
     @Override
