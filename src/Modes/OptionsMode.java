@@ -5,10 +5,14 @@ import Game.Important;
 
 public class OptionsMode implements Mode{
 
+    private String forToString(Player player) {
+        return Important.changeText("bold" ,"Aktuální save: ") + player.writeSave() + "\n" +
+                Important.changeText("bold", "Dostupné savy: ") + Important.writeNamesOfSavedSaves();
+    }
+
     @Override
     public String executeInfo(Player player) {
-        return "Aktuální save: " + player.writeSave() + "\n" +
-                "Dostupné savy: " + Important.writeNamesOfSavedSaves();
+        return Important.dashToString(forToString(player), "Nastavení");
     }
 
     @Override

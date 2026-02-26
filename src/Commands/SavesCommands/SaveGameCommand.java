@@ -21,6 +21,10 @@ public class SaveGameCommand implements Command {
 
     @Override
     public String execute() {
+        if(save.matches(" *")){
+            Important.playSound("wrong sound");
+            return Important.writeSpace(60)+Important.changeText("red", "Čisté mezery nemohou být názvem savu");
+        }
         try {
             init.writeToFile(save);
             this.player.setSave(save);
