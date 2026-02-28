@@ -4,8 +4,9 @@
 > *Last Memory je textová hra vytvořená za účelem získání nových zkušeností v programování jako takovém.*
 
 
-## 🌟 Důležité body
+## 🌟 Zajímavé funkce hry
 
+- Možnost si hru uložit a zase načíst
 - Hra obsahuje zajímavý příběh, který lze postupně odhalovat
 - Gameplay je snadný a svižný
 - Hra implementuje zvukový systém, který hře dodává atmosféru
@@ -111,6 +112,15 @@ Systém je to snadný:
 "název příkazu" -> "upřesnění" = co se po zavolání provede. Vždy před druhým vstupem hra vypíše informaci o možnostech (některé příkazy mají pouze jeden vstup).
 
 S touto radou se neztratíte🌟
+
+## 📂 Systém uložení herního postupu
+Hra nabízí možnost uložit si herní postup. Stačí k tomu nastavit mód na "nastavení" a zadat
+příkaz "uložit". Hra neudává žádný limit k počtu savů. Lze jich mít klidně i 100!⬇️
+
+Hra se pak uloží do speciální složky na vašem disku. Tedy přímo na _**user.home/LastMemorySaves**_ 🖥️
+
+Mezi savy se dá během hraní hry přepínat🔄
+Také je lze mazat🗑️
 
 ## 💻 Jak hru hrát
 Po celou dobu gameplaye máte možnost zavolat příkaz "jak hrát". Ten detailně
