@@ -47,7 +47,7 @@ public class Location implements Comparable<Location>, Serializable {
 
     private ArrayList<Location> possibleLocations;
 
-    private Audio song;
+    private transient Audio song;
 
     private transient String[] connections;
 
