@@ -2,7 +2,10 @@ package Modes;
 
 import AroundPlayer.Player;
 import Game.Important;
-
+/**
+ * A mode focused on options of the game - in current version the options are only about saves management.
+ * @author Matěj Pospíšil
+ */
 public class OptionsMode implements Mode{
 
     private String forToString(Player player) {
