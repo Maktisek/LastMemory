@@ -2,5 +2,4 @@ Návod na ovládání herního start menu:
 "spustit hru" = spustí hru
 "pomoc" = vypíše návod jak ovládat konzoli
 "jak hrát" = vypíše návod jak hrát hru
-"vymazat save" -> "název savu" = vymaže již uložený save
 "opustit" = vypne hru

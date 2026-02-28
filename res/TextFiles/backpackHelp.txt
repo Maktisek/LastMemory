@@ -7,7 +7,6 @@ Návod na používání inventáře:
 Ostatní volně použitelné příkazy:
 "pomoc" = vypíše návod jak ovládat konzoli
 "jak hrát" = vypíše návod jak hrát hru
-"mod" -> "název módu" = přepne mód hry (inventář/lokace)
+"mod" -> "název módu" = přepne mód hry (inventář/lokace/nastavení)
 "zobrazit úkol" = vypíše blížší informace ohledně nynějšího úkolu
-"vymazat save" -> "název savu" = vymaže již uložený save
 "opustit" = vypne hru

@@ -20,7 +20,7 @@ public class OptionsMode implements Mode{
 
     @Override
     public String executeHelp() {
-        return "";
+        return Important.readTxtFiles("/TextFiles/optionsHelp.txt", 0);
     }
 
     @Override
