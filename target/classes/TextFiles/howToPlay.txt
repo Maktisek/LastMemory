@@ -141,6 +141,12 @@ Pokud hráč vstoupí do lokace, na kterou nová lokace navazuje, hra dá hráč
   Při této cutscéně hráč nemusí dělat vůbec nic.
   Stačí si ji přečíst a pak napsat cokoli pro pokračování.
 
+* UKLÁDÁNÍ HERNÍHO POSTUPU
+  Hru si lze uložit a načíst.
+  Pokud si hráč vybere mód "nastavení" může vytvářet, přepisovat, načítat a mazat savy.
+  Savů si hráč může vytvořit tolik, kolik mu PC dovolí.
+  Doporučuji si savy dělat průběžně, protože hra nemá funkci autosave.
+
 * TIPY A TRIKY
   Jakožto vývojář této hry jsem strávil poměrně dost času vychytáváním herních chyb.
   A sám jsem na této hře nahrál zhruba tak 12 hodin.

@@ -10,7 +10,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -198,7 +197,7 @@ public class Initialization implements Serializable{
         for (Audio audio : audios) {
             Location location = findLocationByName(audio.getTitle());
             if (location != null) {
-                Objects.requireNonNull(findLocationByName(location.getName())).setSong(audio);
+                Objects.requireNonNull(findLocationByName(location.getName())).setMusic(new Location.Music(audio));
             } else {
                 throw new WrongInitializationException(Important.changeText("red", "Wrong song name input"));
             }
@@ -213,7 +212,7 @@ public class Initialization implements Serializable{
     private void setHallwaysMusic() {
         for (Location location : locations) {
             if (location.getType() == LocationType.HALLWAY) {
-                location.setSong(Objects.requireNonNull(findLocationByCode("HALLWAY_002")).getSong());
+                location.setMusic(Objects.requireNonNull(findLocationByCode("HALLWAY_002")).getMusic());
             }
         }
     }

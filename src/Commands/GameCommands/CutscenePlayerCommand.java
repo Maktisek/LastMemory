@@ -19,7 +19,7 @@ public class CutscenePlayerCommand implements Command {
 
     @Override
     public String execute() {
-        player.getCurrentLocation().pauseMusic();
+        player.getCurrentLocation().getMusic().pauseMusic();
         Important.playSound("fade cutscene");
         Important.playMusic("cutscene");
         if(player.canEnd()){

@@ -3,6 +3,7 @@ package AudioSystem;
 import javax.sound.sampled.*;
 import java.io.BufferedInputStream;
 import java.io.InputStream;
+import java.io.Serializable;
 
 
 /**
@@ -18,15 +19,15 @@ import java.io.InputStream;
  *
  * @author Matěj Pospíšil, Matěj Chaloupka, ChatGPT
  */
-public class Audio  {
+public class Audio implements Serializable {
 
     private String filePath;
     private String title;
 
-    private  Clip clip;
+    private transient Clip clip;
     private boolean infiniteLoop;
-    private long pausePosition;
-    boolean paused;
+    private transient long pausePosition;
+    private transient boolean paused;
     private float initialVolume;
 
     public Audio() {

@@ -122,7 +122,7 @@ Hra se pak uloží do speciální složky na vašem disku. Tedy přímo na _**us
 Mezi savy se dá během hraní hry přepínat🔄
 Také je lze mazat🗑️
 
-## 💻 Jak hru hrát
+## ❓ Jak hru hrát
 Po celou dobu gameplaye máte možnost zavolat příkaz "jak hrát". Ten detailně
 popíše:
 - jak se hra hraje✅

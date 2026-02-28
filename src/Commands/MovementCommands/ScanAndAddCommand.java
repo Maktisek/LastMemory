@@ -29,7 +29,7 @@ public class ScanAndAddCommand implements Command {
     public String execute() {
         String result = player.scanAndAddPossibleLocations();
         if(result != null){
-            player.getCurrentLocation().pauseMusic();
+            player.getCurrentLocation().getMusic().pauseMusic();
             Important.playSound("new location");
             return result;
         }
@@ -60,10 +60,10 @@ public class ScanAndAddCommand implements Command {
 
     @Override
     public void endAudio() {
-        if (player.getCurrentLocation().getSongClip() != null) {
-            player.getCurrentLocation().resumeMusic();
+        if (player.getCurrentLocation().getMusic().getSongClip() != null) {
+            player.getCurrentLocation().getMusic().resumeMusic();
         } else {
-            player.getCurrentLocation().playMusic(0);
+            player.getCurrentLocation().getMusic().playMusic(0);
         }
     }
 }

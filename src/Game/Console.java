@@ -7,8 +7,6 @@ import Commands.GameCommands.ExitCommand;
 import Commands.GameCommands.StartGameCommand;
 import Commands.SavesCommands.LoadGameCommand;
 import Exceptions.WrongInitializationException;
-import Locations.LocationType;
-import Modes.LocationMode;
 import Modes.Mode;
 import Modes.ModeType;
 import Modes.OutroMode;
@@ -87,16 +85,16 @@ public class Console {
             if (player.canEnd()) {
                 exit = true;
                 player.setMode(new OutroMode());
-                player.getCurrentLocation().pauseMusic();
+                player.getCurrentLocation().getMusic().pauseMusic();
                 executeOutro();
                 continue;
             }
 
             if (player.getMode().getInfo() != ModeType.question) {
-                if (player.getCurrentLocation().getSongClip() != null) {
-                    player.getCurrentLocation().getSong().resume();
+                if (player.getCurrentLocation().getMusic().getSongClip() != null) {
+                    player.getCurrentLocation().getMusic().getSong().resume();
                 } else {
-                    player.getCurrentLocation().playMusic(0);
+                    player.getCurrentLocation().getMusic().playMusic(0);
                 }
             }
 
@@ -178,7 +176,7 @@ public class Console {
      * </p>
      */
     private void cutscenePlayer() {
-        player.getCurrentLocation().pauseMusic();
+        player.getCurrentLocation().getMusic().pauseMusic();
         Command command = new CutscenePlayerCommand(player);
         System.out.println(command.execute());
         waitUntilInput(command);
@@ -201,7 +199,7 @@ public class Console {
             Important.loadText();
             command.endAudio();
             if (!player.canPlayCutscene()) {
-                player.getCurrentLocation().resumeMusic();
+                player.getCurrentLocation().getMusic().resumeMusic();
             }
             System.out.println(Important.writeSpace(60));
         }
@@ -261,7 +259,7 @@ public class Console {
      * </p>
      */
     private void executeOutro() {
-        player.getCurrentLocation().stopMusic();
+        player.getCurrentLocation().getMusic().stopMusic();
         boolean exitOutro = false;
         Important.playMusic("outro music");
         System.out.println(Important.writeSpace(60));

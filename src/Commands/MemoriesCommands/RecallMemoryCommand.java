@@ -37,7 +37,7 @@ public class RecallMemoryCommand implements Command {
             this.isWaitAble = false;
             return Important.writeSpace(60)+Important.changeText("red", "Vzpomínka " + Important.changeText("underline", name) + Important.changeText("red", " neexistuje"));
         }
-        player.getCurrentLocation().getSong().pause();
+        player.getCurrentLocation().getMusic().getSong().pause();
         Important.playMusic("memory song");
         return player.writeMemory(name);
     }

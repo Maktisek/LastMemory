@@ -51,7 +51,7 @@ public class MoveCommand implements Command {
         }
 
         if (player.getMode().getInfo() == ModeType.question) {
-            player.getPreviousLocation().pauseMusic();
+            player.getPreviousLocation().getMusic().pauseMusic();
             Important.playSound("enemy walk");
             Important.playMusic("question mode");
             return Important.writeSpace(60)+Important.changeText("green", "Přesouváš se do: " + player.getCurrentLocation().getName());
@@ -63,19 +63,19 @@ public class MoveCommand implements Command {
         }
 
         if (player.getCurrentLocation().getType() == LocationType.FADE && player.getCurrentLocation().getType() == player.getPreviousLocation().getType()) {
-            player.getPreviousLocation().stopMusic();
+            player.getPreviousLocation().getMusic().stopMusic();
             Important.playSound("walk");
-            player.getCurrentLocation().playMusic(player.getPreviousLocation().getSong().getClip().getMicrosecondPosition());
+            player.getCurrentLocation().getMusic().playMusic(player.getPreviousLocation().getMusic().getSong().getClip().getMicrosecondPosition());
             return Important.writeSpace(60)+Important.changeText("green", "Přesouváš se do: " + player.getCurrentLocation().getName());
         }
 
         if(player.getCurrentLocation().getType() == LocationType.HALLWAY && player.getPreviousLocation().getType() == LocationType.ELEVATOR){
-            player.getPreviousLocation().pauseMusic();
+            player.getPreviousLocation().getMusic().pauseMusic();
             Important.playSound("elevator walk");
             return Important.writeSpace(60)+Important.changeText("green", "Přesouváš se do: " + player.getCurrentLocation().getName());
         }
 
-        player.getPreviousLocation().pauseMusic();
+        player.getPreviousLocation().getMusic().pauseMusic();
         if(player.getCurrentLocation().getType() == LocationType.ELEVATOR){
             Important.playSound("elevator walk");
         }else {

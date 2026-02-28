@@ -18,7 +18,7 @@ public class IntroMode implements Mode, Serializable {
         ascii += "\nPokud neznáš příkazy napiš \""+ Important.changeText("underline", "pomoc")+"\"";
         ascii += "\nPro novou hru použij příkaz \""+ Important.changeText("underline", "spustit hru")+"\"";
         if(Important.hasSave()){
-            ascii += "\nPro pokračování ve hře použij příkaz \""+ Important.changeText("underline", "načíst hru")+"\"";
+            ascii += "\nPro pokračování ve hře použij příkaz \""+ Important.changeText("underline", "načíst")+"\"";
         }
         return ascii;
     }

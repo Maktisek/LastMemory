@@ -17,7 +17,7 @@ import java.util.Collections;
  * Represents a location in the game.
  * <p>
  * The location may optionally include a {@link #friendlyNPC}, {@link #enemyNPC},
- * a {@link #safe}, and a {@link #song}.
+ * a {@link #safe}, and a {@link #music}.
  * </p>
  * <p>
  * Each location has a {@link LocationType} and must be connected to other locations
@@ -47,7 +47,7 @@ public class Location implements Comparable<Location>, Serializable {
 
     private ArrayList<Location> possibleLocations;
 
-    private transient Audio song;
+    private Music music;
 
     private transient String[] connections;
 
@@ -228,29 +228,6 @@ public class Location implements Comparable<Location>, Serializable {
         return enemyNPC == null;
     }
 
-    public void pauseMusic() {
-        if (song != null) {
-            song.pause();
-        }
-    }
-
-    public void resumeMusic() {
-        if (song != null) {
-            song.resume();
-        }
-    }
-
-    public void playMusic(long startPosition) {
-        if (song != null) {
-            song.startMusic(startPosition);
-        }
-    }
-
-    public void stopMusic() {
-        if (song != null) {
-            song.stopMusic();
-        }
-    }
 
     /**
      * Prepares the task to be written through {@link Important#dashToString(String, String)}
@@ -340,19 +317,13 @@ public class Location implements Comparable<Location>, Serializable {
         this.locationType = locationType;
     }
 
-    public Audio getSong() {
-        return song;
+
+    public Music getMusic() {
+        return music;
     }
 
-    public Clip getSongClip() {
-        if (song != null) {
-            return song.getClip();
-        }
-        return null;
-    }
-
-    public void setSong(Audio song) {
-        this.song = song;
+    public void setMusic(Music music) {
+        this.music = music;
     }
 
     public LocationType getLocationType() {
@@ -374,5 +345,53 @@ public class Location implements Comparable<Location>, Serializable {
     @Override
     public int compareTo(Location o) {
         return Boolean.compare(this.isEmpty(), o.isEmpty());
+    }
+
+    public static class Music implements Serializable{
+        private Audio song;
+
+        public Music(Audio song) {
+            this.song = song;
+        }
+
+        public Audio getSong() {
+            return song;
+        }
+
+        public void setSong(Audio song) {
+            this.song = song;
+        }
+
+
+        public void pauseMusic() {
+            if (song != null) {
+                song.pause();
+            }
+        }
+
+        public void resumeMusic() {
+            if (song != null) {
+                song.resume();
+            }
+        }
+
+        public void playMusic(long startPosition) {
+            if (song != null) {
+                song.startMusic(startPosition);
+            }
+        }
+
+        public void stopMusic() {
+            if (song != null) {
+                song.stopMusic();
+            }
+        }
+
+        public Clip getSongClip() {
+            if (song != null) {
+                return song.getClip();
+            }
+            return null;
+        }
     }
 }

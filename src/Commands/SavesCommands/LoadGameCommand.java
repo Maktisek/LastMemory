@@ -52,8 +52,7 @@ public class LoadGameCommand implements Command {
 
         try {
             Initialization init = Initialization.readFromFile(save);
-            player.getCurrentLocation().stopMusic();
-            init.setAllMusic();
+            player.getCurrentLocation().getMusic().stopMusic();
             Player loadedPlayer = init.getPlayer();
             this.player.load(loadedPlayer);
             this.player.setMode(new LocationMode());
