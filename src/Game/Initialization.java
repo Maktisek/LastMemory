@@ -32,8 +32,8 @@ public class Initialization implements Serializable{
 
 
     private transient ObjectMapper mapper;
-    private ArrayList<Location> locations;
-    private transient ArrayList<Location> tempLocations;
+    private final ArrayList<Location> locations;
+    private final transient ArrayList<Location> tempLocations;
     private Player player;
 
     public Initialization() {
@@ -228,7 +228,18 @@ public class Initialization implements Serializable{
         this.player = new Player(findLocationByCode("HALLWAY_002"));
     }
 
-
+    /**
+     * Saves the game into {@code user.home - LastMemorySaves - the name of the save}.
+     * This generalizes the save system, so it can work on any OS.
+     * <p>
+     *     If the save does not exist a new one is created.
+     * </p>
+     * @param fileName the name of the save to which will the game be saved
+     * @throws WrongInitializationException <ul>
+     *     <li>if there is any IO problem with creating the file path</li>
+     *     <li>if there is any IO problem with writing the save into the {@code fileName} save</li>
+     * </ul>
+     */
     public void writeToFile(String fileName) throws WrongInitializationException{
         Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", fileName.toLowerCase() + ".dat");
         try {
@@ -244,6 +255,17 @@ public class Initialization implements Serializable{
         }
     }
 
+    /**
+     * This static method represents a system which creates an instance of {@link Initialization} from a desired save (.dat file)
+     * located at: {@code user.home - LastMemorySaves - fileName}.
+     * This instance can be then used to set up the game.
+     * @param fileName the name of the save from which the instance of {@link Initialization} is created
+     * @return the created instance of {@link Initialization}
+     * @throws WrongInitializationException <ul>
+     *     <li>if there is no save on {@code fileName}</li>
+     *     <li>if there is any problem with loading the save - wrong class or outdated class</li>
+     * </ul>
+     */
     public static Initialization readFromFile(String fileName) throws WrongInitializationException {
         Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", fileName.toLowerCase() + ".dat");
         if(!Files.exists(path)){
@@ -289,9 +311,4 @@ public class Initialization implements Serializable{
         return locations;
     }
 
-    public void turnOffAllMusic(){
-        for (Location location : this.locations){
-            location.stopMusic();
-        }
-    }
 }
