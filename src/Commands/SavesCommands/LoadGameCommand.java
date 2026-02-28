@@ -9,7 +9,7 @@ import Modes.LocationMode;
 import Modes.ModeType;
 
 /**
- * Represents a command, which loads the game save from {@code user.home - LastMemorySaves}.
+ * Represents a command, which loads the game save from {@code user.home - LastMemorySaves} file.
  * <p>
  * {@link #save} represents the save from which the game will be loaded
  * </p>
@@ -17,7 +17,7 @@ import Modes.ModeType;
  * <ul>
  *     <li>players mode is set to {@link Modes.IntroMode} and {@link #save} is null at the same time</li>
  *     <li>{@link #save} is null</li>
- *     <li>if a {@link WrongInitializationException} occurs while loading the game</li>
+ *     <li>a {@link WrongInitializationException} occurs while loading the game</li>
  * </ul>
  * Otherwise, {@link #player} is rewritten from a new instance of {@link Player} created out of new instance of {@link Initialization} via
  * {@link Initialization#readFromFile(String)}. After all player’s mode has to be set to {@link LocationMode} and

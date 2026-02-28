@@ -6,6 +6,19 @@ import Exceptions.WrongInitializationException;
 import Game.Important;
 import Game.Initialization;
 
+/**
+ * Represents a command, which saves the game into {@code user.home - LastMemorySaves} file.
+ * <p>
+ * {@link #save} represents the save to which the game will be saved
+ * </p>
+ * The game cannot be saved if:
+ * <ul>
+ *     <li>{@link #save} matches {@code ""*} regex</li>
+ *     <li>a {@link WrongInitializationException} occurs while saving the game</li>
+ * </ul>
+ * Otherwise, the game is saved into {@link #save} and the game is saved.
+ * @author Matěj Pospíšil
+ */
 public class SaveGameCommand implements Command {
 
 
