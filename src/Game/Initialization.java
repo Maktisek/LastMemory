@@ -228,10 +228,6 @@ public class Initialization implements Serializable{
         this.player = new Player(findLocationByCode("HALLWAY_002"));
     }
 
-    public Player setAndGivePlayer(String code){
-        this.player.setCurrentLocation(findLocationByCode(code));
-        return player;
-    }
 
     public void writeToFile(String fileName) throws WrongInitializationException{
         Path path = Paths.get(System.getProperty("user.home"), "LastMemorySaves", fileName.toLowerCase() + ".dat");
