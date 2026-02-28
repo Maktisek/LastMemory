@@ -9,7 +9,16 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
+/**
+ * Represents a command, which deletes game save from {@code user.home - LastMemorySaves}.
+ * <p>
+ *     {@link #save} represents the save to be deleted
+ * </p>
+ * If the save is null, the save cannot be found or cannot be deleted, then a message
+ * indicating that is returned.
+ * Otherwise, the save is successfully deleted and a message is returned indicating that.
+ * @author Matěj Pospíšil
+ */
 public class DeleteSaveCommand implements Command {
 
 
